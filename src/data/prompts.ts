@@ -23,7 +23,17 @@ import boy22 from "@/assets/boy22.webp";
 import boy23 from "@/assets/boy23.webp";
 import boy24 from "@/assets/boy24.webp";
 import boy25 from "@/assets/boy25.webp";
-
+import boy26 from "@/assets/boy26.webp";
+import boy27 from "@/assets/boy27.webp";
+import boy28 from "@/assets/boy28.webp";
+import boy29 from "@/assets/boy29.webp";
+import boy30 from "@/assets/boy30.webp";
+import boy31 from "@/assets/boy31.webp";
+import boy32 from "@/assets/boy32.webp";
+import boy33 from "@/assets/boy33.webp";
+import boy34 from "@/assets/boy34.webp";
+import boy35 from "@/assets/boy35.webp";
+import boy36 from "@/assets/boy36.webp";
 
 
 
@@ -216,5 +226,82 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic digital artwork of this man in the above image, in a red hoodie and gray cargo pants stepping out of a giant 3D smartphone screen. His body transitions from digital particles and glowing social media icons (X, YouTube, Instagram,facebook etc.) into a fully realistic human form. The background is a futuristic neon-lit lab with purple and pink ambient lights, a computer showing a digital scan, and a boxed action figure version of the same in the above image labeled",
     tags: ["DigitalMetamorphosis", "CyberRebirth", " TechnoHuman "]
   },
-
+  {
+    id: "26",
+    image: boy26,
+    title: "Millionaire Vibes by the Sea",
+    prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
+    tags: ["LuxuryLifestyle", "CinematicFashion", " TravelInStyle "]
+  },
+   {
+    id: "27",
+    image: boy27,
+    title: "The Eagle and the Elegance",
+    prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
+    tags: ["UltraRealism", "CinematicPortrait", " LuxuryElegance "]
+  },
+  {
+    id: "28",
+    image: boy28,
+    title: "Light of Chiang Mai",
+    prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
+    tags: ["YiPengFestival", "GoldenHourMagic", "CinematicPortrait"]
+  },
+  {
+    id: "29",
+    image: boy29,
+    title: "Romantic Silence in the Snow",
+    prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
+    tags: ["CinematicStyle", "WinterElegance", "DilDiyanGallanVibes"]
+  },
+  {
+    id: "30",
+    image: boy30,
+    title: "Dreamy Moments in the Park",
+    prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
+    tags: ["CinematicPortrait", "YouthfulVibes", "DreamyPhotography"]
+  },
+  {
+    id: "31",
+    image: boy31,
+    title: "Outdoor Cafe Elegance",
+    prompt: "Ultra-realistic 4K photo of a 25-year-old South Asian man (5’8”, fit body, same face & hairstyle as reference). He sits stylishly on a clear chair, one leg crossed, wearing black sunglasses, soft white shirt, white formal trousers, and brown loafers. Confident and relaxed pose with one hand on the table and one on the armrest. In front is a modern table with white glassware and designer cutlery. Background: outdoor café with geometric tiles, decorated tree with silver ornaments, soft sunlight filtering through greenery, blurred people in background. Camera slightly low and farther away to show both shoes, outfit, chair, and surroundings clearly.",
+    tags: ["UltraRealisticPortrait", "CinematicLifestyle", "LuxuryFashion"]
+  },
+  {
+    id: "32",
+    image: boy32,
+    title: "Romantic Winter Stroll in the Snow",
+    prompt: "Generate a full-body image of me - a slim boy (use my uploaded image as reference with 100% accurate face, do not change or edit my face) inspired by 'Dil Diyan Gallan' style. He is wearing a black T-shirt, light green jacket, a black muffler, baggy cargo pants, and black sunglasses. Change the pose and camera position: he is walking forward slowly through the snow with one hand holding the black muffler near his neck and the other hand hanging relaxed by his side, body slightly leaning forward, and giving a romantic intense look (no smile). The camera is positioned at a slightly low front angle, capturing his full body in a cinematic wide shot. The background is a snow-covered mountain forest during active snowfall, with cold winter ambiance, soft depth of field, and a film-like cinematic feel (no sunlight).",
+    tags: ["CinematicWinter", "DilDiyanGallanStyle", "Snow"]
+  },
+  {
+    id: "33",
+    image: boy33,
+    title: "Lifelike Collectible: 1/7 Scale Character Figure Display",
+    prompt: "Create 'Ultra-realistic 1/7 scale commercialized figure of the illustrated character, posed naturally and crafted with lifelike details. The figure is displayed on a modern computer desk, standing on a circular transparent acrylic base with no text. On the computer monitor, show the ZBrush 3D modeling process of this figure in progress. Next to the monitor, place a BANDAI-style toy packaging box featuring the original character artwork on its front, with professional lighting and realistic shadows to create a high-quality product photography feel.",
+    tags: ["UltraRealisticFigure", "ProductPhotography", "3DModelShowcase"]
+  },
+   {
+    id: "34",
+    image: boy34,
+    title: "Lifelike Collectible: 1/7 Scale Character Figure Display",
+    prompt: "16K ultra-realistic cinematic 1:1 — Rooftop luxury party. Subject: same man, Face and hair styles exactly uploaded photo. Outfit: maroon blazer over pastel t-shirt, black trousers, designer sneakers. Pose: leaning by railing, holding a glass of drink. Lighting: daylight tone, soft golden reflections.",
+    tags: ["LuxuryLifestyle", "Dubai", "PartyVibes"]
+  },
+   {
+    id: "35",
+    image: boy35,
+    title: "Golden Sands of Luxury",
+    prompt: "32K Ultra HD cinematic frame of a handsome Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, walking on golden sand beach, wind touching his shirt, brand printed short-sleeve shirt tucked in, beige shorts, colorful NB sneakers, luxury rich vibes, sunny day cinematic tone, 9:16 aspect ratio.",
+    tags: ["CinematicBeachShot", "CinematicBeachShot", "Style"]
+  },
+  {
+    id: "36",
+    image: boy36,
+    title: "Luxury in Motion",
+    prompt: "16K cinematic close-up of a boy wearing Louis Vuitton cream drop-shoulder T-shirt, black jeans, and NB sneakers, posing beside green forest roadside railing, luxury glow tone,",
+    tags: ["CinematicCloseUp", "ForestVibes", "Style"]
+  },
 ];
+
