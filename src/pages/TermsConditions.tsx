@@ -22,7 +22,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using StylePrompts, you accept and agree to be bound by the terms and provision 
+                By accessing and using FreeImagePrompt, you accept and agree to be bound by the terms and provision 
                 of this agreement. If you do not agree to these terms, please do not use our service.
               </p>
             </section>
@@ -30,7 +30,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Use of Service</h2>
               <p className="text-muted-foreground leading-relaxed mb-3">
-                StylePrompts provides AI prompts for generating stylish portraits. You agree to use the service only for lawful purposes:
+                FreeImagePrompt provides AI prompts for generating stylish portraits. You agree to use the service only for lawful purposes:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
                 <li>You will not use the service for any illegal or unauthorized purpose</li>
@@ -43,7 +43,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
               <p className="text-muted-foreground leading-relaxed">
-                The prompts, designs, images, and content on StylePrompts are provided for personal and commercial use. 
+                The prompts, designs, images, and content on FreeImagePrompt are provided for personal and commercial use. 
                 You are free to use the prompts to generate your own images. However, you may not redistribute or resell 
                 the prompts themselves without proper attribution.
               </p>
@@ -65,7 +65,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Disclaimer of Warranties</h2>
               <p className="text-muted-foreground leading-relaxed">
-                StylePrompts is provided "as is" without any warranties, expressed or implied. We do not guarantee 
+                FreeImagePrompt is provided "as is" without any warranties, expressed or implied. We do not guarantee 
                 that the service will be uninterrupted, secure, or error-free. The prompts are provided as suggestions 
                 and results may vary depending on the AI platform used.
               </p>
@@ -74,7 +74,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
               <p className="text-muted-foreground leading-relaxed">
-                StylePrompts and its creators shall not be liable for any indirect, incidental, special, consequential, 
+                FreeImagePrompt and its creators shall not be liable for any indirect, incidental, special, consequential, 
                 or punitive damages resulting from your use of or inability to use the service. This includes any images 
                 generated using our prompts.
               </p>
@@ -99,7 +99,7 @@ const TermsConditions = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Changes to Terms</h2>
               <p className="text-muted-foreground leading-relaxed">
-                We may revise these terms at any time. By continuing to use StylePrompts after changes are posted, 
+                We may revise these terms at any time. By continuing to use FreeImagePrompt after changes are posted, 
                 you agree to be bound by the revised terms.
               </p>
             </section>

@@ -1,15 +1,15 @@
 import boy1 from "@/assets/boy1.webp";
 import boy2 from "@/assets/boy2.webp";
-import boy3 from "@/assets/boy3.jpg";
-import boy4 from "@/assets/boy4.jpg";
-import boy5 from "@/assets/boy5.jpg";
-import boy6 from "@/assets/boy6.jpg";
-import boy7 from "@/assets/boy7.jpg";
-import boy8 from "@/assets/boy8.jpg";
-import boy9 from "@/assets/boy9.jpg";
-import boy10 from "@/assets/boy10.jpg";
-import boy11 from "@/assets/boy11.jpg";
-import boy12 from "@/assets/boy12.jpg";
+import boy3 from "@/assets/boy3.webp";
+import boy4 from "@/assets/boy4.webp";
+import boy5 from "@/assets/boy5.webp";
+import boy6 from "@/assets/boy6.webp";
+import boy7 from "@/assets/boy7.webp";
+import boy8 from "@/assets/boy8.webp";
+import boy9 from "@/assets/boy9.webp";
+import boy10 from "@/assets/boy10.webp";
+import boy11 from "@/assets/boy11.webp";
+import boy12 from "@/assets/boy12.webp";
 import boy13 from "@/assets/boy13.webp";
 import boy14 from "@/assets/boy14.webp";
 import boy15 from "@/assets/boy15.webp";
@@ -47,6 +47,31 @@ import boy46 from "@/assets/boy46.webp";
 import boy47 from "@/assets/boy47.webp";
 import boy48 from "@/assets/boy48.webp";
 import boy49 from "@/assets/boy49.webp";
+import boy50 from "@/assets/boy50.webp";
+import boy51 from "@/assets/boy51.webp";
+import boy52 from "@/assets/boy52.webp";
+import boy53 from "@/assets/boy53.webp";
+import boy54 from "@/assets/boy54.webp";
+import boy55 from "@/assets/boy55.webp";
+import boy56 from "@/assets/boy56.webp";
+import boy57 from "@/assets/boy57.webp";
+import boy58 from "@/assets/boy58.webp";
+import boy59 from "@/assets/boy59.webp";
+import boy60 from "@/assets/boy60.webp";
+import boy61 from "@/assets/boy61.webp";
+import boy62 from "@/assets/boy62.webp";
+import boy63 from "@/assets/boy63.webp";
+import boy64 from "@/assets/boy64.webp";
+import boy65 from "@/assets/boy65.webp";
+import boy66 from "@/assets/boy66.webp";
+import boy67 from "@/assets/boy67.webp";
+
+
+
+
+
+
+
 
 
 
@@ -85,72 +110,72 @@ export const promptsData: PromptData[] = [
   {
     id: "3",
     image: boy3,
-    title: "Elegant Charm",
-    prompt: "A portrait of a charming young man with perfectly styled hair, warm smile, wearing elegant casual attire, soft natural lighting, sophisticated style, ultra high resolution, warm color grading",
-    tags: ["Elegant", "Sophisticated", "Natural"]
+    title: "Shadows of Confidence",
+    prompt: "Generate a hyper-realistic cinematic editorial studio portrait of the uploaded person, keeping the exact real face, hairstyle, skin tone, and body identity unchanged. Set in a dark luxury studio with drifting smoke and a top-left spotlight cutting through the haze, the scene features two versions of the same person: one leaning casually against a tall black studio cube with arms crossed, looking confidently off-camera, and the other seated on a stool, leaning forward with clasped hands, gazing intensely at the camera. Both wear an oversized deep navy velvet suit, a white silk shirt unbuttoned at the collar, and polished black shoes, creating a bold, moody, high-fashion editorial atmosphere with visible light rays, sharp shadows, and layered contrast in a 3:4 ratio.",
+    tags: ["CinematicEditorial", "HighFashionPortrait", "LuxuryStudioMood"]
   },
   {
     id: "4",
     image: boy4,
-    title: "Fashion Forward",
-    prompt: "A portrait of a handsome young man with trendy outfit, confident pose, modern urban fashion, dramatic lighting, contemporary style, ultra high resolution, editorial photography",
-    tags: ["Fashion", "Dramatic", "Editorial"]
+    title: "Reflections of Youth",
+    prompt: "Ultra HD 16K hyper-realistic full-body portrait (vertical). Muscular young man leaning on edge of a stone fountain in the college courtyard, looking off to the side. Wearing black polo tucked into light gray trousers, classic leather watch, and reflective blue aviator sunglasses. Captured with Nikon D850, 85mm f/1.2 lens, wide-aperture cinematic bokeh, HDR tone mapping",
+    tags: ["UltraHDPortrait", "CinematicBokeh", "ModernElegance"]
   },
   {
     id: "5",
     image: boy5,
-    title: "Artistic Expression",
-    prompt: "A portrait of a stylish young man with artistic look, creative expression, fashionable clothing, professional photography, modern aesthetic, ultra high resolution, creative lighting",
-    tags: ["Artistic", "Creative", "Modern"]
+    title: "King of Calm",
+    prompt: "Male model in oversized Black sweatshirt and sweatpants with White sneakers, [model wearing black sunglasses with rounded lenses], seated elegantly on a throne in the color Black Golden, against a soft White Pastel dark studio backdrop, [Giant White Tiger lying in front of the model, Tiger with a crown on the head]. Cinematic lighting, futuristic editorial style, relaxed posture, head slightly tilted.",
+    tags: ["FuturisticEditorial", "Creative", "CinimaticStyle"]
   },
   {
     id: "6",
     image: boy6,
-    title: "Casual Elegance",
-    prompt: "A portrait of a handsome young man with casual elegance, natural charm, contemporary fashion, beautiful lighting, modern portrait style, ultra high resolution, professional quality",
-    tags: ["Casual", "Natural", "Professional"]
+    title: "Desert Frames",
+    prompt: "A full-body studio portrait of a man use my face  wearing a stylish, oversized beige bomber jacket with a white 'LV' logo, a black printed shirt, beige pent, white socks, and chunky white shoes. He stands with one leg slightly bent amidst a sandy, desert-like set, with a beige-colored wall behind him and an empty picture frame leaning against it. A Louis Vuitton backpack in white and beige sits beside him. The scene is lit with warm, do again perfectly, slim fit body",
+    tags: ["LouisVuittonStyle", "DesertEditorial", "ModernLuxuryPortrait"]
   },
   {
     id: "7",
     image: boy7,
-    title: "Best Friend Moment",
-    prompt: "A portrait of a handsome young man with a golden retriever dog, warm sunset lighting, outdoor setting, friendly smile, wearing burgundy casual jacket, professional photography, cinematic color grading, ultra high resolution, detailed, shallow depth of field",
-    tags: ["Pet", "Sunset", "Outdoor"]
+    title: "Midnight Reflections",
+    prompt: "Create A stylish young man as referrence upload photo  lounging by a luxury poolside at night, wearing a half-open bargundy shirt and dark trousers. He reclines on a sunbed with a relaxed, confident pose, a cigarette between his lips releasing gentle smoke into the air. His tousled hair glistens slightly, and he wears silver jewelry earrings, bracelets, and a necklace - that catch the soft ambient light. On the table beside him sit bottles of whiskey and a glass filled with amber liquid and ice, reflecting the pool.",
+    tags: ["LuxuryNightEditorial", "CinematicPoolside", "Elegance"]
   },
   {
     id: "8",
     image: boy8,
-    title: "Freedom Jump",
-    prompt: "A portrait of a stylish young man jumping in mid-air in a green field, energetic pose, outdoor photography, natural daylight, wearing blue casual outfit, dynamic action shot, cinematic style, ultra high resolution, professional quality",
-    tags: ["Action", "Dynamic", "Outdoor"]
+    title: "Twilight Ease",
+    prompt: "Create Ultra-realistic 8K portrait of a handsome as referrence upload photo  slim-fit skinny young boy (face reference from image)with curly hair. Wearing a black texture oversized LV tshirt, black loose jeans. Looking thoughtfully off-camera, holding a iphone 17 Pro, leaning on a wall. Blurred green leaves in foreground. Flawless glowing skin, vibrant bokeh city lights background, warm cinematic mood Modify my uploaded photo according to this.",
+    tags: ["CinematicPortrait", "Dynamic", "HyperRealEditorial"]
   },
   {
     id: "9",
     image: boy9,
-    title: "Fire Magic",
-    prompt: "A portrait of a handsome young man with fire effects in hands, dramatic lighting, dark background, magical realism style, cinematic photography, intense expression, ultra high resolution, creative visual effects",
-    tags: ["Dramatic", "Effects", "Creative"]
+    title: "Autumn Focus",
+    prompt: "A realistic DSLR-style photo with natural lighting in an autumn forest. A man (facial description exactly matches the reference photo) sits relaxed on a large fallen tree trunk lying on the ground covered in yellow, orange, and brown dead leaves. He is wearing a light gray knit sweater, black cargo pants, a black baseball cap, and brown hiking boots. Nearby is a black backpack propped against the fallen tree trunk. The man poses with one leg bent over the tree trunk and one foot flat on the ground, while his left hand rests on the top of his baseball cap (as if adjusting the hat on his head), with a calm expression and a slight smile, turning clearly towards the camera. His right hand holds a SONY DSLR camera with a large lens and a camera strap around his neck. The background shows forest trees with beautiful golden yellow leaves, creating a warm, autumnal feel. Sharp DSLR image. Evening atmosphere with soft autumn afternoon sunlight. 4:3 landscape aspect ratio, very high resolution.",
+    tags: ["NaturePortrait", "AutumnVibes", "DSLRRealism"]
   },
   {
     id: "10",
     image: boy10,
-    title: "Sports Lifestyle",
-    prompt: "A portrait of a stylish young man in sports jersey number 23, casual relaxed pose, sunset golden hour lighting, outdoor setting, confident expression, athletic style, cinematic photography, ultra high resolution, warm color tones",
-    tags: ["Sports", "Athletic", "Golden Hour"]
+    title: "Urban Ease Mauve Confidence",
+    prompt: "Full-body HD portrait. Face 100% same as reference. 18-year-old stylish boy, Creat A nyper-realistic 4K portrait of a stylish young man (21 year) leaning confidently against a textured matte black wall on a modern outdoor staircase. He has a medium-toned complexion, a well-groomed beard, and voluminous black hair. He wears sleek, dark-tinted sunglasses and exudes calm, effortless style. His outfit features a relaxed-fit mauve-pink linen shirt with the sleeves and the top few buttons open",
+    tags: ["HyperRealPortrait", "ModernStreetStyle", "Cool"]
   },
   {
     id: "11",
     image: boy11,
-    title: "Adventure Spirit",
-    prompt: "A portrait of a handsome young man near camping tent in forest, outdoor adventure style, natural lighting, wearing green casual outfit, peaceful expression, nature photography, cinematic aesthetic, ultra high resolution, professional quality",
-    tags: ["Adventure", "Camping", "Nature"]
+    title: "Golden Hour Luxury",
+    prompt: "Ultra-detailed 32K cinematic wide shot of a young man leaning against a bright yellow Lamborghini parked on a marble driveway of a European villa. He wears a black printed drop-shoulder T-shirt, mint green shorts, and white-red Air Jordan 1 sneakers. Apple earbuds in both ears. One hand rests on the car roof, the other forms a small finger-heart symbol near his chest. His posture relaxed but confident, millionaire attitude with a romantic charm. Evening sun creates soft orange glow on car paint, fair face illuminated naturally. Drone camera shot slightly from above showing villa garden and driveway layout. Aspect ratio 9:16, face and hairstyle exactly uploaded photo.",
+    tags: ["CinematicLuxury", "CinematicLuxury", "UltraDetailedPortrait"]
   },
   {
     id: "12",
     image: boy12,
-    title: "Epic Journey",
-    prompt: "A portrait of a stylish young man with dramatic waterfall background, adventure photography, wearing dark maroon jacket, powerful natural setting, cinematic lighting, epic composition, ultra high resolution, professional outdoor photography",
-    tags: ["Epic", "Waterfall", "Adventure"]
+    title: "Luxury Power Pose",
+    prompt: "A stylish young man sitting confidently on the hood of a sleek, modern luxury car (dark blue color), wearing a dark green velvet suit with a black shirt and black loafers. He is wearing black sunglasses and a wristwatch, exuding a calm and powerful demeanor. Behind him, there are two other luxury cars (Rolls Royce and Mercedes) with headlights on, slightly blurred by fog. The background features a futuristic multi-story glass building with bright white neon lights outlining the structure, with a glowing sign that reads 'Bangla Motion.' The ground is wet, reflecting the cars and neon lights, and scattered dollar bills are spread across the floor. The overall atmosphere is moody, cinematic, with a cool blue-gray color tone and soft fog, emphasizing luxury and power.",
+    tags: ["CinematicLuxury", "FuturisticEditorial", "Power"]
   },
    {
     id: "13",
@@ -412,6 +437,135 @@ export const promptsData: PromptData[] = [
     prompt: "A dynamic shot of the exact same person from the reference image, with 100% identical facial features, hairstyle, and overall appearance. He is leaning casually against a dark SUV, illuminated by a subtle beam of light from above. He is wearing a black traditional shalwar kameez with a cream-colored shawl draped over his shoulders, and a wristwatch",
     tags: ["CinematicShot", "LuxuryStyle", "ModernElegance"]
   },
+  {
+    id: "50",
+    image: boy50,
+    title: "Reflections of Style",
+    prompt: "A confident man standing in front of a large wall mural featuring his own oversized portrait. He is wearing a light gray suit with a white shirt and a purple tie, complemented by brown leather shoes and a brown belt. The man has neatly styled black hair and a beard, and he is wearing reflective blue sunglasses. He poses casually with one leg crossed over the other and hands in his pockets. The background wall is mostly light gray with minimalistic blue geometric accents that match the cool color scheme of the sunglasses. The overall mood is professional and stylish, with a clean and modern aesthetic.",
+    tags: ["Modern", "Professional", "StylishEditorial"]
+  },
+  {
+    id: "51",
+    image: boy51,
+    title: "Jack Motion",
+    prompt: "A confident businessman sitting on a luxury chair, 'Jack Motion' on the wall, luxurious modern office with excessive logo, wearing a black suite and sunglasses. He is seated at a sleek desk with a silver laptop in front of him, leather executive chair, stylish marble-patterned wall in the background, warm ambient lighting, professional  atmosphere.",
+    tags: ["LuxuryOfficePortrait", "Cinematic", "PowerAndStyle"]
+  },
+  {
+    id: "52",
+    image: boy52,
+    title: "Rainy Crosswalk",
+    prompt: "16K ultra-realistic cinematic 4:5 - city crosswalk in rain at sunset. Outfit: black printed jacket, mint T-shirt, jeans, colorful sneakers. Pose: walking across zebra line, confident attitude. Background: group of people, girl with umbrella on side. Lighting: orange-pink rain reflection tone.",
+    tags: ["StreetStyle", "HyperRealCity", "Mood"]
+  },
+  {
+    id: "53",
+    image: boy53,
+    title: "Cinematic Rain",
+    prompt: "16K ultra-realistic cinematic 4:5 — rainy street beside café lights. Outfit: black printed jacket, white T-shirt, jeans, colorful sneakers. Pose: adjusting jacket hood, confident sideways face. Background: girl in saree and boy with motorbike talking. Lighting: moody cinematic tone, wet reflection.",
+    tags: ["CinematicMood", "HyperRealCity", "Mood"]
+  },
+   {
+    id: "54",
+    image: boy54,
+    title: "Mirror Mode",
+    prompt: "✨Ultra-realistick cinematic photo of a stylish handsome boy sitting on a luxury salon chair in front of a big mirror, holding an iPhone 17 pro max and clicking a selfie. He is wearing a same dress white shawl draped over his shoulders. black sunglass watch, giving a confident fashionable vibe The baci shows salon interiors with glowing vanity lights, hair products on the counter, and glossy reflection in the mirror. the scene has a cinematic lifestyle tone, shot with a sony A7R IV, 35mm f/ 1.4 lens.",
+    tags: ["CinematicLifestyle", "ModernElegance", "Mood"]
+  },
+  {
+    id: "55",
+    image: boy55,
+    title: "Echoes of Strength",
+    prompt: "Uitra realistic, resolution cinematic image o a person crouching beside a owerful black horse in a snow-covered mountainous landscape.100% same Face with the face from the uploaded image, keeping the facial features exactly the same. wavy hair, and wears dark sunglasses, a cozy black sweater, grey cargo pants, and black boots. He crouches with one knee bent, holding the reins of the horse with a relaxed yet confident posture. The horse is muscular, with a glossy jet-black coat",
+    tags: ["ManAndHorse", "Modern", "CinematicWild"]
+  },
+   {
+    id: "56",
+    image: boy56,
+    title: "Paris - Walk of Class",
+    prompt: "Generate a Photography of Stylish young man(same person in image) walking confidently with a takeaway coffee cup, dressed in a tailored black overcoat, open-collar dress shirt, dark trousers, dark round frame sunglasses and formal shoes. Classic wristwatch visible. Setting: in front of the Eiffel Tower, Paris. Early morning golden hour lighting, long shadows, cinematic mood.Several pigeons flying in foreground and background, adding movement. Urban, elegant, lifestyle atmosphere.",
+    tags: ["ParisEditorial", "GoldenHourStyle", "Cinematic"]
+  },
+  {
+    id: "57",
+    image: boy57,
+    title: "Mall Reflections",
+    prompt: "Hyper-realistic, cinematic full-body portrait of a stylish young man with the exact face and perfectly styled hairstyle from the uploaded image, looking directly at the camera. He is casually leaning against a glass railing in a luxurious high-end mall, one hand resting on the railing and the other hand in his pocket. He wears a gradient grey-to-black sweatshirt, fitted black pants, dark sunglasses, and a smartwatch on his left wrist. The indoor mall environment features glowing ambient light.",
+    tags: ["LuxuryLifestyle", "ModernElegance", "Cinematic"]
+  },
+  {
+    id: "58",
+    image: boy58,
+    title: "Whispers in Light",
+    prompt: "The most realistic portrait of a handsome young man lying elegantly. The head rests lightly on the arm. Reflecting the shadow on the glossy black surface perfectly. The soft light like a movie emphasizes the glowing skin and a sharp and delicate face. With slightly wet hair that falls on the forehead naturally.",
+    tags: ["CinematicPortrait", "Shadow", "Elegance"]
+  },
+  {
+    id: "59",
+    image: boy59,
+    title: "The Boss Walks Out",
+    prompt: "A 18 years old stylish Pakistani man in a sleek black Shalwar Kameez, stepping confidently out of a black sports car, captured in a full-body outdoor shot. He exudes authority and charisma, with a serious and magnetic expression, radiating the presence of a mafia boss. Accessories include elegant black leather shoes, luxury watch, and stylish sunglasses. The scene features dramatic lighting, low saturation tones with strong blacks and subtle grays, emphasizing a dark, classy, and cinematic atmosphere. The background shows a modern, upscale urban environment with blurred city details to keep focus on him. Hyper-realistic, ultra-detailed, professional photography style, capturing textures of fabric, reflections on the car, and subtle shadows for depth.",
+    tags: ["Cinematic", "Luxury", "Mood"]
+  },
+  {
+    id: "60",
+    image: boy60,
+    title: "Whispers of the Wind",
+    prompt: "A cinematic, moody slightly telescopic shot of the person exactly as in the reference image , standing in a lush green field of tall grass beneath a cloudy, overcast sky. Their face, body and outfit remain unchanged from the reference image. The posture is expressive and dramatic, learning slightly backwards with one arm outstretched and palm open, as if embracing the wind or the moment. Their head is tilted back, eyes closed and they are wearing large, over-ear silver headphones, evoking calm and emotional release. The perspective is slightly low-angel, with blurred grass in the foreground adding dreamy depth of field. The overall color grading is in muted green and gray tones, with soft , diffused natural lighting to create a serene, reflective, and slightly melancholic mood. The image should feel cinematic , atmospheric , and intimate, capturing a quiet moment of solitude and freedom.",
+    tags: ["Atmosphere", "Dream", "Mood"]
+  },
+  {
+    id: "61",
+    image: boy61,
+    title: "Legacy in Style: Arbaz Soomro Creations",
+    prompt: "A stylish man standing in front of a white BMW car, wearing a traditional black kurta pajama and a cream-colored shawl with red embroidered borders draped over his shoulder. He is wearing sunglasses and standing confidently with one hand on the car. Behind him on the white wall is a large artistic illustration of his portrait, wearing the same outfit and sunglasses. The text on the wall says 'SOOMRO' in bold capital letters, and below it 'ARBAZ SOOMRO Creations' in smaller text. The background is a modern, clean outdoor location with tiled flooring and a white painted wall.",
+    tags: ["CulturalElegance", "Dream", "ModernTraditional"]
+  },
+   {
+    id: "62",
+    image: boy62,
+    title: "Timeless Grace",
+    prompt: "A stylish young man standing confidently against a plain beige wall, wearing a traditional cream-colored shalwar kameez with a matching waistcoat. The outfit is elegant and well-fitted, with a pocket square tucked in the waistcoat. He is wearing black formal shoes and a wristwatch, and has dark hair styled neatly. The man is also wearing sunglasses and posing with one hand adjusting his sleeve and the other resting casually. The lighting is warm and soft, giving the photo a classy and modern fashion photoshoot look.",
+    tags: ["tradional", "Modern", "Culture"]
+  },
+  {
+    id: "63",
+    image: boy63,
+    title: "The Modern Gentleman",
+    prompt: "A professional, cinematic, hyper-realistic fashion photograph of a stylish and confident young man in his late 20s, with black hair and a well-groomed black beard, closely resembling the reference photo. He.ars reflective sunglasses and a sharp, dark pinstripe three-piece suit, paired with a crisp white shi t and a patterned tie. Draped elegantly over his shoulders is a heavy dark wool overcoat. Captured in a candi, sophisticated moment, he looks down while adjusting his shirt cuff. The backdrop is a sleek, modern urvan building with large, dark, reflective glass windows. Natural moody lighting casts soft, dramatic shadows, accentuating the textures of his clothing. The overall look is powerful, cinematic, and editorial-sty Ied for high-end men's fashion. Ultra-photorealistic, hyper-detailed, sharp focus, cinematic color grading, 8K resolution, shot with a Sony lens",
+    tags: ["CinematicMenswear", "UrbanElegance", "Luxury"]
+  },
+  {
+    id: "64",
+    image: boy64,
+    title: "HB_EDITOR Studio",
+    prompt: "A professional male content creator sitting at a modern white desk in a brightly lit studio. He has short brown hair, a trimmed beard, and wears eyeglasses. He is dressed in a white and mustard-yellow raglan sleeve shirt, with white over-ear headphones resting around his neck. In front of him is an open notebook, a closed yellow notebook, a yellow smartphone, a glass of juice, and a pencil holder with two pencils. Behind him on the wall is a large 3D Snapchat logo and the text “HB_EDITOR”. The background features a clean, tech-inspired aesthetic with yellow and white theme elements, icons, and graphics. The man looks focused and thoughtful. The environment is creative and modern, with a hint of branding and digital content theme.",
+    tags: ["ContentCreator", "StudioVibes", "TechInspired"]
+  },
+  {
+    id: "65",
+    image: boy65,
+    title: "Cinematice Studio Ride",
+    prompt: "Hyper-realistic full-body shot of a 35-year-old man (use my face as 100% accurate reference). He has a modern hairstyle, looks stylish and confident, and is dressed in a khaki hoodie, black cargo pants, white shoes, and sleek black sunglasses. He is sitting casually black bike Ducati Diavel 1260 model motorcycle. A glossy black helmet rests on the tank of the bike, with his hands placed firmly on it. He is looking straight ahead with a calm, focused expression. The outdoor environment is realistic, natural daylight highlighting the details of the bike and outfit, with cinematic tones and high-end clarity.",
+    tags: ["HyperRealLifestyle", "ModernStreetStyle", "Motorcycle"]
+  },
+  {
+    id: "66",
+    image: boy66,
+    title: "Urban Reflection",
+    prompt: "1/2 Create an Ultra-realistic cinematic full-body portrait of a 25-year-old handsome man  190 cm tall, fair skin, fit body but no big muscle, dark brown blak hair. He wears a super thin semi transparent white tank top, round glasses, oversized white jeans, and white leather shoes. He is standing with a cool pose, leaning casually against a brick wall covered with a huge graffiti mural of his own face-the artwork is painted in warm tones, realistic yet artistic",
+    tags: ["GraffitiElegance", "ModernStreetStyle", "HyperReal"]
+  },
+  {
+    id: "67",
+    image: boy67,
+    title: "Spectrum of Self",
+    prompt: "Create a hyper-realistic, cinematic composite image using 100% of the uploaded face (identity locked — no alteration or morphing). A very handsome light-skinned young man sits confidently in a turquoise armchair, legs crossed, hands resting calmly on the armrests. He wears a brown polo shirt, dark blue trousers, and black loafers. His hands are lightly stained with red paint, a paintbrush visible between his fingers, and he wears glasses with a serious, creative expression. Surrounding him are six vertical, segmented one-line panels — each displaying a different version of the same man in distinct outfits and poses. Each panel has a subtle distressed grunge texture with white paint splatters blending into a bright, multi-colored abstract background. Outfits in the panels include: 1️⃣ Blue denim jacket over white t-shirt and jeans. 2️⃣ Red jacket over white shirt and jeans. 3️⃣ Green jacket over dark t-shirt and jeans. 4️⃣ Navy blue jacket over red t-shirt and jeans. 5️⃣ Black shirt over grey pants. 6️⃣ Turquoise-toned outfit matching the chair for harmony. A folded newspaper lies casually on the floor in front of the armchair. The lighting is bright and even, with a clean 7-color background palette (red, turquoise, green, yellow, orange, white, and blue). The overall tone is vibrant, artistic, and full of life — breaking away from dark tones with vivid contrast and sharp focus. 🎞️ Photo Details Camera: 50mm lens, f/2.8 aperture for cinematic depth Lighting: bright diffused softbox lighting Tone: bold and color-rich Texture: visible paint detail and fabric texture Resolution: Ultra HD 16K, crystal-clear realism 🎨 Overall Style Style: Hyperrealism / Photorealism Mood: bold, confident, artistic Color Palette: turquoise, red, yellow, blue, and white vibrance Composition: balanced between the main subject and vertical panels",
+    tags: ["VibrantEditorial", "HyperRealCinematic", "ArtisticPortrait"]
+  },
 ];
+
+
+
 
 
