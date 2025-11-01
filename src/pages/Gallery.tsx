@@ -34,6 +34,56 @@ const Gallery = () => {
   const [imageStats, setImageStats] = useState<Record<string, ImageStats>>({});
   const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
 
+  // SEO Setup
+  useEffect(() => {
+    // Update page title
+    document.title = "AI Prompt Gallery - Stylish Boy Portrait Prompts | StylePrompts";
+    
+    // Update or create meta description
+    const updateMetaTag = (name: string, content: string) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateMetaTag('description', 'Browse our curated gallery of AI image prompts for creating stylish boy portraits. Search by category, view examples, and copy prompts instantly for Midjourney, DALL-E, and Stable Diffusion.');
+    updateMetaTag('keywords', 'AI prompts, image generation, boy portraits, Midjourney prompts, DALL-E prompts, AI art, style prompts, portrait photography');
+    
+    // Open Graph tags
+    const updateOGTag = (property: string, content: string) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('property', property);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', content);
+    };
+
+    updateOGTag('og:title', 'AI Prompt Gallery - Stylish Boy Portrait Prompts');
+    updateOGTag('og:description', 'Browse our curated gallery of AI image prompts for creating stylish boy portraits. Search by category and copy prompts instantly.');
+    updateOGTag('og:type', 'website');
+    updateOGTag('og:url', window.location.href);
+
+    // Add canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.href = window.location.href;
+
+    // Cleanup function to reset title when component unmounts
+    return () => {
+      document.title = "StylePrompts - AI Image Prompts for Stylish Boy Portraits";
+    };
+  }, []);
+
   // Fetch all image stats on mount
   useEffect(() => {
     fetchAllStats();
@@ -145,14 +195,14 @@ const Gallery = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-4 mb-8">
+            <header className="text-center space-y-4 mb-8">
               <h1 className="text-4xl md:text-5xl font-bold">
-                Prompt <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Gallery</span>
+                AI Prompt <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Gallery</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
-                Click any image to view and copy its AI prompt
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Explore handcrafted AI prompts for stylish boy portraits. Search by category, view examples, and copy prompts for Midjourney, DALL-E, and Stable Diffusion.
               </p>
-            </div>
+            </header>
 
             {/* Search Bar */}
             <div className="mb-6 max-w-md mx-auto">
