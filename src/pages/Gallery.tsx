@@ -1,14 +1,64 @@
-import { useState } from "react";
-import { Copy, Check, X } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import { Copy, Check, X, Search, Eye, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { promptsData, PromptData } from "@/data/prompts";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+// Define categories based on tags
+const categories = [
+  "All",
+  "Luxury",
+  "Cinematic",
+  "Street Style",
+  "Traditional",
+  "Nature",
+  "Futuristic",
+  "Wedding",
+  "Moody"
+];
+
+interface ImageStats {
+  views: number;
+  likes: number;
+}
 
 const Gallery = () => {
   const [selectedPrompt, setSelectedPrompt] = useState<PromptData | null>(null);
   const [copied, setCopied] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [imageStats, setImageStats] = useState<Record<string, ImageStats>>({});
+  const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
+
+  // Fetch all image stats on mount
+  useEffect(() => {
+    fetchAllStats();
+  }, []);
+
+  const fetchAllStats = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('image_stats')
+        .select('image_id, views, likes');
+      
+      if (error) throw error;
+      
+      const statsMap: Record<string, ImageStats> = {};
+      data?.forEach((stat) => {
+        statsMap[stat.image_id] = {
+          views: stat.views || 0,
+          likes: stat.likes || 0
+        };
+      });
+      setImageStats(statsMap);
+    } catch (error) {
+      console.error('Error fetching stats:', error);
+    }
+  };
 
   const handleCopy = (prompt: string) => {
     navigator.clipboard.writeText(prompt);
@@ -17,6 +67,77 @@ const Gallery = () => {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handlePromptClick = async (item: PromptData) => {
+    setSelectedPrompt(item);
+    
+    // Increment views
+    try {
+      await supabase.rpc('increment_image_views', { p_image_id: item.id });
+      
+      // Update local state
+      setImageStats(prev => ({
+        ...prev,
+        [item.id]: {
+          views: (prev[item.id]?.views || 0) + 1,
+          likes: prev[item.id]?.likes || 0
+        }
+      }));
+    } catch (error) {
+      console.error('Error incrementing views:', error);
+    }
+  };
+
+  const handleLike = async (imageId: string) => {
+    const isLiked = likedImages.has(imageId);
+    
+    try {
+      const { data, error } = await supabase.rpc('toggle_image_like', {
+        p_image_id: imageId,
+        p_increment: !isLiked
+      });
+
+      if (error) throw error;
+
+      // Update local state
+      const newLikedImages = new Set(likedImages);
+      if (isLiked) {
+        newLikedImages.delete(imageId);
+      } else {
+        newLikedImages.add(imageId);
+      }
+      setLikedImages(newLikedImages);
+
+      setImageStats(prev => ({
+        ...prev,
+        [imageId]: {
+          views: prev[imageId]?.views || 0,
+          likes: data
+        }
+      }));
+
+      toast.success(isLiked ? "Like removed!" : "Liked!");
+    } catch (error) {
+      console.error('Error toggling like:', error);
+      toast.error("Failed to update like");
+    }
+  };
+
+  // Filter prompts based on search and category
+  const filteredPrompts = useMemo(() => {
+    return promptsData.filter((item) => {
+      const matchesSearch = 
+        item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.prompt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
+      const matchesCategory = 
+        selectedCategory === "All" || 
+        item.tags.some(tag => tag.toLowerCase().includes(selectedCategory.toLowerCase()));
+
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchQuery, selectedCategory]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -24,7 +145,7 @@ const Gallery = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-4 mb-12">
+            <div className="text-center space-y-4 mb-8">
               <h1 className="text-4xl md:text-5xl font-bold">
                 Prompt <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Gallery</span>
               </h1>
@@ -33,12 +154,41 @@ const Gallery = () => {
               </p>
             </div>
 
+            {/* Search Bar */}
+            <div className="mb-6 max-w-md mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search prompts, titles, or tags..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="mb-8 flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedCategory(category)}
+                  className={selectedCategory === category ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {promptsData.map((item) => (
+              {filteredPrompts.map((item) => (
                 <div
                   key={item.id}
                   className="group cursor-pointer"
-                  onClick={() => setSelectedPrompt(item)}
+                  onClick={() => handlePromptClick(item)}
                 >
                   <div className="relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-all hover:shadow-xl">
                     <img
@@ -47,6 +197,19 @@ const Gallery = () => {
                       className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    
+                    {/* Stats Display */}
+                    <div className="absolute top-2 right-2 flex gap-2">
+                      <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs">
+                        <Eye className="h-3 w-3" />
+                        {imageStats[item.id]?.views || 0}
+                      </div>
+                      <div className="flex items-center gap-1 px-2 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs">
+                        <Heart className="h-3 w-3" />
+                        {imageStats[item.id]?.likes || 0}
+                      </div>
+                    </div>
+
                     <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform">
                       <h3 className="text-white font-semibold mb-2">{item.title}</h3>
                       <div className="flex flex-wrap gap-2">
@@ -90,7 +253,29 @@ const Gallery = () => {
 
             <div className="p-6 space-y-6">
               <div>
-                <h2 className="text-2xl font-bold mb-2">{selectedPrompt.title}</h2>
+                <div className="flex justify-between items-start mb-2">
+                  <h2 className="text-2xl font-bold">{selectedPrompt.title}</h2>
+                  
+                  {/* Stats and Like Button */}
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 text-muted-foreground">
+                      <Eye className="h-5 w-5" />
+                      <span className="font-semibold">{imageStats[selectedPrompt.id]?.views || 0}</span>
+                    </div>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => handleLike(selectedPrompt.id)}
+                      className={likedImages.has(selectedPrompt.id) ? "text-red-500" : "text-muted-foreground"}
+                    >
+                      <Heart 
+                        className={`h-5 w-5 ${likedImages.has(selectedPrompt.id) ? "fill-red-500" : ""}`}
+                      />
+                      <span className="ml-2 font-semibold">{imageStats[selectedPrompt.id]?.likes || 0}</span>
+                    </Button>
+                  </div>
+                </div>
+                
                 <div className="flex flex-wrap gap-2">
                   {selectedPrompt.tags.map((tag, index) => (
                     <span

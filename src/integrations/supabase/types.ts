@@ -14,13 +14,46 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      image_stats: {
+        Row: {
+          created_at: string | null
+          id: string
+          image_id: string
+          likes: number | null
+          updated_at: string | null
+          views: number | null
+        }
+        Insert: {
+          created_at?: string | null
+          id?: string
+          image_id: string
+          likes?: number | null
+          updated_at?: string | null
+          views?: number | null
+        }
+        Update: {
+          created_at?: string | null
+          id?: string
+          image_id?: string
+          likes?: number | null
+          updated_at?: string | null
+          views?: number | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      increment_image_views: {
+        Args: { p_image_id: string }
+        Returns: undefined
+      }
+      toggle_image_like: {
+        Args: { p_image_id: string; p_increment: boolean }
+        Returns: number
+      }
     }
     Enums: {
       [_ in never]: never
