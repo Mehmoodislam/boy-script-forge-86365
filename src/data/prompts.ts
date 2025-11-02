@@ -225,7 +225,7 @@ export const promptsData: PromptData[] = [
     image: boy16,
     title: "Modern Tradition",
     prompt: "A hyper-realistic 8K portrait of a young man wearing a white traditional shalwar kameez paired with a sleek black blazer, standing confidently in a minimalist black background studio. Cinematic lighting highlighting his posture, soft shadows, clean and elegant composition, ultra-detailed 8K.",
-    tags: ["islamic", "Modern", " Tradition"]
+    tags: ["Shalwar Kameez", "Modern", " Tradition"]
   },
   {
     id: "17",
@@ -366,7 +366,7 @@ export const promptsData: PromptData[] = [
     image: boy36,
     title: "Luxury in Motion",
     prompt: "16K cinematic close-up of a boy wearing Louis Vuitton cream drop-shoulder T-shirt, black jeans, and NB sneakers, posing beside green forest roadside railing, luxury glow tone,",
-    tags: ["CinematicCloseUp", "ForestVibes", "Style"]
+    tags: ["CinematicCloseUp", "ForestVibes", "Shalwar Kameez"]
   },
   {
     id: "37",
@@ -401,7 +401,7 @@ export const promptsData: PromptData[] = [
     image: boy41,
     title: "Timeless Elegance in Black",
     prompt: "A handsome young man standing confidently outdoors, leaning casually against a tree in a beautiful garden filled with colorful flowers and lush greenery. He is wearing an elegant black traditional Pakistani shalwar kameez with a black waistcoat, brown Peshawari sandals, and a silver wristwatch. His hair is neatly styled, and he has a well-groomed beard. He is wearing stylish black sunglasses, giving a classy and confident vibe. The background shows a modern house with large glass windows and wooden paneling, surrounded by green trees and bright sunlight. The overall scene looks naturally lit, captured with realistic depth and clarity. Style & Quality: 8K ultra-detailed, full natural lighting, soft shadows, high dynamic range, cinematic tone, Sony a7R IV full-frame camera, 85mm f/1.4 lens, shallow depth of field, bokeh background, professional fashion portrait photography, realistic skin texture, vivid colors, crisp focus.",
-    tags: ["Islamic", "TraditionalStyle", "LuxuryElegance"]
+    tags: ["Shalwar Kameez", "TraditionalStyle", "LuxuryElegance"]
   },
   {
     id: "42",
@@ -436,7 +436,7 @@ export const promptsData: PromptData[] = [
     image: boy46,
     title: "A Moment of Reflection",
     prompt: "Create Ultra-realistic... portrait of me. I'm 26 year old bodybuilder young man,, I'm wearing brown shalwar kameez and gray and white blazer, smart watch and lofer shoes. Looking thoughtfully off-camera, holding a cup of black coffee, leaning on a tree. Magenta bougainvillea branch in upper left, blurred green leaves in foreground. Flawl glowing skin, glossy pink lips, vibrant bokeh ci. + lights background, warm cinematic mood.",
-    tags: ["CinematicPortrait", "EleganceInNature", "LuxuryStyle"]
+    tags: ["CinematicPortrait", "Shalwar Kameez", "LuxuryStyle"]
   },
    {
     id: "47",
@@ -457,7 +457,7 @@ export const promptsData: PromptData[] = [
     image: boy49,
     title: "Under the Spotlight",
     prompt: "A dynamic shot of the exact same person from the reference image, with 100% identical facial features, hairstyle, and overall appearance. He is leaning casually against a dark SUV, illuminated by a subtle beam of light from above. He is wearing a black traditional shalwar kameez with a cream-colored shawl draped over his shoulders, and a wristwatch",
-    tags: ["CinematicShot", "LuxuryStyle", "ModernElegance"]
+    tags: ["CinematicShot", "LuxuryStyle", "Shalwar Kameez"]
   },
   {
     id: "50",
@@ -541,14 +541,14 @@ export const promptsData: PromptData[] = [
     image: boy61,
     title: "Legacy in Style: Arbaz Soomro Creations",
     prompt: "A stylish man standing in front of a white BMW car, wearing a traditional black kurta pajama and a cream-colored shawl with red embroidered borders draped over his shoulder. He is wearing sunglasses and standing confidently with one hand on the car. Behind him on the white wall is a large artistic illustration of his portrait, wearing the same outfit and sunglasses. The text on the wall says 'SOOMRO' in bold capital letters, and below it 'ARBAZ SOOMRO Creations' in smaller text. The background is a modern, clean outdoor location with tiled flooring and a white painted wall.",
-    tags: ["CulturalElegance", "Dream", "ModernTraditional"]
+    tags: ["CulturalElegance", "Dream", "Shalwar Kameez"]
   },
    {
     id: "62",
     image: boy62,
     title: "Timeless Grace",
     prompt: "A stylish young man standing confidently against a plain beige wall, wearing a traditional cream-colored shalwar kameez with a matching waistcoat. The outfit is elegant and well-fitted, with a pocket square tucked in the waistcoat. He is wearing black formal shoes and a wristwatch, and has dark hair styled neatly. The man is also wearing sunglasses and posing with one hand adjusting his sleeve and the other resting casually. The lighting is warm and soft, giving the photo a classy and modern fashion photoshoot look.",
-    tags: ["tradional", "Modern", "Culture"]
+    tags: ["tradional", "Shalwar Kameez", "Culture"]
   },
   {
     id: "63",
@@ -597,7 +597,7 @@ export const promptsData: PromptData[] = [
     image: boy69,
     title: "Modern Elegance in Charcoal Grey",
     prompt: "Create a picture of a sophisticated and fashionable 25 years old young boy is seated on a luxurious, dark grey tufted velvet sofa. He is dressed in a matching charcoal grey shalwar kameez and a tailored charcoal grey blazer/coat. The shalwar kameez features a long shirt and loose-fitting trousers in the same consistent dark grey. He sports a modern, stylish haircut and a well-maintained beard",
-    tags: ["Traditional", "PakistaniFashion", "Lifestyle"]
+    tags: ["Traditional", "Shalwar Kameez", "Lifestyle"]
   },
    {
     id: "70",
@@ -618,7 +618,7 @@ export const promptsData: PromptData[] = [
     image: boy72,
     title: "Golden Grace in the Garden",
     prompt: "Here is the photo-realistic 8K full-body portrait of the 18-year-old boy you requested, maintaining the face from the previous images. He is casually standing in a garden, wearing a dark black shalwar kameez with a golden waistcoat in Hadali style, Peshawari style black shoes, and a golden wrist watch on his left hand, in a relaxed and confident pose.",
-    tags: ["CulturalStyle", "UrbanAesthetic", "TraditionalElegance"]
+    tags: ["CulturalStyle", "Shalwar Kameez", "TraditionalElegance"]
   },
    {
     id: "73",
@@ -653,7 +653,7 @@ export const promptsData: PromptData[] = [
     image: boy77,
     title: "Power and Grace",
     prompt: "A confident man standing in front of a black luxury car, wearing a traditional white kurta pajama and black formal shoes. Behind him stand four bodyguards wearing black suits, white shirts, black ties, and black sunglasses, positioned symmetrically on both sides of the car. The scene is set on a clean paved driveway with trimmed green hedges and a large modern monument or gate in the background under a clear sky. The overall tone is cinematic, professional, and elegant, with good lighting and realistic details.",
-    tags: ["ModernTradition", "CinematicElegance  ", "UrbanElegance "]
+    tags: ["ModernTradition", "CinematicElegance  ", "Shalwar Kameez "]
   },
    {
     id: "78",
@@ -681,7 +681,7 @@ export const promptsData: PromptData[] = [
     image: boy81,
     title: "Elegance on Wheels",
     prompt: "Create ultra Realistic 8k cinmatic pick A Young boy 18 years old wearing Black Fitted and Ironed Shalwar Qamiz with White shawl wearing Golden wrist watch , and Black Square sunglasses  with Brown polish leather shoes , leaning on left side of The bonat of Fully Modified chocolate brown BMW ZX v8 With black Glasses and black tyres With yellow headlights  Number plate'zk 007' parked In Clean road Besides theight.",
-    tags: ["CinematicLuxury", "DesiElegance", "moodyVibes "]
+    tags: ["CinematicLuxury", "Shalwar Kameez", "moodyVibes "]
   },
   {
     id: "82",
@@ -716,7 +716,7 @@ export const promptsData: PromptData[] = [
     image: boy86,
     title: "Golden Serenity in Madinah",
     prompt: "Ultra-realistic, high-resolution cinematic portrait of the man in the reference photo, wearing a traditional Light blue thobe and keffiyeh, He stands calmly in front of Madinah at golden hour, as the warm sunset light creates a serene, glowing atmosphere. His expression is calm and dignified. Professional composition, soft cinematic lighting, 8K resolution, detailed.",
-    tags: ["Traditional", "CulturalElegance", "PeacefulMoments "]
+    tags: ["Traditional", "CulturalElegance", "Shalwar Kameez "]
   },
   {
     id: "87",
@@ -737,7 +737,7 @@ export const promptsData: PromptData[] = [
     image: boy89,
     title: "Midnight Reflections",
     prompt: "A young man wearing a traditional South Asian outfit — a light grey kurta with matching trousers and a white shawl draped over his shoulder — walking confidently down a narrow cobblestone street at night. The street is softly illuminated by warm streetlights and surrounded by old-style brick buildings. There is a gentle mist or steam rising in the background, adding a cinematic atmosphere. The man wears a white cap and looks slightly upward with a calm, thoughtful expression. The lighting is dramatic and warm, with reflections on the wet pavement, creating a peaceful yet cinematic night-time scene.",
-    tags: ["Street Style", "CulturalElegance  ", "MoodyPortrait "]
+    tags: ["Street Style", "Shalwar Kameez", "MoodyPortrait "]
   },
   {
     id: "90",
