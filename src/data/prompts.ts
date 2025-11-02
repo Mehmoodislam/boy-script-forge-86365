@@ -82,6 +82,12 @@ import boy81 from "@/assets/boy81.webp";
 import boy82 from "@/assets/boy82.webp";
 import boy83 from "@/assets/boy83.webp";
 import boy84 from "@/assets/boy84.webp";
+import boy85 from "@/assets/boy85.webp";
+import boy86 from "@/assets/boy86.webp";
+import boy87 from "@/assets/boy87.webp";
+import boy88 from "@/assets/boy88.webp";
+import boy89 from "@/assets/boy89.webp";
+
 
 
 
@@ -687,7 +693,43 @@ export const promptsData: PromptData[] = [
     prompt: "vintage grainy but bright image of the reference picture but draped in a perfect black colour souit pintresty asthetetic retro pants it must feel like a 90s movie hair baddie with a flower in hand and romanticising a windy environment the man is standing against a solid deep shadow and contrast drama creating a mysterious and artistic atmosphere where the lightning is warm with golden tones evoking a sunset or golden hourglow the background is minimalist and slightly textured the expression on his face is moody calm yet happy and introspective.",
     tags: ["CalmVibes", "Street Style", "moodyvibes "]
   },
+  {
+    id: "85",
+    image: boy85,
+    title: "Tranquil Riverside Escape",
+    prompt: "Imagine a peaceful riverside afternoon. Show the man in the picture sitting in a camping chair with his legs crossed and hands behind his head. Keep the face intact. He is dressed in light beige trousers and a dark green hoodie. Snack packs and bottled water are kept on a foldable table nearby.",
+    tags: ["NatureRetreat", "Traditional", "PeacefulMoments "]
+  },
+   {
+    id: "86",
+    image: boy86,
+    title: "Golden Serenity in Madinah",
+    prompt: "Ultra-realistic, high-resolution cinematic portrait of the man in the reference photo, wearing a traditional Light blue thobe and keffiyeh, He stands calmly in front of Madinah at golden hour, as the warm sunset light creates a serene, glowing atmosphere. His expression is calm and dignified. Professional composition, soft cinematic lighting, 8K resolution, detailed.",
+    tags: ["Traditional", "CulturalElegance", "PeacefulMoments "]
+  },
+  {
+    id: "87",
+    image: boy87,
+    title: "Urban Confidence",
+    prompt: "A highly realistic photo of a young man sitting stylishly on an old iron staircase outside a building, wearing a loose beige red shirt, faded black cargo, print sneakers, a gold wristwatch, and round sunglasses. He is resting one elbow on the railing and the other hand on his chin in confident pose. The background shows faded concrete walls and soft cinematic lighting with a slightly warm tone. The hairstyle is neat and voluminous, similar.",
+    tags: ["Street Style", "CinematicPortrait", "PeacefulMoments "]
+  },
+  {
+    id: "88",
+    image: boy88,
+    title: "Monochrome Power",
+    prompt: "Use 100% face above uploaded photo this image to create a dramatic black and white portrait of a confident looking man. Sitting on a wooden stool against a dark studio background. He is wearing a well-fitted, all-black suit with a black shirt and black pant, small silver chain at neck and small silver watch slightly unbottened at the top exuding a moody and powerful aura. His posture is relaxed yet dominant, with one arm resting on his leg and the other one in his pant pocket the lighting is soft but directional creating.",
+    tags: [" Style", "TimelessElegance  ", "MoodyPortrait "]
+  },
+    {
+    id: "89",
+    image: boy89,
+    title: "Midnight Reflections",
+    prompt: "A young man wearing a traditional South Asian outfit — a light grey kurta with matching trousers and a white shawl draped over his shoulder — walking confidently down a narrow cobblestone street at night. The street is softly illuminated by warm streetlights and surrounded by old-style brick buildings. There is a gentle mist or steam rising in the background, adding a cinematic atmosphere. The man wears a white cap and looks slightly upward with a calm, thoughtful expression. The lighting is dramatic and warm, with reflections on the wet pavement, creating a peaceful yet cinematic night-time scene.",
+    tags: ["Street Style", "CulturalElegance  ", "MoodyPortrait "]
+  },
 ];
+
 
 
 
