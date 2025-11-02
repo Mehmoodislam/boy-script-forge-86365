@@ -93,6 +93,10 @@ import boy92 from "@/assets/boy92.webp";
 import boy93 from "@/assets/boy93.webp";
 import boy94 from "@/assets/boy94.webp";
 import boy95 from "@/assets/boy95.webp";
+import boy96 from "@/assets/boy96.webp";
+import boy97 from "@/assets/boy97.webp";
+import boy98 from "@/assets/boy98.webp";
+
 
 
 
@@ -776,6 +780,27 @@ export const promptsData: PromptData[] = [
     title: "Timeless Charm",
     prompt: "A full-length portrait captures a sophisticated man posing next to a vintage car in front of a rustic, character-filled building. The man, with a well-groomed beard and dark hair, is dressed sharply in a black suit, white shirt, and black tie. He leans casually against the front fender of an aged, cream or light-colored classic car, possibly a Ford Mustang, which shows signs of wear and patina, adding to its charm. His right hand rests on the car, when you use someone prompt. you should give credit of this prompt ower.",
     tags: ["ClassicElegance", "CinematicStyle", "MoodyPortrait "]
+  },
+  {
+    id: "96",
+    image: boy96,
+    title: "Timeless Charm",
+    prompt: "A close up portrait of a refffrence with dark thick voluminous hair styled back  and a  beard, standing in a dark,wet,cobblestone street at night.He is wearing traditional South Asian black shalwar kameez , intricately patterned black shawl/ He is holding a string of prayer beads (tasbih) in his hands. The man is leaning against the front of a dark SUV. The scene is lit by a single warm streetlamp from behind him. 8kx",
+    tags: ["Midnight Reverence", "Shalwar Kameez", "MoodyPortrait "]
+  },
+   {
+    id: "97",
+    image: boy97,
+    title: "Golden Ease",
+    prompt: "8k Ultra-realistic Ultra-realistic high-fashion editorial, young man with same hair (reference face), lounging casually on a luxurious velvet sofa in a modern studio. Wearing gray color shalwar kameez. Classic shoes. Black sunglasses. Soft golden light and blurred chandelier glow in background. Elegant, classy, trending editorial. Incorporate the name.Alex Photography' in a sophisticated, unobtrusive font, subtly integrated into the upper right corner of the frame.",
+    tags: ["ModernElegance", "Shalwar Kameez", "HighFashionEditorial "]
+  },
+   {
+    id: "98",
+    image: boy98,
+    title: "Royal Morning",
+    prompt: "he man stands in front of a heritage-style stone mansion with his black Land Cruiser parked beside him. He wears an off-white shalwar kameez with a deep royal blue embroidered shawl, tan classic shoes, and round black shades. His hairstyle is styled clean with volume, a gold ring and bracelet accentuating his outfit. He stands tall, one hand in his pocket and one holding the shawl edge, with a calm royal expression - as if he owns the moment. The morning sun and stone texture around him create a vintage-luxury cinematic aura, making it feel like a fashion ad campaign. (8K Ultra Realistic | Heritage Mansion | Royal Fashion | Model Loo! Cinematic Outdoor Portrait)",
+    tags: ["RoyalElegance", "Shalwar Kameez", "Fashion "]
   },
 ];
 

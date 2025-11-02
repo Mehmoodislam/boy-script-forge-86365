@@ -17,7 +17,7 @@ const categories = [
   "Traditional",
   "Nature",
   "Futuristic",
-  "Wedding",
+  "Shalwar Kameez",
   "Moody"
 ];
 
@@ -369,7 +369,7 @@ const Gallery = () => {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground">
                   💡 <span className="font-semibold">Tip:</span> Copy this prompt and paste it into any AI image generator 
-                  (Midjourney, DALL-E, Stable Diffusion) to create similar stunning images.
+                  (Midjourney, DALL-E, Gemini Stable Diffusion) to create similar stunning images.
                 </p>
               </div>
             </div>
