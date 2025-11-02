@@ -65,18 +65,23 @@ import boy64 from "@/assets/boy64.webp";
 import boy65 from "@/assets/boy65.webp";
 import boy66 from "@/assets/boy66.webp";
 import boy67 from "@/assets/boy67.webp";
-
-
-
-
-
-
-
-
-
-
-
-
+import boy68 from "@/assets/boy68.webp";
+import boy69 from "@/assets/boy69.webp";
+import boy70 from "@/assets/boy70.webp";
+import boy71 from "@/assets/boy71.webp";
+import boy72 from "@/assets/boy72.webp";
+import boy73 from "@/assets/boy73.webp";
+import boy74 from "@/assets/boy74.webp";
+import boy75 from "@/assets/boy75.webp";
+import boy76 from "@/assets/boy76.webp";
+import boy77 from "@/assets/boy77.webp";
+import boy78 from "@/assets/boy78.webp";
+import boy79 from "@/assets/boy79.webp";
+import boy80 from "@/assets/boy80.webp";
+import boy81 from "@/assets/boy81.webp";
+import boy82 from "@/assets/boy82.webp";
+import boy83 from "@/assets/boy83.webp";
+import boy84 from "@/assets/boy84.webp";
 
 
 
@@ -239,7 +244,7 @@ export const promptsData: PromptData[] = [
     image: boy21,
     title: "Elegance in Motion",
     prompt: "A cinematic, ultra-realistic full-body portrait of a stylish young man (use reference face) walking confidently on a European city street, resembling Paris or Milan. He’s wearing a navy-blue suit with a slightly open striped shirt showing layered necklaces, leather belt, and black boots. His hands are casually in his pockets, exuding elegance and confidence. The background shows a vintage café with warm yellow lights, a parked bicycle, and classic French signs. The lighting is golden-hour soft, with shallow depth of field, realistic reflections, muted tones, HDR cinematic color grading, 8K ultra-detailed realism.",
-    tags: ["EuropeanVibes", "CinematicFashion", " GoldenHourStyle"]
+    tags: ["EuropeanVibes", "StreetStyle", " GoldenHourStyle"]
   },
    {
     id: "22",
@@ -463,7 +468,7 @@ export const promptsData: PromptData[] = [
     image: boy53,
     title: "Cinematic Rain",
     prompt: "16K ultra-realistic cinematic 4:5 — rainy street beside café lights. Outfit: black printed jacket, white T-shirt, jeans, colorful sneakers. Pose: adjusting jacket hood, confident sideways face. Background: girl in saree and boy with motorbike talking. Lighting: moody cinematic tone, wet reflection.",
-    tags: ["CinematicMood", "HyperRealCity", "Mood"]
+    tags: ["CinematicMood", "Street Style", "Moody"]
   },
    {
     id: "54",
@@ -563,7 +568,127 @@ export const promptsData: PromptData[] = [
     prompt: "Create a hyper-realistic, cinematic composite image using 100% of the uploaded face (identity locked — no alteration or morphing). A very handsome light-skinned young man sits confidently in a turquoise armchair, legs crossed, hands resting calmly on the armrests. He wears a brown polo shirt, dark blue trousers, and black loafers. His hands are lightly stained with red paint, a paintbrush visible between his fingers, and he wears glasses with a serious, creative expression. Surrounding him are six vertical, segmented one-line panels — each displaying a different version of the same man in distinct outfits and poses. Each panel has a subtle distressed grunge texture with white paint splatters blending into a bright, multi-colored abstract background. Outfits in the panels include: 1️⃣ Blue denim jacket over white t-shirt and jeans. 2️⃣ Red jacket over white shirt and jeans. 3️⃣ Green jacket over dark t-shirt and jeans. 4️⃣ Navy blue jacket over red t-shirt and jeans. 5️⃣ Black shirt over grey pants. 6️⃣ Turquoise-toned outfit matching the chair for harmony. A folded newspaper lies casually on the floor in front of the armchair. The lighting is bright and even, with a clean 7-color background palette (red, turquoise, green, yellow, orange, white, and blue). The overall tone is vibrant, artistic, and full of life — breaking away from dark tones with vivid contrast and sharp focus. 🎞️ Photo Details Camera: 50mm lens, f/2.8 aperture for cinematic depth Lighting: bright diffused softbox lighting Tone: bold and color-rich Texture: visible paint detail and fabric texture Resolution: Ultra HD 16K, crystal-clear realism 🎨 Overall Style Style: Hyperrealism / Photorealism Mood: bold, confident, artistic Color Palette: turquoise, red, yellow, blue, and white vibrance Composition: balanced between the main subject and vertical panels",
     tags: ["VibrantEditorial", "HyperRealCinematic", "ArtisticPortrait"]
   },
+  {
+    id: "68",
+    image: boy68,
+    title: "Calm Boy",
+    prompt: "Hyper-realistic of a handsome boy with a hairstyle, sitting sideways on a rock in a clear blue river. Outfit: Red printed shirt, ripped black jeans. Pose: chin on knee, thoughtful smile look. Cinematic, calm.",
+    tags: ["Nature", "Elegance", "Style"]
+  },
+  {
+    id: "69",
+    image: boy69,
+    title: "Modern Elegance in Charcoal Grey",
+    prompt: "Create a picture of a sophisticated and fashionable 25 years old young boy is seated on a luxurious, dark grey tufted velvet sofa. He is dressed in a matching charcoal grey shalwar kameez and a tailored charcoal grey blazer/coat. The shalwar kameez features a long shirt and loose-fitting trousers in the same consistent dark grey. He sports a modern, stylish haircut and a well-maintained beard",
+    tags: ["Traditional", "PakistaniFashion", "Lifestyle"]
+  },
+   {
+    id: "70",
+    image: boy70,
+    title: "Calm Amidst the Rust",
+    prompt: "A very handsome young boy with a wavy fringe hairstyle, sitting inside the dilapidated frame of an old, fully rusted car (appears to be a jeep). He wears a loose black full shirt both hands button up, grey cargo pants, and sneakers. His look is completed with rectangular thin sunglasses and messy dark black hair. The lighting is moody and cinematic, with a shallow depth of field and a dark, leafy background. His facial expression is changed to a calm yet confident look, enhancing the overall.",
+    tags: ["Moody", "UrbanAesthetic", "Lifestyle"]
+  },
+  {
+    id: "71",
+    image: boy71,
+    title: "Reflections by the River",
+    prompt: "Ultra-realistic double-exposure portrait of a hand some boy with modern hairstyle and . Face must remain 100% identical and consistent across all poses. Outfit: black shirt, gray pants, Sneakers sunglasses. Include multiple poses: full-body sitting, close-up face, and optional standing/walking pose. Background: riverbank (nadi ke kinare) with soft sunset sky, flying birds, smooth gradient, cinematic lighting, subtle water reflections.",
+    tags: ["SunsetVibes", "UrbanAesthetic", "MoodyPortait"]
+  },
+  {
+    id: "72",
+    image: boy72,
+    title: "Golden Grace in the Garden",
+    prompt: "Here is the photo-realistic 8K full-body portrait of the 18-year-old boy you requested, maintaining the face from the previous images. He is casually standing in a garden, wearing a dark black shalwar kameez with a golden waistcoat in Hadali style, Peshawari style black shoes, and a golden wrist watch on his left hand, in a relaxed and confident pose.",
+    tags: ["CulturalStyle", "UrbanAesthetic", "TraditionalElegance"]
+  },
+   {
+    id: "73",
+    image: boy73,
+    title: "The Hadali Style",
+    prompt: "Here is the photo-realistic 8K full-body portrait of the 18-year-old boy you requested, maintaining the face from the previous images. He is casually standing in a garden, wearing a dark black shalwar kameez with a golden waistcoat in Hadali style, Peshawari style black shoes, and a golden wrist watch on his left hand, in a relaxed and confident pose.",
+    tags: ["PakistaniFashion", "ShalwarKameezStyle", "CulturalElegance"]
+  },
+  {
+    id: "74",
+    image: boy74,
+    title: "Lavender Reflections",
+    prompt: "Ultra-realistic, true-to-life 8K full-body portrait of a stylish young man with exact face and hairstyle from the uploaded reference image, standing beside a window under bright, vibrant sunlight, with delicate lavender vines cascading around him. He is leaning casually against the window frame, one hand in pocket, the other lightly resting on the lavendo 077 vine. Face perfectly facing the camera, confident natural expression.",
+    tags: ["NaturalElegance", "UltraRealism", "traditionalStyle"]
+  },
+  {
+    id: "75",
+    image: boy75,
+    title: "he Modern Visionary",
+    prompt: "Ultra-realistic cinematic full-body portrait, young Indian boy, exact face from reference, wearing fitted formal suit, crisp white shirt, no tie, loafers. Sitting in a luxury café, black coffee on the table, laptop half-open. Focused but relaxed posture, classy urban businessman aesthetic, dramatic lighting, cinematic mood.",
+    tags: ["ModernStyle", "CinematicPortrait  ", "UrbanElegance "]
+  },
+  {
+    id: "76",
+    image: boy76,
+    title: "Timeless Poise in the Golden Lobby",
+    prompt: "8K ultra realistic DSLR photo of a young man standing in a luxury hotel lobby with marble floors and golden lights. He wears a perfectly tailored navy suit, crisp white shirt, black tie, and polished oxford shoes. He checks his wristwatch while holding a phone, with elegant composure.",
+    tags: ["LuxuryStyle", "traditionalStyle  ", "UrbanElegance "]
+  },
+  {
+    id: "77",
+    image: boy77,
+    title: "Power and Grace",
+    prompt: "A confident man standing in front of a black luxury car, wearing a traditional white kurta pajama and black formal shoes. Behind him stand four bodyguards wearing black suits, white shirts, black ties, and black sunglasses, positioned symmetrically on both sides of the car. The scene is set on a clean paved driveway with trimmed green hedges and a large modern monument or gate in the background under a clear sky. The overall tone is cinematic, professional, and elegant, with good lighting and realistic details.",
+    tags: ["ModernTradition", "CinematicElegance  ", "UrbanElegance "]
+  },
+   {
+    id: "78",
+    image: boy78,
+    title: "Golden Hour Reflections",
+    prompt: "Ultra-realistic cinematic portrait of a stylish young Indian boy sitting on seaside rocks during a dramatic sunset. He is wearing a brown checked shirt layered over a black t-shirt, paired with white pants and white sneakers. A silver chain hangs around his neck, giving a modern trendy vibe. His pose is casual yet confident, one hand resting on his face with a soft smile. The sky is glowing with vibrant shades of orange, purple, and pink clouds, with ocean waves in the background. The overall mood is calm, aesthetic, and fashionable, captured in golden hour lighting",
+    tags: ["SunsetVibes", "CinematicPortrait  ", "Moody "]
+  },
+  {
+    id: "79",
+    image: boy79,
+    title: "Golden White Look",
+    prompt: "Hyper-realistic Photorealistic Full-body portrait of a 22 years boy, a Subject is leaning against a white cube. Torso angled slightly to the right, leaning back.Head to the front side, looking away.Left hand in his trouser pocket and right hand in iphone 17 pro cosmic blue, bracelet, chain, richard mille Rm 30-01 white,fendi sunglasses, right arm resting on his leg. Legs crossed, right leg extended. Natural proportions preserved. half-white suit and half-white pant with",
+    tags: ["Vibes", "CinematicPortrait  ", "GoldernVibes "]
+  },
+  {
+    id: "80",
+    image: boy80,
+    title: "Ride of Confidence",
+    prompt: "Ultra-realistic full-body portrait of a young boy 18 years old(face 100% same as reference).He sitting with Ninja H2R modified,The guy should be sitting on the bike in a cool,stylish pose, holding a cigarette in his hand,and smoke coming out of the cigarette.a man wearing an oversized Black denim jacket with red and black graphic designs,a grey t-shirt printed oversized dark cargo pants,yellow-black sneakers,chain,wristwatch,bracelet,lovely smile,sunglasses on and looks straight with a calm.",
+    tags: ["LuxuryVibes", "StreetStyle", "BikerVibes "]
+  },
+   {
+    id: "81",
+    image: boy81,
+    title: "Elegance on Wheels",
+    prompt: "Create ultra Realistic 8k cinmatic pick A Young boy 18 years old wearing Black Fitted and Ironed Shalwar Qamiz with White shawl wearing Golden wrist watch , and Black Square sunglasses  with Brown polish leather shoes , leaning on left side of The bonat of Fully Modified chocolate brown BMW ZX v8 With black Glasses and black tyres With yellow headlights  Number plate'zk 007' parked In Clean road Besides theight.",
+    tags: ["CinematicLuxury", "DesiElegance", "moodyVibes "]
+  },
+  {
+    id: "82",
+    image: boy82,
+    title: "Digital Star",
+    prompt: "A hyper-realistic 3D statue of a young boy 23 year old confidently leaning against an oversized 3D Facebook logo. The statue is crafted with ultra-lifelike skin texture and a smooth, polished stone finish. He is dressed in a black hoodie written 'MOIN KHAN', gray parka pants, clean white jordan shoes. His posture is relaxed and confident, with one arm casually resting on the large facebook logo. The face is an exact replica of the reference image — no alterations. The username 'MOIN KHAN' is engraved stylishly near the base of the statue or on the Instagram icon in a clean, modern font. The ground around the statue is covered in soft, white smoke or mist, adding a cinematic and dramatic ambiance. Studio-style lighting casts soft shadows to highlight the textures and contours. The background is clean and minimalistic to focus attention entirely on the statue and the Facebook logo.",
+    tags: ["HyperRealistic3D", "Traditional", "moodyVibes "]
+  },
+  {
+    id: "83",
+    image: boy83,
+    title: "Modern Minimalist",
+    prompt: "A boy sitting in a modern grey armchair. With a light grey background. His face hairstyle are  like the refrence image, wavy black hair with subtle highlights calm and thoughtful expression. Wearing a beige ribbed sweater black pants slightly ripped at the knees, and beige sneakers, one hand lightly touching his forehead/chin, the other hand resting casually. neutral tones, soft lighting, clean, minimal, modern look.",
+    tags: ["CalmVibes", "Traditional", "Vibes "]
+  },
+  {
+    id: "84",
+    image: boy84,
+    title: "Golden Hour Reverie: 90s Mood",
+    prompt: "vintage grainy but bright image of the reference picture but draped in a perfect black colour souit pintresty asthetetic retro pants it must feel like a 90s movie hair baddie with a flower in hand and romanticising a windy environment the man is standing against a solid deep shadow and contrast drama creating a mysterious and artistic atmosphere where the lightning is warm with golden tones evoking a sunset or golden hourglow the background is minimalist and slightly textured the expression on his face is moody calm yet happy and introspective.",
+    tags: ["CalmVibes", "Street Style", "moodyvibes "]
+  },
 ];
+
 
 
 
