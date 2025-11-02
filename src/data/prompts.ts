@@ -87,6 +87,13 @@ import boy86 from "@/assets/boy86.webp";
 import boy87 from "@/assets/boy87.webp";
 import boy88 from "@/assets/boy88.webp";
 import boy89 from "@/assets/boy89.webp";
+import boy90 from "@/assets/boy90.webp";
+import boy91 from "@/assets/boy91.webp";
+import boy92 from "@/assets/boy92.webp";
+import boy93 from "@/assets/boy93.webp";
+import boy94 from "@/assets/boy94.webp";
+import boy95 from "@/assets/boy95.webp";
+
 
 
 
@@ -721,14 +728,57 @@ export const promptsData: PromptData[] = [
     prompt: "Use 100% face above uploaded photo this image to create a dramatic black and white portrait of a confident looking man. Sitting on a wooden stool against a dark studio background. He is wearing a well-fitted, all-black suit with a black shirt and black pant, small silver chain at neck and small silver watch slightly unbottened at the top exuding a moody and powerful aura. His posture is relaxed yet dominant, with one arm resting on his leg and the other one in his pant pocket the lighting is soft but directional creating.",
     tags: [" Style", "TimelessElegance  ", "MoodyPortrait "]
   },
-    {
+  {
     id: "89",
     image: boy89,
     title: "Midnight Reflections",
     prompt: "A young man wearing a traditional South Asian outfit — a light grey kurta with matching trousers and a white shawl draped over his shoulder — walking confidently down a narrow cobblestone street at night. The street is softly illuminated by warm streetlights and surrounded by old-style brick buildings. There is a gentle mist or steam rising in the background, adding a cinematic atmosphere. The man wears a white cap and looks slightly upward with a calm, thoughtful expression. The lighting is dramatic and warm, with reflections on the wet pavement, creating a peaceful yet cinematic night-time scene.",
     tags: ["Street Style", "CulturalElegance  ", "MoodyPortrait "]
   },
+  {
+    id: "90",
+    image: boy90,
+    title: "The Thoughtful Photographer",
+    prompt: "Creat a 8k hyper-realistic dark green portrait cinematic image with dramatic smile actions .(uploaded  photo 100% face match) of A stylish handsome young man (refrence image given) with a slightly dark messy hairstyle and wearing a lose black & maroon gradient half lineing shirt and white lose pant. He hold a Canon camera, He is looking thoughtfully off-camera, captured in a candid, high-key cinematic outdoor portrait The composition is framed by a branch of vivid red/pink/yellow/.",
+    tags: ["CinematicPortrait", "StylishYoungMan  ", "TraditionalElegance "]
+  },
+   {
+    id: "91",
+    image: boy91,
+    title: "Golden Focus",
+    prompt: "Ultra-realistic, cinematic full-body portrait of a young stylish Pakistani man (use uploaded reference image for exact face and perfectly styled hairstyle). He stands indoors, slightly angled toward the camera, confidently holding a smartphone in one hand while glancing at the screen with a calm, focused expression. He wears a mustard yellow tailored blazer and matching trousers, crisp white shirt, black belt, white sneakers, brown pocket square, and wristwatch. Soft natural daylight brightens the minimalist white architectural background with curved walls, wooden flooring, decorative ropes, and bare tree branches - elegant, modern, and lifestyle-inspired atmosphere",
+    tags: ["ModernStyle", "PakistaniElegance", "TraditionalElegance "]
+  },
+  {
+    id: "92",
+    image: boy92,
+    title: "The Fit Boy",
+    prompt: "A stylish digital poster of a young man(refrence image give face accuracy 100%)wearing a black suit with the name 'The Fit' written on the blazer, multiple dramatic poses of the same person arranged artistically, futuristic geometric red and black abstract background, cinematic lighting, sharp contrast, high detail, modern graphic design poster style.",
+    tags: ["FuturisticStyle", "ModernElegance", "CinematicPoster "]
+  },
+  {
+    id: "93",
+    image: boy93,
+    title: "Urban Poise",
+    prompt: "Ultra-realistic editorial street fashion portrait of a slim, stylish young male supermodel (use the uploaded photo - keep the exact same face and hairstyle, perfectly styled and camera-facing). He stands casually with one hand in his pocket, leaning slightly back against a stone railing along the sidewalk. His expression is calm and confident, shoulders relaxed, giving a natural model-like vibe. Outfit: A long-sleeved navy blue collared shirt with two chest pockets (button-up style), grey jeans, white sneakers with navy blue stripes and a gum sole, and a wristwatch with a round white face and light brown leather strap. Backdrop: A grand neo-gothic European building with ornate spires and arched windows. Captured from a mid-level three-quarter angle, in soft daylight with cinematic tones, shallow depth of field, and glossy magazine-quality lighting.",
+    tags: ["StreetStyle", "CinematicPortrait", "EditorialFashion "]
+  },
+   {
+    id: "94",
+    image: boy94,
+    title: "Effortless Motion",
+    prompt: "A handsome young Indian man with a well-groomed beard and stylish hair is captured in a dynamic shot, descending an outdoor staircase with metal railings. He is dressed in a casual yet fashionable outfit: a light olive-green quarter-zip sweatshirt over a beige t-shirt, light grey cargo pants, and white sneakers. He holds a pair of sunglasses in his right hand, and his gaze is directed to the right, slightly upwards, suggesting he is looking at something off-camera. The background is a soft blur",
+    tags: ["ModernStyle", "StreetFashion", "TraditionalElegance "]
+  },
+   {
+    id: "95",
+    image: boy95,
+    title: "Timeless Charm",
+    prompt: "A full-length portrait captures a sophisticated man posing next to a vintage car in front of a rustic, character-filled building. The man, with a well-groomed beard and dark hair, is dressed sharply in a black suit, white shirt, and black tie. He leans casually against the front fender of an aged, cream or light-colored classic car, possibly a Ford Mustang, which shows signs of wear and patina, adding to its charm. His right hand rests on the car, when you use someone prompt. you should give credit of this prompt ower.",
+    tags: ["ClassicElegance", "CinematicStyle", "MoodyPortrait "]
+  },
 ];
+
 
 
 
