@@ -103,16 +103,16 @@ import boy102 from "@/assets/boy102.webp";
 import boy103 from "@/assets/boy103.webp";
 import boy104 from "@/assets/boy104.webp";
 import boy105 from "@/assets/boy105.webp";
-import boy106 from "@/assets/boy105.webp";
-import boy107 from "@/assets/boy105.webp";
-import boy108 from "@/assets/boy105.webp";
-import boy109 from "@/assets/boy105.webp";
-import boy110 from "@/assets/boy105.webp";
-import boy111 from "@/assets/boy105.webp";
-import boy112 from "@/assets/boy105.webp";
-import boy113 from "@/assets/boy105.webp";
-import boy114 from "@/assets/boy105.webp";
-import boy115 from "@/assets/boy105.webp";
+import boy106 from "@/assets/boy106.webp";
+import boy107 from "@/assets/boy107.webp";
+import boy108 from "@/assets/boy108.webp";
+import boy109 from "@/assets/boy109.webp";
+import boy110 from "@/assets/boy110.webp";
+import boy111 from "@/assets/boy111.webp";
+import boy112 from "@/assets/boy112.webp";
+import boy113 from "@/assets/boy113.webp";
+import boy114 from "@/assets/boy114.webp";
+import boy115 from "@/assets/boy115.webp";
 
 
 
