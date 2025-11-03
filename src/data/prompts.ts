@@ -96,11 +96,11 @@ import boy95 from "@/assets/boy95.webp";
 import boy96 from "@/assets/boy96.webp";
 import boy97 from "@/assets/boy97.webp";
 import boy98 from "@/assets/boy98.webp";
-import boy99 from "@/assets/boy98.webp";
-import boy100 from "@/assets/boy98.webp";
-import boy101 from "@/assets/boy98.webp";
-import boy102 from "@/assets/boy98.webp";
-import boy103 from "@/assets/boy98.webp";
+import boy99 from "@/assets/boy99.webp";
+import boy100 from "@/assets/boy100.webp";
+import boy101 from "@/assets/boy101.webp";
+import boy102 from "@/assets/boy102.webp";
+import boy103 from "@/assets/boy103.webp";
 
 
 
