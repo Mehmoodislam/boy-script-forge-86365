@@ -103,6 +103,17 @@ import boy102 from "@/assets/boy102.webp";
 import boy103 from "@/assets/boy103.webp";
 import boy104 from "@/assets/boy104.webp";
 import boy105 from "@/assets/boy105.webp";
+import boy106 from "@/assets/boy105.webp";
+import boy107 from "@/assets/boy105.webp";
+import boy108 from "@/assets/boy105.webp";
+import boy109 from "@/assets/boy105.webp";
+import boy110 from "@/assets/boy105.webp";
+import boy111 from "@/assets/boy105.webp";
+import boy112 from "@/assets/boy105.webp";
+import boy113 from "@/assets/boy105.webp";
+import boy114 from "@/assets/boy105.webp";
+import boy115 from "@/assets/boy105.webp";
+
 
 
 
@@ -858,6 +869,76 @@ export const promptsData: PromptData[] = [
     title: "Whisper of the Veil",
     prompt: "Photorealistic fantasy portrait of a young man in half-profile facing right with calm, mysterious expression, close-up view, right hand raised with index finger pressed gently to his lips in a 'shh' gesture, eyes looking directly forward with quiet intensity. Purple-black smoke swirling around his shoulders and neck. He wears a blue shirt and white pants with sneakers, that fades into the same glowing mist. Purple luminous butterflies perch near his hair and float around him with glowing",
     tags: ["FantasyPortrait  ", "Gangster", "FuturisticPoster "]
+  },
+   {
+    id: "106",
+    image: boy106,
+    title: "The Cool Rebellion",
+    prompt: "Creat a 8k hyper-realistic dark green aesthetic cinematic photo with dramatic cool actions. (uploaded photo 100% face match) of a very handsome young boy (same face) with voluminous dark hair, wearing a loose blue shirt, accessorized with a watch and cool square shape sunglass. Soft minimal background with cinematic lighting,, blurred green leaves, white flower and stunning depth-of-field bokeh. One leg kicking 'LOVE' writing in Heart break logo.",
+    tags: ["HeartbreakAttitude  ", "Cinematic", "FuturisticPoster "]
+  },
+   {
+    id: "107",
+    image: boy107,
+    title: "Smirk in the Snow",
+    prompt: "A medium shot of a young man with dark, styled hair, Gucci circle sunglasses, a black puffer jacket, and a black t-shirt, sitting outdoors in a snowy environment at night. Snowflakes are visibly falling around him. He is looking directly at the camera with a slight smirk. The background is dimly lit with snow-covered ground and hints of buildings or fences.",
+    tags: ["GucciAttitude  ", "Tradional", "FuturisticPoster "]
+  },
+  {
+    id: "108",
+    image: boy108,
+    title: "Golden Hour Grace",
+    prompt: "A stylish young man posing confidently outdoors during golden hour. He stands beside an old wooden fence covered in green ivy leaves, wearing a dark navy shirt with rolled sleeves, white pants, and black sunglasses. One hand casually in his pocket, and the other adjusting his sunglasses with a cool expression. Soft warm sunlight filters through the trees, creating a dreamy glow with natural bokeh and bright pink flowers in the background. Cinematic portrait, sharp focus on the subject, smooth skin tone, vibrant colors, modern aesthetic, charming attitude, clean background blur, classy and relaxed vibe.",
+    tags: ["CinematicCharm  ", "GoldenGlowVibes", "Nature "]
+  },
+   {
+    id: "109",
+    image: boy109,
+    title: "The Pure Signature",
+    prompt: "A digital illustration of a smiling 24-year-old young boy, 99% same face, named Awais. He wears a fully white outfit - cap and shirt - against a light background. His image blends into a large 3D script font spelling “Awais” in soft silver-white with a thin golden outline, creating a clean, bright, and elegant white theme perfect for a premium profile or logo.",
+    tags: ["ElegantWhiteTheme  ", "FuturisticPoster", "Nature "]
+  },
+  {
+    id: "110",
+    image: boy110,
+    title: "Neon Reverie",
+    prompt: "A close-up, low-angle portrait of a man with a beard and round sunglasses, illuminated by dramatic blue and orange neon lighting. The light reflects intensely off his glasses, showing parallel lines, and his expression is contemplative, looking upwards and to the right. He appears to be wearing a textured, possibly furry or sherpa-lined collar. The background is softly blurred with bokeh lights, enhancing the vibrant, high-contrast atmosphere.",
+    tags: ["CinematicVibes  ", "FuturisticPoster", "MoodyPortrait "]
+  },
+  {
+    id: "111",
+    image: boy111,
+    title: "Serenity in Motion",
+    prompt: "A hyper-realistic cinematic 9:16 portrait based on the uploaded image, keeping the same face and hairstyle of A person standing waist-deep in calm water during golden hour sunset, wearing a black long-sleeve shirt, stylish sunglasses, and a subtle necklace. The individual is splashing water upward with one hand, creating a dynamic arc of water droplets that catch the sunlight. The other hand remains relaxed.",
+    tags: ["GoldenHourEnergy  ", "FuturisticPoster", "MoodyPortrait "]
+  },
+  {
+    id: "112",
+    image: boy112,
+    title: "Gagstar in Motion",
+    prompt: "Create a bold, expressive mixed-media portrait using the face from my uploaded photo as the base. The portrait should be a close-up headshot, featuring a front-facing pose with a slightly upward chin tit to convey confidence, attitude, and artistic intensity. The overall aesthetic must reflect a gritty,hand.sketched, graffiti-meets-urban-journal style, blending chaotic pencil sketch lines, vector-Inspired technical scribbles, and bold brush strokes. The portrait should include the following stylistic elements: Red translucent oversized round sunglasses, withintense reflections and abstract shading.Orange-red Jacket or clothing elements to provide strong contrast with the dark tonal base. A background made of beige/sepla paper-like texture overlald with architectural and geometric grid lines, red circles, intersecting sketch lines, technical diagrams, and abstract scribbles. High contrast lighting, emphasiz ing shadows around the cheekbones, jawline, and neck, and making the facial structure dramatic and dominant. A hand-drawn, raw and gritty shading style with Inked outlines and deep black shadows, almost like charcoal or graphite Scribbles and abstract line patterns extending from thehair and edges of the face the face to blend into Into the background, giving the portralt a raw, tralt a raw, kinetic energy include smudges noise, and digital grain to give the artwork a tactile, physical feel-like a scanned-in plece of street art or sketchbook collage. The mood of the portrait should reflect urban energy creative deflance, and a sense of artistic rebellion. The face must match the one in the upload ed photo exactly, preserving skin tone, facial features, andpersonal Identity- just stylized with the describedtechniques. Maintain the natural hair texture and Integrate it into the chaotic linework.Use a neutral expression with confidence, no smile just calm strength and a sense of stylish baldness Composition should be centered, chestlevel up shoulders slightly visible), with the head dominating the frame. The final plece should feel like a modern street-art poster meets fine-art sketchbook portralt Also use the prompt and pencil sketches effect.",
+    tags: ["Gangter  ", "FuturisticPoster", "CinematicPortrait "]
+  },
+   {
+    id: "113",
+    image: boy113,
+    title: "Gagstar in Motion",
+    prompt: "Hyper-realistic 9:16 portrait of a handsome boy with wavy fringe hairstyle, sitting sideways on a rock in a clear blue river. Outfit: maroon shirt, ripped black jeans, white boots. Pose: chin on knee, thoughtful look. 3D cracked stone text 'Awais' above. Cinematic, calm.",
+    tags: ["RiverDreamscape", "Nature", "CinematicPortrait "]
+  },
+  {
+    id: "114",
+    image: boy114,
+    title: "Gagstar in Motion",
+    prompt: "Genrate image of me full body standing in style, wear black Kurta and pathani pant and a black-and-white keffiyeh scarf around his neck. His hair is voluminous and carefully styled, and he sports black sunglasses with a cool, confident expression.Onis a sleek wristwatch and a ring on one finger, its brown feathers patterned with intricate stripes and spots.",
+    tags: ["Shalwar Kameez", "Nature", "CinematicPortrait "]
+  },
+  {
+    id: "115",
+    image: boy115,
+    title: "Motion of Elegance",
+    prompt: "Professional photoshoot of a man walking toward wearing white shirt and black dressing pants. Black shawl draped over his shoulders black sunglasses. black Addidas white and black shoes. holding a lit cigarette above him as .black Rolls-Roycemodel 2025 flash light on. Number plate [GB 1] with extended carbon fiber aero kit, widebody fenders, and custom LED lights. Parked on a private runway with private jet in the background, cinematic luxury setting.",
+    tags: ["Luxury", "Gagnster", "Portrait "]
   },
 ];
 
