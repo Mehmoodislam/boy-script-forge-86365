@@ -113,6 +113,15 @@ import boy112 from "@/assets/boy112.webp";
 import boy113 from "@/assets/boy113.webp";
 import boy114 from "@/assets/boy114.webp";
 import boy115 from "@/assets/boy115.webp";
+import boy116 from "@/assets/boy116.webp";
+import boy117 from "@/assets/boy117.webp";
+import boy118 from "@/assets/boy118.webp";
+import boy119 from "@/assets/boy119.webp";
+import boy120 from "@/assets/boy120.webp";
+import boy121 from "@/assets/boy121.webp";
+import boy122 from "@/assets/boy122.webp";
+import boy123 from "@/assets/boy123.webp";
+
 
 
 
@@ -868,7 +877,7 @@ export const promptsData: PromptData[] = [
     image: boy105,
     title: "Whisper of the Veil",
     prompt: "Photorealistic fantasy portrait of a young man in half-profile facing right with calm, mysterious expression, close-up view, right hand raised with index finger pressed gently to his lips in a 'shh' gesture, eyes looking directly forward with quiet intensity. Purple-black smoke swirling around his shoulders and neck. He wears a blue shirt and white pants with sneakers, that fades into the same glowing mist. Purple luminous butterflies perch near his hair and float around him with glowing",
-    tags: ["FantasyPortrait  ", "Gangster", "FuturisticPoster "]
+    tags: ["FantasyPortrait  ", "Cinimatic", "FuturisticPoster "]
   },
    {
     id: "106",
@@ -940,7 +949,64 @@ export const promptsData: PromptData[] = [
     prompt: "Professional photoshoot of a man walking toward wearing white shirt and black dressing pants. Black shawl draped over his shoulders black sunglasses. black Addidas white and black shoes. holding a lit cigarette above him as .black Rolls-Roycemodel 2025 flash light on. Number plate [GB 1] with extended carbon fiber aero kit, widebody fenders, and custom LED lights. Parked on a private runway with private jet in the background, cinematic luxury setting.",
     tags: ["Luxury", "Gagnster", "Portrait "]
   },
+   {
+    id: "116",
+    image: boy116,
+    title: "Colorfull Styling Boy",
+    prompt: "A dreamy, colorful fantasy portrait of a smiling young man standing against a bright pastel background with neon hearts and vibrant clouds. He wears a stylish rainbow-striped shirt and cap, with a light glowing tattoo on his arm. He holds a magical glowing jar containing a bright heart light, emitting sparkling particles and soft yellow glow. A big glowing moon above him with soft halo light, whimsical hand-drawn hearts floating around, cotton-candy sky tones (pink, blue, yellow), misty cloud effects at the bottom. Playful romantic vibe, magical dreamy aesthetic, soft neon lighting, high-detail skin tone, vibrant Instagram aesthetic, fantasy love theme, cute cinematic touch.",
+    tags: ["Nature", "styling", "Portrait "]
+  },
+  {
+    id: "117",
+    image: boy117,
+    title: "Photo Styling",
+    prompt: "A hyper-realistic studio photoshoot of a young man sitting confidently on a wooden box. He is wearing an open black shirt over a white T-shirt, black pants, and elegant shiny brown shoes. He holds a DSLR camera resting on his lap with one hand, while using the other hand to take a selfie with an iPhone 17 Pro Max. His eyes are open, looking naturally toward the phone with a calm and confident expression. He wears a luxurious gold wristwatch that subtly reflects the studio light. The scene features cinematic lighting with vibrant colored smoke — blue on one side and red on the other — creating a dynamic contrast. The atmosphere feels modern and artistic, captured in a professional fashion photography style, ultra-high",
+    tags: ["MoodyPortrait", "Futuristic", "Portrait "]
+  },
+   {
+    id: "118",
+    image: boy118,
+    title: "Burnig Newspaper",
+    prompt: "a vertical medium portrait of a young adult surrounded by burning newspapers, the flames forming an irregular frame that exposes the entire upper body and face. The composition is pulled slightly back to reveal more of the papers — their text and images blurred by heat, edges curling and glowing red. The subject’s expression is cold, detached, eyes fixed forward with still intensity, lips relaxed but firm, emotion restrained. The firelight casts flickering amber tones across the face, contrasting with the deep, cool shadows behind. The glow reflects in the eyes like shards of molten glass, emphasizing the tension between calm and destruction. Smoke drifts upward, softening the scene with a thin haze. The color palette blends fiery oranges, brass yellows, and dark sienna shadows, maintaining cinematic balance. Clothing and accessories [dark shirt, simple collar, no accessories], hair [dark, slightly tousled, with a few strands lit by flame reflections]. Primary illumination from surrounding fire, soft ambient fill, warm highlights, dense shadows, high contrast, 50mm f/2 lens, 1/250s shutter speed, ISO 400, white balance 3200K, full-frame camera, Kodak Vision3 500T film simulation",
+    tags: ["MoodyPortrait", "Cinematic", "Burning "]
+  },
+   {
+    id: "119",
+    image: boy119,
+    title: "Dramatic Frame",
+    prompt: "Edit this image to show a man walking forward on a rain-slicked urban street, positioned in the center-lower third of the frame, captured in a dramatic three-quarter view. He's wearing a sophisticated charcoal gray trench coat over a black turtleneck and dark fitted trousers, with polished black leather boots. His hand is raised near his chest in a contemplative gesture, checking his watch. The left side of his body is dramatically disintegrating into an explosive dispersion effect—swirling smoke tendrils, ornate clockwork gears, shattered fragments, scattered papers, and metallic particles erupting outward in shades of silver, gray, and slate blue. The background features a misty urban canyon with towering buildings fading into a moody overcast sky. Cinematic depth of field with bokeh lights in the distance. Moody blue-gray color grading with high contrast. Photorealistic digital art style with surreal disintegration effects. 8K quality, dramatic lighting from above creating subtle highlights on the coat.",
+    tags: ["MoodyPortrait", "Cinematic", "Dramatic "]
+  },
+  {
+    id: "120",
+    image: boy120,
+    title: "Silver Boy",
+    prompt: "High-key black and white cinematic portrait of a commanding man, Upload face as reference, with a defined jawline and light stubble, an intense and direct gaze, looking straight into the camera from a low, worm's eye view. His left arm is dramatically extended towards the camera, fingers splayed, wearing a prominent silver ring on the index finger and layered bracelets on the wrist. He is dressed in a simple, fitted white crew-neck t-shirt and a delicate silver pendant necklace. His wavy, textured hair is swept back with volume. The composition features a strong, dynamic perspective with the hand as a foreground element, creating a sense of intimate engagement. Shot with a wide-angle lens (e.g., 35mm, f/2. for a slight perspective distortion, achieving a shallow depth of field with sharp focus on the man's face and soft bokeh in the blown-out, pure white background. Emphasize crisp details on skin texture, fabric, and metallic jewelry. High contrast, brilliant highlights, and deep shadows define the form. Editorial photography, style of Annie Leibovitz and Peter Lindbergh, photorealistic, hyper-detailed, rendered in Octane Render, Unreal Engine 5, 8k resolution.",
+    tags: ["Futuristic", "Cinematic", "Silver "]
+  },
+   {
+    id: "121",
+    image: boy121,
+    title: "Visual Confident Boy",
+    prompt: "The image shows a stylish young man walking confidently on a rainy night, his facial features preserved from the original image, and his yellow sunglasses adding a bold touch. He's wearing a chic, casual winter outfit consisting of a long black leather coat, a black formal vest over a black shirt, black cargo pants, and black leather gloves. He has his left hand in his pocket while holding the lapel of his coat with his right hand, giving an impression of confidence and elegance. The setting is a city street at night during a heavy downpour. Raindrops fall and collect on the ground, reflecting the streetlights and colorful traffic signals in the background, creating a captivating visual effect. The blurred and muted lights of cars and buildings in the background add depth and a cinematic feel to the scene. The white lines on the wet pavement emphasize the man's movement towards the camera, and the dark colors of his outfit harmonize with the nighttime, rainy atmosphere, creating a powerful and striking image.",
+    tags: ["Gangster", "Cinematic", "Moody "]
+  },
+   {
+    id: "122",
+    image: boy122,
+    title: "authentic newspaper shadow",
+    prompt: "Create a Photorealistic Hong Kong retro portrait of a handsome young man, and with authentic 1990s film look. Half-body. Subject leaning against newspaper-covered wall, gaze soft and Hair messy comma haircut, wearing Black t-shirt, wearing blue sunglasses, strands falling across face. Very little glossy lips, dewy skin. Narrow Hong Kong room, walls plastered with old yellowed Cantonese newspapers. Tungsten bulb glow with faint green spill. Shadows heavy, highlights bloom. --ar 4:5--s 250--raw. Use the reference foto, don't alter the face, make it identic 100%",
+    tags: ["Futuristic", "Cinematic", "Moody "]
+  },
+     {
+    id: "123",
+    image: boy123,
+    title: "Rock Gangster Style",
+    prompt: "A cinematic, medium shot photograph features a man with medium-toned skin and a neatly trimmed beard, leaning casually against the hood of a classic black muscle car. He is dressed in a fitted black leather moto jacket with quilted details on the shoulders and sleeves, a black crew-neck t-shirt, and black trousers that are slightly creased. His right hand rests on his knee, while his left hand is slightly tucked into his pocket, creating a relaxed yet confident pose. His gaze is directed forward, with a neutral, intense expression. In the background, a larger-than-life, subtly superimposed portrait of the same man is visible, his face bathed in an intense red light, with smoke swirling around his head and a cigarette held between his lips, exhaling a plume of white smoke. The overall scene is dramatically lit with a strong red light source from above and behind, casting deep shadows and highlighting the car's chrome accents and the textures of the leather. The background is dark, with faint hints of streetlights and urban structures, suggesting a nocturnal setting. The composition emphasizes the man and the car, with a shallow depth of field blurring the background details. The dominant color palette is black and red, creating a moody and dramatic atmosphere, with high contrast and saturated tones. Keywords: cinematic, neo-noir, dramatic lighting, leather jacket, muscle car, brooding, intense, smoke, gritty, urban, high contrast, photorealistic, 8k. neg_prompt: out of focus, blurry, low resolution, deformed, bad anatomy, extra limbs, disfigured, text, words, logo, watermark, unrealistic lighting, oversaturated, dull colors.Muhammad Soultan A cinematic, medium shot photograph features a man with medium-toned skin and a neatly trimmed beard, leaning casually against the hood of a classic black muscle car. He is dressed in a fitted black leather moto jacket with quilted details on the shoulders and sleeves, a black crew-neck t-shirt, and black trousers that are slightly creased. His right hand rests on his knee, while his left hand is slightly tucked into his pocket, creating a relaxed yet confident pose. His gaze is directed forward, with a neutral, intense expression. In the background, a larger-than-life, subtly superimposed portrait of the same man is visible, his face bathed in an intense red light, with smoke swirling around his head and a cigarette held between his lips, exhaling a plume of white smoke. The overall scene is dramatically lit with a strong red light source from above and behind, casting deep shadows and highlighting the car's chrome accents and the textures of the leather. The background is dark, with faint hints of streetlights and urban structures, suggesting a nocturnal setting. The composition emphasizes the man and the car, with a shallow depth of field blurring the background details. The dominant color palette is black and red, creating a moody and dramatic atmosphere, with high contrast and saturated tones. Keywords: cinematic, neo-noir, dramatic lighting, leather jacket, muscle car, brooding, intense, smoke, gritty, urban, high contrast, photorealistic, 8k. neg_prompt: out of focus, blurry, low resolution, deformed, bad anatomy, extra limbs, disfigured, text, words, logo, watermark, unrealistic lighting, oversaturated, dull colors.",
+    tags: ["Futuristic", "Gangster", "Moody "]
+  },
 ];
+
 
 
 
