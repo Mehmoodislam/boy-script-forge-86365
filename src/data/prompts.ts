@@ -101,6 +101,9 @@ import boy100 from "@/assets/boy100.webp";
 import boy101 from "@/assets/boy101.webp";
 import boy102 from "@/assets/boy102.webp";
 import boy103 from "@/assets/boy103.webp";
+import boy104 from "@/assets/boy104.webp";
+import boy105 from "@/assets/boy105.webp";
+
 
 
 
@@ -841,6 +844,20 @@ export const promptsData: PromptData[] = [
     title: "The Two Faces Within",
     prompt: "Modern style poster design featuring a stylish man (as per image) with neat messy coma hair with a split personality concept. On the front, a full-color version is shown: the man is wearing a modern light gray suit, standing casually with one leg crossed in front, hands in pockets, a confident and charismatic face. In the background, a black-and-white version of him is seen wearing sunglasses, staring intently ahead with a mysterious expression.",
     tags: ["Cinematic  ", "Gangster", "LuxuryPoster"]
+  },
+  {
+    id: "104",
+    image: boy104,
+    title: "Neon Reflection",
+    prompt: "A sleek, futuristic photoshoot of a handsome young man looking into a square mirror. His hand, wearing rings, reaches for the reflection. The scene is dark, illuminated by a glowing green neon frame and abstract technological background elements. Moody lighting, intense gaze.",
+    tags: ["FantasyPortrait  ", "Gangster", "FuturisticPoster "]
+  },
+  {
+    id: "105",
+    image: boy105,
+    title: "Whisper of the Veil",
+    prompt: "Photorealistic fantasy portrait of a young man in half-profile facing right with calm, mysterious expression, close-up view, right hand raised with index finger pressed gently to his lips in a 'shh' gesture, eyes looking directly forward with quiet intensity. Purple-black smoke swirling around his shoulders and neck. He wears a blue shirt and white pants with sneakers, that fades into the same glowing mist. Purple luminous butterflies perch near his hair and float around him with glowing",
+    tags: ["FantasyPortrait  ", "Gangster", "FuturisticPoster "]
   },
 ];
 
