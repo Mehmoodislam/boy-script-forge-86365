@@ -96,6 +96,11 @@ import boy95 from "@/assets/boy95.webp";
 import boy96 from "@/assets/boy96.webp";
 import boy97 from "@/assets/boy97.webp";
 import boy98 from "@/assets/boy98.webp";
+import boy99 from "@/assets/boy98.webp";
+import boy100 from "@/assets/boy98.webp";
+import boy101 from "@/assets/boy98.webp";
+import boy102 from "@/assets/boy98.webp";
+import boy103 from "@/assets/boy98.webp";
 
 
 
@@ -802,7 +807,43 @@ export const promptsData: PromptData[] = [
     prompt: "he man stands in front of a heritage-style stone mansion with his black Land Cruiser parked beside him. He wears an off-white shalwar kameez with a deep royal blue embroidered shawl, tan classic shoes, and round black shades. His hairstyle is styled clean with volume, a gold ring and bracelet accentuating his outfit. He stands tall, one hand in his pocket and one holding the shawl edge, with a calm royal expression - as if he owns the moment. The morning sun and stone texture around him create a vintage-luxury cinematic aura, making it feel like a fashion ad campaign. (8K Ultra Realistic | Heritage Mansion | Royal Fashion | Model Loo! Cinematic Outdoor Portrait)",
     tags: ["RoyalElegance", "Shalwar Kameez", "Fashion "]
   },
+  {
+    id: "99",
+    image: boy99,
+    title: "Rebel on the Road",
+    prompt: "Create a dynamic sports poster of uploaded reference photo for exact face, nairstyle, and skin tone smoking a cigarette with attitude, designed in a modern, energetic style. The composition features a large, dramatic profile portrait of the person, in the background with intense red and black abstract strokes radiating outward, symbolizing power and motion. In the foreground, the same person is shown in reclining on the hood of a vintage black and white modify car, his expression full of attitude.",
+    tags: ["PowerAndAttitude  ", "Gangster", "FuturisticPoster "]
+  },
+  {
+    id: "100",
+    image: boy100,
+    title: "Moonlit Solitude",
+    prompt: "hyper-realistic photograph of a beautiful young man with black hair, wearing a yellow velvet shirt and black jeans and white top sneakers, sitting with a pensive gaze on dark rippled desert sand. The background is dominated by a massive glowing orange supermoon (harvest moon style) against a deep blue, starry night sky. A small, silhouetted figure on horseback is riding into the distance across the endless sand dunes.",
+    tags: ["HyperRealism  ", "DesertDreamscape", "MoodyPortrait "]
+  },
+  {
+    id: "101",
+    image: boy101,
+    title: "The Boss of Yangon",
+    prompt: "Create a super hyper-realistic 8K portrait photo of a young Southeast Asian man wearing a black suit and a black shirt with two buttons open, showing a muscular chest. He is standing like a mafia boss in the middle of Yangon City, wearing sunglasses. One hand is in his pocket, and the other is holding a cigar. Next to him is a luxury black Rolls-Royce car. It is raining heavily. A driver is holding an umbrella to cover him. Two bodyguards are standing side by side with their hands clasped in front of them.",
+    tags: ["PowerInTheRain  ", "Gangster", "MoodyPortrait "]
+  },
+  {
+    id: "102",
+    image: boy102,
+    title: "The Boss ",
+    prompt: "generate a powerful and stylish image of the uploaded man, 100 percent face reserved, radiating bossy gangster vibes. he is seated confidently on a luxurious velvet sofa, leaning back in a relaxed yet commanding pose. a cheetah, adorned with heavy gold chains, sits across his lap, its sleek body draped naturally over him. the man's head is turned slightly downward, gazing at the cheetah with a cool, composed expression, sunglasses enhancing his aura of dominance and style. one hand rests casually on the cheetah's back while the other rests along the arm of the sofa, showing both control and ease. he is dressed in high-fashion dark attire -either a pinstripe suit or an open-collared silk shirt layered with bold gold jewelry. ",
+    tags: ["Boss  ", "Gangster", "MoodyPortrait "]
+  },
+  {
+    id: "103",
+    image: boy103,
+    title: "The Two Faces Within",
+    prompt: "Modern style poster design featuring a stylish man (as per image) with neat messy coma hair with a split personality concept. On the front, a full-color version is shown: the man is wearing a modern light gray suit, standing casually with one leg crossed in front, hands in pockets, a confident and charismatic face. In the background, a black-and-white version of him is seen wearing sunglasses, staring intently ahead with a mysterious expression.",
+    tags: ["Cinematic  ", "Gangster", "LuxuryPoster"]
+  },
 ];
+
 
 
 
