@@ -13,7 +13,7 @@ const categories = [
   "All",
   "Luxury",
   "Cinematic",
-  "Street Style",
+  "Gangster",
   "Traditional",
   "Nature",
   "Futuristic",
