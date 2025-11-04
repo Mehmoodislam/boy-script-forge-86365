@@ -121,6 +121,10 @@ import boy120 from "@/assets/boy120.webp";
 import boy121 from "@/assets/boy121.webp";
 import boy122 from "@/assets/boy122.webp";
 import boy123 from "@/assets/boy123.webp";
+import boy124 from "@/assets/boy123.webp";
+import boy125 from "@/assets/boy123.webp";
+import boy126 from "@/assets/boy123.webp";
+
 
 
 
@@ -998,14 +1002,36 @@ export const promptsData: PromptData[] = [
     prompt: "Create a Photorealistic Hong Kong retro portrait of a handsome young man, and with authentic 1990s film look. Half-body. Subject leaning against newspaper-covered wall, gaze soft and Hair messy comma haircut, wearing Black t-shirt, wearing blue sunglasses, strands falling across face. Very little glossy lips, dewy skin. Narrow Hong Kong room, walls plastered with old yellowed Cantonese newspapers. Tungsten bulb glow with faint green spill. Shadows heavy, highlights bloom. --ar 4:5--s 250--raw. Use the reference foto, don't alter the face, make it identic 100%",
     tags: ["Futuristic", "Cinematic", "Moody "]
   },
-     {
+    {
     id: "123",
     image: boy123,
     title: "Rock Gangster Style",
     prompt: "A cinematic, medium shot photograph features a man with medium-toned skin and a neatly trimmed beard, leaning casually against the hood of a classic black muscle car. He is dressed in a fitted black leather moto jacket with quilted details on the shoulders and sleeves, a black crew-neck t-shirt, and black trousers that are slightly creased. His right hand rests on his knee, while his left hand is slightly tucked into his pocket, creating a relaxed yet confident pose. His gaze is directed forward, with a neutral, intense expression. In the background, a larger-than-life, subtly superimposed portrait of the same man is visible, his face bathed in an intense red light, with smoke swirling around his head and a cigarette held between his lips, exhaling a plume of white smoke. The overall scene is dramatically lit with a strong red light source from above and behind, casting deep shadows and highlighting the car's chrome accents and the textures of the leather. The background is dark, with faint hints of streetlights and urban structures, suggesting a nocturnal setting. The composition emphasizes the man and the car, with a shallow depth of field blurring the background details. The dominant color palette is black and red, creating a moody and dramatic atmosphere, with high contrast and saturated tones. Keywords: cinematic, neo-noir, dramatic lighting, leather jacket, muscle car, brooding, intense, smoke, gritty, urban, high contrast, photorealistic, 8k. neg_prompt: out of focus, blurry, low resolution, deformed, bad anatomy, extra limbs, disfigured, text, words, logo, watermark, unrealistic lighting, oversaturated, dull colors.Muhammad Soultan A cinematic, medium shot photograph features a man with medium-toned skin and a neatly trimmed beard, leaning casually against the hood of a classic black muscle car. He is dressed in a fitted black leather moto jacket with quilted details on the shoulders and sleeves, a black crew-neck t-shirt, and black trousers that are slightly creased. His right hand rests on his knee, while his left hand is slightly tucked into his pocket, creating a relaxed yet confident pose. His gaze is directed forward, with a neutral, intense expression. In the background, a larger-than-life, subtly superimposed portrait of the same man is visible, his face bathed in an intense red light, with smoke swirling around his head and a cigarette held between his lips, exhaling a plume of white smoke. The overall scene is dramatically lit with a strong red light source from above and behind, casting deep shadows and highlighting the car's chrome accents and the textures of the leather. The background is dark, with faint hints of streetlights and urban structures, suggesting a nocturnal setting. The composition emphasizes the man and the car, with a shallow depth of field blurring the background details. The dominant color palette is black and red, creating a moody and dramatic atmosphere, with high contrast and saturated tones. Keywords: cinematic, neo-noir, dramatic lighting, leather jacket, muscle car, brooding, intense, smoke, gritty, urban, high contrast, photorealistic, 8k. neg_prompt: out of focus, blurry, low resolution, deformed, bad anatomy, extra limbs, disfigured, text, words, logo, watermark, unrealistic lighting, oversaturated, dull colors.",
     tags: ["Futuristic", "Gangster", "Moody "]
   },
+  {
+    id: "124",
+    image: boy124,
+    title: "Pakistani Nature Beauty",
+    prompt: "Generate a high-resolution natural photo of a 17-18 year old Pakistani boy wearing a clean, well-fitted shalwar kameez in a cool, stylish color (like sky blue, olive green, or jet black). The image should be in a college campus setting with an urban yet natural vibe — well-maintained green lawns, walking paths, some modern college buildings or boundary walls in the background. ‎ ‎The photo should be in one frame containing three different poses of the same boy: ‎ ‎1. Pose 1: Standing casually with arms folded, leaning slightly against a pillar or wall, looking sideways with a soft confident expression. ‎2. Pose 2: Walking calmly with one hand in pocket, looking forward with sunglasses on — calm college vibe. ‎3. Pose 3: Standing straight, hands joined in front, smiling softly at the camera — clean and composed. ‎Lighting should be natural daylight, not artificial. The face should be soft, fresh, and realistic, with a clear complexion, neat hairstyle, and subtle facial details (like light mustache or beard shadow). The image must be fully realistic, no AI glitches, no over-editing, and must feel like a real DSLR photo taken during golden hour. ‎ ‎Background must include mild greenery, a clean walking track, and subtle urban college vibes like benches, low walls, or parked bicycles in distance. ‎ ‎Final image should be ultra HD, portrait orientation, and visually aesthetic — the kind of photo you'd want as your college display picture.",
+    tags: ["Nature", "Shalwar Kameez", "Traditional "]
+  },
+  {
+    id: "125",
+    image: boy125,
+    title: "Lovely boy",
+    prompt: "Create an image of a Pakistani boy wearing a black shalwar kameez with a black ajrak draped over it. The surroundings should be very beautiful, full of greenery, with some flowers in the background. The sky should have lovely clouds, and there should be a stream flowing nearby with some rocks around. One of my feet is placed on a rock while the other is on the ground. One of my hands is resting on my glasses, and the other hand is down. I am looking slightly upward with a very nice pose. The face should be 100% my own, with my actual hairstyle. The picture should look fully professional, ultra HD, and high resolution. 🌊🌴",
+    tags: ["Nature", "Shalwar Kameez", "Traditional "]
+  },
+  {
+    id: "126",
+    image: boy126,
+    title: "FireBox ",
+    prompt: "Create an ultra-realistic 8K vertical full-body cinematic portrait of a young Pakistani man who must appear exactly as in the reference image (100% same face, hair, skin, and expression). He is sitting beside a campfire in a snowy winter landscape during golden hour. He wears a pure white Sindhi salwar kameez with a traditional Sindhi ajrak over his shoulders. The soft golden sunlight reflects warmly on his face and the snow, while gentle snowflakes drift in the air. No guitar and no female character, only this man. The mood is serene, cinematic, and peaceful, showing a quiet winter evening by the fire.",
+    tags: ["Nature", "Shalwar Kameez", "Traditional "]
+  },
 ];
+
 
 
 
