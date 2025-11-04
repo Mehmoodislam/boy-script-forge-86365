@@ -121,9 +121,9 @@ import boy120 from "@/assets/boy120.webp";
 import boy121 from "@/assets/boy121.webp";
 import boy122 from "@/assets/boy122.webp";
 import boy123 from "@/assets/boy123.webp";
-import boy124 from "@/assets/boy123.webp";
-import boy125 from "@/assets/boy123.webp";
-import boy126 from "@/assets/boy123.webp";
+import boy124 from "@/assets/boy124.webp";
+import boy125 from "@/assets/boy125.webp";
+import boy126 from "@/assets/boy126.webp";
 
 
 
