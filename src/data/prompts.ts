@@ -124,6 +124,18 @@ import boy123 from "@/assets/boy123.webp";
 import boy124 from "@/assets/boy124.webp";
 import boy125 from "@/assets/boy125.webp";
 import boy126 from "@/assets/boy126.webp";
+import boy127 from "@/assets/boy127.webp";
+import boy128 from "@/assets/boy128.webp";
+import boy129 from "@/assets/boy129.webp";
+import boy130 from "@/assets/boy130.webp";
+import boy131 from "@/assets/boy131.webp";
+import boy132 from "@/assets/boy132.webp";
+import boy133 from "@/assets/boy133.webp";
+import boy134 from "@/assets/boy134.webp";
+import boy135 from "@/assets/boy135.webp";
+import boy136 from "@/assets/boy136.webp";
+import boy137 from "@/assets/boy137.webp";
+
 
 
 
@@ -1029,6 +1041,83 @@ export const promptsData: PromptData[] = [
     title: "FireBox ",
     prompt: "Create an ultra-realistic 8K vertical full-body cinematic portrait of a young Pakistani man who must appear exactly as in the reference image (100% same face, hair, skin, and expression). He is sitting beside a campfire in a snowy winter landscape during golden hour. He wears a pure white Sindhi salwar kameez with a traditional Sindhi ajrak over his shoulders. The soft golden sunlight reflects warmly on his face and the snow, while gentle snowflakes drift in the air. No guitar and no female character, only this man. The mood is serene, cinematic, and peaceful, showing a quiet winter evening by the fire.",
     tags: ["Nature", "Shalwar Kameez", "Traditional "]
+  },
+  {
+    id: "127",
+    image: boy127,
+    title: "A Digital Moment of Confidence ",
+    prompt: "The Core Scene and Subject A hyper-realistic, cinematic close-up portrait of a young man ([Upload face as reference]), aged 20-25, with an approachable, confident expression. He is seated casually on a massive, vibrantly lit 3D text that dominates the foreground, reading “1K Followers.” The text has a deep emerald green, glossy metallic finish and subtle ambient occlusion where it meets the floor. Wardrobe and Props He wears a high-fashion, monochromatic charcoal gray streetwear ensemble: an oversized, structured hoodie with technical fabric, slim-fit ripped black jeans, and limited-edition, chunky designer sneakers (detailed texture on the sole). In his right hand, he holds a perfectly diffused, glowing cubic light source shaped like the WhatsApp logo. This cube emits a powerful, neon lime-green volumetric light that casts a sharp key light on his face, hoodie textures, and creates a strong rim light on the edges of the 3D text. Environment and Lighting The scene is set in a minimalist, high-end digital studio. The floor is a highly polished, seamless black resin that creates perfect, crisp reflections of the subject and the green light source. The background is an unfocused, deep gray void, punctuated only by a few subtle, bright lime-green and deep teal bokeh spheres created by very shallow depth of field (DOF). The overall lighting scheme is dramatic soft box lighting mixed with the harsh, contrasting green glow. Technical Keywords and Style Ultra-detailed, 16K resolution, professional photography, Hasselblad X2D, cinematic color grading, award-winning studio lighting, photorealistic textures, perfect composition, skin pores visible, realistic reflections, volumetric glow, subsurface scattering on skin, maximum depth of field, Octane Render.",
+    tags: ["Cinematic Portrait", "Streetwear", "Traditional "]
+  },
+  {
+    id: "128",
+    image: boy128,
+    title: "Grounded Confidence: 27K in Style ",
+    prompt: "Edit this photo into a cinematic three-quarter view, low-angle wide portrait of a sculpted muscular built young man in a modern studio environment, sitting casually on the upper edge of the sculptural number 4 in the large white word 27K. The camera is positioned low and slightly 3/4 front, using a wide composition that keeps the entire word 14K fully visible, proportionate, and monumental in the frame. The sculptural typography is slightly enlarged, allowing the man to sit naturally on the letter while maintaining balance and realism. His face looks handsome and serene, with a subtle, warm smile — gentle and genuine — conveying calm confidence and kindness. His eyes look softly into the camera, exuding a peaceful, grounded energy. His physique is fit, lean, and defined, sitting in a composed and elegant posture. He wears a loose grey tank top, and cargo short, perfectly fitted to his frame. On his feet are high cut sneakers. He is sitting relaxed on the number 7, with one hand resting gently on the top of the ❤️ emoji sculpture, and the other hand placed casually on his thigh. The gesture feels natural, friendly, and subtly confident — a mix of elegance and approachability. On top of the sculptural number 7, beside him, sits the realistic 3D ❤️ emoji sculpture in its original red color and glossy. It appears solid, balanced, and proportionate to the typography, adding a lighthearted and creative accent to the composition. The camera angle remains low and wide, ensuring the “27K” structure is fully visible and cinematic. The background maintains depth and space, allowing the lighting to create dimension and atmosphere.",
+    tags: ["CCinematic Portrait", "Confident", "Traditional "]
+  },
+  {
+    id: "129",
+    image: boy129,
+    title: "Fitness Guru",
+    prompt: "A cinematic, hyper-realistic portrait of a young man (100% matched the face reference) sitting casually on large 3D golden letters spelling “Fitness Guru.” He wears a black t shirt, blue jeans, and white sneakers. Behind him, dramatic golden, black, and white smoke bursts outward against a dark backdrop. Ultra-detailed, 8K quality, with cinematic lighting, subtle reflections on the floor, and a bold, modern, and powerful atmosphere.",
+    tags: ["CCinematic Portrait", "Futuristic", "Modern "]
+  },
+  {
+    id: "130",
+    image: boy130,
+    title: "The Pastel Poise",
+    prompt: "An ultra-detailed editorial portrait of a man in his forties (same face 100%), wearing a pastel rose trench coat over a white shirt, with cream trousers and white sneakers. He stands beside a warm cream wall, backed by a blush-to-peach circular gradient bordered with soft blue. Cinematic daylight enhances the tones and adds subtle lens softness",
+    tags: ["Cinematic Portrait", "Nature", "Fashion Portrait "]
+  },
+   {
+    id: "131",
+    image: boy131,
+    title: "The Confident Frame",
+    prompt: "Hyper-ultrarealistic 8K cinematic portrait of a stylish young man standing in front of a dark industrial metal background, his face and hairstyle exactly matching the uploaded reference, hairstyle perfectly styled and set. He is facing the camera directly, with a subtle confident expression, while one hand is raised to adiust or run through his hair He wears premium black sunglasses, a black itted t shirt, a dark brown utility jacket, and dark brown cargo pants.foot wear dark brown chelsi shoes. The lightingis moody and dramatic.",
+    tags: ["Cinematic Portrait", "Aesthetic", "Moody "]
+  },
+   {
+    id: "132",
+    image: boy132,
+    title: "Edge of Shadows",
+    prompt: "Cinematic, high-action movie poster of a stylish Indian male model. He has a well-defined muscular build, wearing a crisp white shirt with rolled-up sleeves and fitted black trousers. He leans confidently against a sleek black Mustang, holding a handgun in his right hand, finger poised on the trigger, eyes focused with intense determination. The background features a composite, large side-profile image of his face, slightly desaturated with dramatic lighting and cinematic shadows,adding depth and intensity. Moody city lights, subtle smoke, and reflections on the car surface create a high-octane thriller vibe. Strong contrast, dynamic angles, epic cinematic lighting, lens flares, and motion blur effects. Ultra-realistic, 8K cinematic movie poster aesthetic.",
+    tags: ["Luxury", "Futuristic", "Moody "]
+  },
+  {
+    id: "133",
+    image: boy133,
+    title: "The Fire Within the Flow",
+    prompt: "A powerful cinematic portrait of a man standing still with his eyes closed, symbolizing inner balance between two opposing forces — water and fire. The left half of his face and body is engulfed in dynamic splashes of cool water, with droplets frozen mid-air and mist surrounding him. The right half burns with intense orange flames, glowing embers, and heat distortions. His skin glistens with reflections from both elements, highlighting tension and harmony. Dramatic lighting from above emphasizes the contours of his face, while the background fades into smoky gray tones with sparks and vapor mixing together. Realistic ultra-detailed textures, 8K clarity, hyperreal cinematic lighting, volumetric smoke, depth of field, moody contrast, surreal atmosphere — art by RG Graphic style, poster aesthetic.",
+    tags: ["Balance Portrait", "Futuristic", "Moody "]
+  },
+  {
+    id: "134",
+    image: boy134,
+    title: "Baptism of Strength",
+    prompt: "Ultra-realistic cinematic portrait of a strong young man standing under a stream of water pouring directly onto his head, droplets splashing dramatically around him. His skin glistens with moisture, muscles defined and illuminated by powerful dual lighting — deep blue on the left and fiery red on the right, creating a bold contrast. He wears a sleeveless black hoodie, a heavy silver chain with a large pendant, and a crossbody strap. His expression is intense and stoic, his hair hanging wet across his face. Subtle mist and water droplets enhance the atmosphere, with sharp details and high contrast, evoking a gritty, powerful, and dramatic tone.",
+    tags: ["Cinematic", "Urban Realism", "Moody "]
+  },
+   {
+    id: "135",
+    image: boy135,
+    title: "The Fireborne Warrior",
+    prompt: "Ultra HD, 8K resolution, hyper-realistic fantasy cinematic portrait of a powerful shirtless man with a muscular, chiseled physique, glowing with fire magic. His expression is intense and focused, eyes filled with determination. His right hand holds a blazing fireball, while streams of fire and flames wrap around his arm and shoulder, radiating heat and energy. The fire glows vividly, casting warm orange highlights across his defined abs, chest, and strong jawline. He is wearing rugged brown cargo pants tied at the waist with a loose belt strap flowing dramatically. The atmosphere is dark, smoky, and cinematic with embers floating in the air, creating a dramatic contrast between fire and shadow. The background is filled with swirling smoke, illuminated by the fiery glow, giving an epic, supernatural, superhero aesthetic. Photorealistic textures, crisp sharp details, cinematic lighting, volumetric smoke, glowing embers, ultra-detailed skin and flame rendering, fantasy realism, perfect high-fashion fantasy warrior style. 100 percent uploaded my face and enhanced Ultra HD 8K resolution",
+    tags: ["Cinematic", "Realistic Warrior", "Moody "]
+  },
+  {
+    id: "136",
+    image: boy136,
+    title: "Elegance in Ashes",
+    prompt: "Ultra-realistic cinematic portrait of a stylish young man standing against a dark minimal background with a soft golden sunlight beam casting dramatic shadows.He is wearing a crisp, elegant sage green suit and open button black silk shirt(blazer and wide-leg trousers)with one hand casually in his pocket and the other holding a bouquet of Black burningroses,smock,ashes,lite fire close to his chest.His hair is voluminous and slightly tousled, styled naturally with texture.",
+    tags: ["Cinematic", "Aesthetic", "Moody "]
+  },
+  {
+    id: "137",
+    image: boy137,
+    title: "Embers of Time",
+    prompt: "A photorealistic portrait of an egyption white man, resembling the person in the uploaded image, with a serious expression and sunglasses, is seated in a distressed wooden chair that is tilted slightly to the right, partially consumed by bright orange and yellow flames on the left side. He is sitting casually with his body angled slightly towards the right, and his head turned to face the camera directly. His right leg is casually crossed over his left leg. His right arm is resting on his right thigh, and he holds a vintage pocket watch with a reflective, metallic surface in his hand. He is wearing a dark, slightly textured leather or denim jacket over a deep maroon or burgundy collared shirt, unbuttoned at the top. His dark pants have a subtle sheen, and he wears dark, pointed-toe boots. The background is a dramatic, smoky black with fiery embers and sparks dramatically rising and scattered around the scene, creating a sense of intensity and danger. Above the man, in a bold, blood-red,",
+    tags: ["Cinematic", "Futuristic", "Moody "]
   },
 ];
 
