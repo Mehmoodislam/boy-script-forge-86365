@@ -135,6 +135,10 @@ import boy134 from "@/assets/boy134.webp";
 import boy135 from "@/assets/boy135.webp";
 import boy136 from "@/assets/boy136.webp";
 import boy137 from "@/assets/boy137.webp";
+import boy138 from "@/assets/boy138.webp";
+import boy139 from "@/assets/boy139.webp";
+import boy140 from "@/assets/boy140.webp";
+
 
 
 
@@ -1118,6 +1122,27 @@ export const promptsData: PromptData[] = [
     title: "Embers of Time",
     prompt: "A photorealistic portrait of an egyption white man, resembling the person in the uploaded image, with a serious expression and sunglasses, is seated in a distressed wooden chair that is tilted slightly to the right, partially consumed by bright orange and yellow flames on the left side. He is sitting casually with his body angled slightly towards the right, and his head turned to face the camera directly. His right leg is casually crossed over his left leg. His right arm is resting on his right thigh, and he holds a vintage pocket watch with a reflective, metallic surface in his hand. He is wearing a dark, slightly textured leather or denim jacket over a deep maroon or burgundy collared shirt, unbuttoned at the top. His dark pants have a subtle sheen, and he wears dark, pointed-toe boots. The background is a dramatic, smoky black with fiery embers and sparks dramatically rising and scattered around the scene, creating a sense of intensity and danger. Above the man, in a bold, blood-red,",
     tags: ["Cinematic", "Futuristic", "Moody "]
+  },
+   {
+    id: "138",
+    image: boy138,
+    title: "Stylish Boy ",
+    prompt: "A stylish romantic portrait of young man, (same face as in refrence image) Wearing Stylish White Shirt, Rolled Sleeve, brown forma pants, brown loafers, luxury Watch, Antare rimless Gradient Blue Sunglasses, sitting at bench, a purple flowers bouquet stays at bench, while his looking at watch to see the time, feel like he is waiting for someone, background is filled with lush purple white flowering trees, creating a dreamy, romantic fantasies, with natural light and shallow depth of field",
+    tags: ["Cinematic", "Futuristic", "Nature "]
+  }, 
+  {
+    id: "139",
+    image: boy139,
+    title: "Handsome ",
+    prompt: "4K Ultra HD Quality Generate A full-body shot of a male with dark brown, boy, stylish dark and slightl brown hair atheletic He is wearing a stylish gradient black-white-shir and black cargo pants.hand watch He is leaning casually against a stone wall, with his right arm resting on top of it. He is also wearing round, tinted and black and white canvas sneakers. The background is a dark, texturec stone wall, with natural outdoor lighting.",
+    tags: ["Cinematic", "Futuristic", "Moody "]
+  },
+    {
+    id: "140",
+    image: boy140,
+    title: " photography poster of a stylish young",
+    prompt: "Create a dynamic high-energy street sports photography poster of a stylish young northern Nigeria man (apply the identical facial structure, skin tone, hair, eye color, and expression consistently; ensure the same face from the uploaded image is applied), viewed from a low, street-level angle. He wears futuristic streetwear: a sleek layered tech-jacket with glowing purple accents, a high-collar hoodie underneath, modular cargo pants with utility straps and metallic details, and chunky cyber-inspired sneakers with neon purple highlights. His pose shows a serious expression with hands in pockets.Composition: Multiple layered shots — one large close-up portrait of his face at the top, a close-up side profile for added emphasis, and the main full-body pose centered.Background: Bold purple, teal and emerald green paint splashes and a prominent stylized cyberpunk white text 'JABIR' in graffiti-like design with abstract halftone patterns, and glowing highlights for dramatic impact.Art style: Hyper-realistic, urban cyberpunk-inspired, futuristic, vibrant, high-contrast, sharp details, digital, 8K. Use the reference image with 100% face match.",
+    tags: ["Cinematic", "Futuristic", "Gangster "]
   },
 ];
 
