@@ -138,6 +138,11 @@ import boy137 from "@/assets/boy137.webp";
 import boy138 from "@/assets/boy138.webp";
 import boy139 from "@/assets/boy139.webp";
 import boy140 from "@/assets/boy140.webp";
+import boy141 from "@/assets/boy141.webp";
+import boy142 from "@/assets/boy142.webp";
+import boy143 from "@/assets/boy143.webp";
+import boy144 from "@/assets/boy144.webp";
+import boy145 from "@/assets/boy145.webp";
 
 
 
@@ -1143,6 +1148,41 @@ export const promptsData: PromptData[] = [
     title: " photography poster of a stylish young",
     prompt: "Create a dynamic high-energy street sports photography poster of a stylish young northern Nigeria man (apply the identical facial structure, skin tone, hair, eye color, and expression consistently; ensure the same face from the uploaded image is applied), viewed from a low, street-level angle. He wears futuristic streetwear: a sleek layered tech-jacket with glowing purple accents, a high-collar hoodie underneath, modular cargo pants with utility straps and metallic details, and chunky cyber-inspired sneakers with neon purple highlights. His pose shows a serious expression with hands in pockets.Composition: Multiple layered shots — one large close-up portrait of his face at the top, a close-up side profile for added emphasis, and the main full-body pose centered.Background: Bold purple, teal and emerald green paint splashes and a prominent stylized cyberpunk white text 'JABIR' in graffiti-like design with abstract halftone patterns, and glowing highlights for dramatic impact.Art style: Hyper-realistic, urban cyberpunk-inspired, futuristic, vibrant, high-contrast, sharp details, digital, 8K. Use the reference image with 100% face match.",
     tags: ["Cinematic", "Futuristic", "Gangster "]
+  },
+   {
+    id: "141",
+    image: boy141,
+    title: " Young Park Bench",
+    prompt: "8K ultra-realistic photo of a asian man, unchanged face from the reference. He is sitting casually on a park bench surrounded by greenery its a bombex ceiba flower tree garden. Outfit: merun shirt, Tailored blak Fit Pant, white sneakers. Black smartwatche and wear BLACK RECTANGLE sunglasses, relaxed outdoor mood. Warm day light with trees in the background.",
+    tags: ["Cinematic", "Park", "Nature "]
+  },
+   {
+    id: "142",
+    image: boy142,
+    title: " Confident Boy",
+    prompt: "A handsome young man stands confidently, looking to the side with a serious expression. He has stylish brown hair and a neatly trimmed beard. He is wearing a black suit jacket over a black traditional long-sleeved tunic with a band collar, and black pants. His hands are in his pockets, and he wears dark sunglasses. A silver watch is visible on his left wrist. The background is a blurred modern building with large glass windows, suggesting an urban or corporate setting. The lighting is soft and even",
+    tags: ["Luxury", "Confident", "Moody "]
+  },
+  {
+    id: "143",
+    image: boy143,
+    title: "Lighting Crosswalk",
+    prompt: "A young man leaping forward on a crosswalk, emerging through a glowing dimensional portal. The portal emits swirling neon energy in shades of electric blue, violet, and magenta, blending with sparks and light streaks. His expression is focused and mid-motion, jacket flowing dynamically, white sneakers catching the light. The urban background is slightly blurred to enhance motion, with subtle reflections of the portal on the ground. Hyper-realistic lighting, crisp details, dynamic action pose, sci-fi atmosphere, cinematic color grading, ultra high resolution, dramatic depth of field, volumetric light rays, energy distortion effects.",
+    tags: ["Lighting", "Futuristic", "Cinematic "]
+  },
+  {
+    id: "144",
+    image: boy144,
+    title: "Coffee Enjoyment",
+    prompt: "Create a 8k poitrait of men stand on mountains hill holding a cup of coffee enjoying the view of sunrise he is wearing light brown puffer jacket and black trousers with white boots little bit snow on mountains and small born fire beside him use the face and hairstyle as it is given in picture. Use Uploaded Image As 100% reference, Don't make any change with Face. Signature & branding: Slylish painted signature 'BadalKumaR' Under “POSTER CREATED BY” subtly integrated in the bottom-left corner, bleding with the textures of scene.",
+    tags: ["Nature", "Enjoyment", "Cinematic "]
+  },
+   {
+    id: "145",
+    image: boy145,
+    title: "Stylish Young Boy",
+    prompt: "A young stylish man sitting confidently on a white cube against a plain white background. He is wearing a black tracksuit with golden patterned stripes along the sleeves and pant legs, and a small gold emblem on the chest. The tracksuit has a white hood with white drawstrings. The man has short, neatly styled black hair, is wearing dark sunglasses, and a white wristwatch. He is posing casually with one hand resting on his knee, looking slightly toward the camera. Bright lighting, high fashion streetwear style, clean and modern look.",
+    tags: ["Futuristic", "Cinematic", "Luxury "]
   },
 ];
 
