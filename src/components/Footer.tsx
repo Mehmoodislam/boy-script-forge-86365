@@ -105,7 +105,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 StylePrompts. All rights reserved. Made with ❤️ for AI creators.
+            © 2024 FreeImagePrompt. All rights reserved. Made with ❤️ for AI creators.
           </p>
         </div>
       </div>
