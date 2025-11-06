@@ -143,6 +143,10 @@ import boy142 from "@/assets/boy142.webp";
 import boy143 from "@/assets/boy143.webp";
 import boy144 from "@/assets/boy144.webp";
 import boy145 from "@/assets/boy145.webp";
+import boy146 from "@/assets/boy146.webp";
+import boy147 from "@/assets/boy147.webp";
+import boy148 from "@/assets/boy148.webp";
+
 
 
 
@@ -1184,7 +1188,30 @@ export const promptsData: PromptData[] = [
     prompt: "A young stylish man sitting confidently on a white cube against a plain white background. He is wearing a black tracksuit with golden patterned stripes along the sleeves and pant legs, and a small gold emblem on the chest. The tracksuit has a white hood with white drawstrings. The man has short, neatly styled black hair, is wearing dark sunglasses, and a white wristwatch. He is posing casually with one hand resting on his knee, looking slightly toward the camera. Bright lighting, high fashion streetwear style, clean and modern look.",
     tags: ["Futuristic", "Cinematic", "Luxury "]
   },
+  {
+    id: "146",
+    image: boy146,
+    title: "Cinematic Young Boy",
+    prompt: "Cinematic, hyper-realistic full-body portrait of a stylish young Indian boy, exact face from uploaded reference, wearing orange oversized orange shirt, black cargo jeans, white shoes, tousled hair, black sunglasses, black smartwatch, holding an iPhone 16 seating in garden table with comfort.Flower bouquet beside him. Leaning forward with elbows on knees, phone close to face, intense yet stylish focus, confident posture, cinematic framing",
+    tags: ["Boy", "Cinematic", "Nature "]
+  },
+   {
+    id: "147",
+    image: boy147,
+    title: "Slightly  Boy",
+    prompt: "100% ultra-realistic cinematic portrait of a 5.10 ft young Asian man with the same face as the uploaded photo (no edits). He has a slightly messy hairstyle, .no sunglasses, and wears a loose blue-blackish lined shirt with white pants. Standing confidently beside an ivy-covered wooden fence, adjusting his shades under soft golden sunlight. Blurred magenta-pink bougainvillea in background. Style: dark green tone, shallow DOF, warm cinematic glow. Jeans colour pant t shirt teal colour",
+    tags: ["Portrait", "Cinematic", "Nature "]
+  },
+  {
+    id: "148",
+    image: boy148,
+    title: "Luxury Boy",
+    prompt: "Ultra-realistic 8K cinematic portrait of a handsome young man sitting confidently in a luxurious modern drawing room on a transparent acrylic chair beside a glass table decorated with fresh flowers. He wears a crisp white shirt under a black V-neck sweater vest with a small polo logo, white tailored trousers, and black loafers with white soles. A dark-strap gold watch gleams on his wrist. His face and hairstyle exactly match the uploaded image, with his hair perfectly styled and neatly set. He is holding an iPhone in his hand, chatting on it with a soft, natural smile. His head is slightly turned toward the camera, and a subtle reflection of his face is visible on the glowing phone screen. From the screen, cute glowing emojis float out gently, creating a lively, romantic feel. Soft cinematic lighting highlights his face, hairstyle, and outfit with realistic reflections on glass surfaces, all in smooth white-toned premium color grading for a luxurious, high-fashion indoor look",
+    tags: ["Luxury", "Cinematic", "Futurisic "]
+  },
 ];
+
+
 
 
 
