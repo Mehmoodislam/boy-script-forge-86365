@@ -1,4 +1,4 @@
-import { Sparkles, Github, Twitter, Mail } from "lucide-react";
+import { Sparkles, Facebook, Instagram, Youtube, Video } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -82,22 +82,40 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Connect</h3>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                aria-label="Follow us on Facebook"
               >
-                <Twitter className="h-5 w-5" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                aria-label="Follow us on Instagram"
               >
-                <Github className="h-5 w-5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://tiktok.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                aria-label="Follow us on TikTok"
               >
-                <Mail className="h-5 w-5" />
+                <Video className="h-5 w-5" />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
+                aria-label="Subscribe to our YouTube channel"
+              >
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
