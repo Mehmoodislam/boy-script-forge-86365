@@ -146,6 +146,10 @@ import boy145 from "@/assets/boy145.webp";
 import boy146 from "@/assets/boy146.webp";
 import boy147 from "@/assets/boy147.webp";
 import boy148 from "@/assets/boy148.webp";
+import boy149 from "@/assets/boy149.webp";
+import boy150 from "@/assets/boy150.webp";
+import boy151 from "@/assets/boy151.webp";
+
 
 
 
@@ -1209,7 +1213,29 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic 8K cinematic portrait of a handsome young man sitting confidently in a luxurious modern drawing room on a transparent acrylic chair beside a glass table decorated with fresh flowers. He wears a crisp white shirt under a black V-neck sweater vest with a small polo logo, white tailored trousers, and black loafers with white soles. A dark-strap gold watch gleams on his wrist. His face and hairstyle exactly match the uploaded image, with his hair perfectly styled and neatly set. He is holding an iPhone in his hand, chatting on it with a soft, natural smile. His head is slightly turned toward the camera, and a subtle reflection of his face is visible on the glowing phone screen. From the screen, cute glowing emojis float out gently, creating a lively, romantic feel. Soft cinematic lighting highlights his face, hairstyle, and outfit with realistic reflections on glass surfaces, all in smooth white-toned premium color grading for a luxurious, high-fashion indoor look",
     tags: ["Luxury", "Cinematic", "Futurisic "]
   },
+   {
+    id: "149",
+    image: boy149,
+    title: "Premium Cinematic Boy",
+    prompt: "Hyper-realistic 4K photo poster collage of (and 100% same face the reference image) a man wearing a black leather jacket, white tee, jeans, and white sneakers. One intense close-up, one relaxed full-body pose, and one turning side profile - all layered over a smoky golden background with warm rim lighting and glowing dust particles. High contrast, cinematic depth, premium magazine vibe, DSLR camera click Picture Full hd pitcher and 8k ultra hd 1080",
+    tags: ["Luxury", "Cinematic", "Futurisic "]
+  },
+  {
+    id: "150",
+    image: boy150,
+    title: "Beautiful Moments",
+    prompt: "Create a hyper-realistic, ultra-sharp cinematic portrait of  scene where the morning sun shines on a handsome young man (use uploaded photo don't alter the face) standing on a beach next to a 3D 'GOOD MORNING' sculpture made of sand, wearing a white shirt with logo 'KELVIN.K' , short sleeve jacket and black pants. Holding a coffee and a sandwich, and giving a slight smile.",
+    tags: ["Nature", "Moments", "Futurisic "]
+  },
+   {
+    id: "151",
+    image: boy151,
+    title: "Beautiful Colorful Backround",
+    prompt: "A closed up selfie full-body photograph of a handsome young man use the uploaded photo happy expression walking directly towards the viewer on a dark, reflective surface. He is wearing a bright, glossy black bomber jacket over a simple red crew-neck shirt and well-fitting, cuffed medium-wash denim jeans. He is wearing red leather boots that match his jacket. ​The background is an explosion of intense, vibrant color—a highly dynamic color splash of pink, puple, orange, yellow, and electric blue pigments, creating a dramatic, energetic, and artistic backdrop. Hyperrealistic digital art, high detail, sharp focus, volumetric lighting, dramatic shadow contrast, 8k resolution, fashion photography style.",
+    tags: ["photgraph", "Colorful", "Futurisic "]
+  },
 ];
+
 
 
 
