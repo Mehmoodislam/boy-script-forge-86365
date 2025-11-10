@@ -149,6 +149,13 @@ import boy148 from "@/assets/boy148.webp";
 import boy149 from "@/assets/boy149.webp";
 import boy150 from "@/assets/boy150.webp";
 import boy151 from "@/assets/boy151.webp";
+import boy152 from "@/assets/boy152.webp";
+import boy153 from "@/assets/boy153.webp";
+import boy154 from "@/assets/boy154.webp";
+import boy155 from "@/assets/boy155.webp";
+import boy156 from "@/assets/boy156.webp";
+import boy157 from "@/assets/boy157.webp";
+
 
 
 
@@ -1233,6 +1240,48 @@ export const promptsData: PromptData[] = [
     title: "Beautiful Colorful Backround",
     prompt: "A closed up selfie full-body photograph of a handsome young man use the uploaded photo happy expression walking directly towards the viewer on a dark, reflective surface. He is wearing a bright, glossy black bomber jacket over a simple red crew-neck shirt and well-fitting, cuffed medium-wash denim jeans. He is wearing red leather boots that match his jacket. ​The background is an explosion of intense, vibrant color—a highly dynamic color splash of pink, puple, orange, yellow, and electric blue pigments, creating a dramatic, energetic, and artistic backdrop. Hyperrealistic digital art, high detail, sharp focus, volumetric lighting, dramatic shadow contrast, 8k resolution, fashion photography style.",
     tags: ["photgraph", "Colorful", "Futurisic "]
+  },
+  {
+    id: "152",
+    image: boy152,
+    title: "Modern Elegance in Traditional Attire",
+    prompt: "A young man with a stylish beard and modern hairstyle, wearing an off-white long kurta with a detailed, colorful, traditional Indian architectural print along the bottom hem and duppata. He is also wearing white slim-fit trousers and dark brown loafers without socks. He stands casually with his hands in his pockets, looking to his right. The background is a solid, ribbed, dark yellow or light brown industrial wall.",
+    tags: ["EthnicFashion", "Shalwar Kameez", "MensWear "]
+  },
+   {
+    id: "153",
+    image: boy153,
+    title: "Contemporary Cool: Cinematic Street Style",
+    prompt: "A Ultra-realistic, cinematic close up half body portrait of a young handsome man (exact same face from reference), height 510', standing casually with one hand in pocket. He wears a mustard blue jacket half unbuttoned Shirt, white pant, Black Sunglasses, His hair is same uploaded image highlights, tousled naturally with a few strands falling over sleek black sunglasses, The background is subtly blurred to emphasize a contemporary fashion-forward background change face white.",
+    tags: ["CinematicPortrait", "Modern", "Futuristic "]
+  },
+  {
+    id: "154",
+    image: boy154,
+    title: "Effortless Vibe: Street Chill Aesthetic",
+    prompt: "A stylish young man with 100% same face as is refrence, voluminous, naturally tousled hair, relaxing in a laid-back pose on a large black cylindrical object outdoors. Wearing a white Sweatshirt a small bat logo on it, and black pants, and a rimless rectangular Gradient Blue Sunglasses golden framing, accessorized with a silver bracelet and rings. The background includes industrial railings and blurred outdoor elements, His face is turned sideways and partially obscured by his hand.",
+    tags: ["CinematicPortrait", "CasualStyle", "Futuristic "]
+  },
+   {
+    id: "155",
+    image: boy155,
+    title: "Industrial Edge: Modern Street Icon",
+    prompt: "Hyper-ultra realistic 8K cinematic portrait. A full body stylish handsome young man modern hairstyle(same as uploaded photoand facial expressions) 22 year old. He is standing leans casually against a dark industrial metal door frame with one hand resting on top and cross the legs. He wears a black t-shirt a vibrant off white bomber or utility jacket, black cargo pants and air Jordan 4 shoes.",
+    tags: ["CinematicPortrait", "StreetFashion", "Futuristic "]
+  },
+  {
+    id: "156",
+    image: boy156,
+    title: "Fire and Denim: Editorial Intensity",
+    prompt: "Fashion editorial portrait of a handsome and athletic fit young Asian man seated on the floor while touching hand casually to his head and thoughtful looking at the camera. He wears a muted printed denim baggy casual jacket over a black top and oversized, printed casual denim pants. stylish pose. Carce beige studio background Broken ground or wall surface with fire light Farming greyish highlighted tousled perfect set hair with grey colour eyes with one ungli and fire.",
+    tags: ["CinematicPortrait", "FashionEditorial", "Futuristic "]
+  },
+   {
+    id: "157",
+    image: boy157,
+    title: "The Modern Elegance",
+    prompt: "Classy modern dark grey theme birthday poster — full-body walking pose in formal charcoal suit with sunglasses. Large faded portrait behind. Text ‘Bayobiyi’ bold modern, and elegant script ‘AI Prompt Expert’. Subtle golden highlights, glossy edges, clean minimal design. Shot on Canon EOS R6 Mark II, 70mm, f/1.6, cinematic 8k ultra-detailed.",
+    tags: ["CinematicPortrait", "FormalStyle", "MoodyPortrait"]
   },
 ];
 
