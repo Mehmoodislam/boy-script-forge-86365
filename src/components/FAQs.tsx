@@ -8,28 +8,28 @@ import {
 const FAQs = () => {
   const faqs = [
     {
-      question: "What AI image generators work with these prompts?",
-      answer: "Our prompts are designed to work with all major AI image generators including Midjourney, DALL-E 3, Stable Diffusion, Leonardo.ai, and more. The prompts use universal descriptive language that any AI can understand."
+      question: "What AI tools work with these prompts?",
+      answer: "Our prompts are tested on Midjourney, DALL·E, Stable Diffusion, and similar AI image generators. They produce consistent, realistic boy portraits."
     },
     {
-      question: "Are these prompts really free to use?",
-      answer: "Yes! All prompts on StylePrompts are completely free to use. There are no hidden costs, premium tiers, or subscriptions. Browse, copy, and use as many prompts as you want."
+      question: "Are these AI prompts free to use?",
+      answer: "Yes, every AI boy image prompt is 100% free - you can copy, use, and modify them for personal or creative projects."
     },
     {
-      question: "Can I modify the prompts?",
-      answer: "Absolutely! Feel free to customize any prompt to better suit your needs. You can adjust details like clothing, background, lighting, or style to create your perfect image."
+      question: "Can I use the prompts?",
+      answer: "Absolutely. You can tweak lighting, style, emotion, or outfit keywords for custom results."
     },
     {
       question: "How do I use the prompts?",
       answer: "Simply click on any image in our gallery to view its prompt, hit the copy button, then paste it into your preferred AI image generator. The AI will create an image based on that prompt."
     },
     {
-      question: "Why aren't my results identical to the examples?",
-      answer: "AI image generators have some randomness built in, so results will vary slightly. However, our prompts are crafted to give consistent, high-quality results across different generations."
+      question: "Why does my result look different?",
+      answer: "Each AI model interprets prompts slightly differently. Try using the same seed or version setting in your AI tool for closer results."
     },
     {
       question: "Can I request specific types of prompts?",
-      answer: "We're constantly expanding our collection. While we don't take individual requests, we regularly add new styles and variations based on popular demand."
+      answer: "Yes! Visit our Contact Page to suggest new AI portrait prompt styles like anime, realistic, or cyberpunk."
     }
   ];
 

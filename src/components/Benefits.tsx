@@ -5,22 +5,22 @@ const Benefits = () => {
     {
       icon: Clock,
       title: "Save Time",
-      description: "No more trial and error. Get perfect prompts instantly instead of spending hours experimenting."
+      description: "No trial and error. Use expert-tested prompts that just work."
     },
     {
       icon: DollarSign,
       title: "Completely Free",
-      description: "All prompts are 100% free to use. No hidden costs, subscriptions, or premium tiers."
+      description: "All prompts are free - no subscriptions or hidden fees."
     },
     {
       icon: TrendingUp,
       title: "Professional Quality",
-      description: "Generate images that look professionally shot. Perfect for social media, projects, or personal use."
+      description: "Generate portrait images that look like professional photoshoots."
     },
     {
       icon: Users,
       title: "Universal Compatibility",
-      description: "Works with all major AI image generators. Use with Midjourney, DALL-E, Stable Diffusion, and more."
+      description: "Works seamlessly across major AI platforms."
     }
   ];
 
@@ -29,7 +29,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why Choose <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">StylePrompts</span>
+            Why Creators Love <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">StylePrompts</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Discover the advantages of using our curated prompt library

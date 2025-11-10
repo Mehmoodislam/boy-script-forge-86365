@@ -4,8 +4,8 @@ const About = () => {
   const features = [
     {
       icon: Sparkles,
-      title: "Handcrafted Prompts",
-      description: "Each prompt is carefully crafted to generate stunning, professional-quality images with consistent results."
+      title: "Handcrafted AI Prompts",
+      description: "Every prompt is written and optimized for consistency and professional quality results. Our team tests each one with major AI image generators before publishing."
     },
     {
       icon: Target,
@@ -15,7 +15,7 @@ const About = () => {
     {
       icon: Zap,
       title: "Instant Access",
-      description: "Simply browse, click, copy, and paste. No sign-up required. Start creating amazing images in seconds."
+      description: "No login. No sign-up. Just click, copy, and paste your chosen AI boy portrait prompt into your favorite generator."
     }
   ];
 
@@ -27,8 +27,7 @@ const About = () => {
             About <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">StylePrompts</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Your ultimate resource for creating stunning AI-generated portraits. We provide professionally crafted prompts 
-            that help you generate stylish, high-quality images consistently.
+            Your ultimate source for professional, ready-to-use <b>AI image prompts</b> - built for artists, creators, and AI enthusiasts.
           </p>
         </div>
 

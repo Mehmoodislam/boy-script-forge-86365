@@ -5,22 +5,22 @@ const HowToUse = () => {
     {
       icon: Search,
       title: "Browse Gallery",
-      description: "Explore our collection of handsome boy prompts. Each image shows the exact result you can achieve."
+      description: "Explore our collection of realistic, handsome AI boy prompts. Each example image shows exactly what the AI can generate."
     },
     {
       icon: Copy,
       title: "Copy Prompt",
-      description: "Click on any image to view its prompt. Hit the copy button to instantly copy it to your clipboard."
+      description: "Click on any image to view its detailed prompt. Hit the copy button for one-click access."
     },
     {
       icon: Wand2,
       title: "Generate Image",
-      description: "Paste the prompt into your favorite AI image generator (Midjourney, DALL-E, Stable Diffusion, etc.)."
+      description: "Paste the prompt into your chosen AI tool - Midjourney, DALL·E, or Stable Diffusion - and hit generate."
     },
     {
       icon: CheckCircle,
       title: "Enjoy Results",
-      description: "Watch as the AI creates a stunning, stylish portrait based on our professionally crafted prompt."
+      description: "Get a high-quality, styled portrait ready for social media, design projects, or creative inspiration."
     }
   ];
 
@@ -29,10 +29,10 @@ const HowToUse = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Use</span>
+            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Use Stunning AI Portraits</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Creating stunning AI portraits is just four simple steps away
+            Making AI-generated boy portraits is simple. Follow these steps to create stylish results instantly:
           </p>
         </div>
 
