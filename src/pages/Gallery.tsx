@@ -79,9 +79,66 @@ const Gallery = () => {
     }
     canonical.href = window.location.href;
 
-    // Cleanup function to reset title when component unmounts
+    // Add JSON-LD structured data
+    const jsonLdScript = document.createElement('script');
+    jsonLdScript.type = 'application/ld+json';
+    jsonLdScript.id = 'gallery-jsonld';
+    jsonLdScript.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": window.location.href,
+          "url": window.location.href,
+          "name": "Free AI Image Prompts for Stylish Boy Portraits | FreeImagePrompt",
+          "description": "Discover 148+ handcrafted AI image prompts for creating stunning stylish boy portraits. Free prompts for Midjourney, DALL-E, Stable Diffusion.",
+          "inLanguage": "en-US",
+          "isPartOf": {
+            "@type": "WebSite",
+            "@id": window.location.origin,
+            "name": "FreeImagePrompt",
+            "url": window.location.origin
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": window.location.origin
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Gallery",
+              "item": window.location.href
+            }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "AI Image Prompts Gallery",
+          "description": "Browse 148+ free AI image prompts for creating stylish boy portraits",
+          "numberOfItems": promptsData.length,
+          "about": {
+            "@type": "CreativeWork",
+            "name": "AI Image Generation Prompts",
+            "description": "Collection of prompts for Midjourney, DALL-E, and Stable Diffusion"
+          }
+        }
+      ]
+    });
+    document.head.appendChild(jsonLdScript);
+
+    // Cleanup function
     return () => {
       document.title = "FreeImagePrompt - AI Image Prompts for Stylish Boy Portraits";
+      const existingScript = document.getElementById('gallery-jsonld');
+      if (existingScript) {
+        existingScript.remove();
+      }
     };
   }, []);
 
