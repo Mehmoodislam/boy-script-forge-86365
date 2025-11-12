@@ -1279,7 +1279,7 @@ export const promptsData: PromptData[] = [
    {
     id: "157",
     image: boy157,
-    title: "The Modern Elegance",
+    title: "Modern Elegance",
     prompt: "Classy modern dark grey theme birthday poster — full-body walking pose in formal charcoal suit with sunglasses. Large faded portrait behind. Text ‘Bayobiyi’ bold modern, and elegant script ‘AI Prompt Expert’. Subtle golden highlights, glossy edges, clean minimal design. Shot on Canon EOS R6 Mark II, 70mm, f/1.6, cinematic 8k ultra-detailed.",
     tags: ["CinematicPortrait", "FormalStyle", "MoodyPortrait"]
   },
