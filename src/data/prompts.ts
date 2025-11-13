@@ -155,6 +155,11 @@ import boy154 from "@/assets/boy154.webp";
 import boy155 from "@/assets/boy155.webp";
 import boy156 from "@/assets/boy156.webp";
 import boy157 from "@/assets/boy157.webp";
+import boy158 from "@/assets/boy158.webp";
+import boy159 from "@/assets/boy159.webp";
+import boy160 from "@/assets/boy160.webp";
+import boy161 from "@/assets/boy161.webp";
+
 
 
 
@@ -1283,7 +1288,36 @@ export const promptsData: PromptData[] = [
     prompt: "Classy modern dark grey theme birthday poster — full-body walking pose in formal charcoal suit with sunglasses. Large faded portrait behind. Text ‘Bayobiyi’ bold modern, and elegant script ‘AI Prompt Expert’. Subtle golden highlights, glossy edges, clean minimal design. Shot on Canon EOS R6 Mark II, 70mm, f/1.6, cinematic 8k ultra-detailed.",
     tags: ["CinematicPortrait", "FormalStyle", "MoodyPortrait"]
   },
+  {
+    id: "158",
+    image: boy158,
+    title: "The Cool Dissolve",
+    prompt: "In the foreground, a young, attractive man, wearing sunglasses, is sitting casually on the hood of a black classic car (muscle car or vintage coupe). He wears a black regatta, camouflaged shorts (army print), white high hip sneakers with white sock details and a thick silver chain necklace with a square pendant. He has a serious and cool expression, looking away.At the bottom, behind him and taking up most of the vertical space, 1/2there is a larger image of the same man (bust portrait), also wearing sunglasses, looking up and the side. This larger image appears to be disintegrating into splashes and strokes of red ink and black with a watercolor or digital brushstrokes effect, creating a dramatic contrast and a sense of energy. keep this faceThe overall background is a clear gray sky or a blurred urban setting, with the artistic mounting overlapping. The floor is clean asphalt or concrete.1/3The lighting is clear and daytime, coming from above, highlighting the man's muscle, the radiance of the car, and the effect of splashes of paint. The light highlights the texture of the clothes and the brightness of the sunglasses. Simulation of 85mm f/1.4 lens, used for sharp focus on man and car in foreground. The natural background (sky) can have a soft bokeh, while the artistic splash effect remains sharp as part of the composition.1/4The style is artistic, conceptual and pop culture/streetwear, with a dynamic and edgy aesthetic. Colors are dominated by black white, camouflage green, and the vibrant splashes of red and black creating a strong visual impact. Raised contrast and vivid saturation for a powerful, graphic look. Incredibly sharp details on the beard, sunglasses, muscles, the texture of the regatta and shorts, the sneakers, the classic car, 1/5and the detailed effect of splashes of red ink and black in the background. 'Don't change your face or hair Hi I put all the commands in the channel members 2.8 thousand real prompt gemini in my bio, there you can copy",
+    tags: ["CinematicPortrait", "Gangster", "StreetwearArt"]
+  },
+  {
+    id: "159",
+    image: boy159,
+    title: " Cool Boy",
+    prompt: "Hyper-realistic cinematic fashion photoshoot of the uploaded person. Seated on a deep blue bean bag, he wears bold all-blue oversized streetwear: , blue jumper, wide blue pants, chunky sneakers, apple watch. Solid blue background,. Powerful drip vibes, Adidas campaign editorial look, dramatic studio lighting. Keep my face exactly the same as the uploaded photo. Do not change or edit my face.' Notas, solo tiene que indicar el color que quieres",
+    tags: ["CinematicPortrait", "Futuristic", "Luxury"]
+  },
+   {
+    id: "160",
+    image: boy160,
+    title: "The White Wolf’s Shadow",
+    prompt: "A medium shot, digital composite art (photomontage), of a handsome young man, wearing dark sunglasses, a white full suit wearing white long fure winter coat . The man is walking front of camera. from the far distance a big hybrib giant white wolf, coming behind the man. front of camera. The background is very blurry (strong bokeh effect snow desert and snow fall) in a natural setting with cool, desaturated colors. The lighting is soft and dramatic, focusing on the features of the man and the white wolf. The style combines realism with high-fashion photography. make it full view, wolf must be look like extra hybrid giant than a man, copy my face 100%",
+    tags: ["CinematicPortrait", "Futuristic", "HybridElegance"]
+  },
+  {
+    id: "160",
+    image: boy161,
+    title: "Rise from the Dust",
+    prompt: "A cinematic action scene of a rugged man mid-fight in a dusty, chaotic environment. He swings a large sledgehammer with intense energy, muscles tensed, dust and debris exploding around him. He wears a torn grey shirt, jeans, and a bandage around his head, showing signs of battle. Harsh golden sunlight cuts through the haze, creating dramatic lighting and motion blur. Gritty, dynamic, high-intensity atmosphere, freeze-frame action shot, cinematic realism, epic tone  16 year old",
+    tags: ["CinematicPortrait", "Street", "Moody"]
+  },
 ];
+
 
 
 
