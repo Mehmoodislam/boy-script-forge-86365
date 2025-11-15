@@ -159,6 +159,13 @@ import boy158 from "@/assets/boy158.webp";
 import boy159 from "@/assets/boy159.webp";
 import boy160 from "@/assets/boy160.webp";
 import boy161 from "@/assets/boy161.webp";
+import boy162 from "@/assets/boy162.webp";
+import boy163 from "@/assets/boy163.webp";
+import boy164 from "@/assets/boy164.webp";
+import boy165 from "@/assets/boy165.webp";
+import boy166 from "@/assets/boy166.webp";
+import boy167 from "@/assets/boy167.webp";
+
 
 
 
@@ -1310,11 +1317,53 @@ export const promptsData: PromptData[] = [
     tags: ["CinematicPortrait", "Futuristic", "HybridElegance"]
   },
   {
-    id: "160",
+    id: "161",
     image: boy161,
     title: "Rise from the Dust",
     prompt: "A cinematic action scene of a rugged man mid-fight in a dusty, chaotic environment. He swings a large sledgehammer with intense energy, muscles tensed, dust and debris exploding around him. He wears a torn grey shirt, jeans, and a bandage around his head, showing signs of battle. Harsh golden sunlight cuts through the haze, creating dramatic lighting and motion blur. Gritty, dynamic, high-intensity atmosphere, freeze-frame action shot, cinematic realism, epic tone  16 year old",
     tags: ["CinematicPortrait", "Street", "Moody"]
+  },
+  {
+    id: "162",
+    image: boy162,
+    title: "The Future of Style",
+    prompt: "A stylish young man sitting confidently on a vibrant, gradient-colored royal armchair. He wears a modern, colorful Adidas-style tracksuit with smooth neon gradients (pink, blue, purple). White sneakers. Behind him is a giant smartphone screen showing a fictional Instagram profile with bright UI elements. A glowing Instagram logo floats between the man and the phone. Background has soft neon lights, futuristic glow, smooth gradients, and a modern aesthetic. Ultra-realistic lighting, crisp details, 3D digital art, high saturation, cinematic composition.",
+    tags: ["CinematicPortrait", "Futuristic", "Instagram"]
+  },
+   {
+    id: "163",
+    image: boy163,
+    title: "he New Age of Influence",
+    prompt: "A confident young man sitting on a luxurious green armchair. He wears a stylish white-and-green Adidas-style tracksuit with clean lines and sporty detailing, along with white sneakers. Behind him stands a large glowing smartphone displaying a fictional social media profile with a green UI theme. Soft neon green outlines, geometric shapes, and digital glow surround the scene. A floating chat icon or profile bubble appears near his head. The environment has a futuristic, modern aesthetic with smooth gradients, soft shadows, and crisp 3D digital art. Ultra-realistic lighting, vibrant colors, high detail, cinematic composition.",
+    tags: ["ModernLuxury", "FuturisticInfluencer", "DigitalStyle"]
+  },
+  {
+    id: "164",
+    image: boy164,
+    title: "Kashmir Reflections",
+    prompt: "A surreal cinematic double exposure artwork featuring the side profile of a young man with curly hair and a short beard, seamlessly blended with a dramatic mountain landscape. Mist and clouds flow through his hair, symbolizing curiosity, growth, and nature's power. At the base of the image, a lone traveler stands on a rocky peak illuminated by a warm glowing light, creating a sense of scale and introspection. The color palette is dominated by cool blues and grays, with soft light and atmospheric depth. The composition should be highly detailed, moody, and artistic, evoking the feel of a concept poster design in ultra-realistic fine art photography style. Use the uploaded face as the reference for the young man's appearance.- feeling wonderful in Kashmir, Pakistan.",
+    tags: ["Nature", "KashmirVibes", "Concept"]
+  },
+   {
+    id: "165",
+    image: boy165,
+    title: "The Creator’s Zone",
+    prompt: "A creative digital portrait of a young man sitting at a desk, holding a smartphone in one hand and working on a laptop (ASUS) in front of him. He is wearing a yellow hoodie, focused and illuminated by soft neon blue and orange lighting. Around him float glowing icons of Photoshop (Ps) and Lightroom (Lr), along with text message bubbles that say: 'Hey, I’ve got some questions on your pricing for business plans!!' and 'I can help. Got time for a call now?' The atmosphere feels futuristic, techy, and cinematic - representing a digital creator or photo editor at work. The background is dark with a glowing logo text 'Ibrahim' in neon light.",
+    tags: ["DigitalCreator", "CinematicPortrait", "Futuristic"]
+  },
+  {
+    id: "166",
+    image: boy166,
+    title: "Earth Beneath My Thoughts",
+    prompt: "Ultra-realistic cinematic artwork of a person Face with the face from the uploaded image, keeping the facial features exactly the same. sitting on the surface of the moon, with planet Earth glowing brightly in the starry sky behind him. The scene is highly detailed, showing the rocky lunar ground with scattered stones and soft blue lighting. The person sits casually on a simple chair, legs crossed, resting his chin on his hand in a thoughtful pose. He wears a white oversized t-shirt with a NASA logo patch, black cargo pants, stylish black-and-white sneakers, and a clean white cap. Next to him, another chair acts as a small table, holding a steaming cup of coffee and a classic coffee grinder, with visible steam rising. Earth appears huge and vivid in the background, showing illuminated continents and glowing city lights, giving a breathtaking cosmic view. The atmosphere feels dreamy, peaceful, and surreal, combining cozy everyday life with futuristic space exploration. Hyper-detailed, ultra-sharp, 8K resolution, photorealistic textures, cinematic lighting, space ambience, masterpiece.",
+    tags: ["UltraRealisticPortrait", "Nature", "Earth"]
+  },
+   {
+    id: "167",
+    image: boy167,
+    title: "Rooftop of Stars",
+    prompt: "A hyper-realistic, cinematic portrait of a man standing on a rooftop at sunset, cradling a large, glowing full moon in his hands as if it were a precious object. The sky behind him is painted in deep shades of orange and purple, illuminated by multiple shooting stars and meteor streaks that pierce the twilight. The man's expression is serene and contemplative, his face softly lit by the moon's warm, golden glow. He wears a light shirt and a watch, with a light touch to his short, neatly trimmed beard. His ear glows faintly, reflecting a tiny, star-shaped light, symbolizing connection with the cosmos. The atmosphere is surreal yet serene, blending elements of fantasy and cosmic wonder. The composition features cinematic lighting, shallow depth of field, HDR tonal mapping, and 8K resolution, capturing subtle details and a vibrant contrast between light and shadow. Style keywords: cinematic realism, fantasy photography, golden hour, astrophotography aesthetics, surreal atmosphere, high dynamic range, 8K ultra-detail",
+    tags: ["CinematicFantasy", "Nature", "Moody"]
   },
 ];
 
