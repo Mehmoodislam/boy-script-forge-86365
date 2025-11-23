@@ -165,6 +165,13 @@ import boy164 from "@/assets/boy164.webp";
 import boy165 from "@/assets/boy165.webp";
 import boy166 from "@/assets/boy166.webp";
 import boy167 from "@/assets/boy167.webp";
+import boy168 from "@/assets/boy168.webp";
+import boy169 from "@/assets/boy169.webp";
+import boy170 from "@/assets/boy170.webp";
+import boy171 from "@/assets/boy171.webp";
+import boy172 from "@/assets/boy172.webp";
+import boy173 from "@/assets/boy173.webp";
+
 
 
 
@@ -1358,14 +1365,44 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic cinematic artwork of a person Face with the face from the uploaded image, keeping the facial features exactly the same. sitting on the surface of the moon, with planet Earth glowing brightly in the starry sky behind him. The scene is highly detailed, showing the rocky lunar ground with scattered stones and soft blue lighting. The person sits casually on a simple chair, legs crossed, resting his chin on his hand in a thoughtful pose. He wears a white oversized t-shirt with a NASA logo patch, black cargo pants, stylish black-and-white sneakers, and a clean white cap. Next to him, another chair acts as a small table, holding a steaming cup of coffee and a classic coffee grinder, with visible steam rising. Earth appears huge and vivid in the background, showing illuminated continents and glowing city lights, giving a breathtaking cosmic view. The atmosphere feels dreamy, peaceful, and surreal, combining cozy everyday life with futuristic space exploration. Hyper-detailed, ultra-sharp, 8K resolution, photorealistic textures, cinematic lighting, space ambience, masterpiece.",
     tags: ["UltraRealisticPortrait", "Nature", "Earth"]
   },
-   {
+  {
     id: "167",
     image: boy167,
     title: "Rooftop of Stars",
     prompt: "A hyper-realistic, cinematic portrait of a man standing on a rooftop at sunset, cradling a large, glowing full moon in his hands as if it were a precious object. The sky behind him is painted in deep shades of orange and purple, illuminated by multiple shooting stars and meteor streaks that pierce the twilight. The man's expression is serene and contemplative, his face softly lit by the moon's warm, golden glow. He wears a light shirt and a watch, with a light touch to his short, neatly trimmed beard. His ear glows faintly, reflecting a tiny, star-shaped light, symbolizing connection with the cosmos. The atmosphere is surreal yet serene, blending elements of fantasy and cosmic wonder. The composition features cinematic lighting, shallow depth of field, HDR tonal mapping, and 8K resolution, capturing subtle details and a vibrant contrast between light and shadow. Style keywords: cinematic realism, fantasy photography, golden hour, astrophotography aesthetics, surreal atmosphere, high dynamic range, 8K ultra-detail",
     tags: ["CinematicFantasy", "Nature", "Moody"]
   },
+  {
+    id: "168",
+    image: boy168,
+    title: "AI Trends Lemon Splash",
+    prompt: "A modern, refreshing product-advertisement scene featuring a silver soda can standing on a reflective wet surface. Water droplets cover the can, and a dynamic splash of water bursts from the top. Fresh yellow lemons—whole and sliced—with green leaves are arranged around the can. On the front of the can, there is a monochrome graphic-style portrait of a man wearing a hoodie and cap. The text ‘AI Trends’ appears in bold yellow letters. Bright studio lighting, high realism, crisp details, vibrant lemon-themed colors, and a professional commercial photography look.",
+    tags: ["ProductPhotography", "Nature", "Cinematic"]
+  },
+   {
+    id: "169",
+    image: boy169,
+    title: "Vibrant Watercolor Reflection",
+    prompt: "A vibrant portrait of a young man, based on the reference image for facial resemblance, depicted in a watercolor and ink sketch style. He is shown resting his chin on his hand in a thoughtful, relaxed pose. His hair is slightly messy and styled naturally, adding to the expressive, casual look. The artwork features visible ink lines and loose watercolor washes in shades of blue, orange, yellow, and pink, blending organically with the paper texture. The strokes are bold and dynamic, creating a sense of energy and emotion. The background is a clean white, highlighting the colorful, artistic composition and the contrast between sketch lines and watercolor flow. Keywords: expressive watercolor portrait, ink and pencil lines, vibrant colors, artistic sketch style, modern art illustration, emotional realism, white background.",
+    tags: ["Modern", "Cinamatic", "Futuristic"]
+  },
+  {
+    id: "170",
+    image: boy170,
+    title: "Follow AI Trends",
+    prompt: "A hyper-realistic, 8k, high-angle overhead shot captures a person looking directly up at the camera with a wide, happy smile, their uploaded face as reference. The subject is wearing a dark grey hoodie, dark pants, and black sneakers with white laces and soles, with hands casually in their pockets. They are centrally positioned on a dark, textured asphalt ground, standing between two massive, textured white graphic numbers '0' and '1' that appear painted or embedded onto the surface. To the upper left of the subject, the textured white text 'December' is visible, while 'Follow AI Trends' is inscribed within the '0' graphic. A silver laptop, open with its keyboard visible, rests flat on the ground to the upper right of the subject. The scene is illuminated by dramatic, cinematic spotlighting from directly above, creating a bright, focused area around the subject and objects, with harsh shadows and a subtle glow, fading into deep black at the edges of the frame, emphasizing the highly detailed texture of the asphalt. A stylized white MK' logo is placed at the bottom center. The composition uses a wide-angle lens to encompass all elements from the extreme high-angle perspective, integrating the graphic overlays seamlessly into the ground plane.",
+    tags: ["Modern", "Cinamatic", "Futuristic"]
+  },
+   {
+    id: "171",
+    image: boy171,
+    title: "Holographic Facebook Identity",
+    prompt: "A futuristic 3D digital artwork showing a glowing Facebook profile card placed on a sleek black desk. The card has a circular profile picture of a young man with long dark brown hair, wearing a soft beige sweater and a delicate necklace. Her expression is calm and elegant. The Facebook interface is designed in a modern holographic style with soft blue lighting around the edges, displaying the name ‘New laa watt’ along with profile details and small icons. A metallic pen lies beside the card, adding a professional and realistic touch. The overall tone is clean, stylish, and high-tech — futuristic social media concept, 4K digital art, photorealistic lighting.' Use reference face. Don't editing my face and hairstyle.",
+    tags: ["Nature", "Cinamatic", "Futuristic"]
+  },
 ];
+
+
 
 
 
