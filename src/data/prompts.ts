@@ -1400,6 +1400,20 @@ export const promptsData: PromptData[] = [
     prompt: "A futuristic 3D digital artwork showing a glowing Facebook profile card placed on a sleek black desk. The card has a circular profile picture of a young man with long dark brown hair, wearing a soft beige sweater and a delicate necklace. Her expression is calm and elegant. The Facebook interface is designed in a modern holographic style with soft blue lighting around the edges, displaying the name ‘New laa watt’ along with profile details and small icons. A metallic pen lies beside the card, adding a professional and realistic touch. The overall tone is clean, stylish, and high-tech — futuristic social media concept, 4K digital art, photorealistic lighting.' Use reference face. Don't editing my face and hairstyle.",
     tags: ["Nature", "Cinamatic", "Futuristic"]
   },
+   {
+    id: "172",
+    image: boy172,
+    title: "Instagram Identity",
+    prompt: "A person subject based on the reference image, keeping the exact same facial structure, hairstyle, and identity (100% identical to the reference, no alterations allowed). A tall, slender, and well-proportioned young man. He has a handsome face, fair, smooth skin, and an elegant, youthful aura. Create a hyper-realistic portrait of the handsome man from the reference photo, framed inside an oversized Instagram post that dominates the composition. His facial features remain identical to the reference—sharp, expressive, and naturally attractive. He sits in a grounded, masculine street-style pose: body leaning slightly forward with both forearms resting on his knees, while one leg steps outward through the Instagram frame, forming a clean and impactful 3D illusion. The pose remains relaxed yet strong. Give him a strong, high-fashion model expression—eyes focused forward with controlled intensity, lips relaxed and neutral (not smiling), jaw slightly defined, and overall energy calm, confident, and effortlessly photogenic. His expression should look like a real editorial model: bold, composed, and quietly powerful without looking cold or stiff. He wears a rust-brown hoodie, cream cargo pants, and beige sneakers, creating a warm earthy streetwear palette. The Instagram frame appears ultra-realistic, featuring: • username “Boy Scooter” • verified badge • display name “AI Generation” • caption “#AICreation #GoogleGeminiPrompts” • authentic IG icons • a circular profile picture identical to the reference photo. The background features an earthy gradient of sand blending into warm burnt orange, with subtle matte textures that complement the outfit’s tones. Soft cinematic lighting enhances his jawline, eye intensity, and the fabric’s texture, emphasizing the 3D breakout effect. The result is a warm, masculine, editorial-style portrait with viral visual impact.",
+    tags: ["Nature", "Cinamatic", "Futuristic"]
+  },
+    {
+    id: "173",
+    image: boy173,
+    title: "Graphite Portrait Study",
+    prompt: "Create an ultra-detailed, hyper-realistic 3D-style graphite pencil sketch of a human face, drawn on textured white notebook paper with visible paper grain and subtle imperfections. The face sketch should look exactly like the reference photo shown on an iPhone placed next to the notebook. The iPhone’s screen clearly displays the original portrait photo that the artist is drawing, with natural reflections and soft daylight glare on the glass. 1 / 2",
+    tags: ["Realistic Sketch", "Cinamatic", "Futuristic"]
+  },
 ];
 
 
