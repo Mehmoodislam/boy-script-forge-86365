@@ -29,7 +29,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            Why Creators Love <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">StylePrompts</span>
+            Why Creators Love <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">FreeImagePrompt</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Discover the advantages of using our curated prompt library
