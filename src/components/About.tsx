@@ -24,7 +24,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            About <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">StylePrompts</span>
+            About <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">FreeImagePrompt</span>
           </h2>
           <p className="text-lg text-muted-foreground">
             Your ultimate source for professional, ready-to-use <b>AI image prompts</b> - built for artists, creators, and AI enthusiasts.

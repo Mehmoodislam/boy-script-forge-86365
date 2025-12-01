@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://styleprompts.com/sitemap.xml
+Sitemap: https://freeimmageprompts.com/sitemap.xml
