@@ -171,26 +171,11 @@ import boy170 from "@/assets/boy170.webp";
 import boy171 from "@/assets/boy171.webp";
 import boy172 from "@/assets/boy172.webp";
 import boy173 from "@/assets/boy173.webp";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import boy174 from "@/assets/boy174.webp";
+import boy175 from "@/assets/boy175.webp";
+import boy176 from "@/assets/boy176.webp";
+import boy177 from "@/assets/boy177.webp";
+import boy178 from "@/assets/boy178.webp";
 
 
 export interface PromptData {
@@ -1407,12 +1392,47 @@ export const promptsData: PromptData[] = [
     prompt: "A person subject based on the reference image, keeping the exact same facial structure, hairstyle, and identity (100% identical to the reference, no alterations allowed). A tall, slender, and well-proportioned young man. He has a handsome face, fair, smooth skin, and an elegant, youthful aura. Create a hyper-realistic portrait of the handsome man from the reference photo, framed inside an oversized Instagram post that dominates the composition. His facial features remain identical to the reference—sharp, expressive, and naturally attractive. He sits in a grounded, masculine street-style pose: body leaning slightly forward with both forearms resting on his knees, while one leg steps outward through the Instagram frame, forming a clean and impactful 3D illusion. The pose remains relaxed yet strong. Give him a strong, high-fashion model expression—eyes focused forward with controlled intensity, lips relaxed and neutral (not smiling), jaw slightly defined, and overall energy calm, confident, and effortlessly photogenic. His expression should look like a real editorial model: bold, composed, and quietly powerful without looking cold or stiff. He wears a rust-brown hoodie, cream cargo pants, and beige sneakers, creating a warm earthy streetwear palette. The Instagram frame appears ultra-realistic, featuring: • username “Boy Scooter” • verified badge • display name “AI Generation” • caption “#AICreation #GoogleGeminiPrompts” • authentic IG icons • a circular profile picture identical to the reference photo. The background features an earthy gradient of sand blending into warm burnt orange, with subtle matte textures that complement the outfit’s tones. Soft cinematic lighting enhances his jawline, eye intensity, and the fabric’s texture, emphasizing the 3D breakout effect. The result is a warm, masculine, editorial-style portrait with viral visual impact.",
     tags: ["Nature", "Cinamatic", "Futuristic"]
   },
-    {
+  {
     id: "173",
     image: boy173,
     title: "Graphite Portrait Study",
     prompt: "Create an ultra-detailed, hyper-realistic 3D-style graphite pencil sketch of a human face, drawn on textured white notebook paper with visible paper grain and subtle imperfections. The face sketch should look exactly like the reference photo shown on an iPhone placed next to the notebook. The iPhone’s screen clearly displays the original portrait photo that the artist is drawing, with natural reflections and soft daylight glare on the glass. 1 / 2",
     tags: ["Realistic Sketch", "Cinamatic", "Futuristic"]
+  },
+   {
+    id: "174",
+    image: boy174,
+    title: "Graphic Logo",
+    prompt: "A cinematic neon-lit fashion portrait of a male model in profile against a deep blue background. A glowing circular halo of bright yellow-green light floats behind his head, casting a vivid rim light along his face and hair. His neck and collar are illuminated by the same neon glow, creating a striking futuristic silhouette. The lighting is dramatic and sculpted, with strong contrast, smooth skin texture, and refined shadows. Minimalist composition, clean color palette, and a high-fashion editorial mood. Ultra high resolution, crisp details, no text, no watermark, no logo.",
+    tags: ["Realistic Sketch", "Cinamatic", "Futuristic"]
+  },
+   {
+    id: "175",
+    image: boy175,
+    title: "Wooden Nook Vibes",
+    prompt: "A vibrant indoor lifestyle photo of a young man sitting in a circular wooden nook on the wall,surrounded by hanging plants and neon lights,with a large white ball as part of the decor.Outfit:Stylish white colour full-sleeve panjabi and paired with cream or light beige high-waist trousers, white Apple Watch, and trendy White colored loafer.accessories can include delicate rings or earrings for a fashionable touch.the man has the same face.",
+    tags: ["Shalwar Kameez", "Cinamatic", "Futuristic"]
+  },
+  {
+    id: "176",
+    image: boy176,
+    title: "Painting Contrast",
+    prompt: "A detailed digital painting of a man with a beard wearing a black and gold paisley-patterned hoodie with the hood up. He is wearing thick-rimmed black glasses with bright yellow lenses. The background is an abstract, textured wall pattern of alternating yellow and grayscale/white checkerboard squares, with subtle circular and abstract glyphs scattered around. The man's face and skin are rendered in grayscale/black and white, with the only color being the vivid yellow and gold accents on the glasses, hoodie pattern, and background. High detail, contemporary art style, striking color isolation (yellow and black/white).",
+    tags: ["Shalwar Kameez", "Traditinal", "Futuristic"]
+  },
+  {
+    id: "177",
+    image: boy177,
+    title: "DSLR Evulation",
+    prompt: "Transform this image Upload Your Image into a 64R DSLR shot resolution full-body portrait of A sleek and modern collage featuring a single male (same face as the uploaded image) model in various poses and outfits, predominantly with striking Blue accents. The overall aesthetic is contemporary and urban.face 100 perfect same original image",
+    tags: ["Moody", "Cinimatic", "Futuristic"]
+  },
+  {
+    id: "178",
+    image: boy178,
+    title: "Office Desk Surrealism",
+    prompt: "A hyper-realistic, 8k, high-angle medium shot captures a surreal office desk scene with a shallow depth of field, emphasizing the foreground subject. The primary subject is a tiny person, approximately 1:10 scale, with uploaded face as reference, sitting cross-legged on a giant black computer keyboard. The person wears black over-ear headphones, a vibrant patterned short-sleeve button-up shirt, blue jeans, and grey sneakers, holding a miniature silver laptop in one hand and a tiny white coffee cup in the other, looking directly at the viewer with a slight smirk. The oversized keyboard features realistic key textures and subtle coffee stains. Behind the keyboard, a spiral-bound notebook with "To Do: Coffee!" handwritten on it and a pen are visible. To the left, a large black computer monitor displays a light-themed file explorer interface, with a yellow sticky note featuring a hand-drawn smiley face attached to its bottom left bezel. To the right, an enormous white ceramic coffee mug with "@AITrends" text is filled with dark coffee. The light wooden desk surface is cluttered with scattered papers, a spilled miniature coffee cup creating a brown stain, paper clips, and coiled black cables, including a USB cable and a black computer mouse connected by a wire that extends towards the tiny person's feet. The scene is bathed in bright, diffused natural lighting from an unseen window, creating soft shadows and highlights, with a subtly blurred office background. The image features cinematic lighting and highly detailed textures throughout.",
+    tags: ["Tradional", "Office", "Futuristic"]
   },
 ];
 
