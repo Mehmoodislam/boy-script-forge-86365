@@ -27,8 +27,11 @@ const Hero = () => {
             <span className="text-foreground">Professional Prompts for AI Portraits</span>
           </h1>
 
+          <p className="text-xl text-muted-foreground max-w-5xl mx-auto">
+             Create stunning, <b>realistic AI boy portraits</b> using our professionally handcrafted prompts. FreeImagePrompt is your ultimate destination for <b>stylish boy image prompts</b> designed specifically for <b>Midjourney , DALL·E, and Stable Diffusion.</b>
+          </p>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Create the <b>perfect AI boy image</b> using our collection of handcrafted prompts. Designed for Midjourney, DALL·E, and Stable Diffusion, each prompt helps you generate realistic, stylish portraits in just one click.
+              With just <b>one click</b>, copy a prompt and generate <b>high-quality AI boy images</b> perfect for profile pictures, creative projects, and social media.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -39,14 +42,14 @@ const Hero = () => {
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-primary/30 hover:border-primary">
-              Learn How It Works
+                Learn How It Works
             </Button>
           </div>
 
           <div className="pt-12 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="space-y-2">
               <div className="text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                50+
+                150+
               </div>
               <div className="text-sm text-muted-foreground">Premium Prompts</div>
             </div>

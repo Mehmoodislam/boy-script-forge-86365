@@ -8,11 +8,11 @@ import {
 const FAQs = () => {
   const faqs = [
     {
-      question: "What AI tools work with these prompts?",
-      answer: "Our prompts are tested on Midjourney, DALL·E, Stable Diffusion, and similar AI image generators. They produce consistent, realistic boy portraits."
+      question: "Which AI tools support these prompts?",
+      answer: "Our prompts are tested on Midjourney, DALL·E, and Stable Diffusion."
     },
     {
-      question: "Are these AI prompts free to use?",
+      question: "Are these AI prompts really free?",
       answer: "Yes, every AI boy image prompt is 100% free - you can copy, use, and modify them for personal or creative projects."
     },
     {
@@ -20,8 +20,8 @@ const FAQs = () => {
       answer: "Absolutely. You can tweak lighting, style, emotion, or outfit keywords for custom results."
     },
     {
-      question: "How do I use the prompts?",
-      answer: "Simply click on any image in our gallery to view its prompt, hit the copy button, then paste it into your preferred AI image generator. The AI will create an image based on that prompt."
+      question: "Can I use these images for social media?",
+      answer: "Yes! AI-generated images and stylish boy dp inspirations are perfect for profiles."
     },
     {
       question: "Why does my result look different?",

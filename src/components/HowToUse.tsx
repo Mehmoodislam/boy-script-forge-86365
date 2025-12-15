@@ -5,22 +5,22 @@ const HowToUse = () => {
     {
       icon: Search,
       title: "Browse Gallery",
-      description: "Explore our collection of realistic, handsome AI boy prompts. Each example image shows exactly what the AI can generate."
+      description: "Explore our gallery of realistic and handsome AI boy images. Each image shows exactly what the prompt can generate."
     },
     {
       icon: Copy,
       title: "Copy Prompt",
-      description: "Click on any image to view its detailed prompt. Hit the copy button for one-click access."
+      description: "Click on any image and copy the detailed AI prompt with one click."
     },
     {
       icon: Wand2,
       title: "Generate Image",
-      description: "Paste the prompt into your chosen AI tool - Midjourney, DALL·E, or Stable Diffusion - and hit generate."
+      description: "Paste the prompt into Midjourney, DALL·E, or Stable Diffusion and hit generate."
     },
     {
       icon: CheckCircle,
       title: "Enjoy Results",
-      description: "Get a high-quality, styled portrait ready for social media, design projects, or creative inspiration."
+      description: "Get a high-quality AI portrait ready for profile pictures, designs, or inspiration."
     }
   ];
 
@@ -29,10 +29,10 @@ const HowToUse = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">
-            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Use Stunning AI Portraits</span>
+            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Create Stunning AI Boy Portraits</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Making AI-generated boy portraits is simple. Follow these steps to create stylish results instantly:
+             Creating AI portraits with FreeImagePrompt is simple:
           </p>
         </div>
 

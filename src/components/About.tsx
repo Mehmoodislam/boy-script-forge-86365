@@ -5,17 +5,17 @@ const About = () => {
     {
       icon: Sparkles,
       title: "Handcrafted AI Prompts",
-      description: "Every prompt is written and optimized for consistency and professional quality results. Our team tests each one with major AI image generators before publishing."
+      description: "Each prompt is manually written and optimized for lighting, realism, facial detail, and composition. We test every prompt before publishing to ensure high-quality output."
     },
     {
       icon: Target,
       title: "Proven Results",
-      description: "All prompts are tested and verified to work perfectly with major AI image generators like Midjourney, DALL-E, and Stable Diffusion."
+      description: "Our prompts work seamlessly with: Midjourney DALL·E Stable Diffusion You get predictable, professional-looking AI portraits every time."
     },
     {
       icon: Zap,
       title: "Instant Access",
-      description: "No login. No sign-up. Just click, copy, and paste your chosen AI boy portrait prompt into your favorite generator."
+      description: "No registration. No subscription. Just copy, paste, and generate."
     }
   ];
 
@@ -27,7 +27,7 @@ const About = () => {
             About <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">FreeImagePrompt</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Your ultimate source for professional, ready-to-use <b>AI image prompts</b> - built for artists, creators, and AI enthusiasts.
+             FreeImagePrompt is built for creators who want <b>ready-to-use AI image prompts</b> without wasting time on trial and error.
           </p>
         </div>
 

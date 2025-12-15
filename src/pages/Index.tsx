@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import HowToUse from "@/components/HowToUse";
+import Stylish from "@/components/Stylish";
 import Benefits from "@/components/Benefits";
 import FAQs from "@/components/FAQs";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <HowToUse />
+      <Stylish />
       <Benefits />
       <FAQs />
       <Footer />
