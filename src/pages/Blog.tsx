@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { Calendar, User, ArrowRight } from "lucide-react";
+import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
 
 const blogPosts = [
   {
@@ -13,52 +15,18 @@ const blogPosts = [
     date: "December 15, 2024",
     author: "FreeImagePrompt Team",
     category: "AI Prompts",
-    image: "/placeholder.svg",
-    content: `
-      <h2>Introduction to AI-Generated Stylish Boy DPs</h2>
-      <p>In today's digital world, having a unique and stylish profile picture (DP) sets you apart from the crowd. AI image generators like Midjourney, DALL-E, and Stable Diffusion have revolutionized how we create stunning portraits. In this guide, we'll explore the best prompts for creating stylish boy DPs.</p>
-      
-      <h2>Why Use AI for Profile Pictures?</h2>
-      <p>AI-generated images offer several advantages:</p>
-      <ul>
-        <li><strong>Uniqueness:</strong> Every image is one-of-a-kind</li>
-        <li><strong>Customization:</strong> You control the style, mood, and aesthetic</li>
-        <li><strong>Quality:</strong> High-resolution, professional-looking results</li>
-        <li><strong>Privacy:</strong> No need to use your real photo</li>
-      </ul>
-      
-      <h2>Top Prompt Styles for Stylish Boy DPs</h2>
-      
-      <h3>1. Luxury Style</h3>
-      <p>Create sophisticated, high-end looking portraits with prompts focusing on luxury fashion, elegant settings, and refined aesthetics. Include elements like designer clothing, gold accessories, and premium backgrounds.</p>
-      
-      <h3>2. Cinematic Look</h3>
-      <p>Achieve movie-poster quality images with dramatic lighting, depth of field, and professional color grading. Use terms like "cinematic lighting," "bokeh," and "film grain" in your prompts.</p>
-      
-      <h3>3. Street Style</h3>
-      <p>Urban, trendy looks with casual fashion, graffiti backgrounds, and street photography aesthetics. Perfect for a modern, cool vibe.</p>
-      
-      <h3>4. Anime/Artistic Style</h3>
-      <p>For those who prefer illustrated looks, anime-style prompts can create beautiful, artistic profile pictures with vibrant colors and unique character designs.</p>
-      
-      <h2>Tips for Better AI Prompts</h2>
-      <ol>
-        <li><strong>Be Specific:</strong> Include details about clothing, background, lighting, and mood</li>
-        <li><strong>Use Quality Terms:</strong> Add "8K," "ultra detailed," "masterpiece" for higher quality</li>
-        <li><strong>Specify Aspect Ratio:</strong> Use "portrait orientation" or specific ratios like 3:4</li>
-        <li><strong>Include Style References:</strong> Mention specific art styles or photographers</li>
-      </ol>
-      
-      <h2>Where to Find More Prompts</h2>
-      <p>Visit our <a href="/gallery">Gallery page</a> to browse 170+ ready-to-use prompts. Simply click to copy and paste into your favorite AI image generator!</p>
-      
-      <h2>Conclusion</h2>
-      <p>Creating the perfect stylish boy DP is now easier than ever with AI. Experiment with different prompts, styles, and generators to find your perfect look. Remember, the key is to be creative and specific with your prompts!</p>
-    `
   }
 ];
 
+const POSTS_PER_PAGE = 8;
+
 const Blog = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  
+  const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
+  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+  const paginatedPosts = blogPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -78,38 +46,34 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Blog Posts */}
+      {/* Blog Posts Grid */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {blogPosts.map((post) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {paginatedPosts.map((post) => (
               <Link key={post.id} to={`/blog/${post.id}`}>
-                <Card className="hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                  <CardHeader>
+                <Card className="h-full hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1">
+                  <CardHeader className="pb-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <Badge variant="outline">{post.category}</Badge>
+                      <Badge variant="outline" className="text-xs">{post.category}</Badge>
                     </div>
-                    <CardTitle className="text-2xl hover:text-primary transition-colors">
+                    <CardTitle className="text-lg line-clamp-2 hover:text-primary transition-colors">
                       {post.title}
                     </CardTitle>
-                    <CardDescription className="text-base">
+                    <CardDescription className="text-sm line-clamp-3">
                       {post.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <CardContent className="pt-0">
+                    <div className="flex flex-col gap-3">
+                      <div className="flex items-center gap-3 text-xs text-muted-foreground">
                         <span className="flex items-center gap-1">
-                          <Calendar className="h-4 w-4" />
+                          <Calendar className="h-3 w-3" />
                           {post.date}
                         </span>
-                        <span className="flex items-center gap-1">
-                          <User className="h-4 w-4" />
-                          {post.author}
-                        </span>
                       </div>
-                      <span className="flex items-center gap-1 text-primary font-medium">
-                        Read More <ArrowRight className="h-4 w-4" />
+                      <span className="flex items-center gap-1 text-primary text-sm font-medium">
+                        Read More <ArrowRight className="h-3 w-3" />
                       </span>
                     </div>
                   </CardContent>
@@ -117,6 +81,41 @@ const Blog = () => {
               </Link>
             ))}
           </div>
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="flex items-center justify-center gap-2 mt-12">
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <Button
+                  key={page}
+                  variant={currentPage === page ? "default" : "outline"}
+                  size="icon"
+                  onClick={() => setCurrentPage(page)}
+                  className={currentPage === page ? "bg-primary" : ""}
+                >
+                  {page}
+                </Button>
+              ))}
+              
+              <Button
+                variant="outline"
+                size="icon"
+                onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          )}
         </div>
       </section>
 
