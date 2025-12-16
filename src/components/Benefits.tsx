@@ -28,10 +28,10 @@ const Benefits = () => {
     <section id="benefits" className="py-24 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words ">
             Why Creators Love <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">FreeImagePrompt</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words text-center">
             Discover the advantages of using our curated prompt library
           </p>
         </div>

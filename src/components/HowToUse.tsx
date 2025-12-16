@@ -28,7 +28,7 @@ const HowToUse = () => {
     <section id="how-to-use" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
+          <h2 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words text-center">
             How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Create Stunning AI Boy Portraits</span>
           </h2>
           <p className="text-lg text-muted-foreground">

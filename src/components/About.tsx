@@ -23,9 +23,22 @@ const About = () => {
     <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            About <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">FreeImagePrompt</span>
+          <h2 className="
+            font-bold
+            text-2xl sm:text-3xl md:text-4xl lg:text-5xl
+            leading-tight
+            break-words
+            text-center 
+          ">
+            About{" "}
+            <span className="
+              bg-gradient-to-r from-primary to-primary-glow
+              bg-clip-text text-transparent
+            ">
+              FreeImagePrompt
+            </span>
           </h2>
+
           <p className="text-lg text-muted-foreground">
              FreeImagePrompt is built for creators who want <b>ready-to-use AI image prompts</b> without wasting time on trial and error.
           </p>
