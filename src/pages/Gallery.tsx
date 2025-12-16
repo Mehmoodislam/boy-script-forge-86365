@@ -38,7 +38,7 @@ const Gallery = () => {
   // SEO Setup
   useEffect(() => {
     // Update page title with keywords
-    document.title = "Free AI Image Prompts for Stylish Boy Portraits | 148+ Prompts - FreeImagePrompt";
+    document.title = "Stylish Boy DP: Cute Boy Pics & Photo for Your Profiles | FreeImagePrompt";
     
     // Update or create meta description
     const updateMetaTag = (name: string, content: string) => {
@@ -51,8 +51,8 @@ const Gallery = () => {
       meta.setAttribute('content', content);
     };
 
-    updateMetaTag('description', 'Discover 148+ handcrafted AI image prompts for creating stunning stylish boy portraits. Free prompts for Midjourney, DALL-E, Stable Diffusion. Search by category: luxury, cinematic, street style, traditional & more.');
-    updateMetaTag('keywords', 'AI image prompts, free AI prompts, boy portrait prompts, Midjourney prompts, DALL-E prompts, Stable Diffusion prompts, stylish boy portraits, AI art generator prompts, luxury portrait prompts, cinematic portrait prompts, street style AI prompts');
+    updateMetaTag('description', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile. Find your next stylish boy dp! Download and use the best boy photo for your profile picture. Get ideas!');
+    updateMetaTag('keywords', 'AI image prompts, free AI prompts, boy portrait prompts, Whatsapp stylish boy, stylish boy DP, Stable Diffusion prompts, stylish boy portraits, AI art generator prompts, luxury portrait prompts, cinematic portrait prompts, street style AI prompts');
     
     // Open Graph tags
     const updateOGTag = (property: string, content: string) => {
@@ -65,8 +65,8 @@ const Gallery = () => {
       meta.setAttribute('content', content);
     };
 
-    updateOGTag('og:title', 'Free AI Image Prompts for Stylish Boy Portraits | FreeImagePrompt');
-    updateOGTag('og:description', 'Discover 148+ handcrafted AI image prompts for creating stunning stylish boy portraits. Free prompts for all major AI image generators.');
+    updateOGTag('og:title', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile | FreeImagePrompt');
+    updateOGTag('og:description', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile. Find your next stylish boy dp! Download and use the best boy photo for your profile picture. Get ideas!');
     updateOGTag('og:type', 'website');
     updateOGTag('og:url', window.location.href);
 
@@ -134,7 +134,7 @@ const Gallery = () => {
 
     // Cleanup function
     return () => {
-      document.title = "FreeImagePrompt - AI Image Prompts for Stylish Boy Portraits";
+      document.title = "Stylish Boy DP: Cute Boy Pics & Photo for Your Profile";
       const existingScript = document.getElementById('gallery-jsonld');
       if (existingScript) {
         existingScript.remove();
@@ -254,10 +254,10 @@ const Gallery = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <header className="text-center space-y-4 mb-8">
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <h1 className="font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-5xl break-words text-center">
                 Free AI Image Prompts for <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Stylish Boy Portraits</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-3">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed break-words text-center max-w-2xl mx-auto mb-3">
                 Discover 148+ handcrafted <Link to="/" className="text-primary hover:underline font-medium">AI image prompts</Link> for creating stunning stylish boy portraits. Perfect for <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Midjourney</a>, <a href="https://openai.com/dall-e-3" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">DALL-E</a>, and <a href="https://stability.ai/stable-image" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline font-medium">Stable Diffusion</a>. Browse by category, copy prompts instantly, and start creating amazing AI art today.
               </p>
               <nav className="text-sm text-muted-foreground">
