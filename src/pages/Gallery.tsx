@@ -19,7 +19,8 @@ const categories = [
   "Nature",
   "Futuristic",
   "Shalwar Kameez",
-  "Moody"
+  "Moody",
+  "Trending"
 ];
 
 interface ImageStats {

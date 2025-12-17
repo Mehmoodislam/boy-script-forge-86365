@@ -176,6 +176,16 @@ import boy175 from "@/assets/boy175.webp";
 import boy176 from "@/assets/boy176.webp";
 import boy177 from "@/assets/boy177.webp";
 import boy178 from "@/assets/boy178.webp";
+import boy179 from "@/assets/boy179.webp";
+import boy180 from "@/assets/boy180.webp";
+import boy181 from "@/assets/boy181.webp";
+import boy182 from "@/assets/boy182.webp";
+import boy183 from "@/assets/boy183.webp";
+import boy184 from "@/assets/boy184.webp";
+import boy185 from "@/assets/boy185.webp";
+import boy186 from "@/assets/boy186.webp";
+
+
 
 
 export interface PromptData {
@@ -1434,7 +1444,64 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic, 8k, high-angle medium shot captures a surreal office desk scene with a shallow depth of field, emphasizing the foreground subject. The primary subject is a tiny person, approximately 1:10 scale, with uploaded face as reference, sitting cross-legged on a giant black computer keyboard. The person wears black over-ear headphones, a vibrant patterned short-sleeve button-up shirt, blue jeans, and grey sneakers, holding a miniature silver laptop in one hand and a tiny white coffee cup in the other, looking directly at the viewer with a slight smirk. The oversized keyboard features realistic key textures and subtle coffee stains. Behind the keyboard, a spiral-bound notebook with 'To Do: Coffee!' handwritten on it and a pen are visible. To the left, a large black computer monitor displays a light-themed file explorer interface, with a yellow sticky note featuring a hand-drawn smiley face attached to its bottom left bezel. To the right, an enormous white ceramic coffee mug with '@AITrends' text is filled with dark coffee. The light wooden desk surface is cluttered with scattered papers, a spilled miniature coffee cup creating a brown stain, paper clips, and coiled black cables, including a USB cable and a black computer mouse connected by a wire that extends towards the tiny person's feet. The scene is bathed in bright, diffused natural lighting from an unseen window, creating soft shadows and highlights, with a subtly blurred office background. The image features cinematic lighting and highly detailed textures throughout.",
     tags: ["Tradional", "Office", "Futuristic"]
   },
+   {
+    id: "179",
+    image: boy179,
+    title: "Rehman Dukait Style",
+    prompt: "A stylish 25-age man standing outdoors in a desert environment, wearing a black traditional outfit and a long black coat. He, wearing dark aviator sunglasses, and showing a confident half-smile while holding both hands open as if explaining something. A dusty atmosphere with sand in the air, a white SUV with the door open behind him, soft daylight, cinematic color grading, sharp details, realistic lighting, high-resolution, dramatic movie-style shot.",
+    tags: ["Trending", "Gangster", "Shalwar Kameez"]
+  },
+  {
+    id: "180",
+    image: boy180,
+    title: "Desert Royalt",
+    prompt: "A cinematic golden-hour portrait of a 20-year-old man standing near a pearl-white Land Cruiser at a cliffside road. He's wearing a charcoal-gray shalwar kameez with a deep maroon patterned shawl, black loafers, and aviator sunglasses that reflect the orange sky. His hair is styled with a soft volume, and his hand rests casually in his pocket as he looks toward the glowing horizon. The sunlight hits his face at a perfect angle, creating depth and shadow across the frame. Dust particles float in the air, adding a cinematic desert luxury vibe like a fashion magazine cover shot. (8K HDR | Golden Hour | Fashion Pose | Desert Edge | Cinematic Portrait)",
+    tags: ["Tradional", "Nature", "Shalwar Kameez"]
+  },
+  {
+    id: "181",
+    image: boy181,
+    title: "Winter of 2026",
+    prompt: "A stylish man standing beside frosted 2026 digits with gentle snowfall in a winter park. Natural cold lighting, wearing dark blue wool coat, scarf, boots. Soft dreamy New Year emotion, high-end editorial, 4:5",
+    tags: ["Tradional", "Futuristic", "Trending"]
+  },
+   {
+    id: "182",
+    image: boy182,
+    title: "Walking Into 2026",
+    prompt: "Hyper realistic 8k resolution, portrait ratio. Same person with exact same, A young Bangladeshi boy walking confidently. from left to right across a soft blurred foreground, wearing a white & blue striped button-down shirt, blue cargo pants, holding a black backpack in his left hand. Misty ethereal background with muted teal blue and light gray tones, cinematic lighting, highly detailed 8k, New Year theme. Overlay text design: large bold slightly distressed teal font “2026”, below it “365/DAYS”, very small text at top 'MAIRAJ BRO'",
+    tags: ["Tradional", "Futuristic", "Trending"]
+  },
+  {
+    id: "183",
+    image: boy183,
+    title: "On Top of the New Year",
+    prompt: "A fisheye ultra-wide shot looking down from a very tall skyscraper: a smiling young man in a blue and orange jacket takes a selfie with a long stick, standing on a circular clear glass viewing platform. Shot with a wide-angle fisheye lens for dramatic distortion and insane height perspective. Below him, the entire city layout is intentionally designed so that the houses, streets, and building blocks form the giant numbers “2026” when viewed from the top. The urban grid curves naturally into the digits, blending real architecture with creative design. Evening sunlight casts soft highlights across the rooftops, roads, and parks, giving the numbers a glowing outline. Hyper-realistic, sharp detailing, cinematic atmosphere, and a clear sense of vertigo and danger.",
+    tags: ["Tradional", "Futuristic", "Trending"]
+  },
+  {
+    id: "184",
+    image: boy184,
+    title: "Electric Blue",
+    prompt: "A hyper-realistic mirror selfie of a handsome young man with messy, spiked dark hair and light stubble. He is wearing a white button-down shirt left unbuttoned at the top to reveal his chest and stylish rimless rectangular sunglasses with a slight tint. He is holding a black triple-lens smartphone (iPhone 16 Pro style) in his right hand, capturing the reflection. The entire image is washed in intense, monochromatic deep blue neon lighting, creating a cool, moody atmosphere. High contrast shadows define his jawline and neck, while the background remains simple and vertically draped, likely a curtain. 8k resolution, ultra-detailed skin texture, sharp focus on the face. Size 4:5 ratio 100%",
+    tags: ["Tradional", "Futuristic", "Cinematic"]
+  },
+   {
+    id: "185",
+    image: boy185,
+    title: "Victory Has a Smile",
+    prompt: "Ultra-realistic cinematic portrait and full-body scenes of the same young man from the uploaded photo (face must match exactly). He appears in a dramatic villain-style desert setting:walking in slow motion through a narrow sandstone alley, smiling broadly, arms stretched confidently like a dance entrance, and also captured mid-clap in a celebration moment. He wears a black kurta, layered black overcoat, and dark sunglasses.",
+    tags: ["SahlwarKameez", "Trending", "Gangster"]
+  },
+   {
+    id: "186",
+    image: boy186,
+    title: "Signature of Authority",
+    prompt: "A hyper-realistic close-up of a premium luxurious wooden desk nameplate and pen holder set, crafted from polished dark mahogany wood with gold accents. The centerpiece features a high-precision 3D relief wood carving of a man resembling the provided reference (wearing sunglasses, beard, dark hair). The wood is deeply engraved with elegant Arabic Diwani calligraphy text: 'حضرتحسین'. Below it, the number '03459221457' is engraved in gold. At the bottom, a stylish handwritten English signature 'Husaini'. Cinematic lighting, depth of field, 8k resolution, intricate wood texture, executive office background, soft sunlight reflections. --ar 9:16",
+    tags: ["signature", "Trending", "Futuristc"]
+  },
 ];
+
 
 
 
