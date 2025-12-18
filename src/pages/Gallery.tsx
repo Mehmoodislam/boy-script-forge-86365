@@ -232,9 +232,9 @@ const Gallery = () => {
     }
   };
 
-  // Filter prompts based on search and category
+  // Filter prompts based on search and category, reverse to show newest first
   const filteredPrompts = useMemo(() => {
-    return promptsData.filter((item) => {
+    return [...promptsData].reverse().filter((item) => {
       const matchesSearch = 
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.prompt.toLowerCase().includes(searchQuery.toLowerCase()) ||
