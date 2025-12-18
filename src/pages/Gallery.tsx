@@ -39,7 +39,7 @@ const Gallery = () => {
   // SEO Setup
   useEffect(() => {
     // Update page title with keywords
-    document.title = "Stylish Boy DP: Cute Boy Pics & Photo for Your Profiles | FreeImagePrompt";
+    document.title = "Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | FreeImagePrompt";
     
     // Update or create meta description
     const updateMetaTag = (name: string, content: string) => {
@@ -52,7 +52,7 @@ const Gallery = () => {
       meta.setAttribute('content', content);
     };
 
-    updateMetaTag('description', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile. Find your next stylish boy dp! Download and use the best boy photo for your profile picture. Get ideas!');
+    updateMetaTag('description', 'Browse stylish boy DP gallery with cute boy photos and free AI image prompts. Explore cinematic, luxury, trendy boy portraits for WhatsApp & social profiles.');
     updateMetaTag('keywords', 'AI image prompts, free AI prompts, boy portrait prompts, Whatsapp stylish boy, stylish boy DP, Stable Diffusion prompts, stylish boy portraits, AI art generator prompts, luxury portrait prompts, cinematic portrait prompts, street style AI prompts');
     
     // Open Graph tags
@@ -66,8 +66,8 @@ const Gallery = () => {
       meta.setAttribute('content', content);
     };
 
-    updateOGTag('og:title', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile | FreeImagePrompt');
-    updateOGTag('og:description', 'Stylish Boy DP: Cute Boy Pics & Photo for Your Profile. Find your next stylish boy dp! Download and use the best boy photo for your profile picture. Get ideas!');
+    updateOGTag('og:title', 'Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | FreeImagePrompt');
+    updateOGTag('og:description', 'Browse stylish boy DP gallery with cute boy photos and free AI image prompts. Explore cinematic, luxury, trendy boy portraits for WhatsApp & social profiles.');
     updateOGTag('og:type', 'website');
     updateOGTag('og:url', window.location.href);
 
@@ -78,7 +78,8 @@ const Gallery = () => {
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
-    canonical.href = window.location.href;
+    canonical.href = "https://freeimageprompt.com/gallery";
+
 
     // Add JSON-LD structured data
     const jsonLdScript = document.createElement('script');
