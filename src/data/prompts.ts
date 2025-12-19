@@ -186,8 +186,6 @@ import boy185 from "@/assets/boy185.webp";
 import boy186 from "@/assets/boy186.webp";
 
 
-
-
 export interface PromptData {
   id: string;
   image: string;
