@@ -184,6 +184,19 @@ import boy183 from "@/assets/boy183.webp";
 import boy184 from "@/assets/boy184.webp";
 import boy185 from "@/assets/boy185.webp";
 import boy186 from "@/assets/boy186.webp";
+import boy187 from "@/assets/boy187.webp";
+import boy188 from "@/assets/boy188.webp";
+import boy189 from "@/assets/boy189.webp";
+import boy190 from "@/assets/boy190.webp";
+import boy191 from "@/assets/boy191.webp";
+import boy192 from "@/assets/boy192.webp";
+import boy193 from "@/assets/boy193.webp";
+import boy194 from "@/assets/boy194.webp";
+import boy195 from "@/assets/boy195.webp";
+import boy196 from "@/assets/boy196.webp";
+import boy197 from "@/assets/boy197.webp";
+
+
 
 
 export interface PromptData {
@@ -1498,7 +1511,85 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic close-up of a premium luxurious wooden desk nameplate and pen holder set, crafted from polished dark mahogany wood with gold accents. The centerpiece features a high-precision 3D relief wood carving of a man resembling the provided reference (wearing sunglasses, beard, dark hair). The wood is deeply engraved with elegant Arabic Diwani calligraphy text: 'حضرتحسین'. Below it, the number '03459221457' is engraved in gold. At the bottom, a stylish handwritten English signature 'Husaini'. Cinematic lighting, depth of field, 8k resolution, intricate wood texture, executive office background, soft sunlight reflections. --ar 9:16",
     tags: ["signature", "Trending", "Futuristc"]
   },
+    {
+    id: "187",
+    image: boy187,
+    title: "Cinematic Vision in Green",
+    prompt: "Creat a 8k hyper-realistic dark green portrait cinematic image.(uploaded photo 100% face match) of a stylish handsome young man (reference image given) with a wearing a Luxury mehndi colour salwar kameez And Same luxury shawl and wearing a sunglasses. He hold a Canon camera. He is looking thoughtfully off-camera, captured in a candid, high-key cinematic outdoor portrait. The composition is framed by a branch of vivid red/pink/yellow/black bougainvillea flowers in the upper left corner and heavily blurred green leaves in the extreme foreground. Depth of field, stunning soft bokeh effect.",
+    tags: ["Nature", "ShalwarKameez", "Ciematic"]
+  },
+   {
+    id: "188",
+    image: boy188,
+    title: "Modern Maximum Style",
+    prompt: "Create an ultra-realistic 8K DSLR-style photo of a stylish young man striking a cool pose. He is wearing a white hoodie with a black MH ♥️ logo, slightly unzipped at the collar, light sky blue baggy jeans and white sneakers. He is holding black sunglasses casually in one hand. The background should feature abstract, textured white and light-blue structures for a clean, modern look. Make sure the man's face and hairstyle match exactly with the reference photo.",
+    tags: ["Modern", "UltraRealisticPortrait", "Futuristc"]
+  },
+  {
+    id: "189",
+    image: boy189,
+    title: "Golden Elegance in Modern Tradition",
+    prompt: "Modern portrait of a stylish handsome man with orjinal.hair, wearing a.purple  shalwar kameez with light skin waiscoat  with brown loufer standing styles  same face reference 8k full hd picture  light golden lights  accessorized with a watch The beautiful shoping mall Cataria views background is soft, minimal and.to emphasize a contemporary fashion-forward vibe. Cinematic lighting, ultra-detailed, realistic textures. Little smile face. Don't change the face. Keep the 100%.same original face hairstyle reference image",
+    tags: ["Traditional", "ShalwarKameez", "Luxury"]
+  },
+  {
+    id: "190",
+    image: boy190,
+    title: "Calm Power on the Streets",
+    prompt: "Cinematic ultra-realistic full-body portrait of a 20-year-old fit and striking Indian boy sitting casually on the road curb outside a stylish café, one knee bent with his elbow resting on it. He wears a loose black T-shirt, white cargo pants, a luxury white watch, and white sneakers. His right hand holds a new iPhone, and his left hand runs through his hair. His face and hairstyle are 100% identical to the uploaded reference image, perfectly styled, looking directly at the camera with a mild confident smile and a bold, commanding presence. A sleek white Avanti car is parked in the background near a flowering tree. The environment is windy, creating subtle motion in his hair and T-shirt.",
+    tags: ["CinematicStreetPortrait", "Modern", "Luxury"]
+  },
+  {
+    id: "191",
+    image: boy191,
+    title: "Shadow Luxury: Street Power",
+    prompt: "Use 100% face above uploaded photo Young man with black beard and black hair,wearing sunglasses, round sunglasses, black shiny puffer jacket, light gray sweatpants, and white chunky sneakers, casually sitting on the rear trunk of a matte black modified Lamborghini Huracán with large rear wing and aggressive body kit, open driver door, black wheels, in front of an industrial concrete building with horizontal paneling and graffiti, overcast sky, urban street style vibe, confident pose with hands in pockets, high detail, sharp focus, realistic photography",
+    tags: ["LuxurySupercar", "Modern", "Cinematic"]
+  },
+   {
+    id: "192",
+    image: boy192,
+    title: "Jumma Mubarak in Golden Light",
+    prompt: "The Concept: Large, glowing 3D text that says 'Jumma Mubarak' behind the person. The Outfit: A white silk Panjabi with silver embroidery on the neck and cuffs, white slim-fit pajamas, and black velvet loafers. The Place: A modern, minimalist white mosque courtyard with a clear blue sky. Prompt: > A hyper-realistic 3D social media profile picture. A stylish 20-year-old man standing in a grand white marble mosque courtyard. Behind him, large glowing 3D golden text reads JUMMA MUBARAK'. He is wearing a premium white silk Panjabi with silver embroidery, white pajamas, and black velvet loafers. He is adjusting his sunglasses and looking towards the camera. Cinematic lighting, soft shadows, 8k resolution.",
+    tags: ["ShalwarKameez", "Traditiaonal", "JummaMubarak"]
+  },
+    {
+    id: "193",
+    image: boy193,
+    title: "Eyes That Dare",
+    prompt: "A young boy 22 years oldwith intense eyes holds up a bright black scarf that covers the lower half of his face, with other hand pointing directly toward the viewer as if issuing a challenge,his voluminous, windswept same hair and grey denim shirt add modern cinematic flair, while the warm, blurred background suggests an outdoor setting at golden hour-compose a portrait with shallow depth of field, vibrant color grading, and dramatic lighting that emphasizes mystery, confidence, and motion.",
+    tags: ["Modern", "Cinematic", "Golder"]
+  },
+   {
+    id: "194",
+    image: boy194,
+    title: "Elegance in the Rising Moment",
+    prompt: "A hyper-realistic cinematic 9:16 portrait based on. the uploaded image, keeping the same face and hairstyle of A stylish man in a formal black suit, crisp white shirt, and sleek black tie, wearing dark sunglasses, holding a vape device in one hand. He gazes upward with a composed expression while exhaling a thick cloud of vapor that swirls dramatically in the air. The background. is softly blurred, suggesting an outdoor setting with natural ambient light and subtle bokeh effects. The lighting is warm and directional, casting gentle highlights on his face and suit. The mood is modern, confident, and fashion-forward blending elegance with a touch of urban cool in ultra-realistic 8K resolution.",
+    tags: ["Modern", "Cinematic", "Fashion"]
+  },
+  {
+    id: "195",
+    image: boy195,
+    title: "Moonlit Confidence",
+    prompt: "8K ultra-realistic full-body portrait of a young man standing outdoors at night under a glowing full moon. Soft green bokeh lights and glowing particles surround him, creating a magical atmosphere. He wears a stylish red-to-white gradient shirt with sleeves rolled up, and casual pants matching the outfit. His body is slightly angled to the left, head tilted up with a calm and confident expression. Reflective sunglasses on. In his cupped hands, he holds a 2/3",
+    tags: ["Magic", "Cinematic", "Futuristic"]
+  },
+   {
+    id: "196",
+    image: boy196,
+    title: "Breaking the Paper Barrier",
+    prompt: "A hyper-realistic, 8k, highly detailed photograph capturing a surreal artistic concept, presented as a close-up, eye-level shot with a standard lens. A man with the uploaded reference face, clean shaven, wearing an oversized black crew-neck t-shirt, is shown emerging from a torn sheet of plain off-white paper. His head and upper chest appear in full photographic realism, with accurate skin texture, natural hair, and realistic fabric detail on the shirt. The transition from realism to sketch begins exactly at the natural shoulder line. From that point downward, the entire body including shoulders, arms, torso, cargo pants and legs is illustrated as detailed black pencil sketches drawn onto the paper surface. The sketched arms must follow true human proportions, extending naturally to full length with no shortening or foreshortening. The sketched hands are spread wide and pressed against the inside of the paper as if he is breaking out of a flat drawing into real space. The torn edges around the opening are sharp, textured and thick, clearly showing the depth of the paper and strengthening the illusion of 3D realism emerging from a 2D sketch. The composition is centred, with the realistic upper body protruding forward while the sketched lower body radiates outward across the page. Soft, even cinematic lighting from the front gives gentle shadows on the real face and shirt, while keeping the pencil sketch flat, matte, and paper-like. The final result blends ultra-realistic portrait photography with hand-drawn illustration to create a striking trompe l’oeil effect of a man pulling himself out of a two-dimensional world.",
+    tags: ["Barrier", "Trompt", "Futuristic"]
+  },
+   {
+    id: "197",
+    image: boy197,
+    title: "Bold & Minimal",
+    prompt: "A stylish boy with (same person in image and exactly same facial feature) sitting cross legged on a modern red chair in front of a bold red background with a large transparent letter 'TA' behind her. He is 5.4 feet tall physique and he is wearing a black jacket, white t-shirt, beige pants,  and white sneakers. The overall vibe is modern, cheerful, and bold, with a minimalist color palette focused on shades of blue. The enter scene will be taken in hyper realistic DSLR CAMERA style.",
+    tags: ["Realristic", "Modern", "Futuristic"]
+  },
 ];
+
 
 
 
