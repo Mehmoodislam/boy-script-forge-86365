@@ -20,9 +20,9 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="FreeImagePrompt Logo" className="h-10 w-10 rounded-lg group-hover:scale-110 transition-transform" />
+            <img src={logo} alt="TrendsPrompt Logo" className="h-10 w-10 rounded-lg group-hover:scale-110 transition-transform" />
             <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              FreeImagePrompt
+              TrendsPrompt
             </span>
           </Link>
 

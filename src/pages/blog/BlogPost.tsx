@@ -17,7 +17,7 @@ const blogPosts: Record<string, {
     title: "Best AI Image Prompts for Stylish Boy DP in 2025",
     description: "Discover the top AI prompts to create stunning stylish boy profile pictures. Learn how to craft the perfect prompt for Midjourney, DALL-E, and other AI generators.",
     date: "December 15, 2024",
-    author: "FreeImagePrompt Team",
+    author: "TrendsPrompt Team",
     category: "AI Prompts",
     content: `
       <h2>Introduction to AI-Generated Stylish Boy DPs</h2>
