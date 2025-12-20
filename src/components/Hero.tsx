@@ -55,7 +55,7 @@ const Hero = () => {
           <div className=" pt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto text-center ">
             <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                150+
+                200+
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">
                 Premium Prompts
