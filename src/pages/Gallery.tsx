@@ -9,7 +9,8 @@ import { promptsData, PromptData } from "@/data/prompts";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
-const ITEMS_PER_PAGE = 12;
+const ITEMS_PER_PAGE = 20;
+const VISIBLE_PAGES = 5;
 
 // Define categories based on tags
 const categories = [
@@ -374,17 +375,24 @@ const Gallery = () => {
                   <ChevronLeft className="h-4 w-4" />
                 </Button>
                 
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                  <Button
-                    key={page}
-                    variant={currentPage === page ? "default" : "outline"}
-                    size="icon"
-                    onClick={() => setCurrentPage(page)}
-                    className={currentPage === page ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
-                  >
-                    {page}
-                  </Button>
-                ))}
+                {(() => {
+                  // Calculate which 5 pages to show
+                  const currentGroup = Math.floor((currentPage - 1) / VISIBLE_PAGES);
+                  const startPage = currentGroup * VISIBLE_PAGES + 1;
+                  const endPage = Math.min(startPage + VISIBLE_PAGES - 1, totalPages);
+                  
+                  return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map((page) => (
+                    <Button
+                      key={page}
+                      variant={currentPage === page ? "default" : "outline"}
+                      size="icon"
+                      onClick={() => setCurrentPage(page)}
+                      className={currentPage === page ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
+                    >
+                      {page}
+                    </Button>
+                  ));
+                })()}
                 
                 <Button
                   variant="outline"
