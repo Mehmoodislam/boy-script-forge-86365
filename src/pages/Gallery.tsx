@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Copy, Check, X, Search, Eye, Heart } from "lucide-react";
+import { Copy, Check, X, Search, Eye, Heart, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,6 +8,8 @@ import Footer from "@/components/Footer";
 import { promptsData, PromptData } from "@/data/prompts";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
+
+const ITEMS_PER_PAGE = 12;
 
 // Define categories based on tags
 const categories = [
@@ -34,6 +36,7 @@ const Gallery = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [imageStats, setImageStats] = useState<Record<string, ImageStats>>({});
+  const [currentPage, setCurrentPage] = useState(1);
   const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
 
   // SEO Setup
@@ -248,6 +251,18 @@ const Gallery = () => {
     });
   }, [searchQuery, selectedCategory]);
 
+  // Pagination calculations
+  const totalPages = Math.ceil(filteredPrompts.length / ITEMS_PER_PAGE);
+  const paginatedPrompts = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    return filteredPrompts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  }, [filteredPrompts, currentPage]);
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedCategory]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -303,7 +318,7 @@ const Gallery = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredPrompts.map((item) => (
+              {paginatedPrompts.map((item) => (
                 <div
                   key={item.id}
                   className="group cursor-pointer"
@@ -346,6 +361,41 @@ const Gallery = () => {
                 </div>
               ))}
             </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="flex items-center justify-center gap-2 mt-10">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  disabled={currentPage === 1}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </Button>
+                
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <Button
+                    key={page}
+                    variant={currentPage === page ? "default" : "outline"}
+                    size="icon"
+                    onClick={() => setCurrentPage(page)}
+                    className={currentPage === page ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
+                  >
+                    {page}
+                  </Button>
+                ))}
+                
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  disabled={currentPage === totalPages}
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </main>
