@@ -9,7 +9,7 @@ import { promptsData, PromptData } from "@/data/prompts";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
-const ITEMS_PER_PAGE = 20;
+const ITEMS_PER_PAGE = 21;
 const VISIBLE_PAGES = 5;
 
 // Define categories based on tags
@@ -376,9 +376,23 @@ const Gallery = () => {
                 </Button>
                 
                 {(() => {
-                  // Calculate which 5 pages to show
-                  const currentGroup = Math.floor((currentPage - 1) / VISIBLE_PAGES);
-                  const startPage = currentGroup * VISIBLE_PAGES + 1;
+                  // Envato-style sliding pagination - clicked page becomes second position
+                  let startPage: number;
+                  
+                  if (totalPages <= VISIBLE_PAGES) {
+                    // If total pages <= 5, show all
+                    startPage = 1;
+                  } else if (currentPage <= 2) {
+                    // First 2 pages - start from 1
+                    startPage = 1;
+                  } else if (currentPage >= totalPages - 1) {
+                    // Last 2 pages - show last 5
+                    startPage = totalPages - VISIBLE_PAGES + 1;
+                  } else {
+                    // Middle pages - current page becomes second position
+                    startPage = currentPage - 1;
+                  }
+                  
                   const endPage = Math.min(startPage + VISIBLE_PAGES - 1, totalPages);
                   
                   return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map((page) => (
