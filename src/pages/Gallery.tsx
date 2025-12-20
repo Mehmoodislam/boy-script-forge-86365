@@ -168,6 +168,7 @@ const Gallery = () => {
           likes: stat.likes || 0
         };
       });
+      
       setImageStats(statsMap);
     } catch (error) {
       console.error('Error fetching stats:', error);
