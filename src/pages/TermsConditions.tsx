@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { FileText } from "lucide-react";
 
 const TermsConditions = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Terms & Conditions | FreeImagePrompt"
+        description="Read the terms and conditions for using FreeImagePrompt. Understand your rights and responsibilities when using our AI prompts."
+        canonicalUrl="https://freeimageprompt.com/terms-conditions"
+      />
       <Navigation />
       
       <main className="container mx-auto px-4 py-20">

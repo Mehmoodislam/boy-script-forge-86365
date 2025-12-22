@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
 import { Calendar, User, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -29,6 +30,11 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="AI Image Prompts Blog | FreeImagePrompt"
+        description="Tips, tutorials, and inspiration for creating stunning AI-generated stylish boy portraits. Learn prompt techniques for Midjourney, DALL-E, and more."
+        canonicalUrl="https://freeimageprompt.com/blog"
+      />
       <Navigation />
       
       {/* Hero Section */}

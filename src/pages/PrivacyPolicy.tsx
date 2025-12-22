@@ -1,10 +1,16 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Shield } from "lucide-react";
 
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Privacy Policy | FreeImagePrompt"
+        description="Learn how FreeImagePrompt collects, uses, and protects your personal data. Read our privacy policy for details."
+        canonicalUrl="https://freeimageprompt.com/privacy-policy"
+      />
       <Navigation />
       
       <main className="container mx-auto px-4 py-20">

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -84,6 +85,12 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={`${post.title} | FreeImagePrompt Blog`}
+        description={post.description}
+        canonicalUrl={`https://freeimageprompt.com/blog/${slug}`}
+        ogType="article"
+      />
       <Navigation />
       
       {/* Article Header */}
