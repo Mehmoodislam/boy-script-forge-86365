@@ -35,12 +35,12 @@ const About = () => {
               bg-gradient-to-r from-primary to-primary-glow
               bg-clip-text text-transparent
             ">
-              TrendsPrompt
+              FreeImagePrompt
             </span>
           </h2>
 
           <p className="text-lg text-muted-foreground">
-             TrendsPrompt is built for creators who want <b>ready-to-use AI image prompts</b> without wasting time on trial and error.
+             FreeImagePrompt is built for creators who want <b>ready-to-use AI image prompts</b> without wasting time on trial and error.
           </p>
         </div>
 

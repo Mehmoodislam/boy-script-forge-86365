@@ -43,7 +43,7 @@ const Gallery = () => {
   // SEO Setup
   useEffect(() => {
     // Update page title with keywords
-    document.title = "Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | TrendsPrompt";
+    document.title = "Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | FreeImagePrompt";
     
     // Update or create meta description
     const updateMetaTag = (name: string, content: string) => {
@@ -70,7 +70,7 @@ const Gallery = () => {
       meta.setAttribute('content', content);
     };
 
-    updateOGTag('og:title', 'Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | TrendsPrompt');
+    updateOGTag('og:title', 'Stylish Boy DP Gallery – Cute Boy Photos & AI Image Prompts | FreeImagePrompt');
     updateOGTag('og:description', 'Browse stylish boy DP gallery with cute boy photos and free AI image prompts. Explore cinematic, luxury, trendy boy portraits for WhatsApp & social profiles.');
     updateOGTag('og:type', 'website');
     updateOGTag('og:url', window.location.href);
@@ -96,13 +96,13 @@ const Gallery = () => {
           "@type": "WebPage",
           "@id": window.location.href,
           "url": window.location.href,
-          "name": "Free AI Image Prompts for Stylish Boy Portraits | TrendsPrompt",
+          "name": "Free AI Image Prompts for Stylish Boy Portraits | FreeImagePrompt",
           "description": "Discover 148+ handcrafted AI image prompts for creating stunning stylish boy portraits. Free prompts for Midjourney, DALL-E, Stable Diffusion.",
           "inLanguage": "en-US",
           "isPartOf": {
             "@type": "WebSite",
             "@id": window.location.origin,
-            "name": "TrendsPrompt",
+            "name": "FreeImagePrompt",
             "url": window.location.origin
           }
         },

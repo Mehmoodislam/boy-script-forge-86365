@@ -12,7 +12,7 @@ const Footer = () => {
                 <Sparkles className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                TrendsPrompt
+                FreeImagePrompt
               </span>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -128,7 +128,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 TrendsPrompt. All rights reserved. Made with ❤️ for AI creators.
+            © 2025 FreeImagePrompt. All rights reserved. Made with ❤️ for AI creators.
           </p>
         </div>
       </div>

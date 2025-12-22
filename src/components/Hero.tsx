@@ -30,7 +30,7 @@ const Hero = () => {
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-5xl mx-auto leading-relaxed break-words text-center">
             Create stunning, <b>realistic AI boy portraits</b> using our professionally handcrafted prompts.
-            TrendsPrompt is your ultimate destination for <b>stylish boy image prompts</b> designed
+            FreeImagePrompt is your ultimate destination for <b>stylish boy image prompts</b> designed
             specifically for <b>Midjourney, DALL·E, and Stable Diffusion.</b>
           </p>
 
