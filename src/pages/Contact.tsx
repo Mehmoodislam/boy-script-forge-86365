@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const contactSchema = z.object({
@@ -37,6 +38,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contact Us | FreeImagePrompt"
+        description="Get in touch with FreeImagePrompt. Have questions or suggestions about AI image prompts? We'd love to hear from you."
+        canonicalUrl="https://freeimageprompt.com/contact"
+      />
       <Navigation />
       
       <main className="pt-24 pb-16">
