@@ -13,7 +13,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Stylish Boy DP: Cute Boy Pics & Photo for Your Profile | FreeImagePrompt"
+        title="Free Image Prompt Stylish Boy DP: Cute Boy Pics & Photo for Your Profile | FreeImagePrompt"
         description="Discover 170+ free AI image prompts for creating stunning stylish boy portraits. Perfect for Midjourney, DALL-E, and Stable Diffusion."
         canonicalUrl="https://freeimageprompt.com/"
         keywords="AI image prompts, stylish boy DP, cute boy photos, AI art generator, Midjourney prompts, DALL-E prompts"
