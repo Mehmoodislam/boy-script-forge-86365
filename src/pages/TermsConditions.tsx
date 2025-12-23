@@ -13,120 +13,161 @@ const TermsConditions = () => {
       />
       <Navigation />
       
-      <main className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-3 mb-6">
-            <div className="p-3 rounded-lg bg-gradient-to-br from-primary to-primary-glow">
-              <FileText className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <h1 className="text-4xl font-bold">Terms & Conditions</h1>
-          </div>
-          
-          <p className="text-muted-foreground mb-8">Last updated: October 28, 2025</p>
-          
-          <div className="space-y-8 text-foreground">
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Agreement to Terms</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                By accessing and using FreeImagePrompt, you accept and agree to be bound by the terms and provision 
-                of this agreement. If you do not agree to these terms, please do not use our service.
-              </p>
-            </section>
+    <main className="container mx-auto px-4 py-20">
+  <div className="max-w-4xl mx-auto text-foreground">
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Use of Service</h2>
-              <p className="text-muted-foreground leading-relaxed mb-3">
-                FreeImagePrompt provides AI prompts for generating stylish portraits. You agree to use the service only for lawful purposes:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>You will not use the service for any illegal or unauthorized purpose</li>
-                <li>You will not violate any laws in your jurisdiction</li>
-                <li>You will not transmit any malicious code or viruses</li>
-                <li>You will respect intellectual property rights</li>
-              </ul>
-            </section>
+    <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
+    <p className="text-muted-foreground mb-10">Last updated: 12/23/2025</p>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                The prompts, designs, images, and content on FreeImagePrompt are provided for personal and commercial use. 
-                You are free to use the prompts to generate your own images. However, you may not redistribute or resell 
-                the prompts themselves without proper attribution.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Acceptance of Terms</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        By accessing or using <strong>FreeImagePrompt</strong>, you agree to comply with and be bound by these
+        Terms of Service. If you do not agree with any part of these terms, please discontinue using our website.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">User Responsibilities</h2>
-              <p className="text-muted-foreground leading-relaxed mb-3">
-                When using our prompts with AI image generators, you are responsible for:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
-                <li>Complying with the terms of service of the AI platform you use</li>
-                <li>Ensuring generated content does not infringe on anyone's rights</li>
-                <li>Using the generated images ethically and legally</li>
-                <li>Not creating harmful, offensive, or misleading content</li>
-              </ul>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Use License</h2>
+      <p className="text-muted-foreground leading-relaxed mb-3">
+        Permission is granted to temporarily access and use the materials on <strong>FreeImagePrompt</strong> for
+        <strong>personal, non-commercial viewing only</strong>.
+      </p>
+      <p className="text-muted-foreground mb-2">This license does not allow you to:</p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
+        <li>Modify, copy, or redistribute the materials</li>
+        <li>Use the materials for commercial purposes or public display</li>
+        <li>Attempt to reverse engineer or exploit any website software</li>
+        <li>Remove copyright or proprietary notices</li>
+      </ul>
+      <p className="text-muted-foreground mt-3">
+        All rights not expressly granted are reserved.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Disclaimer of Warranties</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                FreeImagePrompt is provided "as is" without any warranties, expressed or implied. We do not guarantee 
-                that the service will be uninterrupted, secure, or error-free. The prompts are provided as suggestions 
-                and results may vary depending on the AI platform used.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">User-Generated Content</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        Users are fully responsible for any content they upload, including AI prompts, text, or images.
+        By submitting content to <strong>FreeImagePrompt</strong>, you grant us a
+        <strong>non-exclusive, royalty-free, worldwide license</strong> to display, distribute, and promote
+        your content on our platform.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Limitation of Liability</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                FreeImagePrompt and its creators shall not be liable for any indirect, incidental, special, consequential, 
-                or punitive damages resulting from your use of or inability to use the service. This includes any images 
-                generated using our prompts.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Prohibited Uses and Content</h2>
+      <p className="text-muted-foreground mb-3">
+        You agree <strong>not</strong> to upload, post, or share content that:
+      </p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
+        <li>Is illegal or promotes unlawful activities</li>
+        <li>Infringes copyrights, trademarks, or intellectual property rights</li>
+        <li>Contains hate speech, harassment, or discrimination</li>
+        <li>Encourages self-harm, violence, or dangerous activities</li>
+        <li>Contains adult, pornographic, or sexually explicit material</li>
+        <li>Exploits or harms minors in any way</li>
+        <li>Promotes terrorism, extremism, or violence</li>
+        <li>Includes malware, viruses, or malicious code</li>
+        <li>Encourages fraud, scams, or misleading practices</li>
+        <li>Violates privacy or personal data rights</li>
+        <li>Contains false, deceptive, or manipulated information</li>
+        <li>Promotes animal cruelty or harm</li>
+      </ul>
+      <p className="text-muted-foreground mt-3">
+        We reserve the right to remove any content that violates these terms, applicable laws,
+        or <strong>Google Publisher Policies</strong>, without prior notice.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Content Accuracy</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                While we strive to provide high-quality prompts, we make no guarantees about the accuracy or quality 
-                of images generated using our prompts. Results depend on the AI platform and settings used.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Advertising &amp; Google AdSense Compliance</h2>
+      <p className="text-muted-foreground leading-relaxed mb-3">
+        <strong>FreeImagePrompt</strong> displays ads via <strong>Google AdSense</strong> and other advertising partners.
+      </p>
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
+        <li>Third-party vendors may use cookies for ad personalization</li>
+        <li>Ads are served by third parties and do not represent our endorsement</li>
+        <li>We comply with Google AdSense and industry advertising standards</li>
+        <li>Ads do not interfere with core site navigation or usability</li>
+        <li>Artificial traffic, click fraud, or ad manipulation is strictly prohibited</li>
+      </ul>
+      <p className="text-muted-foreground mt-3">
+        We are not responsible for the content or accuracy of third-party advertisements.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Modifications to Service</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We reserve the right to modify or discontinue the service at any time without notice. We shall not 
-                be liable to you or any third party for any modification, suspension, or discontinuance of the service.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Disclaimer</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        All materials on <strong>FreeImagePrompt</strong> are provided on an
+        <strong>“as is”</strong> and <strong>“as available”</strong> basis.
+        We make no warranties, expressed or implied, including merchantability,
+        fitness for a particular purpose, or non-infringement.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Changes to Terms</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We may revise these terms at any time. By continuing to use FreeImagePrompt after changes are posted, 
-                you agree to be bound by the revised terms.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Limitations of Liability</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        In no event shall <strong>FreeImagePrompt</strong>, its owners, or partners be liable
+        for any damages, including loss of data, revenue, or business interruption
+        arising from the use or inability to use our website.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Governing Law</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                These terms shall be governed by and construed in accordance with applicable laws, without regard 
-                to its conflict of law provisions.
-              </p>
-            </section>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Revisions and Accuracy</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        We do not guarantee that the content on our website is accurate, complete, or current.
+        Errors may occur, and we reserve the right to update content at any time.
+      </p>
+    </section>
 
-            <section>
-              <h2 className="text-2xl font-semibold mb-4">Contact Information</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                If you have any questions about these Terms & Conditions, please contact us through our website.
-              </p>
-            </section>
-          </div>
-        </div>
-      </main>
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">User Responsibilities</h2>
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
+        <li>Provide accurate information when submitting content</li>
+        <li>Respect intellectual property rights</li>
+        <li>Avoid automated access, scraping, or bots</li>
+        <li>Follow all applicable laws and platform policies</li>
+        <li>Not misrepresent identity or ownership</li>
+        <li>Report any violations or inappropriate content</li>
+      </ul>
+    </section>
+
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Content Quality Standards</h2>
+      <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
+        <li>Be original or properly credited</li>
+        <li>Provide value and not be spam or low-quality</li>
+        <li>Follow community and platform guidelines</li>
+        <li>Comply with all legal and third-party requirements</li>
+      </ul>
+      <p className="text-muted-foreground mt-3">
+        We reserve the right to remove content that fails to meet these standards.
+      </p>
+    </section>
+
+    <section className="mb-8">
+      <h2 className="text-2xl font-semibold mb-3">Modifications to Terms</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        We may update or revise these Terms of Service at any time without prior notice.
+        Continued use of <strong>FreeImagePrompt</strong> constitutes acceptance of the latest version.
+      </p>
+    </section>
+
+    <section>
+      <h2 className="text-2xl font-semibold mb-3">Contact Information</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        If you have any questions about these Terms of Service, please contact us through
+        the <strong>FreeImagePrompt</strong> website.
+      </p>
+    </section>
+
+  </div>
+</main>
+
 
       <Footer />
     </div>
