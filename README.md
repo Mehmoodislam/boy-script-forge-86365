@@ -59,6 +59,68 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- Vercel Web Analytics
+
+## Vercel Web Analytics Setup
+
+This project includes Vercel Web Analytics for tracking visitor behavior and page performance.
+
+### Prerequisites
+
+- A Vercel account ([sign up for free](https://vercel.com/signup))
+- A Vercel project ([create a new project](https://vercel.com/new))
+- The Vercel CLI installed: `npm install -g vercel`
+
+### Enable Web Analytics
+
+1. On the [Vercel dashboard](https://vercel.com/dashboard), select your Project
+2. Click the **Analytics** tab
+3. Click **Enable** from the dialog
+4. Note: Enabling Web Analytics will add new routes (scoped at `/_vercel/insights/*`) after your next deployment
+
+### Integration
+
+The `@vercel/analytics` package has already been added to this project. The `Analytics` component from `@vercel/analytics/react` is integrated into the main `App.tsx` component, providing automatic page view tracking and performance monitoring.
+
+The integration includes:
+- Automatic page view tracking via React Router integration
+- Web Vitals collection (LCP, FID, CLS, etc.)
+- No additional configuration required
+
+### Deploy Your App
+
+Deploy your app to Vercel using:
+
+```bash
+vercel deploy
+```
+
+Or, connect your Git repository to Vercel for automatic deployments:
+
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Import your repository on [Vercel](https://vercel.com/new)
+3. Your app will automatically deploy on every push to main
+
+### View Your Data
+
+Once your app is deployed and users have visited your site:
+
+1. Go to your [Vercel dashboard](https://vercel.com/dashboard)
+2. Select your project
+3. Click the **Analytics** tab
+
+**💡 Note:** If everything is set up properly, you should be able to see a Fetch/XHR request in your browser's Network tab from `/_vercel/insights/view` when you visit any page.
+
+### Custom Events
+
+Users on Pro and Enterprise plans can track custom user interactions such as button clicks, form submissions, or purchases. Learn more about [custom events](https://vercel.com/docs/analytics/custom-events).
+
+### Learn More
+
+For more information about Vercel Web Analytics, visit:
+- [Vercel Analytics Documentation](https://vercel.com/docs/analytics)
+- [@vercel/analytics Package](https://vercel.com/docs/analytics/package)
+- [Privacy and Compliance](https://vercel.com/docs/analytics/privacy-policy)
 
 ## How can I deploy this project?
 
