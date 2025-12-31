@@ -1,11 +1,41 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import { promptsData } from "@/data/prompts";
+import { useEffect, useState } from "react";
+import { fetchFeaturedPrompts, type Prompt } from "@/services/api";
 
 const GalleryPreview = () => {
-  // Get the latest 6 images (reversed to show newest first)
-  const previewImages = [...promptsData].reverse().slice(0, 6);
+  const [previewImages, setPreviewImages] = useState<Prompt[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadFeaturedPrompts = async () => {
+      try {
+        const data = await fetchFeaturedPrompts();
+        // Take first 6 for preview
+        setPreviewImages(data.slice(0, 6));
+      } catch (error) {
+        console.error('Error fetching featured prompts:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadFeaturedPrompts();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="py-16 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex justify-center items-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 bg-secondary/30">
@@ -14,7 +44,7 @@ const GalleryPreview = () => {
           <div className="text-center mb-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Latest AI Portraits
+                Featured AI Portraits
               </span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -31,7 +61,7 @@ const GalleryPreview = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-all hover:shadow-xl">
                   <img
-                    src={item.image}
+                    src={item.image_url}
                     alt={item.title}
                     className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
                   />
