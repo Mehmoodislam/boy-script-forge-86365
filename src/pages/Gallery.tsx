@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Copy, Check, X, Search, Eye, Heart, ChevronLeft, ChevronRight } from "lucide-react";
+import { Copy, Check, X, Search, Eye, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,8 +9,7 @@ import { promptsData, PromptData } from "@/data/prompts";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 
-const ITEMS_PER_PAGE = 21;
-const VISIBLE_PAGES = 5;
+const ITEMS_PER_LOAD = 21;
 
 // Define categories based on tags
 const categories = [
@@ -37,7 +36,7 @@ const Gallery = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [imageStats, setImageStats] = useState<Record<string, ImageStats>>({});
-  const [currentPage, setCurrentPage] = useState(1);
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_LOAD);
   const [likedImages, setLikedImages] = useState<Set<string>>(new Set());
 
   // SEO Setup
@@ -253,17 +252,21 @@ const Gallery = () => {
     });
   }, [searchQuery, selectedCategory]);
 
-  // Pagination calculations
-  const totalPages = Math.ceil(filteredPrompts.length / ITEMS_PER_PAGE);
-  const paginatedPrompts = useMemo(() => {
-    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-    return filteredPrompts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-  }, [filteredPrompts, currentPage]);
+  // Get visible prompts based on load more
+  const visiblePrompts = useMemo(() => {
+    return filteredPrompts.slice(0, visibleCount);
+  }, [filteredPrompts, visibleCount]);
 
-  // Reset to page 1 when filters change
+  // Reset visible count when filters change
   useEffect(() => {
-    setCurrentPage(1);
+    setVisibleCount(ITEMS_PER_LOAD);
   }, [searchQuery, selectedCategory]);
+
+  const handleLoadMore = () => {
+    setVisibleCount(prev => prev + ITEMS_PER_LOAD);
+  };
+
+  const hasMore = visibleCount < filteredPrompts.length;
 
   return (
     <div className="min-h-screen bg-background">
@@ -320,7 +323,7 @@ const Gallery = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {paginatedPrompts.map((item) => (
+              {visiblePrompts.map((item) => (
                 <div
                   key={item.id}
                   className="group cursor-pointer"
@@ -364,58 +367,15 @@ const Gallery = () => {
               ))}
             </div>
 
-            {/* Pagination */}
-            {totalPages > 1 && (
-              <div className="flex items-center justify-center gap-2 mt-10">
+            {/* Load More Button */}
+            {hasMore && (
+              <div className="flex justify-center mt-10">
                 <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-                  disabled={currentPage === 1}
+                  size="lg"
+                  onClick={handleLoadMore}
+                  className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all"
                 >
-                  <ChevronLeft className="h-4 w-4" />
-                </Button>
-                
-                {(() => {
-                  // Envato-style sliding pagination - clicked page becomes second position
-                  let startPage: number;
-                  
-                  if (totalPages <= VISIBLE_PAGES) {
-                    // If total pages <= 5, show all
-                    startPage = 1;
-                  } else if (currentPage <= 2) {
-                    // First 2 pages - start from 1
-                    startPage = 1;
-                  } else if (currentPage >= totalPages - 1) {
-                    // Last 2 pages - show last 5
-                    startPage = totalPages - VISIBLE_PAGES + 1;
-                  } else {
-                    // Middle pages - current page becomes second position
-                    startPage = currentPage - 1;
-                  }
-                  
-                  const endPage = Math.min(startPage + VISIBLE_PAGES - 1, totalPages);
-                  
-                  return Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i).map((page) => (
-                    <Button
-                      key={page}
-                      variant={currentPage === page ? "default" : "outline"}
-                      size="icon"
-                      onClick={() => setCurrentPage(page)}
-                      className={currentPage === page ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
-                    >
-                      {page}
-                    </Button>
-                  ));
-                })()}
-                
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-                  disabled={currentPage === totalPages}
-                >
-                  <ChevronRight className="h-4 w-4" />
+                  Load More ({filteredPrompts.length - visibleCount} remaining)
                 </Button>
               </div>
             )}
