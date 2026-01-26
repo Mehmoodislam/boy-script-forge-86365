@@ -20,24 +20,20 @@ const Hero = () => {
           </div>
           <h1 className="font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl break-words text-center">
             <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-              Stylish, Realistic &
+              Stylish Handsome Boy
             </span>
             <br className="hidden sm:block" />
             <span className="text-foreground">
-              Professional Prompts for AI Portraits
+              Pic Professional Prompts for AI Portraits
             </span>
           </h1>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-5xl mx-auto leading-relaxed break-words text-center">
-            Create stunning, <b>realistic AI boy portraits</b> using our professionally handcrafted prompts.
-            FreeImagePrompt is your ultimate destination for <b>stylish boy image prompts</b> designed
-            specifically for <b>Midjourney, DALL·E, and Stable Diffusion.</b>
+            Create <b>stylish handsome boy pic</b> using our professionally handcrafted <b>AI boy image prompts.</b> FreeImagePrompt is your ultimate destination for generating <b>realistic,</b> <b>trendy, and professional boy portraits </b>  designed for <b>Midjourney,</b> <b>DALL·E,</b> Stable Diffusion, and <b>Gemini AI.</b>
           </p>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words text-center">
-            With just <b>one click</b>, copy a prompt and generate
-            <b> high-quality AI boy images</b> perfect for profile pictures,
-            creative projects, and social media.
+             With just one click, copy a prompt and generate <b>high-quality stylish boy</b> pics perfect for <b>profile pictures, social media, and creative projects.</b>
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

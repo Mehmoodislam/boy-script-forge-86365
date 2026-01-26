@@ -16,7 +16,7 @@ const Stylish = () => {
                     </h2>
 
                     <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words  mt-5">
-                        Looking for a <b>stylish boy dp</b> to upgrade your profile picture?
+                        Looking to upgrade your profile picture with a <b>stylish boy DP?</b>
                     </p>
                     <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words mt-2">
                         We also feature a curated collection of <b>cute boy pics, boys stylish dp,</b> and <b>stylish boy photos</b> to inspire your AI creations or use directly on social media.

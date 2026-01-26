@@ -5,22 +5,22 @@ const Benefits = () => {
     {
       icon: Clock,
       title: "Save Time",
-      description: "All AI prompts are 100% free, no hidden charges."
+      description: "No experimentation needed - ready-to-use prompts."
     },
     {
       icon: DollarSign,
       title: "Completely Free",
-      description: "All AI prompts are 100% free, no hidden charges."
+      description: "All AI prompts are 100% free, forever."
     },
     {
       icon: TrendingUp,
       title: "Professional Quality",
-      description: "Generate portraits that look like real professional photoshoots."
+      description: "Generate portraits that look like real studio photoshoots."
     },
     {
       icon: Users,
       title: "Universal Compatibility",
-      description: "Works across all major AI image generators."
+      description: "Works with all major AI image generators."
     }
   ];
 

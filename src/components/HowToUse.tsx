@@ -5,22 +5,22 @@ const HowToUse = () => {
     {
       icon: Search,
       title: "Browse Gallery",
-      description: "Explore our gallery of realistic and handsome AI boy images. Each image shows exactly what the prompt can generate."
+      description: "Explore realistic and trending AI boy portraits. Every image shows what the prompt can generate."
     },
     {
       icon: Copy,
       title: "Copy Prompt",
-      description: "Click on any image and copy the detailed AI prompt with one click."
+      description: "Click on any image and copy the detailed AI boy image prompt with one click."
     },
     {
       icon: Wand2,
       title: "Generate Image",
-      description: "Paste the prompt into Midjourney, DALL·E, or Stable Diffusion and hit generate."
+      description: "Paste the prompt into Midjourney, DALL·E, Stable Diffusion, or Gemini AI and hit generate."
     },
     {
       icon: CheckCircle,
       title: "Enjoy Results",
-      description: "Get a high-quality AI portrait ready for profile pictures, designs, or inspiration."
+      description: "Get a stylish handsome boy pic ready for profile pictures, designs, or inspiration."
     }
   ];
 
@@ -29,7 +29,7 @@ const HowToUse = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words text-center">
-            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Create Stunning AI Boy Portraits</span>
+            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent"> Create Stylish Handsome Boy Pic Using AI</span>
           </h2>
           <p className="text-lg text-muted-foreground">
              Creating AI portraits with FreeImagePrompt is simple:
