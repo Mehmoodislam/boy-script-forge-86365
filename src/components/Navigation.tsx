@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
-import logo from "/favicon.png";
+import logo from "@/assets/nav-logo.png";
 
 const Navigation = () => {
   const location = useLocation();
