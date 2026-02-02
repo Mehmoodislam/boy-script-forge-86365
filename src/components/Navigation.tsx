@@ -32,11 +32,10 @@ const Navigation = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.to
+                className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.to
                     ? "text-primary"
                     : "text-foreground/70"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -63,11 +62,10 @@ const Navigation = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.to
+                className={`block text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.to
                     ? "text-primary"
                     : "text-foreground/70"
-                }`}
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
