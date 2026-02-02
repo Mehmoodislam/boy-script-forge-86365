@@ -11,6 +11,8 @@ import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/BlogPost";
+import MoodOffDp2026 from "./pages/blog/MoodOffDp2026";
+import AttitudeBoyDp2026 from "./pages/blog/AttitudeBoyDp2026";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
@@ -39,6 +41,8 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/whatsapp-dp-attitude-boy-2026" element={<AttitudeBoyDp2026 />} />
+              <Route path="/blog/mood-off-dp-2026" element={<MoodOffDp2026 />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />

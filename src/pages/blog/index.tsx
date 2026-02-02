@@ -10,6 +10,22 @@ import { useState } from "react";
 
 const blogPosts = [
   {
+    id: "whatsapp-dp-attitude-boy-2026",
+    title: "WhatsApp DP for Attitude Boy 2026: Best Stylish Boys Attitude Images (Free HD Download)",
+    description: "Best WhatsApp DP for attitude boy! HD boys attitude images, cool profile pictures, stylish wallpapers free download. Confidence swag for Instagram 2026 😎",
+    date: "February 2, 2026",
+    author: "TrendsPrompt Team",
+    category: "Profile Pictures",
+  },
+  {
+    id: "mood-off-dp-2026",
+    title: "Best Mood Off DP 2026: Free Sad Mood Images, Photos & WhatsApp Profile Pictures",
+    description: "Best mood off DP images free download! HD sad mood photos, alone boy girl DP for WhatsApp, Instagram. Emotional wallpapers & Pinterest trends 2026. Express heartbreak silently 💔",
+    date: "February 2, 2026",
+    author: "TrendsPrompt Team",
+    category: "Profile Pictures",
+  },
+  {
     id: "best-ai-image-prompts-stylish-boy-dp",
     title: "Best AI Image Prompts for Stylish Boy DP in 2024",
     description: "Discover the top AI prompts to create stunning stylish boy profile pictures. Learn how to craft the perfect prompt for Midjourney, DALL-E, and other AI generators.",
@@ -23,7 +39,7 @@ const POSTS_PER_PAGE = 8;
 
 const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  
+
   const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
   const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
   const paginatedPosts = blogPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
@@ -36,7 +52,7 @@ const Blog = () => {
         canonicalUrl="https://freeimageprompt.com/blog"
       />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">
         <div className="container mx-auto px-4">
@@ -99,7 +115,7 @@ const Blog = () => {
               >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              
+
               {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                 <Button
                   key={page}
@@ -111,7 +127,7 @@ const Blog = () => {
                   {page}
                 </Button>
               ))}
-              
+
               <Button
                 variant="outline"
                 size="icon"
