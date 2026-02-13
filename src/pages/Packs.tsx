@@ -1,57 +1,77 @@
 import { useState, useEffect } from "react";
-import { X, Download, ChevronLeft } from "lucide-react";
+import { X, Download, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import {
   fetchCategories,
-  fetchPromptsByCategory,
+  fetchPrompts,
   type Prompt,
   type Category,
 } from "@/services/api";
 
-const GALLERY_CATEGORIES = ["cinematic", "futuristic", "shalwar kameez", "luxury", "trending", "wallpaper"];
+const ITEMS_PER_LOAD = 21;
 
 const Packs = () => {
   const [categories, setCategories] = useState<Category[]>([]);
+  const [prompts, setPrompts] = useState<Prompt[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
-  const [categoryImages, setCategoryImages] = useState<Prompt[]>([]);
-  const [loadingImages, setLoadingImages] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(true);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<Prompt | null>(null);
 
+  // Load categories
   useEffect(() => {
     const loadCategories = async () => {
       try {
         const data = await fetchCategories();
-        // Filter out the 6 gallery categories
-        const packCategories = data.filter(
-          (c) => !GALLERY_CATEGORIES.includes(c.name.toLowerCase())
-        );
-        setCategories(packCategories);
+        setCategories(data);
       } catch (error) {
         console.error("Error fetching categories:", error);
-        toast.error("Failed to load packs");
-      } finally {
-        setLoading(false);
       }
     };
     loadCategories();
   }, []);
 
-  const handleCategoryClick = async (category: Category) => {
-    setSelectedCategory(category);
-    setLoadingImages(true);
+  // Load prompts
+  useEffect(() => {
+    const loadPrompts = async () => {
+      setLoading(true);
+      try {
+        const data = await fetchPrompts(1, ITEMS_PER_LOAD);
+        setPrompts(data.data);
+        setHasMore(data.current_page < data.last_page);
+        setCurrentPage(1);
+      } catch (error) {
+        console.error("Error fetching prompts:", error);
+        toast.error("Failed to load images");
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadPrompts();
+  }, []);
+
+  const handleLoadMore = async () => {
+    if (loadingMore || !hasMore) return;
+    setLoadingMore(true);
     try {
-      const data = await fetchPromptsByCategory(category.id);
-      setCategoryImages(data.data);
+      const nextPage = currentPage + 1;
+      const data = await fetchPrompts(nextPage, ITEMS_PER_LOAD);
+      setPrompts((prev) => [...prev, ...data.data]);
+      setCurrentPage(nextPage);
+      setHasMore(data.current_page < data.last_page);
     } catch (error) {
-      console.error("Error fetching category images:", error);
-      toast.error("Failed to load images");
+      console.error("Error loading more:", error);
+      toast.error("Failed to load more images");
     } finally {
-      setLoadingImages(false);
+      setLoadingMore(false);
     }
   };
 
@@ -73,8 +93,24 @@ const Packs = () => {
     }
   };
 
+  // Filter
+  const filteredPrompts = prompts.filter((item) => {
+    const matchesSearch =
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.category.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesCategory =
+      selectedCategory === "All" ||
+      item.category.name.toLowerCase() === selectedCategory.toLowerCase();
+    return matchesSearch && matchesCategory;
+  });
+
+  // Related images for popup
   const relatedImages = selectedImage
-    ? categoryImages.filter((img) => img.id !== selectedImage.id)
+    ? filteredPrompts.filter(
+        (img) =>
+          img.id !== selectedImage.id &&
+          img.category.name === selectedImage.category.name
+      )
     : [];
 
   return (
@@ -89,98 +125,104 @@ const Packs = () => {
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            {/* Header */}
-            {!selectedCategory ? (
-              <>
-                <header className="text-center space-y-4 mb-10">
-                  <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl">
-                    Image{" "}
-                    <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                      Packs
-                    </span>
-                  </h1>
-                  <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
-                    Explore curated image collections organized by category. Click a pack to browse and download images.
-                  </p>
-                </header>
+            <header className="text-center space-y-4 mb-8">
+              <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl">
+                Image{" "}
+                <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                  Packs
+                </span>
+              </h1>
+              <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto">
+                Explore all curated image collections. Browse by category, search, and download your favorites.
+              </p>
+            </header>
 
-                {/* Category Grid */}
-                {loading ? (
-                  <div className="flex justify-center py-20">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
-                  </div>
-                ) : categories.length === 0 ? (
-                  <p className="text-center text-muted-foreground py-20">No packs available yet.</p>
-                ) : (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                    {categories.map((cat) => (
-                      <button
-                        key={cat.id}
-                        onClick={() => handleCategoryClick(cat)}
-                        className="group relative rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-xl aspect-square bg-card"
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent z-10" />
-                        <div className="absolute inset-0 flex items-center justify-center z-20">
-                          <span className="text-white font-bold text-lg sm:text-xl drop-shadow-lg group-hover:scale-110 transition-transform">
-                            {cat.name}
-                          </span>
-                        </div>
-                        <div className="w-full h-full bg-gradient-to-br from-primary/20 to-primary-glow/20" />
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </>
+            {/* Search Bar */}
+            <div className="mb-6 max-w-md mx-auto">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search images or categories..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="mb-8 flex flex-wrap gap-2 justify-center">
+              <Button
+                variant={selectedCategory === "All" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory("All")}
+                className={selectedCategory === "All" ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
+              >
+                All
+              </Button>
+              {categories.map((cat) => (
+                <Button
+                  key={cat.id}
+                  variant={selectedCategory === cat.name ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedCategory(cat.name)}
+                  className={selectedCategory === cat.name ? "bg-gradient-to-r from-primary to-primary-glow" : ""}
+                >
+                  {cat.name}
+                </Button>
+              ))}
+            </div>
+
+            {/* Loading */}
+            {loading ? (
+              <div className="flex justify-center py-20">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
+              </div>
             ) : (
               <>
-                {/* Category Detail View */}
-                <div className="mb-6">
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
-                      setSelectedCategory(null);
-                      setCategoryImages([]);
-                    }}
-                    className="gap-2"
-                  >
-                    <ChevronLeft className="h-4 w-4" />
-                    Back to Packs
-                  </Button>
+                {/* Image Grid */}
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                  {filteredPrompts.map((img) => (
+                    <div
+                      key={img.id}
+                      onClick={() => setSelectedImage(img)}
+                      className="cursor-pointer group rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg"
+                    >
+                      <img
+                        src={img.image_url}
+                        alt={img.title}
+                        className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
 
-                <header className="text-center space-y-2 mb-8">
-                  <h2 className="font-bold text-2xl sm:text-3xl">
-                    {selectedCategory.name}{" "}
-                    <span className="text-primary">Pack</span>
-                  </h2>
-                </header>
-
-                {loadingImages ? (
-                  <div className="flex justify-center py-20">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" />
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-                    {categoryImages.map((img) => (
-                      <div
-                        key={img.id}
-                        onClick={() => setSelectedImage(img)}
-                        className="cursor-pointer group rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg"
-                      >
-                        <img
-                          src={img.image_url}
-                          alt={img.title}
-                          className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
-                          loading="lazy"
-                        />
-                      </div>
-                    ))}
+                {/* Load More */}
+                {hasMore && selectedCategory === "All" && searchQuery === "" && (
+                  <div className="flex justify-center mt-10">
+                    <Button
+                      size="lg"
+                      onClick={handleLoadMore}
+                      disabled={loadingMore}
+                      className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all"
+                    >
+                      {loadingMore ? (
+                        <>
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2" />
+                          Loading...
+                        </>
+                      ) : (
+                        "Load More"
+                      )}
+                    </Button>
                   </div>
                 )}
 
-                {categoryImages.length === 0 && !loadingImages && (
+                {filteredPrompts.length === 0 && !loading && (
                   <p className="text-center text-muted-foreground py-20">
-                    No images in this pack yet.
+                    No images found matching your criteria.
                   </p>
                 )}
               </>
@@ -228,7 +270,7 @@ const Packs = () => {
             {relatedImages.length > 0 && (
               <div className="p-4">
                 <h3 className="text-sm font-semibold text-muted-foreground mb-3">
-                  More from {selectedCategory?.name}
+                  More from {selectedImage.category.name}
                 </h3>
                 <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
                   {relatedImages.slice(0, 8).map((img) => (

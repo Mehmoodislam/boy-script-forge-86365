@@ -250,8 +250,12 @@ const Gallery = () => {
     }
   };
 
-  // Filter prompts based on search and category
+  // Filter prompts based on search, category, and gallery-only categories
   const filteredPrompts = prompts.filter((item) => {
+    // Only show images from the 6 gallery categories
+    const isGalleryCategory = GALLERY_CATEGORY_NAMES.includes(item.category.name.toLowerCase());
+    if (!isGalleryCategory) return false;
+
     const matchesSearch = 
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.prompt_text.toLowerCase().includes(searchQuery.toLowerCase()) ||
