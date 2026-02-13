@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import Index from "./pages/Index";
 import Gallery from "./pages/Gallery";
+import Packs from "./pages/Packs";
 import Contact from "./pages/Contact";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/BlogPost";
@@ -40,6 +41,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/packs" element={<Packs />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/whatsapp-dp-attitude-boy-2026" element={<AttitudeBoyDp2026 />} />
               <Route path="/blog/mood-off-dp-2026" element={<MoodOffDp2026 />} />
