@@ -16,6 +16,7 @@ import {
 } from "@/services/api";
 
 const ITEMS_PER_LOAD = 21;
+const GALLERY_CATEGORY_NAMES = ["cinematic", "futuristic", "shalwar kameez", "luxury", "trending", "wallpaper"];
 
 const Gallery = () => {
   const [selectedPrompt, setSelectedPrompt] = useState<Prompt | null>(null);
@@ -139,7 +140,8 @@ const Gallery = () => {
     const loadCategories = async () => {
       try {
         const data = await fetchCategories();
-        setCategories(data);
+        const filtered = data.filter(c => GALLERY_CATEGORY_NAMES.includes(c.name.toLowerCase()));
+        setCategories(filtered);
       } catch (error) {
         console.error('Error fetching categories:', error);
       }

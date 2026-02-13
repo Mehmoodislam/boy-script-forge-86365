@@ -90,3 +90,11 @@ export const copyPrompt = async (id: number): Promise<void> => {
   const result = await response.json();
   if (!result.success) throw new Error(result.message);
 };
+
+// Fetch prompts by category
+export const fetchPromptsByCategory = async (categoryId: number, page: number = 1, perPage: number = 50): Promise<PaginatedResponse> => {
+  const response = await fetch(`${API_BASE_URL}/list?page=${page}&per_page=${perPage}&category_id=${categoryId}`);
+  const result: ApiResponse<PaginatedResponse> = await response.json();
+  if (!result.success) throw new Error(result.message);
+  return result.data;
+};
