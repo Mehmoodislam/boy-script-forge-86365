@@ -14,6 +14,7 @@ import {
 } from "@/services/api";
 
 const ITEMS_PER_LOAD = 21;
+const GALLERY_CATEGORY_NAMES = ["cinematic", "futuristic", "shalwar kameez", "luxury", "trending", "wallpaper"];
 
 const Packs = () => {
   const [categories, setCategories] = useState<Category[]>([]);
@@ -31,7 +32,9 @@ const Packs = () => {
     const loadCategories = async () => {
       try {
         const data = await fetchCategories();
-        setCategories(data);
+        // Filter out gallery categories from the category buttons
+        const filtered = data.filter(c => !GALLERY_CATEGORY_NAMES.includes(c.name.toLowerCase()));
+        setCategories(filtered);
       } catch (error) {
         console.error("Error fetching categories:", error);
       }
@@ -95,6 +98,10 @@ const Packs = () => {
 
   // Filter
   const filteredPrompts = prompts.filter((item) => {
+    // Exclude gallery categories from packs page
+    const isGalleryCategory = GALLERY_CATEGORY_NAMES.includes(item.category.name.toLowerCase());
+    if (isGalleryCategory) return false;
+
     const matchesSearch =
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       item.category.name.toLowerCase().includes(searchQuery.toLowerCase());
@@ -107,10 +114,10 @@ const Packs = () => {
   // Related images for popup
   const relatedImages = selectedImage
     ? filteredPrompts.filter(
-        (img) =>
-          img.id !== selectedImage.id &&
-          img.category.name === selectedImage.category.name
-      )
+      (img) =>
+        img.id !== selectedImage.id &&
+        img.category.name === selectedImage.category.name
+    )
     : [];
 
   return (
@@ -182,7 +189,7 @@ const Packs = () => {
             ) : (
               <>
                 {/* Image Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredPrompts.map((img) => (
                     <div
                       key={img.id}
