@@ -1,12 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
+
+const tools = [
+  { to: "/tools/youtube-downloader", label: "YouTube Video Downloader", icon: Youtube, desc: "Download YouTube videos easily" },
+  { to: "/tools/instagram-downloader", label: "Instagram Downloader", icon: ImageDown, desc: "Save Instagram reels & posts" },
+  { to: "/tools/image-compressor", label: "Image Compressor", icon: FileText, desc: "Compress images without quality loss" },
+  { to: "/tools/qr-code-generator", label: "QR Code Generator", icon: QrCode, desc: "Generate QR codes instantly" },
+  { to: "/tools/text-to-image", label: "Text to Image", icon: Type, desc: "Convert text prompts to images" },
+];
 
 const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
+  const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
+  const toolsRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const links = [
     { to: "/", label: "Home" },
@@ -15,6 +27,21 @@ const Navigation = () => {
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setToolsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setToolsOpen(false), 200);
+  };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -41,6 +68,45 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Tools Dropdown */}
+            <div
+              ref={toolsRef}
+              className="relative"
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
+                  location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
+                }`}
+              >
+                Tools
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? "rotate-180" : ""}`} />
+              </button>
+
+              {toolsOpen && (
+                <div className="absolute top-full right-0 mt-2 w-72 rounded-xl border border-border bg-popover shadow-lg p-2 z-[100] animate-in fade-in-0 zoom-in-95 duration-200">
+                  {tools.map((tool) => (
+                    <Link
+                      key={tool.to}
+                      to={tool.to}
+                      onClick={() => setToolsOpen(false)}
+                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-accent/10 transition-colors group"
+                    >
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                        <tool.icon className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-foreground">{tool.label}</p>
+                        <p className="text-xs text-muted-foreground">{tool.desc}</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <ThemeToggle />
           </div>
 
@@ -58,13 +124,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-4">
+          <div className="md:hidden py-4 space-y-1">
             {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
-                className={`block text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.to
-                    ? "text-primary"
+                className={`block text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname === link.to
+                    ? "text-primary bg-primary/10"
                     : "text-foreground/70"
                   }`}
                 onClick={() => setIsOpen(false)}
@@ -72,6 +138,32 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+
+            {/* Mobile Tools Accordion */}
+            <button
+              onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
+              className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${
+                location.pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
+              }`}
+            >
+              Tools
+              <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileToolsOpen ? "rotate-180" : ""}`} />
+            </button>
+            {mobileToolsOpen && (
+              <div className="pl-4 space-y-1">
+                {tools.map((tool) => (
+                  <Link
+                    key={tool.to}
+                    to={tool.to}
+                    onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
+                    className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
+                  >
+                    <tool.icon className="h-4 w-4" />
+                    <span className="text-sm">{tool.label}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>

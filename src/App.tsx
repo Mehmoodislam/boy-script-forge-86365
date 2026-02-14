@@ -16,6 +16,7 @@ import MoodOffDp2026 from "./pages/blog/MoodOffDp2026";
 import AttitudeBoyDp2026 from "./pages/blog/AttitudeBoyDp2026";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import YouTubeDownloader from "./pages/YouTubeDownloader";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { analytics } from "./firebase";
@@ -49,6 +50,7 @@ const App = () => {
               <Route path="/contact" element={<Contact />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-services" element={<TermsConditions />} />
+              <Route path="/tools/youtube-downloader" element={<YouTubeDownloader />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
