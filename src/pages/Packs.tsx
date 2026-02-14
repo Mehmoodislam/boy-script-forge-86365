@@ -80,7 +80,8 @@ const Packs = () => {
 
   const handleDownload = async (imageUrl: string, title: string) => {
     try {
-      const response = await fetch(imageUrl);
+      const response = await fetch(imageUrl, { mode: "cors" });
+      if (!response.ok) throw new Error("Fetch failed");
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
@@ -92,7 +93,9 @@ const Packs = () => {
       window.URL.revokeObjectURL(url);
       toast.success("Download started!");
     } catch {
-      toast.error("Failed to download image");
+      // Fallback: open in new tab if CORS blocks
+      window.open(imageUrl, "_blank");
+      toast.info("Image opened in new tab — long press or right-click to save.");
     }
   };
 
