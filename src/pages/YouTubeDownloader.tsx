@@ -11,7 +11,10 @@ const YouTubeDownloader = () => {
   const [videoInfo, setVideoInfo] = useState<{
     title: string;
     thumbnail: string;
-    downloadUrl: string;
+    formats: Array<{
+      quality: string;
+      downloadUrl: string;
+    }>;
   } | null>(null);
 
   const isValidYouTubeUrl = (url: string) => {
@@ -46,13 +49,15 @@ const YouTubeDownloader = () => {
 
       if (!response.ok) throw new Error(data.error || "Failed to process video");
 
-      if (data.downloadUrl) {
+      if (data.formats && data.formats.length > 0) {
         setVideoInfo({
           title: data.title || "YouTube Video",
           thumbnail: data.thumbnail || "",
-          downloadUrl: data.downloadUrl,
+          formats: data.formats,
         });
         toast.success("Video ready for download!");
+      } else {
+        toast.error("No download formats available");
       }
     } catch (error: any) {
       toast.error(error.message || "Failed to process video. Try again.");
@@ -118,25 +123,33 @@ const YouTubeDownloader = () => {
 
             {/* Video Info Result */}
             {videoInfo && (
-              <div className="mt-6 p-4 rounded-xl border border-border bg-background flex flex-col sm:flex-row gap-4 items-center">
-                {videoInfo.thumbnail && (
-                  <img
-                    src={videoInfo.thumbnail}
-                    alt={videoInfo.title}
-                    className="w-full sm:w-48 rounded-lg object-cover aspect-video"
-                  />
-                )}
-                <div className="flex-1 text-center sm:text-left">
-                  <h3 className="font-medium text-foreground mb-2">{videoInfo.title}</h3>
-                  <a
-                    href={videoInfo.downloadUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-accent text-accent-foreground font-medium text-sm hover:opacity-90 transition-opacity"
-                  >
-                    <Download className="h-4 w-4" />
-                    Download Video
-                  </a>
+              <div className="mt-6 p-4 rounded-xl border border-border bg-background">
+                <div className="flex flex-col sm:flex-row gap-4 items-start mb-4">
+                  {videoInfo.thumbnail && (
+                    <img
+                      src={videoInfo.thumbnail}
+                      alt={videoInfo.title}
+                      className="w-full sm:w-48 rounded-lg object-cover aspect-video"
+                    />
+                  )}
+                  <div className="flex-1">
+                    <h3 className="font-medium text-foreground mb-3">{videoInfo.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3">Select quality to download:</p>
+                    <div className="flex flex-wrap gap-2">
+                      {videoInfo.formats.map((format, index) => (
+                        <a
+                          key={index}
+                          href={format.downloadUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:opacity-90 transition-opacity"
+                        >
+                          <Download className="h-4 w-4" />
+                          {format.quality}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             )}

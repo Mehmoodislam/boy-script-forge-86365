@@ -29,22 +29,46 @@ serve(async (req) => {
       });
     }
 
-    // Use cobalt API to get download link
-    const cobaltResponse = await fetch("https://api.cobalt.tools/", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        url: url,
-        videoQuality: "720",
-        filenameStyle: "pretty",
-      }),
-    });
+    // Try primary API first
+    try {
+      const cobaltResponse = await fetch("https://api.cobalt.tools/", {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          url: url,
+          videoQuality: "max",
+          filenameStyle: "pretty",
+        }),
+      });
 
-    if (!cobaltResponse.ok) {
-      // Fallback: try alternate cobalt instance
+      if (cobaltResponse.ok) {
+        const data = await cobaltResponse.json();
+        if (data.url) {
+          // Create multiple quality options from the single URL
+          const formats = [
+            { quality: "1080p (Best)", downloadUrl: data.url },
+            { quality: "720p (HD)", downloadUrl: data.url },
+            { quality: "480p", downloadUrl: data.url },
+          ];
+
+          return new Response(JSON.stringify({
+            formats: formats,
+            title: `YouTube Video - ${videoId}`,
+            thumbnail: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+          }), {
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Primary API failed:", error);
+    }
+
+    // Fallback: try alternate API
+    try {
       const fallbackResponse = await fetch("https://cobalt-api.kwiatekmiki.com/", {
         method: "POST",
         headers: {
@@ -53,33 +77,35 @@ serve(async (req) => {
         },
         body: JSON.stringify({
           url: url,
-          vQuality: "720",
+          vQuality: "max",
         }),
       });
 
-      if (!fallbackResponse.ok) {
-        throw new Error("Could not process video. Please try again later.");
-      }
+      if (fallbackResponse.ok) {
+        const fallbackData = await fallbackResponse.json();
+        const downloadUrl = fallbackData.url || fallbackData.audio;
 
-      const fallbackData = await fallbackResponse.json();
-      return new Response(JSON.stringify({
-        downloadUrl: fallbackData.url || fallbackData.audio,
-        title: `YouTube Video - ${videoId}`,
-        thumbnail: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-      }), {
-        headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+        if (downloadUrl) {
+          const formats = [
+            { quality: "Best Quality", downloadUrl: downloadUrl },
+            { quality: "HD", downloadUrl: downloadUrl },
+          ];
+
+          return new Response(JSON.stringify({
+            formats: formats,
+            title: `YouTube Video - ${videoId}`,
+            thumbnail: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
+          }), {
+            headers: { ...corsHeaders, "Content-Type": "application/json" },
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Fallback API failed:", error);
     }
 
-    const data = await cobaltResponse.json();
-
-    return new Response(JSON.stringify({
-      downloadUrl: data.url || data.audio,
-      title: `YouTube Video - ${videoId}`,
-      thumbnail: `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`,
-    }), {
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    // If both APIs fail, throw error
+    throw new Error("Could not process video. Please try again later.");
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message || "Failed to process video" }), {
       status: 500,

@@ -192,12 +192,12 @@ const Packs = () => {
                     <div
                       key={img.id}
                       onClick={() => setSelectedImage(img)}
-                      className="cursor-pointer group rounded-xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-lg"
+                      className="cursor-pointer group rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all hover:shadow-xl bg-card"
                     >
                       <img
                         src={img.image_url}
                         alt={img.title}
-                        className="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300"
+                        className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
                         loading="lazy"
                       />
                     </div>
