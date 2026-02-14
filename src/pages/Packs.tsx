@@ -80,22 +80,17 @@ const Packs = () => {
 
   const handleDownload = async (imageUrl: string, title: string) => {
     try {
-      const response = await fetch(imageUrl, { mode: "cors" });
-      if (!response.ok) throw new Error("Fetch failed");
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
+      const filename = `${title.replace(/\s+/g, "-").toLowerCase()}.webp`;
+      const proxyUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/download-image?url=${encodeURIComponent(imageUrl)}&filename=${encodeURIComponent(filename)}`;
       const a = document.createElement("a");
-      a.href = url;
-      a.download = `${title.replace(/\s+/g, "-").toLowerCase()}.webp`;
+      a.href = proxyUrl;
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      window.URL.revokeObjectURL(url);
       toast.success("Download started!");
     } catch {
-      // Fallback: open in new tab if CORS blocks
-      window.open(imageUrl, "_blank");
-      toast.info("Image opened in new tab — long press or right-click to save.");
+      toast.error("Failed to download image");
     }
   };
 
