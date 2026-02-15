@@ -18,6 +18,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import YouTubeDownloader from "./pages/YouTubeDownloader";
 import GradeCalculator from "./pages/GradeCalculator";
+import MockInterview from "./pages/MockInterview";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { analytics } from "./firebase";
@@ -53,6 +54,7 @@ const App = () => {
               <Route path="/terms-of-services" element={<TermsConditions />} />
               <Route path="/tools/youtube-downloader" element={<YouTubeDownloader />} />
               <Route path="/tools/grade-calculator" element={<GradeCalculator />} />
+              <Route path="/tools/mock-interview" element={<MockInterview />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
