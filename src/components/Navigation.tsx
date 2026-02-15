@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator } from "lucide-react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
@@ -14,6 +14,7 @@ const mediaTools = [
 
 const studentTools = [
   { to: "/tools/grade-calculator", label: "Grade Calculator", icon: Calculator, desc: "Calculate GPA & weighted grades" },
+  { to: "/tools/mock-interview", label: "Mock Interview", icon: Brain, desc: "AI-powered interview practice" },
 ];
 
 const Navigation = () => {

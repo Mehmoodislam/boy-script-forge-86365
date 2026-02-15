@@ -106,8 +106,8 @@ serve(async (req) => {
 
     // If both APIs fail, throw error
     throw new Error("Could not process video. Please try again later.");
-  } catch (error) {
-    return new Response(JSON.stringify({ error: error.message || "Failed to process video" }), {
+  } catch (error: unknown) {
+    return new Response(JSON.stringify({ error: error instanceof Error ? error.message : "Failed to process video" }), {
       status: 500,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
