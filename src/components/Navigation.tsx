@@ -1,15 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type } from "lucide-react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
 
-const tools = [
-  { to: "/tools/youtube-downloader", label: "YouTube Video Downloader", icon: Youtube, desc: "Download YouTube videos easily" },
-  { to: "/tools/instagram-downloader", label: "Instagram Downloader", icon: ImageDown, desc: "Save Instagram reels & posts" },
-  { to: "/tools/image-compressor", label: "Image Compressor", icon: FileText, desc: "Compress images without quality loss" },
-  { to: "/tools/qr-code-generator", label: "QR Code Generator", icon: QrCode, desc: "Generate QR codes instantly" },
-  { to: "/tools/text-to-image", label: "Text to Image", icon: Type, desc: "Convert text prompts to images" },
+const mediaTools = [
+  { to: "/tools/youtube-downloader", label: "YouTube Downloader", icon: Youtube, desc: "Download videos easily" },
+  { to: "/tools/instagram-downloader", label: "Instagram Downloader", icon: ImageDown, desc: "Save reels & posts" },
+  { to: "/tools/image-compressor", label: "Image Compressor", icon: FileText, desc: "Compress images" },
+  { to: "/tools/qr-code-generator", label: "QR Code Generator", icon: QrCode, desc: "Create QR codes" },
+  { to: "/tools/text-to-image", label: "Text to Image", icon: Type, desc: "AI image generator" },
+];
+
+const studentTools = [
+  { to: "/tools/grade-calculator", label: "Grade Calculator", icon: Calculator, desc: "Calculate GPA & weighted grades" },
 ];
 
 const Navigation = () => {
@@ -61,8 +65,8 @@ const Navigation = () => {
                 key={link.to}
                 to={link.to}
                 className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.to
-                    ? "text-primary"
-                    : "text-foreground/70"
+                  ? "text-primary"
+                  : "text-foreground/70"
                   }`}
               >
                 {link.label}
@@ -77,32 +81,58 @@ const Navigation = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
-                }`}
+                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
+                  }`}
               >
                 Tools
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? "rotate-180" : ""}`} />
               </button>
 
               {toolsOpen && (
-                <div className="absolute top-full right-0 mt-2 w-72 rounded-xl border border-border bg-popover shadow-lg p-2 z-[100] animate-in fade-in-0 zoom-in-95 duration-200">
-                  {tools.map((tool) => (
-                    <Link
-                      key={tool.to}
-                      to={tool.to}
-                      onClick={() => setToolsOpen(false)}
-                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-accent/10 transition-colors group"
-                    >
-                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-                        <tool.icon className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-foreground">{tool.label}</p>
-                        <p className="text-xs text-muted-foreground">{tool.desc}</p>
-                      </div>
-                    </Link>
-                  ))}
+                <div className="absolute top-full right-0 mt-2 w-[600px] rounded-xl border border-border bg-popover shadow-lg p-4 z-[100] animate-in fade-in-0 zoom-in-95 duration-200 grid grid-cols-2 gap-4">
+                  <div>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Media Tools</h3>
+                    <div className="space-y-1">
+                      {mediaTools.map((tool) => (
+                        <Link
+                          key={tool.to}
+                          to={tool.to}
+                          onClick={() => setToolsOpen(false)}
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors group"
+                        >
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                            <tool.icon className="h-4 w-4" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">{tool.label}</p>
+                            <p className="text-xs text-muted-foreground">{tool.desc}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Student Tools</h3>
+                    <div className="space-y-1">
+                      {studentTools.map((tool) => (
+                        <Link
+                          key={tool.to}
+                          to={tool.to}
+                          onClick={() => setToolsOpen(false)}
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors group"
+                        >
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                            <tool.icon className="h-4 w-4" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">{tool.label}</p>
+                            <p className="text-xs text-muted-foreground">{tool.desc}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -130,8 +160,8 @@ const Navigation = () => {
                 key={link.to}
                 to={link.to}
                 className={`block text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname === link.to
-                    ? "text-primary bg-primary/10"
-                    : "text-foreground/70"
+                  ? "text-primary bg-primary/10"
+                  : "text-foreground/70"
                   }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -142,26 +172,46 @@ const Navigation = () => {
             {/* Mobile Tools Accordion */}
             <button
               onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
-              className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${
-                location.pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
-              }`}
+              className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
+                }`}
             >
               Tools
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileToolsOpen ? "rotate-180" : ""}`} />
             </button>
             {mobileToolsOpen && (
-              <div className="pl-4 space-y-1">
-                {tools.map((tool) => (
-                  <Link
-                    key={tool.to}
-                    to={tool.to}
-                    onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
-                    className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
-                  >
-                    <tool.icon className="h-4 w-4" />
-                    <span className="text-sm">{tool.label}</span>
-                  </Link>
-                ))}
+              <div className="pl-4 space-y-4 mt-2">
+                <div>
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Media Tools</h3>
+                  <div className="space-y-1">
+                    {mediaTools.map((tool) => (
+                      <Link
+                        key={tool.to}
+                        to={tool.to}
+                        onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
+                      >
+                        <tool.icon className="h-4 w-4" />
+                        <span className="text-sm">{tool.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Student Tools</h3>
+                  <div className="space-y-1">
+                    {studentTools.map((tool) => (
+                      <Link
+                        key={tool.to}
+                        to={tool.to}
+                        onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
+                      >
+                        <tool.icon className="h-4 w-4" />
+                        <span className="text-sm">{tool.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
           </div>
