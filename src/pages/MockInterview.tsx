@@ -128,8 +128,8 @@ const MockInterview = () => {
       />
       <Navigation />
       <main className="min-h-screen bg-background pt-20 pb-16">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <Link to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-6">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <Link to="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-primary transition-colors mb-6 mt-10">
             <ArrowLeft className="h-4 w-4" /> Back to Home
           </Link>
 
@@ -139,9 +139,9 @@ const MockInterview = () => {
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
                 <Sparkles className="h-4 w-4" /> AI-Powered Mock Interview
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-3">
+              <p className="text-4xl md:text-5xl font-bold mb-3">
                 Ace Your Next <span className="text-primary">Interview</span>
-              </h1>
+              </p>
               <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
                 Paste your job description and practice with AI-generated interview questions
               </p>
@@ -229,16 +229,14 @@ const MockInterview = () => {
                     <button
                       key={idx}
                       onClick={() => setSelectedOption(idx)}
-                      className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 ${
-                        selectedOption === idx
+                      className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-200 ${selectedOption === idx
                           ? "border-primary bg-primary/10 shadow-md"
                           : "border-border hover:border-primary/40 hover:bg-accent/5"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${
-                          selectedOption === idx ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
-                        }`}>
+                        <div className={`h-8 w-8 rounded-lg flex items-center justify-center text-sm font-bold shrink-0 ${selectedOption === idx ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"
+                          }`}>
                           {String.fromCharCode(65 + idx)}
                         </div>
                         <span className="text-sm font-medium">{option}</span>
@@ -292,9 +290,8 @@ const MockInterview = () => {
                 {scoreResult.results.map((r, i) => (
                   <div key={i} className={`bg-card border rounded-xl p-5 ${r.correct ? "border-green-500/30" : r.skipped ? "border-border" : "border-red-500/30"}`}>
                     <div className="flex items-start gap-3">
-                      <div className={`mt-0.5 h-6 w-6 rounded-full flex items-center justify-center shrink-0 ${
-                        r.correct ? "bg-green-500/10 text-green-500" : r.skipped ? "bg-muted text-muted-foreground" : "bg-red-500/10 text-red-500"
-                      }`}>
+                      <div className={`mt-0.5 h-6 w-6 rounded-full flex items-center justify-center shrink-0 ${r.correct ? "bg-green-500/10 text-green-500" : r.skipped ? "bg-muted text-muted-foreground" : "bg-red-500/10 text-red-500"
+                        }`}>
                         {r.correct ? <CheckCircle2 className="h-4 w-4" /> : r.skipped ? <SkipForward className="h-4 w-4" /> : <XCircle className="h-4 w-4" />}
                       </div>
                       <div className="flex-1">
@@ -327,35 +324,144 @@ const MockInterview = () => {
             </div>
           )}
         </div>
+        {/* Content Section SEO */}
+        <article className="mt-16 prose prose-lg dark:prose-invert max-w-4xl m-auto">
 
-        {/* SEO Content */}
-        <section className="container mx-auto px-4 max-w-4xl mt-16">
-          <div className="bg-card border border-border rounded-2xl p-8 prose prose-sm dark:prose-invert max-w-none">
-            <h2>AI Mock Interview Practice - Prepare for Your Dream Job</h2>
-            <p>Our AI-powered mock interview tool helps you prepare for job interviews by generating tailored multiple-choice questions based on real job descriptions. Whether you're a software developer, data analyst, designer, or any other professional, this tool adapts to your target role.</p>
-            
-            <h3>How It Works</h3>
-            <ol>
-              <li><strong>Paste Your Job Description</strong> – Copy the job posting you're applying for and paste it into the text area above.</li>
-              <li><strong>AI Generates Questions</strong> – Our AI analyzes the job requirements and creates 5 relevant interview questions with 4 answer options each.</li>
-              <li><strong>Answer or Skip</strong> – Take your time to answer each question. You can skip questions you're unsure about.</li>
-              <li><strong>Get Your Score</strong> – After completing all questions, you'll receive a detailed score with explanations for each answer.</li>
-              <li><strong>Restart Anytime</strong> – Not satisfied? Restart the interview or try with a different job description.</li>
-            </ol>
+            <h1 className="text-4xl md:text-5xl font-bold mb-3">
+                 Common Interview Questions and Answers: How to Give a Good Answer in a Job Interview
+            </h1>
+           
+        <p className="text-muted-foreground text-lg max-w-5xl mx-auto">
+          An interview question can shape the outcome of your job interview. Employers use
+          common interview questions to evaluate your skills, experience, and personality.
+          This guide explains why interviewers ask certain questions and how to prepare
+          strong, confident answers that help you stand out.
+        </p>
+          <p className="text-muted-foreground text-lg">
+            Below is a structured breakdown of common job interview questions, why employers
+            ask them, and how you can answer effectively without sounding rehearsed.
+          </p>
 
-            <h3>Why Practice with AI Mock Interviews?</h3>
-            <ul>
-              <li>Build confidence before your actual interview</li>
-              <li>Identify knowledge gaps in your technical skills</li>
-              <li>Learn from detailed explanations of correct answers</li>
-              <li>Practice as many times as you want, completely free</li>
-              <li>Questions are tailored to the specific job you're applying for</li>
+          <div className="border-2 border-gray-200 dark:border-gray-800 rounded-lg p-4 mt-6">
+            <h2 className="text-2xl font-semibold mb-2">Article Outline</h2>
+            <ul className="list-disc pl-5">
+              <li>Interview Question Basics: What Are Employers Really Asking?</li>
+              <li>Tell Me About a Time You Faced a Challenge</li>
+              <li>Why Do You Want to Work Here?</li>
+              <li>Questions About Your Current Job or Position</li>
+              <li>Tell Me About a Time You Disagreed at Work</li>
+              <li>What Kind of Work Environment Do You Prefer?</li>
+              <li>Common Interview Questions About Strengths and Weakness</li>
+              <li>Questions About Your Last Job and Work History</li>
+              <li>Salary Expectations and Current Salary</li>
+              <li>Questions to Ask at the End of a Job Interview</li>
             </ul>
-
-            <h3>Tips for Better Interview Preparation</h3>
-            <p>Use this tool alongside your regular interview preparation. Review the explanations for questions you got wrong, study the relevant topics, and retake the interview to track your improvement. The more you practice, the more confident you'll feel during your actual interview.</p>
           </div>
-        </section>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Interview Question Basics: What Are Employers Really Asking?</h2>
+          <p className="text-muted-foreground text-lg">
+            Every interview question is designed to reveal something specific. The interviewer
+            or hiring manager wants to know if your skills and mindset align with the job
+            description and company goals.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Understanding why employers ask certain questions helps you answer confidently
+            and position yourself as a strong candidate.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Tell Me About a Time You Faced a Challenge</h2>
+          <p className="text-muted-foreground text-lg">
+            “Tell me about a time” questions are behavioral questions that evaluate how you
+            respond to real workplace situations. Interviewers look for problem-solving,
+            accountability, and learning.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Use the STAR method to structure your answer and choose an example relevant to
+            the role you are applying for.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Why Do You Want to Work Here?</h2>
+          <p className="text-muted-foreground text-lg">
+            This question helps interviewers measure motivation and cultural fit. A strong
+            answer shows you understand the company’s mission and values.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Connect your skills and career goals with what the organization offers to show
+            genuine interest.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Questions About Your Current Job or Position</h2>
+          <p className="text-muted-foreground text-lg">
+            Interviewers ask about your current job to understand your responsibilities,
+            growth, and experience.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Focus on achievements and skills relevant to the new role while remaining
+            professional about your current employer.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Tell Me About a Time You Disagreed at Work</h2>
+          <p className="text-muted-foreground text-lg">
+            Questions about disagreement assess teamwork and communication skills. Employers
+            want to see that you handle conflict respectfully.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Explain how you listened, communicated clearly, and worked toward a solution.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">What Kind of Work Environment Do You Prefer?</h2>
+          <p className="text-muted-foreground text-lg">
+            This question helps determine if you are the right fit for the company culture.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Be honest while highlighting adaptability and collaboration.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Common Interview Questions About Strengths and Weakness</h2>
+          <p className="text-muted-foreground text-lg">
+            When asked about strengths, focus on skills relevant to the position. When asked
+            about weaknesses, show self-awareness and improvement.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Avoid vague answers and provide examples that demonstrate growth.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Questions About Your Last Job and Work History</h2>
+          <p className="text-muted-foreground text-lg">
+            Employers ask about your last job to understand your career progression and
+            decision-making.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Emphasize learning experiences and how they prepared you for the next role.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Salary Expectations and Current Salary</h2>
+          <p className="text-muted-foreground text-lg">
+            Salary questions help employers determine alignment with their budget.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Research market rates and provide a reasonable salary range rather than a fixed
+            number.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Questions to Ask at the End of a Job Interview</h2>
+          <p className="text-muted-foreground text-lg">
+            Asking thoughtful questions shows interest and preparation.
+          </p>
+          <p className="text-muted-foreground text-lg">
+            Ask about growth opportunities, team structure, or performance expectations.
+          </p>
+
+          <h2 className="text-2xl font-bold text-foreground mt-4 mb-2">Key Takeaways</h2>
+          <ul className="list-disc pl-5">
+            <li className="text-muted-foreground">Understand the intent behind every interview question</li>
+            <li className="text-muted-foreground">Use real examples instead of memorized answers</li>
+            <li className="text-muted-foreground">Align responses with the role you are applying for</li>
+            <li className="text-muted-foreground">Prepare smart questions for the end of the interview</li>
+            <li className="text-muted-foreground">Confidence and clarity leave a strong impression</li>
+          </ul>
+
+        </article>
       </main>
       <Footer />
     </>
