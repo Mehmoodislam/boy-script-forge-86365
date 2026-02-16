@@ -122,8 +122,8 @@ const MockInterview = () => {
   return (
     <>
       <SEOHead
-        title="AI Mock Interview Practice | FreeImagePrompt"
-        description="Practice for your next job interview with AI-generated MCQ questions. Get instant scores and improve your interview skills."
+        title="Common Interview Questions & Answers - Job Interview Guide | FreeImagePrompt"
+        description="Prepare for your job interview with common interview questions and answers. Learn how to give a good answer, impress interviewers, and stand out."
         canonicalUrl="https://freeimageprompt.com/tools/mock-interview"
       />
       <Navigation />
