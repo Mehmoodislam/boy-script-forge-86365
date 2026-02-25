@@ -1,15 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain } from "lucide-react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
 
 const mediaTools = [
   { to: "/tools/youtube-downloader", label: "YouTube Downloader", icon: Youtube, desc: "Download videos easily" },
-  { to: "/tools/instagram-downloader", label: "Instagram Downloader", icon: ImageDown, desc: "Save reels & posts" },
-  { to: "/tools/image-compressor", label: "Image Compressor", icon: FileText, desc: "Compress images" },
-  { to: "/tools/qr-code-generator", label: "QR Code Generator", icon: QrCode, desc: "Create QR codes" },
-  { to: "/tools/text-to-image", label: "Text to Image", icon: Type, desc: "AI image generator" },
+  { to: "/tools/jpg-compress", label: "JPG Compress", icon: ImageIcon, desc: "Compress JPG images" },
+  { to: "/tools/compress-jpg-to-5kb", label: "JPG Compress to 5KB", icon: ImageIcon, desc: "Specific 5KB optimization" },
 ];
 
 const studentTools = [
@@ -28,7 +26,6 @@ const Navigation = () => {
   const links = [
     { to: "/", label: "Home" },
     { to: "/gallery", label: "Image Gallery" },
-    { to: "/packs", label: "Packs" },
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];
