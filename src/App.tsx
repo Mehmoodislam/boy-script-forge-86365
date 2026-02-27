@@ -60,15 +60,6 @@ const App = () => {
               <Route path="/tools/mock-interview" element={<MockInterview />} />
               <Route path="/tools/jpg-compress" element={<JPGCompress />} />
               <Route path="/tools/compress-jpg-to-5kb" element={<Compress5kb />} />
-              <Route path="/tools/compress-jpg-to-10kb" element={<JPGCompress targetSize="10kb" />} />
-              <Route path="/tools/compress-jpg-to-15kb" element={<JPGCompress targetSize="15kb" />} />
-              <Route path="/tools/compress-jpg-to-20kb" element={<JPGCompress targetSize="20kb" />} />
-              <Route path="/tools/compress-jpg-to-25kb" element={<JPGCompress targetSize="25kb" />} />
-              <Route path="/tools/compress-jpg-to-30kb" element={<JPGCompress targetSize="30kb" />} />
-              <Route path="/tools/compress-jpg-to-35kb" element={<JPGCompress targetSize="35kb" />} />
-              <Route path="/tools/compress-jpg-to-40kb" element={<JPGCompress targetSize="40kb" />} />
-              <Route path="/tools/compress-jpg-to-45kb" element={<JPGCompress targetSize="45kb" />} />
-              <Route path="/tools/compress-jpg-to-50kb" element={<JPGCompress targetSize="50kb" />} />
               <Route path="/tools/jpg-compress-to-:size" element={<TargetSize />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

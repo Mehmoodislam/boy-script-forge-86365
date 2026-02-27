@@ -23,9 +23,10 @@ interface CompressedResult {
 
 interface JPGCompressProps {
     targetSize?: string;
+    children?: React.ReactNode;
 }
 
-const JPGCompress = ({ targetSize }: JPGCompressProps) => {
+const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
     const [results, setResults] = useState<CompressedResult[]>([]);
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
@@ -154,17 +155,12 @@ const JPGCompress = ({ targetSize }: JPGCompressProps) => {
         setResults([]);
     };
 
-    const isExplicit = ["5kb", "10kb", "15kb", "20kb", "25kb", "30kb", "35kb", "40kb", "45kb", "50kb"].includes(targetSize || "");
-    const canonicalPath = targetSize
-        ? (isExplicit ? `/tools/compress-jpg-to-${targetSize}` : `/tools/jpg-compress-to-${targetSize}`)
-        : "/tools/jpg-compress";
-
     return (
         <div className="min-h-screen bg-background text-foreground">
             <SEOHead
                 title={pageTitle}
                 description={subTitle}
-                canonicalUrl={`https://freeimageprompt.com${canonicalPath}`}
+                canonicalUrl={`https://freeimageprompt.com/tools/jpg-compress${targetSize ? `-to-${targetSize}` : ""}`}
                 keywords={`batch jpg compressor, ${targetSize ? `compress jpg to ${targetSize}, ` : ""}multiple image compressor, compress multiple jpegs, bulk image optimizer`}
             />
             <Navigation />
@@ -376,6 +372,9 @@ const JPGCompress = ({ targetSize }: JPGCompressProps) => {
 
                     {/* Compression Targets Section */}
                     <CompressionTargets />
+
+                    {/* SEO Content Injection */}
+                    {children}
                 </div>
             </main>
 
