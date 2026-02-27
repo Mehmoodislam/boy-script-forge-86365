@@ -1,7 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 import logo from "@/assets/nav-logo.png";
 
 const mediaTools = [
@@ -16,7 +20,7 @@ const studentTools = [
 ];
 
 const Navigation = () => {
-  const location = useLocation();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileToolsOpen, setMobileToolsOpen] = useState(false);
@@ -49,8 +53,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="FreeImagePrompt Logo" className="h-10 w-10 rounded-lg group-hover:scale-110 transition-transform" />
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image src={logo} alt="FreeImagePrompt Logo" className="h-10 w-10 rounded-lg group-hover:scale-110 transition-transform" />
             <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               FreeImagePrompt
             </span>
@@ -61,8 +65,8 @@ const Navigation = () => {
             {links.map((link) => (
               <Link
                 key={link.to}
-                to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-primary ${location.pathname === link.to
+                href={link.to}
+                className={`text-sm font-medium transition-colors hover:text-primary ${pathname === link.to
                   ? "text-primary"
                   : "text-foreground/70"
                   }`}
@@ -79,7 +83,7 @@ const Navigation = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
                   }`}
               >
                 Tools
@@ -94,7 +98,7 @@ const Navigation = () => {
                       {mediaTools.map((tool) => (
                         <Link
                           key={tool.to}
-                          to={tool.to}
+                          href={tool.to}
                           onClick={() => setToolsOpen(false)}
                           className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors group"
                         >
@@ -116,7 +120,7 @@ const Navigation = () => {
                       {studentTools.map((tool) => (
                         <Link
                           key={tool.to}
-                          to={tool.to}
+                          href={tool.to}
                           onClick={() => setToolsOpen(false)}
                           className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors group"
                         >
@@ -156,8 +160,8 @@ const Navigation = () => {
             {links.map((link) => (
               <Link
                 key={link.to}
-                to={link.to}
-                className={`block text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname === link.to
+                href={link.to}
+                className={`block text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${pathname === link.to
                   ? "text-primary bg-primary/10"
                   : "text-foreground/70"
                   }`}
@@ -170,7 +174,7 @@ const Navigation = () => {
             {/* Mobile Tools Accordion */}
             <button
               onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
-              className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
+              className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
                 }`}
             >
               Tools
@@ -184,7 +188,7 @@ const Navigation = () => {
                     {mediaTools.map((tool) => (
                       <Link
                         key={tool.to}
-                        to={tool.to}
+                        href={tool.to}
                         onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
                         className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
                       >
@@ -200,7 +204,7 @@ const Navigation = () => {
                     {studentTools.map((tool) => (
                       <Link
                         key={tool.to}
-                        to={tool.to}
+                        href={tool.to}
                         onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
                         className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
                       >

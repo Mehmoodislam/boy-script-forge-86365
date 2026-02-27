@@ -1,6 +1,8 @@
+"use client";
+
 import { Button } from "./ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -33,11 +35,11 @@ const Hero = () => {
           </p>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words text-center">
-             With just one click, copy a prompt and generate <b>high-quality stylish boy</b> pics perfect for <b>profile pictures, social media, and creative projects.</b>
+            With just one click, copy a prompt and generate <b>high-quality stylish boy</b> pics perfect for <b>profile pictures, social media, and creative projects.</b>
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/gallery">
+            <Link href="/gallery">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group">
                 Explore Gallery
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

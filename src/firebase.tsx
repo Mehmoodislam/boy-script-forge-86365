@@ -14,5 +14,11 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-console.log("✅ Firebase initialized");
-export const analytics = getAnalytics(app);
+
+let analytics;
+if (typeof window !== "undefined") {
+  analytics = getAnalytics(app);
+  console.log("✅ Firebase Analytics initialized");
+}
+
+export { analytics };

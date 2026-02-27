@@ -201,7 +201,7 @@ import boy197 from "@/assets/boy197.webp";
 
 export interface PromptData {
   id: string;
-  image: string;
+  image: any;
   title: string;
   prompt: string;
   tags: string[];
@@ -292,14 +292,14 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish young man sitting confidently on the hood of a sleek, modern luxury car (dark blue color), wearing a dark green velvet suit with a black shirt and black loafers. He is wearing black sunglasses and a wristwatch, exuding a calm and powerful demeanor. Behind him, there are two other luxury cars (Rolls Royce and Mercedes) with headlights on, slightly blurred by fog. The background features a futuristic multi-story glass building with bright white neon lights outlining the structure, with a glowing sign that reads 'Bangla Motion.' The ground is wet, reflecting the cars and neon lights, and scattered dollar bills are spread across the floor. The overall atmosphere is moody, cinematic, with a cool blue-gray color tone and soft fog, emphasizing luxury and power.",
     tags: ["CinematicLuxury", "FuturisticEditorial", "Power"]
   },
-   {
+  {
     id: "13",
     image: boy13,
     title: "Street Fashion",
     prompt: "A confident man walking on a wet city street at night under neon lights, wearing stylish streetwear and sneakers, cinematic bokeh, rain reflections, photorealistic.",
     tags: ["Dark Mode", "Motivational", " Vibe"]
   },
-   {
+  {
     id: "14",
     image: boy14,
     title: "Motivation Vibe",
@@ -313,7 +313,7 @@ export const promptsData: PromptData[] = [
     prompt: "A human and a robot standing together in a futuristic city, glowing light trails, metallic reflections, concept art realism, 8K UHD.",
     tags: ["epic", "Modern", " AI"]
   },
-   {
+  {
     id: "16",
     image: boy16,
     title: "Modern Tradition",
@@ -327,36 +327,36 @@ export const promptsData: PromptData[] = [
     prompt: "Make my photo like a Ultra-realistic cinematic potrait person the face from the uploaded image, keeping the facial features exactly the same. sitting confidently on a modern armchair in a luxurious high-rise apartment. He is wearing a light gray blazer over a white shirt, paired with dark trousers and brown formal shoes. The man leans back casually with one arm on the armrest and the other hand near his face, exuding charisma and authority.",
     tags: ["sucess", "Modern", " epic"]
   },
-   {
+  {
     id: "18",
     image: boy18,
     title: "Men Beside Horse",
     prompt: "A hyper-realistic 8K cinematic image of a stylish young man dressed in an all-white outfit (white shirt, white pants, and sneakers) running confidently beside a majestic white horse on a forest pathway. The background is filled with tall green trees and soft sunlight filtering through the leaves, creating a dreamy atmosphere. Dust lightly rises from the ground as they move, adding a sense of motion and energy. The man wears sunglasses, has a confident expression, and the scene symbolizes freedom, strength, and elegance. Ultra-detailed lighting, natural tones, shallow depth of field, photorealistic 8K UHD.",
     tags: ["Men", "Modern", " Horse"]
   },
-   {
+  {
     id: "19",
     image: boy19,
     title: "Golden Nights of Dubai",
     prompt: "A stylish young man posing confidently in front of a luxury golden supercar with butterfly doors open at night, modern city lights glowing in the background. The man is wearing fashionable black pants, a white t-shirt, black jacket, black loafers, and a wristwatch on his hand. He is sitting casually on the golden sports car, looking cool and confident. The car has sleek curves and futuristic headlights. The background shows a beautifully illuminated Dubai skyscraper sky building with glowing calligraphy, crowds and cars blurred softly to give a bokeh effect. The scene is cinematic, high resolution, hyper-realistic photography with perfect lighting, vibrant colors, and a luxurious, glamorous atmosphere.",
     tags: ["LuxuryLifestyle", "Dubai", " CinematicVibes"]
   },
-   {
+  {
     id: "20",
     image: boy20,
     title: "Midnight Reflections",
     prompt: "A hyper-realistic, ultra-sharp cinematic portrait of a stylish man (100% match the face) leaning casually against a sleek black Maserati MC20 supercar. The man stands in a relaxed pose with one leg slightly bent, resting his back against the glossy car door while bringing Leaning forward his hand in the pocket and to the car in a thoughtful gesture. He wears a fitted black leather jacket, tailored black pants, and dark sneakers with crisp white soles. Background the night city road and blur and red light.",
     tags: ["CinematicStyle", "LuxuryDrive", " UrbanElegance"]
   },
-   {
-    
+  {
+
     id: "21",
     image: boy21,
     title: "Elegance in Motion",
     prompt: "A cinematic, ultra-realistic full-body portrait of a stylish young man (use reference face) walking confidently on a European city street, resembling Paris or Milan. He’s wearing a navy-blue suit with a slightly open striped shirt showing layered necklaces, leather belt, and black boots. His hands are casually in his pockets, exuding elegance and confidence. The background shows a vintage café with warm yellow lights, a parked bicycle, and classic French signs. The lighting is golden-hour soft, with shallow depth of field, realistic reflections, muted tones, HDR cinematic color grading, 8K ultra-detailed realism.",
     tags: ["EuropeanVibes", "StreetStyle", " GoldenHourStyle"]
   },
-   {
+  {
     id: "22",
     image: boy22,
     title: "Crimson Solitude",
@@ -377,7 +377,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stunning handsome man poses confidently beside a sleek futuristic sports car glowing with neon lights in a cyberpunk city at night. He wears a futuristic navy jacket bomber, black pants and luminous LED sneakers that reflect vividly on the wet pavement. Her expression is calm, mysterious, and powerful. The car beside her has glowing blue rims, a reflective metallic surface, massive holographic billboards display his face with glowing typography reading Fitness Guru The scene captures cinematic cyberpunk energy - rain-soaked street, colorful reflections, moody atmosphere, low-angle shot, photorealistic detail, 8K cinematic realism, inspired by futuristic Tokyo nightlife. and illuminated contours that match the vibrant city lights.",
     tags: ["CyberpunkElegance", "FuturisticVibes", " NeonEmpire "]
   },
-   {
+  {
     id: "25",
     image: boy25,
     title: "From Screen to Reality",
@@ -391,7 +391,7 @@ export const promptsData: PromptData[] = [
     prompt: "32K Ultra HD cinematic fashion shot, Bangladeshi boy (height 5'3), face and hair styles exactly uploaded photo, standing confidently beside a luxury speedboat, European-style pastel shirt, white long pants, colorful Balenciaga sneakers, millionaire attitude, travel luxury tone, bright day, 9:16 aspect ratio.",
     tags: ["LuxuryLifestyle", "CinematicFashion", " TravelInStyle "]
   },
-   {
+  {
     id: "27",
     image: boy27,
     title: "The Eagle and the Elegance",
@@ -440,14 +440,14 @@ export const promptsData: PromptData[] = [
     prompt: "Create 'Ultra-realistic 1/7 scale commercialized figure of the illustrated character, posed naturally and crafted with lifelike details. The figure is displayed on a modern computer desk, standing on a circular transparent acrylic base with no text. On the computer monitor, show the ZBrush 3D modeling process of this figure in progress. Next to the monitor, place a BANDAI-style toy packaging box featuring the original character artwork on its front, with professional lighting and realistic shadows to create a high-quality product photography feel.",
     tags: ["UltraRealisticFigure", "ProductPhotography", "3DModelShowcase"]
   },
-   {
+  {
     id: "34",
     image: boy34,
     title: "Lifelike Collectible: 1/7 Scale Character Figure Display",
     prompt: "16K ultra-realistic cinematic 1:1 — Rooftop luxury party. Subject: same man, Face and hair styles exactly uploaded photo. Outfit: maroon blazer over pastel t-shirt, black trousers, designer sneakers. Pose: leaning by railing, holding a glass of drink. Lighting: daylight tone, soft golden reflections.",
     tags: ["LuxuryLifestyle", "Dubai", "PartyVibes"]
   },
-   {
+  {
     id: "35",
     image: boy35,
     title: "Golden Sands of Luxury",
@@ -503,7 +503,7 @@ export const promptsData: PromptData[] = [
     prompt: "A dynamic, low-angle 32k shot of a me (from above reference image) in a black salwar and kamez sunglasses on a powerful Black horse, mid-jump, with dirt and debris kicking up around them. The focus is on the horse's muscular form and the intensity of the moment, with a bright, overcast sky in the background. Photorealistic style, action shot. Keep my face 100% same as in the reference image",
     tags: ["CinematicActionShot", "TraditionalStyle", "ShalwarKameez"]
   },
-   {
+  {
     id: "43",
     image: boy43,
     title: "A Cozy Garden Retreat",
@@ -524,14 +524,14 @@ export const promptsData: PromptData[] = [
     prompt: "cinematic scene of a mysterious young man sitting on a modern leather chair in a dark room. He is wearing a cool oversized maroon vintage jersey, oversized faded black baggy jeans, and stylish white sneakers with dark accents. His expression is indifferent and calm with one hand on his chin and one leg raised. The wall is made of textured concrete filled with gravity, which gives it an urban and rough feel. The overall feel is gloomy and intense, with dramatic lighting and shadows. Highly detailed, with a realistic finish.",
     tags: ["StreetStyle", "CinematicMood", "GloomyVibes"]
   },
-   {
+  {
     id: "46",
     image: boy46,
     title: "A Moment of Reflection",
     prompt: "Create Ultra-realistic... portrait of me. I'm 26 year old bodybuilder young man,, I'm wearing brown shalwar kameez and gray and white blazer, smart watch and lofer shoes. Looking thoughtfully off-camera, holding a cup of black coffee, leaning on a tree. Magenta bougainvillea branch in upper left, blurred green leaves in foreground. Flawl glowing skin, glossy pink lips, vibrant bokeh ci. + lights background, warm cinematic mood.",
     tags: ["CinematicPortrait", "Shalwar Kameez", "LuxuryStyle"]
   },
-   {
+  {
     id: "47",
     image: boy47,
     title: "A Timeless Look",
@@ -545,7 +545,7 @@ export const promptsData: PromptData[] = [
     prompt: "Make a 4k portrait of me, a moody, intimate portrait in a dark setting with solid black background, holding glowing lights close to his face. Some strands of his hair fall gently across his face, partially covering one eye. The warm white lights softly illuminate his skin, creating a dramatic contrast against the deep black background. The atmosphere is soft, mysterious, and dreamy, with a cozy yet slightly melancholic mood. My face and body should be 100% same don't change it.",
     tags: ["MoodyPortrait", "CinematicMood", "IntimateLighting"]
   },
-   {
+  {
     id: "49",
     image: boy49,
     title: "Under the Spotlight",
@@ -580,7 +580,7 @@ export const promptsData: PromptData[] = [
     prompt: "16K ultra-realistic cinematic 4:5 — rainy street beside café lights. Outfit: black printed jacket, white T-shirt, jeans, colorful sneakers. Pose: adjusting jacket hood, confident sideways face. Background: girl in saree and boy with motorbike talking. Lighting: moody cinematic tone, wet reflection.",
     tags: ["CinematicMood", "Street Style", "Moody"]
   },
-   {
+  {
     id: "54",
     image: boy54,
     title: "Mirror Mode",
@@ -594,7 +594,7 @@ export const promptsData: PromptData[] = [
     prompt: "Uitra realistic, resolution cinematic image o a person crouching beside a owerful black horse in a snow-covered mountainous landscape.100% same Face with the face from the uploaded image, keeping the facial features exactly the same. wavy hair, and wears dark sunglasses, a cozy black sweater, grey cargo pants, and black boots. He crouches with one knee bent, holding the reins of the horse with a relaxed yet confident posture. The horse is muscular, with a glossy jet-black coat",
     tags: ["ManAndHorse", "Modern", "CinematicWild"]
   },
-   {
+  {
     id: "56",
     image: boy56,
     title: "Paris - Walk of Class",
@@ -636,7 +636,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish man standing in front of a white BMW car, wearing a traditional black kurta pajama and a cream-colored shawl with red embroidered borders draped over his shoulder. He is wearing sunglasses and standing confidently with one hand on the car. Behind him on the white wall is a large artistic illustration of his portrait, wearing the same outfit and sunglasses. The text on the wall says 'SOOMRO' in bold capital letters, and below it 'ARBAZ SOOMRO Creations' in smaller text. The background is a modern, clean outdoor location with tiled flooring and a white painted wall.",
     tags: ["CulturalElegance", "Dream", "Shalwar Kameez"]
   },
-   {
+  {
     id: "62",
     image: boy62,
     title: "Timeless Grace",
@@ -692,7 +692,7 @@ export const promptsData: PromptData[] = [
     prompt: "Create a picture of a sophisticated and fashionable 25 years old young boy is seated on a luxurious, dark grey tufted velvet sofa. He is dressed in a matching charcoal grey shalwar kameez and a tailored charcoal grey blazer/coat. The shalwar kameez features a long shirt and loose-fitting trousers in the same consistent dark grey. He sports a modern, stylish haircut and a well-maintained beard",
     tags: ["Traditional", "Shalwar Kameez", "Lifestyle"]
   },
-   {
+  {
     id: "70",
     image: boy70,
     title: "Calm Amidst the Rust",
@@ -713,7 +713,7 @@ export const promptsData: PromptData[] = [
     prompt: "Here is the photo-realistic 8K full-body portrait of the 18-year-old boy you requested, maintaining the face from the previous images. He is casually standing in a garden, wearing a dark black shalwar kameez with a golden waistcoat in Hadali style, Peshawari style black shoes, and a golden wrist watch on his left hand, in a relaxed and confident pose.",
     tags: ["CulturalStyle", "Shalwar Kameez", "TraditionalElegance"]
   },
-   {
+  {
     id: "73",
     image: boy73,
     title: "The Hadali Style",
@@ -748,7 +748,7 @@ export const promptsData: PromptData[] = [
     prompt: "A confident man standing in front of a black luxury car, wearing a traditional white kurta pajama and black formal shoes. Behind him stand four bodyguards wearing black suits, white shirts, black ties, and black sunglasses, positioned symmetrically on both sides of the car. The scene is set on a clean paved driveway with trimmed green hedges and a large modern monument or gate in the background under a clear sky. The overall tone is cinematic, professional, and elegant, with good lighting and realistic details.",
     tags: ["ModernTradition", "CinematicElegance  ", "Shalwar Kameez "]
   },
-   {
+  {
     id: "78",
     image: boy78,
     title: "Golden Hour Reflections",
@@ -769,7 +769,7 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic full-body portrait of a young boy 18 years old(face 100% same as reference).He sitting with Ninja H2R modified,The guy should be sitting on the bike in a cool,stylish pose, holding a cigarette in his hand,and smoke coming out of the cigarette.a man wearing an oversized Black denim jacket with red and black graphic designs,a grey t-shirt printed oversized dark cargo pants,yellow-black sneakers,chain,wristwatch,bracelet,lovely smile,sunglasses on and looks straight with a calm.",
     tags: ["LuxuryVibes", "StreetStyle", "BikerVibes "]
   },
-   {
+  {
     id: "81",
     image: boy81,
     title: "Elegance on Wheels",
@@ -804,7 +804,7 @@ export const promptsData: PromptData[] = [
     prompt: "Imagine a peaceful riverside afternoon. Show the man in the picture sitting in a camping chair with his legs crossed and hands behind his head. Keep the face intact. He is dressed in light beige trousers and a dark green hoodie. Snack packs and bottled water are kept on a foldable table nearby.",
     tags: ["NatureRetreat", "Traditional", "PeacefulMoments "]
   },
-   {
+  {
     id: "86",
     image: boy86,
     title: "Golden Serenity in Madinah",
@@ -839,7 +839,7 @@ export const promptsData: PromptData[] = [
     prompt: "Creat a 8k hyper-realistic dark green portrait cinematic image with dramatic smile actions .(uploaded  photo 100% face match) of A stylish handsome young man (refrence image given) with a slightly dark messy hairstyle and wearing a lose black & maroon gradient half lineing shirt and white lose pant. He hold a Canon camera, He is looking thoughtfully off-camera, captured in a candid, high-key cinematic outdoor portrait The composition is framed by a branch of vivid red/pink/yellow/.",
     tags: ["CinematicPortrait", "StylishYoungMan  ", "TraditionalElegance "]
   },
-   {
+  {
     id: "91",
     image: boy91,
     title: "Golden Focus",
@@ -860,14 +860,14 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic editorial street fashion portrait of a slim, stylish young male supermodel (use the uploaded photo - keep the exact same face and hairstyle, perfectly styled and camera-facing). He stands casually with one hand in his pocket, leaning slightly back against a stone railing along the sidewalk. His expression is calm and confident, shoulders relaxed, giving a natural model-like vibe. Outfit: A long-sleeved navy blue collared shirt with two chest pockets (button-up style), grey jeans, white sneakers with navy blue stripes and a gum sole, and a wristwatch with a round white face and light brown leather strap. Backdrop: A grand neo-gothic European building with ornate spires and arched windows. Captured from a mid-level three-quarter angle, in soft daylight with cinematic tones, shallow depth of field, and glossy magazine-quality lighting.",
     tags: ["StreetStyle", "CinematicPortrait", "EditorialFashion "]
   },
-   {
+  {
     id: "94",
     image: boy94,
     title: "Effortless Motion",
     prompt: "A handsome young Indian man with a well-groomed beard and stylish hair is captured in a dynamic shot, descending an outdoor staircase with metal railings. He is dressed in a casual yet fashionable outfit: a light olive-green quarter-zip sweatshirt over a beige t-shirt, light grey cargo pants, and white sneakers. He holds a pair of sunglasses in his right hand, and his gaze is directed to the right, slightly upwards, suggesting he is looking at something off-camera. The background is a soft blur",
     tags: ["ModernStyle", "StreetFashion", "TraditionalElegance "]
   },
-   {
+  {
     id: "95",
     image: boy95,
     title: "Timeless Charm",
@@ -881,14 +881,14 @@ export const promptsData: PromptData[] = [
     prompt: "A close up portrait of a refffrence with dark thick voluminous hair styled back  and a  beard, standing in a dark,wet,cobblestone street at night.He is wearing traditional South Asian black shalwar kameez , intricately patterned black shawl/ He is holding a string of prayer beads (tasbih) in his hands. The man is leaning against the front of a dark SUV. The scene is lit by a single warm streetlamp from behind him. 8kx",
     tags: ["Midnight Reverence", "Shalwar Kameez", "MoodyPortrait "]
   },
-   {
+  {
     id: "97",
     image: boy97,
     title: "Golden Ease",
     prompt: "8k Ultra-realistic Ultra-realistic high-fashion editorial, young man with same hair (reference face), lounging casually on a luxurious velvet sofa in a modern studio. Wearing gray color shalwar kameez. Classic shoes. Black sunglasses. Soft golden light and blurred chandelier glow in background. Elegant, classy, trending editorial. Incorporate the name.Alex Photography' in a sophisticated, unobtrusive font, subtly integrated into the upper right corner of the frame.",
     tags: ["ModernElegance", "Shalwar Kameez", "HighFashionEditorial "]
   },
-   {
+  {
     id: "98",
     image: boy98,
     title: "Royal Morning",
@@ -944,14 +944,14 @@ export const promptsData: PromptData[] = [
     prompt: "Photorealistic fantasy portrait of a young man in half-profile facing right with calm, mysterious expression, close-up view, right hand raised with index finger pressed gently to his lips in a 'shh' gesture, eyes looking directly forward with quiet intensity. Purple-black smoke swirling around his shoulders and neck. He wears a blue shirt and white pants with sneakers, that fades into the same glowing mist. Purple luminous butterflies perch near his hair and float around him with glowing",
     tags: ["FantasyPortrait  ", "Cinimatic", "FuturisticPoster "]
   },
-   {
+  {
     id: "106",
     image: boy106,
     title: "The Cool Rebellion",
     prompt: "Creat a 8k hyper-realistic dark green aesthetic cinematic photo with dramatic cool actions. (uploaded photo 100% face match) of a very handsome young boy (same face) with voluminous dark hair, wearing a loose blue shirt, accessorized with a watch and cool square shape sunglass. Soft minimal background with cinematic lighting,, blurred green leaves, white flower and stunning depth-of-field bokeh. One leg kicking 'LOVE' writing in Heart break logo.",
     tags: ["HeartbreakAttitude  ", "Cinematic", "FuturisticPoster "]
   },
-   {
+  {
     id: "107",
     image: boy107,
     title: "Smirk in the Snow",
@@ -965,7 +965,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish young man posing confidently outdoors during golden hour. He stands beside an old wooden fence covered in green ivy leaves, wearing a dark navy shirt with rolled sleeves, white pants, and black sunglasses. One hand casually in his pocket, and the other adjusting his sunglasses with a cool expression. Soft warm sunlight filters through the trees, creating a dreamy glow with natural bokeh and bright pink flowers in the background. Cinematic portrait, sharp focus on the subject, smooth skin tone, vibrant colors, modern aesthetic, charming attitude, clean background blur, classy and relaxed vibe.",
     tags: ["CinematicCharm  ", "GoldenGlowVibes", "Nature "]
   },
-   {
+  {
     id: "109",
     image: boy109,
     title: "The Pure Signature",
@@ -993,7 +993,7 @@ export const promptsData: PromptData[] = [
     prompt: "Create a bold, expressive mixed-media portrait using the face from my uploaded photo as the base. The portrait should be a close-up headshot, featuring a front-facing pose with a slightly upward chin tit to convey confidence, attitude, and artistic intensity. The overall aesthetic must reflect a gritty,hand.sketched, graffiti-meets-urban-journal style, blending chaotic pencil sketch lines, vector-Inspired technical scribbles, and bold brush strokes. The portrait should include the following stylistic elements: Red translucent oversized round sunglasses, withintense reflections and abstract shading.Orange-red Jacket or clothing elements to provide strong contrast with the dark tonal base. A background made of beige/sepla paper-like texture overlald with architectural and geometric grid lines, red circles, intersecting sketch lines, technical diagrams, and abstract scribbles. High contrast lighting, emphasiz ing shadows around the cheekbones, jawline, and neck, and making the facial structure dramatic and dominant. A hand-drawn, raw and gritty shading style with Inked outlines and deep black shadows, almost like charcoal or graphite Scribbles and abstract line patterns extending from thehair and edges of the face the face to blend into Into the background, giving the portralt a raw, tralt a raw, kinetic energy include smudges noise, and digital grain to give the artwork a tactile, physical feel-like a scanned-in plece of street art or sketchbook collage. The mood of the portrait should reflect urban energy creative deflance, and a sense of artistic rebellion. The face must match the one in the upload ed photo exactly, preserving skin tone, facial features, andpersonal Identity- just stylized with the describedtechniques. Maintain the natural hair texture and Integrate it into the chaotic linework.Use a neutral expression with confidence, no smile just calm strength and a sense of stylish baldness Composition should be centered, chestlevel up shoulders slightly visible), with the head dominating the frame. The final plece should feel like a modern street-art poster meets fine-art sketchbook portralt Also use the prompt and pencil sketches effect.",
     tags: ["Gangter  ", "FuturisticPoster", "CinematicPortrait "]
   },
-   {
+  {
     id: "113",
     image: boy113,
     title: "Gagstar in Motion",
@@ -1014,7 +1014,7 @@ export const promptsData: PromptData[] = [
     prompt: "Professional photoshoot of a man walking toward wearing white shirt and black dressing pants. Black shawl draped over his shoulders black sunglasses. black Addidas white and black shoes. holding a lit cigarette above him as .black Rolls-Roycemodel 2025 flash light on. Number plate [GB 1] with extended carbon fiber aero kit, widebody fenders, and custom LED lights. Parked on a private runway with private jet in the background, cinematic luxury setting.",
     tags: ["Luxury", "Gagnster", "Portrait "]
   },
-   {
+  {
     id: "116",
     image: boy116,
     title: "Colorfull Styling Boy",
@@ -1028,14 +1028,14 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic studio photoshoot of a young man sitting confidently on a wooden box. He is wearing an open black shirt over a white T-shirt, black pants, and elegant shiny brown shoes. He holds a DSLR camera resting on his lap with one hand, while using the other hand to take a selfie with an iPhone 17 Pro Max. His eyes are open, looking naturally toward the phone with a calm and confident expression. He wears a luxurious gold wristwatch that subtly reflects the studio light. The scene features cinematic lighting with vibrant colored smoke — blue on one side and red on the other — creating a dynamic contrast. The atmosphere feels modern and artistic, captured in a professional fashion photography style, ultra-high",
     tags: ["MoodyPortrait", "Futuristic", "Portrait "]
   },
-   {
+  {
     id: "118",
     image: boy118,
     title: "Burnig Newspaper",
     prompt: "a vertical medium portrait of a young adult surrounded by burning newspapers, the flames forming an irregular frame that exposes the entire upper body and face. The composition is pulled slightly back to reveal more of the papers — their text and images blurred by heat, edges curling and glowing red. The subject’s expression is cold, detached, eyes fixed forward with still intensity, lips relaxed but firm, emotion restrained. The firelight casts flickering amber tones across the face, contrasting with the deep, cool shadows behind. The glow reflects in the eyes like shards of molten glass, emphasizing the tension between calm and destruction. Smoke drifts upward, softening the scene with a thin haze. The color palette blends fiery oranges, brass yellows, and dark sienna shadows, maintaining cinematic balance. Clothing and accessories [dark shirt, simple collar, no accessories], hair [dark, slightly tousled, with a few strands lit by flame reflections]. Primary illumination from surrounding fire, soft ambient fill, warm highlights, dense shadows, high contrast, 50mm f/2 lens, 1/250s shutter speed, ISO 400, white balance 3200K, full-frame camera, Kodak Vision3 500T film simulation",
     tags: ["MoodyPortrait", "Cinematic", "Burning "]
   },
-   {
+  {
     id: "119",
     image: boy119,
     title: "Dramatic Frame",
@@ -1049,21 +1049,21 @@ export const promptsData: PromptData[] = [
     prompt: "High-key black and white cinematic portrait of a commanding man, Upload face as reference, with a defined jawline and light stubble, an intense and direct gaze, looking straight into the camera from a low, worm's eye view. His left arm is dramatically extended towards the camera, fingers splayed, wearing a prominent silver ring on the index finger and layered bracelets on the wrist. He is dressed in a simple, fitted white crew-neck t-shirt and a delicate silver pendant necklace. His wavy, textured hair is swept back with volume. The composition features a strong, dynamic perspective with the hand as a foreground element, creating a sense of intimate engagement. Shot with a wide-angle lens (e.g., 35mm, f/2. for a slight perspective distortion, achieving a shallow depth of field with sharp focus on the man's face and soft bokeh in the blown-out, pure white background. Emphasize crisp details on skin texture, fabric, and metallic jewelry. High contrast, brilliant highlights, and deep shadows define the form. Editorial photography, style of Annie Leibovitz and Peter Lindbergh, photorealistic, hyper-detailed, rendered in Octane Render, Unreal Engine 5, 8k resolution.",
     tags: ["Futuristic", "Cinematic", "Silver "]
   },
-   {
+  {
     id: "121",
     image: boy121,
     title: "Visual Confident Boy",
     prompt: "The image shows a stylish young man walking confidently on a rainy night, his facial features preserved from the original image, and his yellow sunglasses adding a bold touch. He's wearing a chic, casual winter outfit consisting of a long black leather coat, a black formal vest over a black shirt, black cargo pants, and black leather gloves. He has his left hand in his pocket while holding the lapel of his coat with his right hand, giving an impression of confidence and elegance. The setting is a city street at night during a heavy downpour. Raindrops fall and collect on the ground, reflecting the streetlights and colorful traffic signals in the background, creating a captivating visual effect. The blurred and muted lights of cars and buildings in the background add depth and a cinematic feel to the scene. The white lines on the wet pavement emphasize the man's movement towards the camera, and the dark colors of his outfit harmonize with the nighttime, rainy atmosphere, creating a powerful and striking image.",
     tags: ["Gangster", "Cinematic", "Moody "]
   },
-   {
+  {
     id: "122",
     image: boy122,
     title: "authentic newspaper shadow",
     prompt: "Create a Photorealistic Hong Kong retro portrait of a handsome young man, and with authentic 1990s film look. Half-body. Subject leaning against newspaper-covered wall, gaze soft and Hair messy comma haircut, wearing Black t-shirt, wearing blue sunglasses, strands falling across face. Very little glossy lips, dewy skin. Narrow Hong Kong room, walls plastered with old yellowed Cantonese newspapers. Tungsten bulb glow with faint green spill. Shadows heavy, highlights bloom. --ar 4:5--s 250--raw. Use the reference foto, don't alter the face, make it identic 100%",
     tags: ["Futuristic", "Cinematic", "Moody "]
   },
-    {
+  {
     id: "123",
     image: boy123,
     title: "Rock Gangster Style",
@@ -1119,14 +1119,14 @@ export const promptsData: PromptData[] = [
     prompt: "An ultra-detailed editorial portrait of a man in his forties (same face 100%), wearing a pastel rose trench coat over a white shirt, with cream trousers and white sneakers. He stands beside a warm cream wall, backed by a blush-to-peach circular gradient bordered with soft blue. Cinematic daylight enhances the tones and adds subtle lens softness",
     tags: ["Cinematic Portrait", "Nature", "Fashion Portrait "]
   },
-   {
+  {
     id: "131",
     image: boy131,
     title: "The Confident Frame",
     prompt: "Hyper-ultrarealistic 8K cinematic portrait of a stylish young man standing in front of a dark industrial metal background, his face and hairstyle exactly matching the uploaded reference, hairstyle perfectly styled and set. He is facing the camera directly, with a subtle confident expression, while one hand is raised to adiust or run through his hair He wears premium black sunglasses, a black itted t shirt, a dark brown utility jacket, and dark brown cargo pants.foot wear dark brown chelsi shoes. The lightingis moody and dramatic.",
     tags: ["Cinematic Portrait", "Aesthetic", "Moody "]
   },
-   {
+  {
     id: "132",
     image: boy132,
     title: "Edge of Shadows",
@@ -1147,7 +1147,7 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic cinematic portrait of a strong young man standing under a stream of water pouring directly onto his head, droplets splashing dramatically around him. His skin glistens with moisture, muscles defined and illuminated by powerful dual lighting — deep blue on the left and fiery red on the right, creating a bold contrast. He wears a sleeveless black hoodie, a heavy silver chain with a large pendant, and a crossbody strap. His expression is intense and stoic, his hair hanging wet across his face. Subtle mist and water droplets enhance the atmosphere, with sharp details and high contrast, evoking a gritty, powerful, and dramatic tone.",
     tags: ["Cinematic", "Urban Realism", "Moody "]
   },
-   {
+  {
     id: "135",
     image: boy135,
     title: "The Fireborne Warrior",
@@ -1168,13 +1168,13 @@ export const promptsData: PromptData[] = [
     prompt: "A photorealistic portrait of an egyption white man, resembling the person in the uploaded image, with a serious expression and sunglasses, is seated in a distressed wooden chair that is tilted slightly to the right, partially consumed by bright orange and yellow flames on the left side. He is sitting casually with his body angled slightly towards the right, and his head turned to face the camera directly. His right leg is casually crossed over his left leg. His right arm is resting on his right thigh, and he holds a vintage pocket watch with a reflective, metallic surface in his hand. He is wearing a dark, slightly textured leather or denim jacket over a deep maroon or burgundy collared shirt, unbuttoned at the top. His dark pants have a subtle sheen, and he wears dark, pointed-toe boots. The background is a dramatic, smoky black with fiery embers and sparks dramatically rising and scattered around the scene, creating a sense of intensity and danger. Above the man, in a bold, blood-red,",
     tags: ["Cinematic", "Futuristic", "Moody "]
   },
-   {
+  {
     id: "138",
     image: boy138,
     title: "Stylish Boy ",
     prompt: "A stylish romantic portrait of young man, (same face as in refrence image) Wearing Stylish White Shirt, Rolled Sleeve, brown forma pants, brown loafers, luxury Watch, Antare rimless Gradient Blue Sunglasses, sitting at bench, a purple flowers bouquet stays at bench, while his looking at watch to see the time, feel like he is waiting for someone, background is filled with lush purple white flowering trees, creating a dreamy, romantic fantasies, with natural light and shallow depth of field",
     tags: ["Cinematic", "Futuristic", "Nature "]
-  }, 
+  },
   {
     id: "139",
     image: boy139,
@@ -1182,21 +1182,21 @@ export const promptsData: PromptData[] = [
     prompt: "4K Ultra HD Quality Generate A full-body shot of a male with dark brown, boy, stylish dark and slightl brown hair atheletic He is wearing a stylish gradient black-white-shir and black cargo pants.hand watch He is leaning casually against a stone wall, with his right arm resting on top of it. He is also wearing round, tinted and black and white canvas sneakers. The background is a dark, texturec stone wall, with natural outdoor lighting.",
     tags: ["Cinematic", "Futuristic", "Moody "]
   },
-    {
+  {
     id: "140",
     image: boy140,
     title: " photography poster of a stylish young",
     prompt: "Create a dynamic high-energy street sports photography poster of a stylish young northern Nigeria man (apply the identical facial structure, skin tone, hair, eye color, and expression consistently; ensure the same face from the uploaded image is applied), viewed from a low, street-level angle. He wears futuristic streetwear: a sleek layered tech-jacket with glowing purple accents, a high-collar hoodie underneath, modular cargo pants with utility straps and metallic details, and chunky cyber-inspired sneakers with neon purple highlights. His pose shows a serious expression with hands in pockets.Composition: Multiple layered shots — one large close-up portrait of his face at the top, a close-up side profile for added emphasis, and the main full-body pose centered.Background: Bold purple, teal and emerald green paint splashes and a prominent stylized cyberpunk white text 'JABIR' in graffiti-like design with abstract halftone patterns, and glowing highlights for dramatic impact.Art style: Hyper-realistic, urban cyberpunk-inspired, futuristic, vibrant, high-contrast, sharp details, digital, 8K. Use the reference image with 100% face match.",
     tags: ["Cinematic", "Futuristic", "Gangster "]
   },
-   {
+  {
     id: "141",
     image: boy141,
     title: " Young Park Bench",
     prompt: "8K ultra-realistic photo of a asian man, unchanged face from the reference. He is sitting casually on a park bench surrounded by greenery its a bombex ceiba flower tree garden. Outfit: merun shirt, Tailored blak Fit Pant, white sneakers. Black smartwatche and wear BLACK RECTANGLE sunglasses, relaxed outdoor mood. Warm day light with trees in the background.",
     tags: ["Cinematic", "Park", "Nature "]
   },
-   {
+  {
     id: "142",
     image: boy142,
     title: " Confident Boy",
@@ -1217,7 +1217,7 @@ export const promptsData: PromptData[] = [
     prompt: "Create a 8k poitrait of men stand on mountains hill holding a cup of coffee enjoying the view of sunrise he is wearing light brown puffer jacket and black trousers with white boots little bit snow on mountains and small born fire beside him use the face and hairstyle as it is given in picture. Use Uploaded Image As 100% reference, Don't make any change with Face. Signature & branding: Slylish painted signature 'BadalKumaR' Under “POSTER CREATED BY” subtly integrated in the bottom-left corner, bleding with the textures of scene.",
     tags: ["Nature", "Enjoyment", "Cinematic "]
   },
-   {
+  {
     id: "145",
     image: boy145,
     title: "Stylish Young Boy",
@@ -1231,7 +1231,7 @@ export const promptsData: PromptData[] = [
     prompt: "Cinematic, hyper-realistic full-body portrait of a stylish young Indian boy, exact face from uploaded reference, wearing orange oversized orange shirt, black cargo jeans, white shoes, tousled hair, black sunglasses, black smartwatch, holding an iPhone 16 seating in garden table with comfort.Flower bouquet beside him. Leaning forward with elbows on knees, phone close to face, intense yet stylish focus, confident posture, cinematic framing",
     tags: ["Boy", "Cinematic", "Nature "]
   },
-   {
+  {
     id: "147",
     image: boy147,
     title: "Slightly  Boy",
@@ -1245,7 +1245,7 @@ export const promptsData: PromptData[] = [
     prompt: "Ultra-realistic 8K cinematic portrait of a handsome young man sitting confidently in a luxurious modern drawing room on a transparent acrylic chair beside a glass table decorated with fresh flowers. He wears a crisp white shirt under a black V-neck sweater vest with a small polo logo, white tailored trousers, and black loafers with white soles. A dark-strap gold watch gleams on his wrist. His face and hairstyle exactly match the uploaded image, with his hair perfectly styled and neatly set. He is holding an iPhone in his hand, chatting on it with a soft, natural smile. His head is slightly turned toward the camera, and a subtle reflection of his face is visible on the glowing phone screen. From the screen, cute glowing emojis float out gently, creating a lively, romantic feel. Soft cinematic lighting highlights his face, hairstyle, and outfit with realistic reflections on glass surfaces, all in smooth white-toned premium color grading for a luxurious, high-fashion indoor look",
     tags: ["Luxury", "Cinematic", "Futurisic "]
   },
-   {
+  {
     id: "149",
     image: boy149,
     title: "Premium Cinematic Boy",
@@ -1259,7 +1259,7 @@ export const promptsData: PromptData[] = [
     prompt: "Create a hyper-realistic, ultra-sharp cinematic portrait of  scene where the morning sun shines on a handsome young man (use uploaded photo don't alter the face) standing on a beach next to a 3D 'GOOD MORNING' sculpture made of sand, wearing a white shirt with logo 'KELVIN.K' , short sleeve jacket and black pants. Holding a coffee and a sandwich, and giving a slight smile.",
     tags: ["Nature", "Moments", "Futurisic "]
   },
-   {
+  {
     id: "151",
     image: boy151,
     title: "Beautiful Colorful Backround",
@@ -1273,7 +1273,7 @@ export const promptsData: PromptData[] = [
     prompt: "A young man with a stylish beard and modern hairstyle, wearing an off-white long kurta with a detailed, colorful, traditional Indian architectural print along the bottom hem and duppata. He is also wearing white slim-fit trousers and dark brown loafers without socks. He stands casually with his hands in his pockets, looking to his right. The background is a solid, ribbed, dark yellow or light brown industrial wall.",
     tags: ["EthnicFashion", "Shalwar Kameez", "MensWear "]
   },
-   {
+  {
     id: "153",
     image: boy153,
     title: "Contemporary Cool: Cinematic Street Style",
@@ -1287,7 +1287,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish young man with 100% same face as is refrence, voluminous, naturally tousled hair, relaxing in a laid-back pose on a large black cylindrical object outdoors. Wearing a white Sweatshirt a small bat logo on it, and black pants, and a rimless rectangular Gradient Blue Sunglasses golden framing, accessorized with a silver bracelet and rings. The background includes industrial railings and blurred outdoor elements, His face is turned sideways and partially obscured by his hand.",
     tags: ["CinematicPortrait", "CasualStyle", "Futuristic "]
   },
-   {
+  {
     id: "155",
     image: boy155,
     title: "Industrial Edge: Modern Street Icon",
@@ -1301,7 +1301,7 @@ export const promptsData: PromptData[] = [
     prompt: "Fashion editorial portrait of a handsome and athletic fit young Asian man seated on the floor while touching hand casually to his head and thoughtful looking at the camera. He wears a muted printed denim baggy casual jacket over a black top and oversized, printed casual denim pants. stylish pose. Carce beige studio background Broken ground or wall surface with fire light Farming greyish highlighted tousled perfect set hair with grey colour eyes with one ungli and fire.",
     tags: ["CinematicPortrait", "FashionEditorial", "Futuristic "]
   },
-   {
+  {
     id: "157",
     image: boy157,
     title: "Modern Elegance",
@@ -1322,7 +1322,7 @@ export const promptsData: PromptData[] = [
     prompt: "Hyper-realistic cinematic fashion photoshoot of the uploaded person. Seated on a deep blue bean bag, he wears bold all-blue oversized streetwear: , blue jumper, wide blue pants, chunky sneakers, apple watch. Solid blue background,. Powerful drip vibes, Adidas campaign editorial look, dramatic studio lighting. Keep my face exactly the same as the uploaded photo. Do not change or edit my face.' Notas, solo tiene que indicar el color que quieres",
     tags: ["CinematicPortrait", "Futuristic", "Luxury"]
   },
-   {
+  {
     id: "160",
     image: boy160,
     title: "The White Wolf’s Shadow",
@@ -1343,7 +1343,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish young man sitting confidently on a vibrant, gradient-colored royal armchair. He wears a modern, colorful Adidas-style tracksuit with smooth neon gradients (pink, blue, purple). White sneakers. Behind him is a giant smartphone screen showing a fictional Instagram profile with bright UI elements. A glowing Instagram logo floats between the man and the phone. Background has soft neon lights, futuristic glow, smooth gradients, and a modern aesthetic. Ultra-realistic lighting, crisp details, 3D digital art, high saturation, cinematic composition.",
     tags: ["CinematicPortrait", "Futuristic", "Instagram"]
   },
-   {
+  {
     id: "163",
     image: boy163,
     title: "he New Age of Influence",
@@ -1357,7 +1357,7 @@ export const promptsData: PromptData[] = [
     prompt: "A surreal cinematic double exposure artwork featuring the side profile of a young man with curly hair and a short beard, seamlessly blended with a dramatic mountain landscape. Mist and clouds flow through his hair, symbolizing curiosity, growth, and nature's power. At the base of the image, a lone traveler stands on a rocky peak illuminated by a warm glowing light, creating a sense of scale and introspection. The color palette is dominated by cool blues and grays, with soft light and atmospheric depth. The composition should be highly detailed, moody, and artistic, evoking the feel of a concept poster design in ultra-realistic fine art photography style. Use the uploaded face as the reference for the young man's appearance.- feeling wonderful in Kashmir, Pakistan.",
     tags: ["Nature", "KashmirVibes", "Concept"]
   },
-   {
+  {
     id: "165",
     image: boy165,
     title: "The Creator’s Zone",
@@ -1385,7 +1385,7 @@ export const promptsData: PromptData[] = [
     prompt: "A modern, refreshing product-advertisement scene featuring a silver soda can standing on a reflective wet surface. Water droplets cover the can, and a dynamic splash of water bursts from the top. Fresh yellow lemons—whole and sliced—with green leaves are arranged around the can. On the front of the can, there is a monochrome graphic-style portrait of a man wearing a hoodie and cap. The text ‘AI Trends’ appears in bold yellow letters. Bright studio lighting, high realism, crisp details, vibrant lemon-themed colors, and a professional commercial photography look.",
     tags: ["ProductPhotography", "Nature", "Cinematic"]
   },
-   {
+  {
     id: "169",
     image: boy169,
     title: "Vibrant Watercolor Reflection",
@@ -1399,14 +1399,14 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic, 8k, high-angle overhead shot captures a person looking directly up at the camera with a wide, happy smile, their uploaded face as reference. The subject is wearing a dark grey hoodie, dark pants, and black sneakers with white laces and soles, with hands casually in their pockets. They are centrally positioned on a dark, textured asphalt ground, standing between two massive, textured white graphic numbers '0' and '1' that appear painted or embedded onto the surface. To the upper left of the subject, the textured white text 'December' is visible, while 'Follow AI Trends' is inscribed within the '0' graphic. A silver laptop, open with its keyboard visible, rests flat on the ground to the upper right of the subject. The scene is illuminated by dramatic, cinematic spotlighting from directly above, creating a bright, focused area around the subject and objects, with harsh shadows and a subtle glow, fading into deep black at the edges of the frame, emphasizing the highly detailed texture of the asphalt. A stylized white MK' logo is placed at the bottom center. The composition uses a wide-angle lens to encompass all elements from the extreme high-angle perspective, integrating the graphic overlays seamlessly into the ground plane.",
     tags: ["Modern", "Cinamatic", "Futuristic"]
   },
-   {
+  {
     id: "171",
     image: boy171,
     title: "Holographic Facebook Identity",
     prompt: "A futuristic 3D digital artwork showing a glowing Facebook profile card placed on a sleek black desk. The card has a circular profile picture of a young man with long dark brown hair, wearing a soft beige sweater and a delicate necklace. Her expression is calm and elegant. The Facebook interface is designed in a modern holographic style with soft blue lighting around the edges, displaying the name ‘New laa watt’ along with profile details and small icons. A metallic pen lies beside the card, adding a professional and realistic touch. The overall tone is clean, stylish, and high-tech — futuristic social media concept, 4K digital art, photorealistic lighting.' Use reference face. Don't editing my face and hairstyle.",
     tags: ["Nature", "Cinamatic", "Futuristic"]
   },
-   {
+  {
     id: "172",
     image: boy172,
     title: "Instagram Identity",
@@ -1420,14 +1420,14 @@ export const promptsData: PromptData[] = [
     prompt: "Create an ultra-detailed, hyper-realistic 3D-style graphite pencil sketch of a human face, drawn on textured white notebook paper with visible paper grain and subtle imperfections. The face sketch should look exactly like the reference photo shown on an iPhone placed next to the notebook. The iPhone’s screen clearly displays the original portrait photo that the artist is drawing, with natural reflections and soft daylight glare on the glass. 1 / 2",
     tags: ["Realistic Sketch", "Cinamatic", "Futuristic"]
   },
-   {
+  {
     id: "174",
     image: boy174,
     title: "Graphic Logo",
     prompt: "A cinematic neon-lit fashion portrait of a male model in profile against a deep blue background. A glowing circular halo of bright yellow-green light floats behind his head, casting a vivid rim light along his face and hair. His neck and collar are illuminated by the same neon glow, creating a striking futuristic silhouette. The lighting is dramatic and sculpted, with strong contrast, smooth skin texture, and refined shadows. Minimalist composition, clean color palette, and a high-fashion editorial mood. Ultra high resolution, crisp details, no text, no watermark, no logo.",
     tags: ["Realistic Sketch", "Cinamatic", "Futuristic"]
   },
-   {
+  {
     id: "175",
     image: boy175,
     title: "Wooden Nook Vibes",
@@ -1455,7 +1455,7 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic, 8k, high-angle medium shot captures a surreal office desk scene with a shallow depth of field, emphasizing the foreground subject. The primary subject is a tiny person, approximately 1:10 scale, with uploaded face as reference, sitting cross-legged on a giant black computer keyboard. The person wears black over-ear headphones, a vibrant patterned short-sleeve button-up shirt, blue jeans, and grey sneakers, holding a miniature silver laptop in one hand and a tiny white coffee cup in the other, looking directly at the viewer with a slight smirk. The oversized keyboard features realistic key textures and subtle coffee stains. Behind the keyboard, a spiral-bound notebook with 'To Do: Coffee!' handwritten on it and a pen are visible. To the left, a large black computer monitor displays a light-themed file explorer interface, with a yellow sticky note featuring a hand-drawn smiley face attached to its bottom left bezel. To the right, an enormous white ceramic coffee mug with '@AITrends' text is filled with dark coffee. The light wooden desk surface is cluttered with scattered papers, a spilled miniature coffee cup creating a brown stain, paper clips, and coiled black cables, including a USB cable and a black computer mouse connected by a wire that extends towards the tiny person's feet. The scene is bathed in bright, diffused natural lighting from an unseen window, creating soft shadows and highlights, with a subtly blurred office background. The image features cinematic lighting and highly detailed textures throughout.",
     tags: ["Tradional", "Office", "Futuristic"]
   },
-   {
+  {
     id: "179",
     image: boy179,
     title: "Rehman Dukait Style",
@@ -1476,7 +1476,7 @@ export const promptsData: PromptData[] = [
     prompt: "A stylish man standing beside frosted 2026 digits with gentle snowfall in a winter park. Natural cold lighting, wearing dark blue wool coat, scarf, boots. Soft dreamy New Year emotion, high-end editorial, 4:5",
     tags: ["Tradional", "Futuristic", "Trending"]
   },
-   {
+  {
     id: "182",
     image: boy182,
     title: "Walking Into 2026",
@@ -1497,28 +1497,28 @@ export const promptsData: PromptData[] = [
     prompt: "A hyper-realistic mirror selfie of a handsome young man with messy, spiked dark hair and light stubble. He is wearing a white button-down shirt left unbuttoned at the top to reveal his chest and stylish rimless rectangular sunglasses with a slight tint. He is holding a black triple-lens smartphone (iPhone 16 Pro style) in his right hand, capturing the reflection. The entire image is washed in intense, monochromatic deep blue neon lighting, creating a cool, moody atmosphere. High contrast shadows define his jawline and neck, while the background remains simple and vertically draped, likely a curtain. 8k resolution, ultra-detailed skin texture, sharp focus on the face. Size 4:5 ratio 100%",
     tags: ["Tradional", "Futuristic", "Cinematic"]
   },
-   {
+  {
     id: "185",
     image: boy185,
     title: "Victory Has a Smile",
     prompt: "Ultra-realistic cinematic portrait and full-body scenes of the same young man from the uploaded photo (face must match exactly). He appears in a dramatic villain-style desert setting:walking in slow motion through a narrow sandstone alley, smiling broadly, arms stretched confidently like a dance entrance, and also captured mid-clap in a celebration moment. He wears a black kurta, layered black overcoat, and dark sunglasses.",
     tags: ["SahlwarKameez", "Trending", "Gangster"]
   },
-   {
+  {
     id: "186",
     image: boy186,
     title: "Signature of Authority",
     prompt: "A hyper-realistic close-up of a premium luxurious wooden desk nameplate and pen holder set, crafted from polished dark mahogany wood with gold accents. The centerpiece features a high-precision 3D relief wood carving of a man resembling the provided reference (wearing sunglasses, beard, dark hair). The wood is deeply engraved with elegant Arabic Diwani calligraphy text: 'حضرتحسین'. Below it, the number '03459221457' is engraved in gold. At the bottom, a stylish handwritten English signature 'Husaini'. Cinematic lighting, depth of field, 8k resolution, intricate wood texture, executive office background, soft sunlight reflections. --ar 9:16",
     tags: ["signature", "Trending", "Futuristc"]
   },
-    {
+  {
     id: "187",
     image: boy187,
     title: "Cinematic Vision in Green",
     prompt: "Creat a 8k hyper-realistic dark green portrait cinematic image.(uploaded photo 100% face match) of a stylish handsome young man (reference image given) with a wearing a Luxury mehndi colour salwar kameez And Same luxury shawl and wearing a sunglasses. He hold a Canon camera. He is looking thoughtfully off-camera, captured in a candid, high-key cinematic outdoor portrait. The composition is framed by a branch of vivid red/pink/yellow/black bougainvillea flowers in the upper left corner and heavily blurred green leaves in the extreme foreground. Depth of field, stunning soft bokeh effect.",
     tags: ["Nature", "ShalwarKameez", "Ciematic"]
   },
-   {
+  {
     id: "188",
     image: boy188,
     title: "Modern Maximum Style",
@@ -1546,21 +1546,21 @@ export const promptsData: PromptData[] = [
     prompt: "Use 100% face above uploaded photo Young man with black beard and black hair,wearing sunglasses, round sunglasses, black shiny puffer jacket, light gray sweatpants, and white chunky sneakers, casually sitting on the rear trunk of a matte black modified Lamborghini Huracán with large rear wing and aggressive body kit, open driver door, black wheels, in front of an industrial concrete building with horizontal paneling and graffiti, overcast sky, urban street style vibe, confident pose with hands in pockets, high detail, sharp focus, realistic photography",
     tags: ["LuxurySupercar", "Modern", "Cinematic"]
   },
-   {
+  {
     id: "192",
     image: boy192,
     title: "Jumma Mubarak in Golden Light",
     prompt: "The Concept: Large, glowing 3D text that says 'Jumma Mubarak' behind the person. The Outfit: A white silk Panjabi with silver embroidery on the neck and cuffs, white slim-fit pajamas, and black velvet loafers. The Place: A modern, minimalist white mosque courtyard with a clear blue sky. Prompt: > A hyper-realistic 3D social media profile picture. A stylish 20-year-old man standing in a grand white marble mosque courtyard. Behind him, large glowing 3D golden text reads JUMMA MUBARAK'. He is wearing a premium white silk Panjabi with silver embroidery, white pajamas, and black velvet loafers. He is adjusting his sunglasses and looking towards the camera. Cinematic lighting, soft shadows, 8k resolution.",
     tags: ["ShalwarKameez", "Traditiaonal", "JummaMubarak"]
   },
-    {
+  {
     id: "193",
     image: boy193,
     title: "Eyes That Dare",
     prompt: "A young boy 22 years oldwith intense eyes holds up a bright black scarf that covers the lower half of his face, with other hand pointing directly toward the viewer as if issuing a challenge,his voluminous, windswept same hair and grey denim shirt add modern cinematic flair, while the warm, blurred background suggests an outdoor setting at golden hour-compose a portrait with shallow depth of field, vibrant color grading, and dramatic lighting that emphasizes mystery, confidence, and motion.",
     tags: ["Modern", "Cinematic", "Golder"]
   },
-   {
+  {
     id: "194",
     image: boy194,
     title: "Elegance in the Rising Moment",
@@ -1574,14 +1574,14 @@ export const promptsData: PromptData[] = [
     prompt: "8K ultra-realistic full-body portrait of a young man standing outdoors at night under a glowing full moon. Soft green bokeh lights and glowing particles surround him, creating a magical atmosphere. He wears a stylish red-to-white gradient shirt with sleeves rolled up, and casual pants matching the outfit. His body is slightly angled to the left, head tilted up with a calm and confident expression. Reflective sunglasses on. In his cupped hands, he holds a 2/3",
     tags: ["Magic", "Cinematic", "Futuristic"]
   },
-   {
+  {
     id: "196",
     image: boy196,
     title: "Breaking the Paper Barrier",
     prompt: "A hyper-realistic, 8k, highly detailed photograph capturing a surreal artistic concept, presented as a close-up, eye-level shot with a standard lens. A man with the uploaded reference face, clean shaven, wearing an oversized black crew-neck t-shirt, is shown emerging from a torn sheet of plain off-white paper. His head and upper chest appear in full photographic realism, with accurate skin texture, natural hair, and realistic fabric detail on the shirt. The transition from realism to sketch begins exactly at the natural shoulder line. From that point downward, the entire body including shoulders, arms, torso, cargo pants and legs is illustrated as detailed black pencil sketches drawn onto the paper surface. The sketched arms must follow true human proportions, extending naturally to full length with no shortening or foreshortening. The sketched hands are spread wide and pressed against the inside of the paper as if he is breaking out of a flat drawing into real space. The torn edges around the opening are sharp, textured and thick, clearly showing the depth of the paper and strengthening the illusion of 3D realism emerging from a 2D sketch. The composition is centred, with the realistic upper body protruding forward while the sketched lower body radiates outward across the page. Soft, even cinematic lighting from the front gives gentle shadows on the real face and shirt, while keeping the pencil sketch flat, matte, and paper-like. The final result blends ultra-realistic portrait photography with hand-drawn illustration to create a striking trompe l’oeil effect of a man pulling himself out of a two-dimensional world.",
     tags: ["Barrier", "Trompt", "Futuristic"]
   },
-   {
+  {
     id: "197",
     image: boy197,
     title: "Bold & Minimal",

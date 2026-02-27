@@ -1,3 +1,5 @@
+"use client";
+
 import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 
 type Theme = "light" | "dark";
@@ -10,10 +12,14 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme;
-    return stored || "dark";
-  });
+    if (stored) {
+      setTheme(stored);
+    }
+  }, []);
 
   useEffect(() => {
     const root = window.document.documentElement;

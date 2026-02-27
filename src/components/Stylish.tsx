@@ -1,6 +1,6 @@
-import React from 'react';
+import Image from "next/image";
 import { Button } from "./ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import boy116 from "@/assets/boy116.webp";
 
 
@@ -32,20 +32,20 @@ const Stylish = () => {
                     <p className="text-lg text-muted-foreground mt-2">
                         <b>👉 Explore Full Collection:</b>
                     </p>
-                    <Link to="/gallery">
+                    <Link href="/gallery">
                         <Button size="lg" className=" bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group mt-4   text-sm sm:text-base whitespace-normal break-words text-center px-4">
-                                Stylish Boy DP - Cute Boy Pics & HD Photos                      
+                            Stylish Boy DP - Cute Boy Pics & HD Photos
                         </Button>
                     </Link>
                 </div>
 
                 {/* Right Image */}
                 <div className="w-full">
-                    <img
+                    <Image
                         src={boy116}
                         alt="Stylish Boy DP"
-                         loading="lazy"
-                        className="w-full h-full object-cover rounded-lg shadow-md"
+                        className="w-full h-auto object-cover rounded-lg shadow-md"
+                        priority={false}
                     />
                 </div>
 
