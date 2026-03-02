@@ -9,6 +9,146 @@ import { toast } from "sonner";
 import CompressionTargets from "@/components/tools/CompressionTargets";
 import SEOHead from "@/components/SEOHead";
 
+const FiveKBContent = () => (
+    <>
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <p className="text-muted-foreground leading-relaxed">
+                When it comes to submitting documents, applying for jobs, or navigating government portals, image size limitations often become a hurdle. Welcome to SmallJPG – your go-to solution for compressing JPEG images to sizes as small as 5kb, ensuring your images meet strict size requirements without compromising quality.
+            </p>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-6">How To Compress JPG to 5kb:</h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+                Compressing your JPEG images to a mere 5kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+                {[
+                    { step: "1", title: "Upload Your Image", desc: "Begin by selecting your JPEG file directly on the website." },
+                    { step: "2", title: "Choose 5kb Compression", desc: "Opt for the specific 5kb compression option provided on the tool." },
+                    { step: "3", title: "Adjust Settings if Needed", desc: "SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality." },
+                    { step: "4", title: "Download Your Compressed Image", desc: "Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms." },
+                ].map((item) => (
+                    <div key={item.step} className="p-6 rounded-2xl bg-accent/5 border border-border space-y-2">
+                        <div className="flex items-center gap-3">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">{item.step}</span>
+                            <h3 className="text-lg font-bold m-0">{item.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm m-0">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-6">Key Features:</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+                <div className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3">
+                    <h3 className="text-lg font-bold flex items-center gap-2 m-0">
+                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                        Browser-Side Compression
+                    </h3>
+                    <p className="text-muted-foreground text-sm m-0">SmallJPG ensures your image stays secure by performing all compression operations directly within your browser.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3">
+                    <h3 className="text-lg font-bold flex items-center gap-2 m-0">
+                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                        Unlimited Compression
+                    </h3>
+                    <p className="text-muted-foreground text-sm m-0">There's no limit on the number of images you can compress, ensuring you're always ready for that next submission.</p>
+                </div>
+            </div>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-4">Further Insights on 5kb Compression</h2>
+            <p className="text-muted-foreground leading-relaxed">
+                Compressing your image to a mere 5kb doesn't mean compromising its essence. With SmallJPG, you retain the crucial details while ensuring compliance with size regulations. This feature becomes vital for meeting stringent image size requirements without losing image quality.
+            </p>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
+            <p className="text-muted-foreground leading-relaxed">
+                SmallJPG's specialized 5kb compression tool empowers users facing size limitations on various platforms. Compressing images to meet stringent size requirements is no longer a daunting task with our user-friendly and secure browser-based compression service.
+            </p>
+        </div>
+    </>
+);
+
+const GenericContent = () => (
+    <>
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <p className="text-muted-foreground leading-relaxed">
+                In today's digital age, image compression plays a crucial role, especially when submitting images on online portals that have strict size restrictions. SmallJPG is here to help you overcome this challenge. Our web-based tool allows you to compress JPG images quickly and efficiently, reducing their size to meet specific requirements, all in just a few clicks. Whether you're applying for a government job, admission to an educational institution, or simply optimizing your images for web use, SmallJPG has you covered.
+            </p>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <p className="text-muted-foreground leading-relaxed mb-8">
+                Our online tool allows you to quickly and effortlessly compress your JPG images to specific file sizes, including 50KB, 100KB, 200KB, and more. Say goodbye to the frustration of oversized image uploads – SmallJPG is your solution!
+            </p>
+            <h2 className="text-2xl font-bold mb-6">How SmallJPG Works:</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+                {[
+                    { step: "1", title: "Upload Your Image", desc: "Start by uploading your JPG image to our platform." },
+                    { step: "2", title: "Select Your Desired Size", desc: "SmallJPG offers preset options to compress your image to specific sizes, including 50KB, 100KB, 200KB, and more." },
+                    { step: "3", title: "Click \"Compress Image\"", desc: "Once you've chosen your desired size, click the button, and SmallJPG will instantly optimize your image." },
+                    { step: "4", title: "Download the Compressed Image", desc: "Your compressed image is ready! Download it and use it for your online submissions." },
+                ].map((item) => (
+                    <div key={item.step} className="p-6 rounded-2xl bg-accent/5 border border-border space-y-2">
+                        <div className="flex items-center gap-3">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">{item.step}</span>
+                            <h3 className="text-lg font-bold m-0">{item.title}</h3>
+                        </div>
+                        <p className="text-muted-foreground text-sm m-0">{item.desc}</p>
+                    </div>
+                ))}
+            </div>
+            <p className="text-muted-foreground leading-relaxed mt-8">
+                In no time, your image will be ready for download, perfectly sized and primed for upload to online portals.
+            </p>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-8">Why Use SmallJPG As Image Compressor?</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+                {[
+                    { title: "Lightning-Fast Compression", desc: "SmallJPG compresses your images in milliseconds, ensuring you won't waste valuable time." },
+                    { title: "Specific Size Options", desc: "Specify the exact file size you need, whether it's 50KB, 100KB, or any other custom size." },
+                    { title: "User-Friendly Interface", desc: "Our intuitive interface makes it easy for anyone to compress images effortlessly." },
+                    { title: "No Installation Required", desc: "SmallJPG works right in your browser, eliminating the need for downloads or installations." },
+                ].map((item) => (
+                    <div key={item.title} className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3">
+                        <h3 className="text-lg font-bold flex items-center gap-2 m-0">
+                            <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                            {item.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm m-0">{item.desc}</p>
+                    </div>
+                ))}
+                <div className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3 md:col-span-2">
+                    <h3 className="text-lg font-bold flex items-center gap-2 m-0">
+                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                        Perfect for Online Portals
+                    </h3>
+                    <p className="text-muted-foreground text-sm m-0">SmallJPG is a favorite tool among users who frequently upload images to online portals. It ensures your images meet their size requirements without a hitch.</p>
+                </div>
+            </div>
+        </div>
+
+        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
+            <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+                SmallJPG is your go-to tool for swiftly compressing JPG images to specific sizes, addressing the requirements of online portals where image size limitations are common.
+            </p>
+            <p className="text-muted-foreground leading-relaxed font-medium">
+                With SmallJPG, the power to make your images just the right size is at your fingertips. Give it a try and optimize your image submissions today!
+            </p>
+        </div>
+    </>
+);
+
 interface CompressedResult {
     id: string;
     originalName: string;
@@ -40,16 +180,23 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
     };
 
     const displaySize = targetSize ? targetSize.toUpperCase() : "";
-    const pageTitle = targetSize
-        ? `Compress JPG to ${displaySize} Online Free | SmallJPG`
-        : "Compress JPG Image Online Free - SmallJPG Image Compressor";
-    const metaDescription = targetSize
-        ? `Compress JPG images to ${displaySize} online free. SmallJPG makes it easy to reduce JPG file size to exactly ${displaySize} for online portals, government jobs & admissions.`
-        : "SmallJPG: Compress JPG images to 50KB, 100KB, 200KB & more. Free online JPG compressor for government job portals, admissions & web use. No installation required.";
-    const h1Title = targetSize ? `Compress JPG to ${displaySize}` : "Compress JPG Image";
-    const subTitle = targetSize
-        ? `SmallJPG: Your Ultimate Destination for Effortless JPG Size Compression to ${displaySize}.`
-        : "SmallJPG: Your Ultimate Destination for Effortless JPG Size Compression.";
+    const is5kb = targetSize?.toLowerCase() === "5kb";
+    const pageTitle = is5kb
+        ? "Compress JPG To 5KB Online Free | SmallJPG"
+        : targetSize
+            ? `Compress JPG to ${displaySize} Online Free | SmallJPG`
+            : "Compress JPG Image Online Free - SmallJPG Image Compressor";
+    const metaDescription = is5kb
+        ? "Effortlessly compress JPG to 5kb for fast, efficient uploads with SmallJPG – your image size solution. Free online tool for government jobs, admissions & more."
+        : targetSize
+            ? `Compress JPG images to ${displaySize} online free. SmallJPG makes it easy to reduce JPG file size to exactly ${displaySize} for online portals, government jobs & admissions.`
+            : "SmallJPG: Compress JPG images to 50KB, 100KB, 200KB & more. Free online JPG compressor for government job portals, admissions & web use. No installation required.";
+    const h1Title = is5kb ? "Compress JPG To 5KB" : targetSize ? `Compress JPG to ${displaySize}` : "Compress JPG Image";
+    const subTitle = is5kb
+        ? "Effortlessly compress JPG to 5kb for fast, efficient uploads with SmallJPG – your image size solution."
+        : targetSize
+            ? `SmallJPG: Your Ultimate Destination for Effortless JPG Size Compression to ${displaySize}.`
+            : "SmallJPG: Your Ultimate Destination for Effortless JPG Size Compression.";
 
     const formatSize = (bytes: number) => {
         if (bytes === 0) return "0 Bytes";
@@ -345,76 +492,11 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
 
                     {/* Main Content Section */}
                     <div className="mt-20 prose prose-lg dark:prose-invert max-w-none">
-                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
-                            <p className="text-muted-foreground leading-relaxed">
-                                In today's digital age, image compression plays a crucial role, especially when submitting images on online portals that have strict size restrictions. SmallJPG is here to help you overcome this challenge. Our web-based tool allows you to compress JPG images quickly and efficiently, reducing their size to meet specific requirements, all in just a few clicks. Whether you're applying for a government job, admission to an educational institution, or simply optimizing your images for web use, SmallJPG has you covered. Let's explore how SmallJPG can make your life easier.
-                            </p>
-                        </div>
-
-                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
-                            <p className="text-muted-foreground leading-relaxed mb-8">
-                                Our online tool allows you to quickly and effortlessly compress your JPG images to specific file sizes, including 50KB, 100KB, 200KB, and more. Say goodbye to the frustration of oversized image uploads – SmallJPG is your solution!
-                            </p>
-
-                            <h2 className="text-2xl font-bold mb-6">How SmallJPG Works:</h2>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                {[
-                                    { step: "1", title: "Upload Your Image", desc: "Start by uploading your JPG image to our platform." },
-                                    { step: "2", title: "Select Your Desired Size", desc: "SmallJPG offers preset options to compress your image to specific sizes, including 50KB, 100KB, 200KB, and more." },
-                                    { step: "3", title: "Click \"Compress Image\"", desc: "Once you've chosen your desired size, click the \"Compress Image\" button, and SmallJPG will instantly optimize your image." },
-                                    { step: "4", title: "Download the Compressed Image", desc: "Your compressed image is ready! Download it and use it for your online submissions." },
-                                ].map((item) => (
-                                    <div key={item.step} className="p-6 rounded-2xl bg-accent/5 border border-border space-y-2">
-                                        <div className="flex items-center gap-3">
-                                            <span className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm">{item.step}</span>
-                                            <h3 className="text-lg font-bold m-0">{item.title}</h3>
-                                        </div>
-                                        <p className="text-muted-foreground text-sm m-0">{item.desc}</p>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <p className="text-muted-foreground leading-relaxed mt-8">
-                                In no time, your image will be ready for download, perfectly sized and primed for upload to online portals. Whether you're a professional, student, or someone who needs to quickly adjust image sizes, SmallJPG is your ideal solution.
-                            </p>
-                        </div>
-
-                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
-                            <h2 className="text-2xl font-bold mb-8">Why Use SmallJPG As Image Compressor?</h2>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                {[
-                                    { title: "Lightning-Fast Compression", desc: "SmallJPG compresses your images in milliseconds, ensuring you won't waste valuable time on resizing and optimizing images." },
-                                    { title: "Specific Size Options", desc: "SmallJPG allows you to specify the exact file size you need, whether it's 50KB, 100KB, or any other custom size." },
-                                    { title: "User-Friendly Interface", desc: "Our intuitive interface makes it easy for anyone, even with limited technical skills, to compress images effortlessly." },
-                                    { title: "No Installation Required", desc: "Forget about installing complex software or apps. SmallJPG works right in your browser, eliminating the need for downloads or installations." },
-                                ].map((item) => (
-                                    <div key={item.title} className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3">
-                                        <h3 className="text-lg font-bold flex items-center gap-2 m-0">
-                                            <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
-                                            {item.title}
-                                        </h3>
-                                        <p className="text-muted-foreground text-sm m-0">{item.desc}</p>
-                                    </div>
-                                ))}
-                                <div className="p-6 rounded-2xl bg-accent/5 border border-border space-y-3 md:col-span-2">
-                                    <h3 className="text-lg font-bold flex items-center gap-2 m-0">
-                                        <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
-                                        Perfect for Online Portals
-                                    </h3>
-                                    <p className="text-muted-foreground text-sm m-0">SmallJPG is a favorite tool among users who frequently upload images to online portals. It ensures your images meet their size requirements without a hitch.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border mb-10">
-                            <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-                            <p className="text-muted-foreground leading-relaxed mb-4">
-                                SmallJPG is your go-to tool for swiftly compressing JPG images to specific sizes, addressing the requirements of online portals where image size limitations are common. Whether you need to meet strict size restrictions on government job portals or admission platforms, SmallJPG is here to save the day.
-                            </p>
-                            <p className="text-muted-foreground leading-relaxed font-medium">
-                                With SmallJPG, the power to make your images just the right size is at your fingertips. Give it a try and optimize your image submissions today!
-                            </p>
-                        </div>
+                        {targetSize?.toLowerCase() === "5kb" ? (
+                            <FiveKBContent />
+                        ) : (
+                            <GenericContent />
+                        )}
                     </div>
 
 
