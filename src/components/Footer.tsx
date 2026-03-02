@@ -1,5 +1,5 @@
 import { Sparkles, Facebook, Instagram, Youtube, Video } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,17 +24,17 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/gallery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Blog
                 </Link>
               </li>
@@ -71,12 +71,12 @@ const Footer = () => {
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/terms-of-services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Terms of Services
                 </Link>
               </li>

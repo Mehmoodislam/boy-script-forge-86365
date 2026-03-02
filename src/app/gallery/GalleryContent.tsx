@@ -1,8 +1,6 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Copy, Check, X, Search, Eye, Heart } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navigation from "@/components/Navigation";
@@ -20,7 +18,7 @@ import {
 const ITEMS_PER_LOAD = 21;
 const GALLERY_CATEGORY_NAMES = ["cinematic", "futuristic", "shalwar kameez", "luxury", "trending", "wallpaper"];
 
-export default function GalleryContent() {
+export default function Gallery() {
     const [selectedPrompt, setSelectedPrompt] = useState<Prompt | null>(null);
     const [copied, setCopied] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
@@ -170,16 +168,16 @@ export default function GalleryContent() {
                                 Free AI Image Prompts for <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Stylish Boy Portraits</span>
                             </h1>
                             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed break-words text-center max-w-2xl mx-auto mb-3">
-                                Discover {totalPrompts}+ handcrafted <Link href="/" className="text-primary hover:underline font-medium">AI image prompts</Link> for creating stunning stylish boy portraits. Perfect for Midjourney, DALL-E, and Stable Diffusion. Browse by category, copy prompts instantly, and start creating amazing AI art today.
+                                Discover {totalPrompts}+ handcrafted <Link to="/" className="text-primary hover:underline font-medium">AI image prompts</Link> for creating stunning stylish boy portraits. Perfect for Midjourney, DALL-E, and Stable Diffusion. Browse by category, copy prompts instantly, and start creating amazing AI art today.
                             </p>
                             <nav className="text-sm text-muted-foreground">
-                                <Link href="/" className="hover:text-primary transition-colors font-medium">Home</Link>
+                                <Link to="/" className="hover:text-primary transition-colors font-medium">Home</Link>
                                 {" • "}
-                                <Link href="/#about" className="hover:text-primary transition-colors font-medium">About</Link>
+                                <Link to="/#about" className="hover:text-primary transition-colors font-medium">About</Link>
                                 {" • "}
-                                <Link href="/#how-to-use" className="hover:text-primary transition-colors font-medium">How to Use</Link>
+                                <Link to="/#how-to-use" className="hover:text-primary transition-colors font-medium">How to Use</Link>
                                 {" • "}
-                                <Link href="/#faqs" className="hover:text-primary transition-colors font-medium">FAQs</Link>
+                                <Link to="/#faqs" className="hover:text-primary transition-colors font-medium">FAQs</Link>
                             </nav>
                         </header>
 

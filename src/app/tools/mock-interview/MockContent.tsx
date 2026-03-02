@@ -1,12 +1,11 @@
-"use client";
-
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Brain, Sparkles, RotateCcw, SkipForward, CheckCircle2, XCircle, Trophy, Briefcase, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
@@ -35,7 +34,7 @@ interface ScoreResult {
 
 type Phase = "input" | "loading" | "quiz" | "scoring" | "results";
 
-export default function MockContent() {
+export default function MockInterview() {
     const [phase, setPhase] = useState<Phase>("input");
     const [jobDescription, setJobDescription] = useState("");
     const [questions, setQuestions] = useState<Question[]>([]);
@@ -108,6 +107,11 @@ export default function MockContent() {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEOHead
+                title="Mock Interview - Practice with AI"
+                description="Prepare for your job interview with AI-generated questions."
+                canonicalUrl="https://freeimageprompt.com/tools/mock-interview"
+            />
             <Navigation />
             <main className="pt-24 pb-16">
                 <div className="container mx-auto px-4 max-w-4xl">

@@ -1,9 +1,8 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { Calculator, Plus, Trash2, RotateCcw, Check } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
@@ -15,7 +14,7 @@ interface Assignment {
     weight: string;
 }
 
-export default function GradeContent() {
+export default function GradeCalculator() {
     const [assignments, setAssignments] = useState<Assignment[]>([
         { id: "1", name: "Assignment 1", grade: "", weight: "" },
         { id: "2", name: "Assignment 2", grade: "", weight: "" },
@@ -100,6 +99,11 @@ export default function GradeContent() {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEOHead
+                title="Grade Calculator Guide - Calculate Test & Final Grades Easily"
+                description="Use our free grade calculator to calculate test scores, weighted grades, and your final grade."
+                canonicalUrl="https://freeimageprompt.com/tools/grade-calculator"
+            />
             <Navigation />
 
             <main className="pt-24 pb-16">

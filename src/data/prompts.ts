@@ -201,7 +201,7 @@ import boy197 from "@/assets/boy197.webp";
 
 export interface PromptData {
   id: string;
-  image: any;
+  image: string;
   title: string;
   prompt: string;
   tags: string[];

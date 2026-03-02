@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { X, Download, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,7 +15,7 @@ import {
 const ITEMS_PER_LOAD = 21;
 const GALLERY_CATEGORY_NAMES = ["cinematic", "futuristic", "shalwar kameez", "luxury", "trending", "wallpaper"];
 
-export default function PacksContent() {
+export default function Packs() {
     const [categories, setCategories] = useState<Category[]>([]);
     const [prompts, setPrompts] = useState<Prompt[]>([]);
     const [loading, setLoading] = useState(true);
@@ -81,7 +79,7 @@ export default function PacksContent() {
             const filename = `${title.replace(/\s+/g, "-").toLowerCase()}.webp`;
             // In Next.js, we might need a different proxy or just direct download if possible
             // Assuming existing supabase function still works
-            const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "https://ovhktclcveypqicrscun.supabase.co";
+            const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "https://ovhktclcveypqicrscun.supabase.co";
             const proxyUrl = `${supabaseUrl}/functions/v1/download-image?url=${encodeURIComponent(imageUrl)}&filename=${encodeURIComponent(filename)}`;
             const a = document.createElement("a");
             a.href = proxyUrl;

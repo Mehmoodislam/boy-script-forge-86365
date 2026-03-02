@@ -1,12 +1,11 @@
-"use client";
-
 import { useState } from "react";
 import { Youtube, Download, Loader2, AlertCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 
-export default function YouTubeContent() {
+export default function YouTubeDownloader() {
     const [url, setUrl] = useState("");
     const [loading, setLoading] = useState(false);
     const [videoInfo, setVideoInfo] = useState<{
@@ -38,7 +37,7 @@ export default function YouTubeContent() {
 
         try {
             const response = await fetch(
-                `${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/youtube-download`,
+                `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/youtube-download`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
@@ -69,6 +68,12 @@ export default function YouTubeContent() {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEOHead
+                title="YouTube Video Downloader - Free Online Tool | FreeImagePrompt"
+                description="Download YouTube videos for free in HD quality. Paste the video URL and download instantly. Fast, free, and easy to use YouTube video downloader."
+                canonicalUrl="https://freeimageprompt.com/tools/youtube-downloader"
+                keywords="youtube video downloader, download youtube videos, free youtube downloader, youtube to mp4, youtube download online"
+            />
             <Navigation />
 
             <main className="pt-24 pb-16">

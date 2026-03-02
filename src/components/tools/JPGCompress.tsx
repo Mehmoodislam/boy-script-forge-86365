@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { Image as ImageIcon, Upload, Download, FileJson, CheckCircle2, AlertCircle, Trash2, ArrowRight, X, Layers, List } from "lucide-react";
 import imageCompression from "browser-image-compression";
@@ -9,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
 import CompressionTargets from "@/components/tools/CompressionTargets";
+import SEOHead from "@/components/SEOHead";
 
 interface CompressedResult {
     id: string;
@@ -41,10 +40,15 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
     };
 
     const displaySize = targetSize ? targetSize.toUpperCase() : "";
-    const pageTitle = targetSize ? `Compress JPG to ${displaySize} - Batch Image Optimizer` : "Batch JPG Image Compressor - Compress Multiple JPGs";
+    const pageTitle = targetSize
+        ? `Compress JPG to ${displaySize} Online - Fast & Free Optimizer`
+        : "Batch JPG Image Compressor - Compress Multiple JPGs Fast & Free";
+    const metaDescription = targetSize
+        ? `Specifically optimize and compress JPG images to under ${displaySize} while maintaining the best possible quality. Perfect for restricted uploads and web forms.`
+        : "Compress multiple JPG/JPEG images at once without losing quality. 100% client-side, secure, and fast batch optimization directly in your browser.";
     const h1Title = targetSize ? `Compress JPG to ${displaySize}` : "Batch JPG Compressor";
     const subTitle = targetSize
-        ? `Compress your JPG images specifically to under ${displaySize} while maintaining the best possible quality. Free, fast, and secure.`
+        ? `Get your images ready for any platform by compressing them specifically to ${displaySize}. Professional results, instantly.`
         : "Upload multiple images and compress them instantly. Secure, fast, and high-quality optimization directly in your browser.";
 
     const formatSize = (bytes: number) => {
@@ -191,6 +195,7 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead title={pageTitle} description={metaDescription} />
             <Navigation />
 
             <main className="pt-24 pb-16">
@@ -342,14 +347,64 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
                         <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
                             <h3 className="text-xl font-bold">Bulk Processing</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Save time by uploading hundreds of images at once.
+                                Save time by uploading hundreds of images at once. Our engine handles multi-file compression with ease.
                             </p>
                         </div>
                         <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
                             <h3 className="text-xl font-bold">100% Client-Side</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                Security first. All compression happens in your browser.
+                                Your privacy is our priority. Images never leave your device. All processing happens locally in your browser.
                             </p>
+                        </div>
+                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+                            <h3 className="text-xl font-bold">Quality Preservation</h3>
+                            <p className="text-muted-foreground text-sm leading-relaxed">
+                                Our smart algorithms reduce file size while keeping your photos looking sharp and professional.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="mt-20 prose prose-lg dark:prose-invert max-w-none bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                        <h2 className="text-3xl font-bold mb-6">Why use our {displaySize || "JPG"} compressor?</h2>
+                        <div className="grid md:grid-cols-2 gap-10">
+                            <div className="space-y-4">
+                                <h4 className="text-xl font-semibold flex items-center gap-2">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    Ultra-Fast Compression
+                                </h4>
+                                <p className="text-muted-foreground">
+                                    Our tool is optimized for speed. Don't waste time waiting for uploads; compress your {displaySize || "JPG"} files in seconds directly on your computer.
+                                </p>
+                            </div>
+                            <div className="space-y-4">
+                                <h4 className="text-xl font-semibold flex items-center gap-2">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    Easy to Use
+                                </h4>
+                                <p className="text-muted-foreground">
+                                    No complex settings. Just drag and drop your photos, and our tool automatically optimizes them to the perfect size.
+                                </p>
+                            </div>
+                            <div className="space-y-4">
+                                <h4 className="text-xl font-semibold flex items-center gap-2">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    Perfect for {targetSize ? targetSize : "Web"}
+                                </h4>
+                                <p className="text-muted-foreground">
+                                    {targetSize
+                                        ? `Many platforms require images to be under ${targetSize}. Our tool ensures you hit that target every time with smart dimension adjustment.`
+                                        : "Optimized images load faster on websites and use less bandwidth, improving your SEO and user experience."}
+                                </p>
+                            </div>
+                            <div className="space-y-4">
+                                <h4 className="text-xl font-semibold flex items-center gap-2">
+                                    <CheckCircle2 className="h-5 w-5 text-primary" />
+                                    Free & Unlimited
+                                </h4>
+                                <p className="text-muted-foreground">
+                                    No subscriptions, no watermarks, and no file limits. Use our batch compressor as much as you need for your personal or professional projects.
+                                </p>
+                            </div>
                         </div>
                     </div>
 

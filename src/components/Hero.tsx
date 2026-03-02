@@ -1,8 +1,6 @@
-"use client";
-
 import { Button } from "./ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -39,7 +37,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/gallery">
+            <Link to="/gallery">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group">
                 Explore Gallery
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
