@@ -6,8 +6,8 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
-import CompressionTargets from "@/components/tools/CompressionTargets";
 import SEOHead from "@/components/SEOHead";
+import OtherCompressionSizes from "@/components/OtherCompressionSizes";
 
 interface CompressedResult {
     id: string;
@@ -22,34 +22,23 @@ interface CompressedResult {
 }
 
 interface JPGCompressProps {
-    targetSize?: string;
     children?: React.ReactNode;
 }
 
-const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
+const JPGCompress = ({ children }: JPGCompressProps) => {
     const [results, setResults] = useState<CompressedResult[]>([]);
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
+    // Use default templates for generic compressor
+    const pageTitle = "Batch JPG Image Compressor - Compress Multiple JPGs Fast & Free";
+    const metaDescription = "Compress multiple JPG/JPEG images at once without losing quality. 100% client-side, secure, and fast batch optimization directly in your browser.";
+    const h1Title = "Batch JPG Compressor";
+    const subTitle = "Upload multiple images and compress them instantly. Secure, fast, and high-quality optimization directly in your browser.";
+
     const getTargetSizeMB = () => {
-        if (!targetSize) return 1;
-        const value = parseInt(targetSize);
-        if (isNaN(value)) return 1;
-        if (targetSize.toLowerCase().endsWith("kb")) return value / 1024;
-        if (targetSize.toLowerCase().endsWith("mb")) return value;
-        return 1;
+        return 1; // Default to 1MB or could be an input later
     };
 
-    const displaySize = targetSize ? targetSize.toUpperCase() : "";
-    const pageTitle = targetSize
-        ? `Compress JPG to ${displaySize} Online - Fast & Free Optimizer`
-        : "Batch JPG Image Compressor - Compress Multiple JPGs Fast & Free";
-    const metaDescription = targetSize
-        ? `Specifically optimize and compress JPG images to under ${displaySize} while maintaining the best possible quality. Perfect for restricted uploads and web forms.`
-        : "Compress multiple JPG/JPEG images at once without losing quality. 100% client-side, secure, and fast batch optimization directly in your browser.";
-    const h1Title = targetSize ? `Compress JPG to ${displaySize}` : "Batch JPG Compressor";
-    const subTitle = targetSize
-        ? `Get your images ready for any platform by compressing them specifically to ${displaySize}. Professional results, instantly.`
-        : "Upload multiple images and compress them instantly. Secure, fast, and high-quality optimization directly in your browser.";
 
     const formatSize = (bytes: number) => {
         if (bytes === 0) return "0 Bytes";
@@ -94,9 +83,15 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
 
             try {
                 const targetSizeMB = getTargetSizeMB();
+
+                // Start with a reasonable dimension based on target size for better first-pass results
+                let initialDimensions = 1920;
+                if (targetSizeMB < 0.05) initialDimensions = 800; // < 50KB
+                if (targetSizeMB < 0.02) initialDimensions = 400; // < 20KB
+
                 let options = {
                     maxSizeMB: targetSizeMB,
-                    maxWidthOrHeight: 1920,
+                    maxWidthOrHeight: initialDimensions,
                     useWebWorker: true,
                     onProgress: (percent: number) => {
                         setResults(prev => prev.map(r => r.id === item.id ? { ...r, progress: percent } : r));
@@ -105,27 +100,24 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
 
                 let compressedFile = await imageCompression(fileToProcess, options);
 
-                // If it's still significantly over target (allowing 2% buffer), try more aggressive parameters
-                // This is especially important for small targets like 5KB or 20KB
-                if (compressedFile.size > targetSizeMB * 1024 * 1024 * 1.02 && targetSizeMB < 0.1) {
+                // Iterative compression to hit the target size precisely (within 2% tolerance)
+                const targetSizeBytes = targetSizeMB * 1024 * 1024;
+                let attempts = 0;
+
+                while (compressedFile.size > targetSizeBytes * 1.02 && attempts < 3) {
+                    attempts++;
+                    // Progressively reduce maxSizeMB and dimensions to force the library to compress further
+                    const reductionFactor = 0.9 - (attempts * 0.1);
+
                     try {
-                        // Try 1: Smaller dimensions
                         compressedFile = await imageCompression(compressedFile as File, {
                             ...options,
-                            maxSizeMB: targetSizeMB * 0.9,
-                            maxWidthOrHeight: 800,
+                            maxSizeMB: targetSizeMB * reductionFactor,
+                            maxWidthOrHeight: Math.max(160, initialDimensions * reductionFactor),
                         });
-
-                        // Try 2: Even smaller if still over
-                        if (compressedFile.size > targetSizeMB * 1024 * 1024 * 1.02) {
-                            compressedFile = await imageCompression(compressedFile as File, {
-                                ...options,
-                                maxSizeMB: targetSizeMB * 0.8,
-                                maxWidthOrHeight: 400,
-                            });
-                        }
                     } catch (retryErr) {
-                        console.warn("Aggressive compression retry failed, using initial result", retryErr);
+                        console.warn(`Compression attempt ${attempts} failed, sticking with current result`, retryErr);
+                        break;
                     }
                 }
 
@@ -345,18 +337,21 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
 
                     <div className="mt-20 grid md:grid-cols-3 gap-8">
                         <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+                            <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-layers h-6 w-6 text-indigo-500"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg></div>
                             <h3 className="text-xl font-bold">Bulk Processing</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
                                 Save time by uploading hundreds of images at once. Our engine handles multi-file compression with ease.
                             </p>
                         </div>
                         <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+                            <div className="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right h-6 w-6 text-amber-500"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div>
                             <h3 className="text-xl font-bold">100% Client-Side</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
                                 Your privacy is our priority. Images never leave your device. All processing happens locally in your browser.
                             </p>
                         </div>
                         <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+                            <div className="w-12 h-12 rounded-2xl bg-teal-500/10 flex items-center justify-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-circle-check h-6 w-6 text-teal-500"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg></div>
                             <h3 className="text-xl font-bold">Quality Preservation</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
                                 Our smart algorithms reduce file size while keeping your photos looking sharp and professional.
@@ -364,51 +359,92 @@ const JPGCompress = ({ targetSize, children }: JPGCompressProps) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 prose prose-lg dark:prose-invert max-w-none bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                        <h2 className="text-3xl font-bold mb-6">Why use our {displaySize || "JPG"} compressor?</h2>
-                        <div className="grid md:grid-cols-2 gap-10">
-                            <div className="space-y-4">
-                                <h4 className="text-xl font-semibold flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                                    Ultra-Fast Compression
-                                </h4>
-                                <p className="text-muted-foreground">
-                                    Our tool is optimized for speed. Don't waste time waiting for uploads; compress your {displaySize || "JPG"} files in seconds directly on your computer.
-                                </p>
+                    <div className="mt-20 space-y-16">
+                        <section className=" p-8 md:p-12 r">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 5kb:</h2>
+                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                                Compressing your JPEG images to a mere 5kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
+                            </p>
+                            <ol className="space-y-6">
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
+                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
+                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 5kb Compression:</strong> Opt for the specific 5kb compression option provided on the tool.</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
+                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
+                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
+                                </li>
+                            </ol>
+                              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                                Compressing your JPEG images to a mere 5kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
+                            </p>
+                              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                                Compressing your JPEG images to a mere 5kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
+                            </p>
+                        </section>
+
+                        <section className="text-center py-10">
+                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
+                                COMPRESS JPG To 5KB
+                            </h2>
+                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                                Reduce JPG Size to Specific KB Easily
+                            </p>
+
+                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+                                <div className="flex flex-col items-center gap-4">
+                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
+                                        <img src="/src/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
+                                    </div>
+                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-6">
+                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
+                                        Free, Fast & Online Tool
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
+                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
+                                    </div>
+                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
+                                        <div className="p-1 rounded bg-orange-500">
+                                            <ImageIcon className="h-4 w-4 text-white" />
+                                        </div>
+                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
+                                            Small<span className="text-orange-500">JPG</span>
+                                        </span>
+                                    </div>
+                                    <div className="flex items-center gap-2">
+                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
+                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
+                                    </div>
+                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
+                                        smalljpg.org
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-4">
+                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
+                                        <img src="/src/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
+                                    </div>
+                                    <span className="text-3xl font-black text-[#00bcd4]">5 KB</span>
+                                </div>
                             </div>
-                            <div className="space-y-4">
-                                <h4 className="text-xl font-semibold flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                                    Easy to Use
-                                </h4>
-                                <p className="text-muted-foreground">
-                                    No complex settings. Just drag and drop your photos, and our tool automatically optimizes them to the perfect size.
-                                </p>
-                            </div>
-                            <div className="space-y-4">
-                                <h4 className="text-xl font-semibold flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                                    Perfect for {targetSize ? targetSize : "Web"}
-                                </h4>
-                                <p className="text-muted-foreground">
-                                    {targetSize
-                                        ? `Many platforms require images to be under ${targetSize}. Our tool ensures you hit that target every time with smart dimension adjustment.`
-                                        : "Optimized images load faster on websites and use less bandwidth, improving your SEO and user experience."}
-                                </p>
-                            </div>
-                            <div className="space-y-4">
-                                <h4 className="text-xl font-semibold flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-primary" />
-                                    Free & Unlimited
-                                </h4>
-                                <p className="text-muted-foreground">
-                                    No subscriptions, no watermarks, and no file limits. Use our batch compressor as much as you need for your personal or professional projects.
-                                </p>
-                            </div>
-                        </div>
+                        </section>
                     </div>
 
-                    <CompressionTargets />
+                    <OtherCompressionSizes />
+
                     {children}
                 </div>
             </main>

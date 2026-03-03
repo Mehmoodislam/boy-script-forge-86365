@@ -1,13 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon } from "lucide-react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon, Layers } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
 
 const mediaTools = [
   { to: "/tools/youtube-downloader", label: "YouTube Downloader", icon: Youtube, desc: "Download videos easily" },
-  { to: "/tools/jpg-compress", label: "JPG Compress", icon: ImageIcon, desc: "Compress JPG images" },
-  { to: "/tools/compress-jpg-to-5kb", label: "JPG Compress to 5KB", icon: ImageIcon, desc: "Specific 5KB optimization" },
+  { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch image optimization" },
 ];
 
 const studentTools = [

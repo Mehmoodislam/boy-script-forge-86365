@@ -22,6 +22,30 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import JPGCompressPage from "./pages/JPGCompressPage";
+import JPGCompress5kbPage from "./pages/JPGCompress5kbPage";
+import JPGCompress10kbPage from "./pages/JPGCompress10kbPage";
+import JPGCompress15kbPage from "./pages/JPGCompress15kbPage";
+import JPGCompress20kbPage from "./pages/JPGCompress20kbPage";
+import JPGCompress25kbPage from "./pages/JPGCompress25kbPage";
+import JPGCompress30kbPage from "./pages/JPGCompress30kbPage";
+import JPGCompress35kbPage from "./pages/JPGCompress35kbPage";
+import JPGCompress40kbPage from "./pages/JPGCompress40kbPage";
+import JPGCompress45kbPage from "./pages/JPGCompress45kbPage";
+import JPGCompress50kbPage from "./pages/JPGCompress50kbPage";
+import JPGCompress60kbPage from "./pages/JPGCompress60kbPage";
+import JPGCompress70kbPage from "./pages/JPGCompress70kbPage";
+import JPGCompress80kbPage from "./pages/JPGCompress80kbPage";
+import JPGCompress90kbPage from "./pages/JPGCompress90kbPage";
+import JPGCompress100kbPage from "./pages/JPGCompress100kbPage";
+import JPGCompress150kbPage from "./pages/JPGCompress150kbPage";
+import JPGCompress200kbPage from "./pages/JPGCompress200kbPage";
+import JPGCompress250kbPage from "./pages/JPGCompress250kbPage";
+import JPGCompress300kbPage from "./pages/JPGCompress300kbPage";
+import JPGCompress400kbPage from "./pages/JPGCompress400kbPage";
+import JPGCompress500kbPage from "./pages/JPGCompress500kbPage";
+import JPGCompress1mbPage from "./pages/JPGCompress1mbPage";
+import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
+import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 
 const queryClient = new QueryClient();
@@ -40,10 +64,6 @@ const Home = () => (
     </div>
 );
 
-const JPGCompressPageWithParams = () => {
-    const { size } = useParams();
-    return <JPGCompressPage targetSize={size} />;
-};
 
 function App() {
     return (
@@ -60,8 +80,30 @@ function App() {
                             <Route path="/tools/mock-interview" element={<MockInterview />} />
                             <Route path="/tools/grade-calculator" element={<GradeCalculator />} />
                             <Route path="/tools/jpg-compress" element={<JPGCompressPage />} />
-                            <Route path="/tools/compress-jpg-to-5kb" element={<JPGCompressPage targetSize="5kb" />} />
-                            <Route path="/tools/compress-jpg-to-:size" element={<JPGCompressPageWithParams />} />
+                            <Route path="/tools/compress-jpg-to-5kb" element={<JPGCompress5kbPage />} />
+                            <Route path="/tools/compress-jpg-to-10kb" element={<JPGCompress10kbPage />} />
+                            <Route path="/tools/compress-jpg-to-15kb" element={<JPGCompress15kbPage />} />
+                            <Route path="/tools/compress-jpg-to-20kb" element={<JPGCompress20kbPage />} />
+                            <Route path="/tools/compress-jpg-to-25kb" element={<JPGCompress25kbPage />} />
+                            <Route path="/tools/compress-jpg-to-30kb" element={<JPGCompress30kbPage />} />
+                            <Route path="/tools/compress-jpg-to-35kb" element={<JPGCompress35kbPage />} />
+                            <Route path="/tools/compress-jpg-to-40kb" element={<JPGCompress40kbPage />} />
+                            <Route path="/tools/compress-jpg-to-45kb" element={<JPGCompress45kbPage />} />
+                            <Route path="/tools/compress-jpg-to-50kb" element={<JPGCompress50kbPage />} />
+                            <Route path="/tools/compress-jpg-to-60kb" element={<JPGCompress60kbPage />} />
+                            <Route path="/tools/compress-jpg-to-70kb" element={<JPGCompress70kbPage />} />
+                            <Route path="/tools/compress-jpg-to-80kb" element={<JPGCompress80kbPage />} />
+                            <Route path="/tools/compress-jpg-to-90kb" element={<JPGCompress90kbPage />} />
+                            <Route path="/tools/compress-jpg-to-100kb" element={<JPGCompress100kbPage />} />
+                            <Route path="/tools/compress-jpg-to-150kb" element={<JPGCompress150kbPage />} />
+                            <Route path="/tools/compress-jpg-to-200kb" element={<JPGCompress200kbPage />} />
+                            <Route path="/tools/compress-jpg-to-250kb" element={<JPGCompress250kbPage />} />
+                            <Route path="/tools/compress-jpg-to-300kb" element={<JPGCompress300kbPage />} />
+                            <Route path="/tools/compress-jpg-to-400kb" element={<JPGCompress400kbPage />} />
+                            <Route path="/tools/compress-jpg-to-500kb" element={<JPGCompress500kbPage />} />
+                            <Route path="/tools/compress-jpg-to-1mb" element={<JPGCompress1mbPage />} />
+                            <Route path="/tools/compress-jpg-to-2mb" element={<JPGCompress2mbPage />} />
+                            <Route path="/tools/compress-jpg-to-5mb" element={<JPGCompress5mbPage />} />
                             <Route path="/blog" element={<Blog />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
                             <Route path="/contact" element={<Contact />} />
