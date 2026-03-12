@@ -34,10 +34,10 @@ export default function PostManager() {
   const { data: posts, isLoading } = useQuery({
     queryKey: ['admin-posts'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_posts')
+      const { data, error } = await (supabase
+        .from('cms_posts' as any)
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }) as any);
       if (error) throw error;
       return data;
     }
