@@ -45,10 +45,10 @@ export default function PostManager() {
 
   const upsertMutation = useMutation({
     mutationFn: async (formData: any) => {
-      const { data, error } = await supabase
-        .from('cms_posts')
+      const { data, error } = await (supabase
+        .from('cms_posts' as any)
         .upsert(formData)
-        .select();
+        .select() as any);
       if (error) throw error;
       return data;
     },
