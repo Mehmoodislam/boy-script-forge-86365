@@ -157,7 +157,7 @@ export default function PostManager() {
                 <TableRow><TableCell colSpan={5} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : posts?.length === 0 ? (
                 <TableRow><TableCell colSpan={5} className="text-center py-8 text-muted-foreground">No posts found.</TableCell></TableRow>
-              ) : posts?.map((post) => (
+              ) : posts?.map((post: any) => (
                 <TableRow key={post.id}>
                   <TableCell className="font-medium max-w-[200px] truncate">{post.title}</TableCell>
                   <TableCell>/{post.slug}</TableCell>

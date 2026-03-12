@@ -159,7 +159,7 @@ export default function PageManager() {
                 <TableRow><TableCell colSpan={5} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : pages?.length === 0 ? (
                 <TableRow><TableCell colSpan={5} className="text-center py-8 text-muted-foreground">No pages found.</TableCell></TableRow>
-              ) : pages?.map((page) => (
+              ) : pages?.map((page: any) => (
                 <TableRow key={page.id}>
                   <TableCell className="font-medium">{page.title}</TableCell>
                   <TableCell>/{page.slug}</TableCell>

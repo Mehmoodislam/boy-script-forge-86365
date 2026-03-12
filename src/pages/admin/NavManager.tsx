@@ -137,7 +137,7 @@ export default function NavManager() {
                 <TableRow><TableCell colSpan={4} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : menuItems?.length === 0 ? (
                 <TableRow><TableCell colSpan={4} className="text-center py-8 text-muted-foreground">No menu items found.</TableCell></TableRow>
-              ) : menuItems?.map((item) => (
+              ) : menuItems?.map((item: any) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.order_index}</TableCell>
                   <TableCell className="font-medium">{item.label}</TableCell>
