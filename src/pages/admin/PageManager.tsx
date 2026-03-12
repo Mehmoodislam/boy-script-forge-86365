@@ -45,10 +45,10 @@ export default function PageManager() {
 
   const upsertMutation = useMutation({
     mutationFn: async (formData: any) => {
-      const { data, error } = await supabase
-        .from('cms_pages')
+      const { data, error } = await (supabase
+        .from('cms_pages' as any)
         .upsert(formData)
-        .select();
+        .select() as any);
       if (error) throw error;
       return data;
     },
