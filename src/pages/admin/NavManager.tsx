@@ -32,10 +32,10 @@ export default function NavManager() {
   const { data: menuItems, isLoading } = useQuery({
     queryKey: ['admin-navigation'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_navigation')
+      const { data, error } = await (supabase
+        .from('cms_navigation' as any)
         .select('*')
-        .order('order_index', { ascending: true });
+        .order('order_index', { ascending: true }) as any);
       if (error) throw error;
       return data;
     }
