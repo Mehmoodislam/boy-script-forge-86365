@@ -6,16 +6,39 @@ import { Calendar, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/data/blog-posts";
+import { blogPosts as staticPosts } from "@/data/blog-posts";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 
 const POSTS_PER_PAGE = 8;
 
 export default function Blog() {
     const [currentPage, setCurrentPage] = useState(1);
+    
+    const { data: dynamicPosts } = useQuery({
+        queryKey: ['blog-posts'],
+        queryFn: async () => {
+            const { data, error } = await supabase
+                .from('cms_posts' as any)
+                .select('*')
+                .eq('is_published', true)
+                .order('created_at', { ascending: false });
+            if (error) return [];
+            return data.map((post: any) => ({
+                id: post.slug, 
+                title: post.title,
+                description: post.excerpt,
+                category: "Blog",
+                date: new Date(post.created_at).toLocaleDateString(),
+                content: post.content
+            }));
+        }
+    });
 
-    const totalPages = Math.ceil(blogPosts.length / POSTS_PER_PAGE);
+    const allPosts = [...staticPosts, ...(dynamicPosts || [])];
+    const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
     const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-    const paginatedPosts = blogPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
+    const paginatedPosts = allPosts.slice(startIndex, startIndex + POSTS_PER_PAGE);
 
     return (
         <div className="min-h-screen bg-background text-foreground">

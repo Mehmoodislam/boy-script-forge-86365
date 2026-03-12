@@ -9,6 +9,7 @@ import About from "./components/About";
 import HowToUse from "./components/HowToUse";
 import Stylish from "./components/Stylish";
 import GalleryPreview from "./components/GalleryPreview";
+import ToolSection from "./components/ToolSection";
 import Benefits from "./components/Benefits";
 import FAQs from "./components/FAQs";
 import Gallery from "./app/gallery/GalleryContent";
@@ -23,6 +24,8 @@ import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import JPGCompressPage from "./pages/JPGCompressPage";
 import JPGCompress5kbPage from "./pages/JPGCompress5kbPage";
+import JPGIncreaseSizePage from "./pages/JPGIncreaseSizePage";
+import JPGReducePage from "./pages/JPGReducePage";
 import JPGCompress10kbPage from "./pages/JPGCompress10kbPage";
 import JPGCompress15kbPage from "./pages/JPGCompress15kbPage";
 import JPGCompress20kbPage from "./pages/JPGCompress20kbPage";
@@ -46,6 +49,12 @@ import JPGCompress500kbPage from "./pages/JPGCompress500kbPage";
 import JPGCompress1mbPage from "./pages/JPGCompress1mbPage";
 import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
+import AdminLogin from "./pages/admin/Login";
+import AdminDashboard from "./pages/admin/Dashboard";
+import PageManager from "./pages/admin/PageManager";
+import PostManager from "./pages/admin/PostManager";
+import NavManager from "./pages/admin/NavManager";
+import DynamicPage from "./pages/DynamicPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 
 const queryClient = new QueryClient();
@@ -55,6 +64,7 @@ const Home = () => (
         <Navigation />
         <Hero />
         <GalleryPreview />
+        <ToolSection />
         <About />
         <HowToUse />
         <Stylish />
@@ -80,6 +90,8 @@ function App() {
                             <Route path="/tools/mock-interview" element={<MockInterview />} />
                             <Route path="/tools/grade-calculator" element={<GradeCalculator />} />
                             <Route path="/tools/jpg-compress" element={<JPGCompressPage />} />
+                            <Route path="/tools/reduce-jpg-size" element={<JPGReducePage />} />
+                            <Route path="/tools/increase-jpg-size" element={<JPGIncreaseSizePage />} />
                             <Route path="/tools/compress-jpg-to-5kb" element={<JPGCompress5kbPage />} />
                             <Route path="/tools/compress-jpg-to-10kb" element={<JPGCompress10kbPage />} />
                             <Route path="/tools/compress-jpg-to-15kb" element={<JPGCompress15kbPage />} />
@@ -109,6 +121,16 @@ function App() {
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                             <Route path="/terms-of-services" element={<TermsOfService />} />
+                            
+                            {/* Admin Routes */}
+                            <Route path="/admin/login" element={<AdminLogin />} />
+                            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+                            <Route path="/admin/pages" element={<PageManager />} />
+                            <Route path="/admin/posts" element={<PostManager />} />
+                            <Route path="/admin/navigation" element={<NavManager />} />
+
+                            {/* Dynamic CMS Pages (Catch-all) */}
+                            <Route path="/:slug" element={<DynamicPage />} />
                         </Routes>
                     </Router>
                 </TooltipProvider>

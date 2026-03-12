@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
+import OtherCompressionSizes from "@/components/OtherCompressionSizes";
 
 interface CompressedResult {
   id: string;
@@ -110,17 +111,17 @@ const JPGCompress = () => {
           prev.map((r) =>
             r.id === item.id
               ? {
-                  ...r,
-                  compressedSize: compressedFile.size,
-                  compressedFile: new File(
-                    [compressedFile],
-                    item.originalName,
-                    { type: "image/jpeg" }
-                  ),
-                  previewUrl,
-                  status: "completed",
-                  progress: 100,
-                }
+                ...r,
+                compressedSize: compressedFile.size,
+                compressedFile: new File(
+                  [compressedFile],
+                  item.originalName,
+                  { type: "image/jpeg" }
+                ),
+                previewUrl,
+                status: "completed",
+                progress: 100,
+              }
               : r
           )
         );
@@ -277,6 +278,29 @@ const JPGCompress = () => {
               ))}
             </div>
           )}
+
+          <div className="mt-20 grid md:grid-cols-3 gap-8">
+            <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+              <h3 className="text-xl font-bold">Bulk Processing</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Save time by uploading hundreds of images at once. Our engine handles multi-file compression with ease.
+              </p>
+            </div>
+            <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+              <h3 className="text-xl font-bold">100% Client-Side</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Your privacy is our priority. Images never leave your device. All processing happens locally in your browser.
+              </p>
+            </div>
+            <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
+              <h3 className="text-xl font-bold">Quality Preservation</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Our smart algorithms reduce file size while keeping your photos looking sharp and professional.
+              </p>
+            </div>
+          </div>
+
+          <OtherCompressionSizes />
         </div>
       </main>
 

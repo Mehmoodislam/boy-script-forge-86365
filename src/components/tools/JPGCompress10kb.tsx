@@ -30,10 +30,10 @@ const JPGCompress10kb = ({ children }: JPGCompress10kbProps) => {
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
     // Specifically for 10KB
-    const pageTitle = "Compress JPG to 10KB Online Free - Fast Image Optimizer";
-    const metaDescription = "Specifically optimize and compress JPG images to under 10KB while maintaining the best possible quality. Perfect for restricted uploads and web forms.";
-    const h1Title = "Compress JPG to 10KB";
-    const subTitle = "Get your images ready for any platform by compressing them specifically to 10KB. Professional results, instantly.";
+    const pageTitle = "Compress JPG to 10KB Online - Free, Fast & Lossless Quality";
+    const metaDescription = "Compress JPG to exactly 10KB online for free using Free Image Prompt. Perfect for job applications, government portals, and admission forms. No signup, no quality loss - just fast, browser-based JPEG compression.";
+    const h1Title = "Compress JPG to 10KB - Exactly What You Need, Right When You Need It";
+    const subTitle = "Whether you're submitting a passport photo for a visa application, uploading a profile picture for a government portal, or attaching a photo ID to a job application, strict file size requirements can be a frustrating roadblock. Most official platforms limit image uploads to 10KB.";
 
     const getTargetSizeMB = () => {
         return 10 / 1024; // Target: 10KB
@@ -354,83 +354,223 @@ const JPGCompress10kb = ({ children }: JPGCompress10kbProps) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 space-y-16">
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 10kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                                Compressing your JPEG images to a mere 10kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
-                            </p>
-                            <ol className="space-y-6">
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 10kb Compression:</strong> Opt for the specific 10kb compression option provided on the tool.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
-                                </li>
-                            </ol>
-                        </section>
-
-                        <section className="text-center py-10">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
-                                COMPRESS JPG To 10KB
-                            </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Reduce JPG Size to Specific KB Easily
-                            </p>
-
-                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                    <section className="mt-20 space-y-24">
+                        {/* Why section */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8">Why Do Websites and Portals Require Images Under 10KB?</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <p className="text-muted-foreground leading-relaxed">
+                                        Understanding the reason behind the 10KB limit helps you appreciate why a precise, reliable tool is essential. Here are the most common real-world scenarios where 10KB is the mandatory maximum:
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {[
+                                            "Government job portals (e.g., SSC, UPSC, railway recruitment boards) specify photo and signature uploads at 10KB to 20KB.",
+                                            "University and college admission forms across India, Pakistan, Bangladesh, and other South Asian countries enforce image size caps.",
+                                            "Banking KYC forms and financial institution portals mandate compressed passport-size photographs.",
+                                            "Visa and passport application systems require high compliance with size specifications.",
+                                            "Job recruitment platforms limit candidate photo uploads to avoid storage overhead."
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex gap-3 text-muted-foreground text-sm">
+                                                <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-6">
-                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
-                                        Free, Fast & Online Tool
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
-                                        <div className="p-1 rounded bg-orange-500">
-                                            <ImageIcon className="h-4 w-4 text-white" />
-                                        </div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                                            Small<span className="text-orange-500">JPG</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
-                                        smalljpg.org
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
-                                    </div>
-                                    <span className="text-3xl font-black text-[#00bcd4]">10 KB</span>
+                                <div className="bg-primary/5 rounded-3xl p-6 border border-primary/10 flex items-center justify-center">
+                                    <p className="text-lg font-medium text-center italic text-primary/80">
+                                        "In each of these use cases, uploading a file that exceeds the limit causes your submission to be rejected - even if the image quality is perfect."
+                                    </p>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+
+                        {/* How to compress (Steps) */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8">How to Compress JPG to 10KB - Step-by-Step Guide</h2>
+                            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
+                                {[
+                                    { title: "Upload Image", text: "Go to the Free Image Prompt Compress JPG to 10KB tool and select your JPG or JPEG file." },
+                                    { title: "Select 10KB Preset", text: "Select the '10KB' preset from the target size options. You can also enter a custom value." },
+                                    { title: "Fine-Tune (Optional)", text: "Use Settings to adjust quality balance - useful for images with fine text." },
+                                    { title: "Compress Now", text: "Click 'Compress Now' - the tool processes entirely within your browser in under 3 seconds." },
+                                    { title: "Preview & Download", text: "Preview the result. If satisfied, click 'Download' to save your 10KB JPEG instantly." }
+                                ].map((step, i) => (
+                                    <div key={i} className="relative p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-colors">
+                                        <span className="absolute -top-4 -left-4 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold shadow-lg">
+                                            {i + 1}
+                                        </span>
+                                        <h3 className="font-bold mb-2 mt-2">{step.title}</h3>
+                                        <p className="text-sm text-muted-foreground">{step.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Key Features */}
+                        <div>
+                            <h2 className="text-3xl font-bold mb-12 text-center">Key Features of Free Image Prompt's JPG Compressor</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                {[
+                                    { title: "100% Browser-Side Processing", text: "Your images never leave your device. We use client-side JavaScript for maximum privacy.", icon: <Upload className="h-6 w-6" /> },
+                                    { title: "Precise Target-Size", text: "Our engine iterates automatically to land your image as close to exactly 10KB as possible.", icon: <Layers className="h-6 w-6" /> },
+                                    { title: "Unlimited Free Compressions", text: "No daily limits, no subscriptions, no accounts. Compress as many as you need.", icon: <CheckCircle2 className="h-6 w-6" /> },
+                                    { title: "Multi-Format Support", text: "Handles PNG and WebP inputs, automatically converting them to compressed JPEG.", icon: <FileJson className="h-6 w-6" /> },
+                                    { title: "Customizable Quality", text: "Manually adjust values while seeing dynamic file size updates for professional results.", icon: <List className="h-6 w-6" /> },
+                                    { title: "Mobile-Friendly", text: "Works seamlessly on Android, iOS, Windows, and Mac without any app installation.", icon: <ImageIcon className="h-6 w-6" /> }
+                                ].map((feature, i) => (
+                                    <div key={i} className="flex gap-6 p-6 rounded-3xl bg-card border border-border hover:shadow-lg transition-all">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                                            {feature.icon}
+                                        </div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">{feature.title}</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">{feature.text}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Technical Truth */}
+                        <div className="bg-primary/5 p-8 md:p-12 rounded-[2.5rem] border border-primary/10">
+                            <h2 className="text-3xl font-bold mb-8">How Does JPEG Compression to 10KB Actually Work?</h2>
+                            <div className="prose prose-sm md:prose-base max-w-none text-muted-foreground">
+                                <p>
+                                    JPEG compression works by analyzing image data in 8x8 pixel blocks and applying a Discrete Cosine Transform (DCT). 
+                                    When compressing to a specific target like 10KB, our algorithm:
+                                </p>
+                                <ul className="grid md:grid-cols-2 gap-4 mt-6 list-none p-0">
+                                    {[
+                                        "Performs initial compression pass at mid-range quality.",
+                                        "Measures output file size against the 10KB target.",
+                                        "Iteratively adjusts quantization table in binary search pattern.",
+                                        "Stops within ±0.5KB of the 10KB target.",
+                                        "Delivers final image with maximum visual fidelity."
+                                    ].map((item, i) => (
+                                        <li key={i} className="flex gap-2 items-center bg-background/50 p-3 rounded-xl border border-border">
+                                            <ArrowRight className="h-4 w-4 text-primary" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        {/* Real World Use Cases */}
+                        <div>
+                            <h2 className="text-3xl font-bold mb-12 text-center">Real-World Use Cases</h2>
+                            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { title: "Govt Job Applications", text: "SSC, UPSC, NEET, and State PSC Exams commonly require photos between 4KB–10KB." },
+                                    { title: "Passport & Visa Photo", text: "Embassy portals typically require 35mm x 45mm at 10KB to 50KB size limits." },
+                                    { title: "Bank KYC & Compliance", text: "South Asian banks allow online account creation with photo submission capped at 10KB–20KB." },
+                                    { title: "School Admissions", text: "Admission portals for engineering (JEE) and medical colleges enforce 10KB photo restrictions." },
+                                    { title: "Employee Portals", text: "Corporate HR platforms cap profile photo uploads at 10KB for database efficiency." }
+                                ].map((useCase, i) => (
+                                    <div key={i} className="p-6 rounded-3xl bg-card border border-border space-y-3">
+                                        <h3 className="font-bold text-primary">{useCase.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{useCase.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Comparison Table */}
+                        <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-xl">
+                            <div className="bg-primary px-8 py-6">
+                                <h2 className="text-2xl font-bold text-primary-foreground">Free Image Prompt vs Other JPEG Compressors - Why We're Better</h2>
+                            </div>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="bg-muted/50">
+                                            <th className="p-5 font-bold border-b border-border">Feature</th>
+                                            <th className="p-5 font-bold border-b border-border text-primary">Free Image Prompt</th>
+                                            <th className="p-5 font-bold border-b border-border">SmallJPG</th>
+                                            <th className="p-5 font-bold border-b border-border">Typical Competitors</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-border">
+                                        {[
+                                            { f: "Precise 10KB Target", a: "✅ Yes", b: "✅ Yes", c: "❌ Approx only" },
+                                            { f: "100% Browser-Side", a: "✅ Yes", b: "✅ Yes", c: "❌ Server upload" },
+                                            { f: "Unlimited Free Use", a: "✅ Yes", b: "✅ Yes", c: "❌ Daily limit" },
+                                            { f: "No Sign-up Required", a: "✅ Yes", b: "✅ Yes", c: "⚠️ Varies" },
+                                            { f: "Mobile Optimised", a: "✅ Yes", b: "⚠️ Partial", c: "⚠️ Varies" },
+                                            { f: "PNG/WebP Input", a: "✅ Yes", b: "❌ JPG only", c: "⚠️ Varies" },
+                                            { f: "Quality Preview", a: "✅ Yes", b: "⚠️ Basic", c: "❌ No" },
+                                            { f: "Custom KB Target", a: "✅ Yes", b: "⚠️ Presets only", c: "❌ No" },
+                                        ].map((row, i) => (
+                                            <tr key={i} className="hover:bg-accent/5 transition-colors">
+                                                <td className="p-5 font-medium">{row.f}</td>
+                                                <td className="p-5 text-primary font-bold">{row.a}</td>
+                                                <td className="p-5 text-muted-foreground">{row.b}</td>
+                                                <td className="p-5 text-muted-foreground">{row.c}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        {/* Pro Tips */}
+                        <div className="space-y-8">
+                            <h2 className="text-3xl font-bold text-center">Pro Tips for Best Results When Compressing to 10KB</h2>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {[
+                                    { t: "Resize before compressing", d: "If your original image is very large (e.g., 3MB), first resize it to approximately 200x250 pixels before applying 10KB compression. This preserves far more detail." },
+                                    { t: "Use JPEG, not PNG for photos", d: "PNG files use lossless compression and are inherently larger. For photos and portraits, JPEG is more efficient and produces better visual results." },
+                                    { t: "Check exact dimension requirements", d: "Some portals require specific pixel dimensions (e.g., 200x230px). Ensure your image meets both size and dimension requirements." },
+                                    { t: "Avoid re-compressing", d: "If an image is already at 11KB, additional compression may reduce quality significantly. Upload the original high-resolution version for best results." },
+                                    { t: "Use the preview", d: "Free Image Prompt shows you a side-by-side comparison. Zoom in on faces or fine details before accepting the result." }
+                                ].map((tip, i) => (
+                                    <div key={i} className="p-6 rounded-3xl bg-card border border-border border-l-4 border-l-primary shadow-sm hover:shadow-md transition-all">
+                                        <h3 className="font-bold text-lg mb-2 flex items-center gap-2">
+                                            <span className="text-primary">Tip {i + 1}:</span> {tip.t}
+                                        </h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{tip.d}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Different Sizes */}
+                        <div className="bg-primary/5 p-8 md:p-12 rounded-[2.5rem] border border-primary/10 text-center">
+                            <h2 className="text-3xl font-bold mb-6">Need a Different File Size? Compress JPG to Any KB</h2>
+                            <p className="text-muted-foreground mb-10 max-w-2xl mx-auto">
+                                Free Image Prompt supports precise compression to any target size. Whether your portal requires 5KB or 200KB - our tool handles it.
+                            </p>
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                                {[
+                                    { s: "5KB", d: "Signature Uploads", p: "/tools/compress-jpg-to-5kb" },
+                                    { s: "20KB", d: "Govt Portals", p: "/tools/compress-jpg-to-20kb" },
+                                    { s: "50KB", d: "Bank KYC", p: "/tools/compress-jpg-to-50kb" },
+                                    { s: "100KB", d: "Email Attachments", p: "/tools/compress-jpg-to-100kb" },
+                                    { s: "200KB", d: "High-Res Submission", p: "/tools/compress-jpg-to-200kb" }
+                                ].map((size, i) => (
+                                    <a key={i} href={size.p} className="p-4 rounded-2xl bg-background border border-border hover:border-primary hover:shadow-lg transition-all group">
+                                        <div className="font-black text-xl text-primary group-hover:scale-110 transition-transform">{size.s}</div>
+                                        <div className="text-[10px] uppercase font-bold text-muted-foreground mt-1">{size.d}</div>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Conclusion */}
+                        <div className="text-center space-y-6 py-10">
+                            <h2 className="text-3xl font-bold">Conclusion - The Smartest, Safest Way to Compress JPEG to 10KB</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed max-w-4xl mx-auto">
+                                Compressing a JPG to exactly 10KB is a specific, technical challenge that generic tools often fail to solve reliably. 
+                                Free Image Prompt was built specifically to meet this need - offering precise target-size compression, 
+                                complete browser-side privacy, unlimited free use, and a transparent quality preview.
+                            </p>
+                            <p className="text-primary font-bold text-xl italic">
+                                No servers. No subscriptions. No guesswork. Just a 10KB JPEG, ready in seconds.
+                            </p>
+                        </div>
+                    </section>
 
                     <OtherCompressionSizes />
 

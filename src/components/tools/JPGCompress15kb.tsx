@@ -30,10 +30,10 @@ const JPGCompress15kb = ({ children }: JPGCompress15kbProps) => {
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
     // Specifically for 15KB
-    const pageTitle = "Compress JPG to 15KB Online Free - Fast Image Optimizer";
-    const metaDescription = "Specifically optimize and compress JPG images to under 15KB while maintaining the best possible quality. Perfect for restricted uploads and web forms.";
-    const h1Title = "Compress JPG to 15KB";
-    const subTitle = "Get your images ready for any platform by compressing them specifically to 15KB. Professional results, instantly.";
+    const pageTitle = "Compress JPG to 15KB Online - Free, Precise & Instant";
+    const metaDescription = "Compress JPG to exactly 15KB online for free using Free Image Prompt. Ideal for exam forms, job portals, and government submissions. No signup needed, 100% browser-based compression.";
+    const h1Title = "Compress JPG to 15KB - Hit the Exact Size Every Time";
+    const subTitle = "Uploading a photo to an official portal only to get an error message saying 'file size exceeds limit' is one of the most common digital frustrations people face today. When a platform requires your image to be under 15KB, guessing wastes time.";
 
     const getTargetSizeMB = () => {
         return 15 / 1024; // Target: 15KB
@@ -354,83 +354,208 @@ const JPGCompress15kb = ({ children }: JPGCompress15kbProps) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 space-y-16">
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 15kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                                Compressing your JPEG images to a mere 15kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
-                            </p>
-                            <ol className="space-y-6">
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 15kb Compression:</strong> Opt for the specific 15kb compression option provided on the tool.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
-                                </li>
-                            </ol>
-                        </section>
-
-                        <section className="text-center py-10">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
-                                COMPRESS JPG To 15KB
-                            </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Reduce JPG Size to Specific KB Easily
-                            </p>
-
-                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                    <section className="mt-20 space-y-24">
+                        {/* Use Cases section */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8">Where Is a 15KB Image Size Limit Actually Required?</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <p className="text-muted-foreground leading-relaxed text-sm">
+                                        The 15KB threshold appears across a wide range of official and institutional platforms. Knowing where you'll encounter it helps you plan your submission correctly:
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {[
+                                            "Competitive exam portals (IBPS, SSC, state service boards) capping photos between 10KB and 20KB.",
+                                            "University and college admission forms for passport-size images.",
+                                            "Government employee registration portals and ID card issuance systems.",
+                                            "Online scholarship application systems and municipal utility connection portals."
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex gap-3 text-muted-foreground text-sm">
+                                                <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-6">
-                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
-                                        Free, Fast & Online Tool
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
-                                        <div className="p-1 rounded bg-orange-500">
-                                            <ImageIcon className="h-4 w-4 text-white" />
-                                        </div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                                            Small<span className="text-orange-500">JPG</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
-                                        smalljpg.org
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
-                                    </div>
-                                    <span className="text-3xl font-black text-[#00bcd4]">15 KB</span>
+                                <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 flex items-center justify-center">
+                                    <p className="text-lg font-medium text-center italic text-primary/80 leading-relaxed">
+                                        "Missing this limit by even a few kilobytes causes automatic form rejection — making precision compression essential, not optional."
+                                    </p>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+
+                        {/* How to compress (Steps) */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8 text-center">How to Compress JPG to 15KB - Simple 6-Step Process</h2>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                {[
+                                    { title: "Visit Free Image Prompt", text: "Open directly in your browser. No sign-up or installation is ever required." },
+                                    { title: "Upload Your Image", text: "Select your JPG/JPEG from your device, phone gallery, Google Drive, or Dropbox." },
+                                    { title: "Select 15KB Preset", text: "Select the '15KB' preset from our target size menu for instant configuration." },
+                                    { title: "Fine-Tune Quality", text: "Adjust the quality slider if your image contains facial features or fine text." },
+                                    { title: "Click Compress Now", text: "Our iterative engine processes your image in under 5 seconds, entirely offline." },
+                                    { title: "Preview & Download", text: "Inspect the final result before saving your portal-ready 15KB image." }
+                                ].map((step, i) => (
+                                    <div key={i} className="relative p-7 rounded-[2rem] bg-background border border-border hover:border-primary/50 transition-all group overflow-hidden">
+                                        <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-150 transition-transform">
+                                            <div className="font-black text-6xl text-primary">{i + 1}</div>
+                                        </div>
+                                        <h3 className="font-bold mb-3 text-lg flex items-center gap-2">
+                                            <span className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm font-bold">{i + 1}</span>
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{step.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Features */}
+                        <div className="space-y-12">
+                            <div className="text-center space-y-4">
+                                <h2 className="text-3xl font-bold">What Makes Free Image Prompt Better Than Other Compressors</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">High-performance compression built for strict government requirements.</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                                {[
+                                    { title: "Browser-Only Processing", text: "Zero privacy risk. Your image never leaves your device, keeping sensitive IDs and photos 100% safe.", icon: <Upload className="h-6 w-6" /> },
+                                    { title: "Accurate 15KB Targeting", text: "Our iterative search algorithm homes in on exactly 15KB — no more guessing or rejection.", icon: <Layers className="h-6 w-6" /> },
+                                    { title: "No Limits, No Login", text: "Unlimited free compressions. Whether you're one applicant or processing a batch, usage is unrestricted.", icon: <CheckCircle2 className="h-6 w-6" /> },
+                                    { title: "Mobile-First Experience", text: "Compress directly from Android or iOS camera rolls without needing a desktop or app installation.", icon: <ImageIcon className="h-6 w-6" /> },
+                                    { title: "Advanced Input Support", text: "Upload PNG screenshots or WebP images and get properly optimized 15KB JPEG outputs.", icon: <FileJson className="h-6 w-6" /> },
+                                    { title: "Instant Verification", text: "A real-time quality preview lets you verify visual clarity before submitting your final document.", icon: <List className="h-6 w-6" /> }
+                                ].map((feature, i) => (
+                                    <div key={i} className="group p-8 rounded-[2rem] bg-card border border-border hover:bg-primary/5 transition-all">
+                                        <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:rotate-12 transition-transform">
+                                            {feature.icon}
+                                        </div>
+                                        <h3 className="font-bold text-lg mb-3">{feature.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed italic">"{feature.text}"</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Pro Tips */}
+                        <div className="bg-primary/5 p-10 md:p-14 rounded-[3rem] border border-primary/10 relative overflow-hidden">
+                            <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 blur-[100px] rounded-full" />
+                            <h2 className="text-3xl font-bold mb-10 text-center">Pro Tips to Get the Best Quality at 15KB</h2>
+                            <div className="grid md:grid-cols-2 gap-10">
+                                <div className="space-y-8">
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">Pre-Compression Resizing</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Resize your image to the portal's required pixel dimensions (e.g., 200x230px) before compressing. This avoids heavy scaling and results in sharper facial features.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">Signature Scanning</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                For signatures, always use a plain white background. This reduces color complexity, allowing the compressor to focus on making the pen lines crisp.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-8">
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">Check Original Dimensions</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                At 15KB, avoid starting with ultra-high resolution images (like 10MB camera raw files). Scaling down a moderately sized image preserves more texture.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">4</div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">Text Clarity</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                If your image contains text (like a digital ID), use our settings slider to prioritize sharpness over file size to ensure OCR systems can read it.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Comparison Table */}
+                        <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-2xl">
+                            <div className="bg-gradient-to-r from-primary to-accent p-8 text-center text-primary-foreground">
+                                <h2 className="text-2xl font-bold">Free Image Prompt vs Other JPEG Compressors — Why We're Better</h2>
+                            </div>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="bg-muted/50 border-b border-border">
+                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Feature</th>
+                                            <th className="p-6 font-bold text-sm uppercase tracking-wider text-primary">Free Image Prompt</th>
+                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Other Tools</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-border">
+                                        {[
+                                            { f: "Precise 15KB Target", a: "✅ Guaranteed", b: "❌ Approximate only" },
+                                            { f: "100% Browser-Side", a: "✅ Yes (Privacy Focused)", b: "❌ Server upload required" },
+                                            { f: "Iterative Algorithm", a: "✅ Binary Search Engine", b: "❌ Single-pass compression" },
+                                            { f: "Commercial Use", a: "✅ Unlimited & Free", b: "⚠️ Daily limits apply" },
+                                            { f: "No Sign-up Required", a: "✅ Yes", b: "⚠️ Varies" },
+                                            { f: "Custom Quality Review", a: "✅ Live Preview", b: "❌ No preview" }
+                                        ].map((row, i) => (
+                                            <tr key={i} className="hover:bg-accent/5 transition-all group">
+                                                <td className="p-6 font-medium text-sm">{row.f}</td>
+                                                <td className="p-6 text-primary font-bold text-sm group-hover:scale-105 transition-transform">{row.a}</td>
+                                                <td className="p-6 text-muted-foreground text-sm italic">{row.b}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        {/* Different Sizes Link Grid */}
+                        <div className="bg-accent/5 p-10 md:p-14 rounded-[3rem] border border-border text-center">
+                            <h2 className="text-3xl font-bold mb-4">Need a Different File Size? Compress JPG to Any KB</h2>
+                            <p className="text-muted-foreground mb-12 max-w-2xl mx-auto italic">
+                                Free Image Prompt handles precise targets for any portal requirement. From signature uploads to high-res documents.
+                            </p>
+                            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                                {[
+                                    { s: "5KB", d: "Signatures", p: "/tools/compress-jpg-to-5kb" },
+                                    { s: "10KB", d: "Portals", p: "/tools/compress-jpg-to-10kb" },
+                                    { s: "20KB", d: "Admissions", p: "/tools/compress-jpg-to-20kb" },
+                                    { s: "50KB", d: "Job Forms", p: "/tools/compress-jpg-to-50kb" },
+                                    { s: "100KB", d: "Passports", p: "/tools/compress-jpg-to-100kb" },
+                                    { s: "200KB", d: "Resumes", p: "/tools/compress-jpg-to-200kb" }
+                                ].map((size, i) => (
+                                    <a key={i} href={size.p} className="flex flex-col items-center p-6 rounded-3xl bg-background border border-border hover:border-primary hover:shadow-xl transition-all group">
+                                        <span className="font-black text-2xl text-primary group-hover:scale-110 transition-transform">{size.s}</span>
+                                        <span className="text-[10px] font-bold text-muted-foreground mt-2 uppercase tracking-widest">{size.d}</span>
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Conclusion */}
+                        <div className="text-center space-y-8 max-w-4xl mx-auto py-12">
+                            <div className="h-1.5 w-24 bg-primary/20 rounded-full mx-auto" />
+                            <h2 className="text-3xl font-bold tracking-tight">THE TRUSTED CHOICE FOR 15KB COMPRESSION</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed italic">
+                                "Generic compressors often fail to hit the mark, leading to rejected forms and wasted time. 
+                                Free Image Prompt was engineered to solve the 15KB problem with pinpoint accuracy, absolute privacy, and professional-grade quality."
+                            </p>
+                            <div className="flex justify-center gap-4">
+                                <div className="px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-bold uppercase tracking-widest">Safety First</div>
+                                <div className="px-6 py-2 rounded-full border border-accent/20 bg-accent/5 text-accent text-sm font-bold uppercase tracking-widest">Precision Built</div>
+                            </div>
+                        </div>
+                    </section>
 
                     <OtherCompressionSizes />
 

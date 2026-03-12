@@ -5,10 +5,39 @@ import Footer from "@/components/Footer";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 
 export default function BlogPost() {
     const { slug } = useParams();
-    const post = blogPosts.find(p => p.id === slug);
+    const staticPost = blogPosts.find(p => p.id === slug);
+
+    const { data: dynamicPost, isLoading } = useQuery({
+        queryKey: ['blog-post', slug],
+        queryFn: async () => {
+            if (staticPost) return null;
+            const { data, error } = await (supabase
+                .from('cms_posts' as any)
+                .select('*')
+                .eq('slug', slug)
+                .single() as any);
+            if (error) return null;
+            const postData = data as any;
+            return {
+                title: postData.title,
+                description: postData.excerpt,
+                category: "Blog",
+                date: new Date(postData.created_at).toLocaleDateString(),
+                author: "Admin",
+                content: postData.content
+            };
+        },
+        enabled: !!slug && !staticPost
+    });
+
+    const post = staticPost || dynamicPost;
+
+    if (isLoading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
 
     if (!post) {
         return (

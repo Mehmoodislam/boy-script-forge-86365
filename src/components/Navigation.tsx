@@ -1,12 +1,18 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon, Layers } from "lucide-react";
+import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon, Layers, ArrowDown } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
+import { supabase } from "@/integrations/supabase/client";
+import { useQuery } from "@tanstack/react-query";
 
 const mediaTools = [
   { to: "/tools/youtube-downloader", label: "YouTube Downloader", icon: Youtube, desc: "Download videos easily" },
   { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch image optimization" },
+  { to: "/tools/increase-jpg-size", label: "Increase JPG Size", icon: Layers, desc: "Specific KB enlargement" },
+  { to: "/tools/reduce-jpg-size", label: "Reduce JPG Size", icon: ArrowDown, desc: "Fast weight reduction" },
+  { to: "/tools/compress-jpg-to-5kb", label: "JPG to 5KB", icon: ImageDown, desc: "Ultra small optimization" },
+  { to: "/tools/compress-jpg-to-50kb", label: "JPG to 50KB", icon: ImageDown, desc: "Perfect for forms" },
 ];
 
 const studentTools = [
@@ -28,6 +34,20 @@ const Navigation = () => {
     { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];
+
+  const { data: dynamicLinks } = useQuery({
+    queryKey: ['navigation-menu'],
+    queryFn: async () => {
+      const { data, error } = await (supabase
+        .from('cms_navigation' as any)
+        .select('label, path') as any)
+        .order('order_index', { ascending: true });
+      if (error) return [];
+      return (data as any[]).map(item => ({ to: item.path, label: item.label }));
+    }
+  });
+
+  const allLinks = [...links, ...(dynamicLinks || [])];
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -57,7 +77,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map((link) => (
+            {allLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -152,7 +172,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-1">
-            {links.map((link) => (
+            {allLinks.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}

@@ -390,7 +390,7 @@ const JPGCompress100kb = ({ children }: JPGCompress100kbProps) => {
                             <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
+                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
                                     </div>
                                     <span className="text-3xl font-black text-orange-500">4 MB</span>
                                 </div>
@@ -423,7 +423,7 @@ const JPGCompress100kb = ({ children }: JPGCompress100kbProps) => {
 
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/src/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
+                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
                                     </div>
                                     <span className="text-3xl font-black text-[#00bcd4]">100 KB</span>
                                 </div>

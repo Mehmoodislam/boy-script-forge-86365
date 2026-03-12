@@ -68,6 +68,47 @@ const Footer = () => {
           </div>
 
           <div>
+            <h3 className="font-semibold mb-4">JPG Compressor</h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link to="/tools/increase-jpg-size" className="text-muted-foreground hover:text-primary transition-colors">
+                  Increase JPG Size
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/reduce-jpg-size" className="text-muted-foreground hover:text-primary transition-colors">
+                  Reduce JPG Size
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-5kb" className="text-muted-foreground hover:text-primary transition-colors">
+                  JPG to 5KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-10kb" className="text-muted-foreground hover:text-primary transition-colors">
+                  JPG to 10KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-20kb" className="text-muted-foreground hover:text-primary transition-colors">
+                  JPG to 20KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-50kb" className="text-muted-foreground hover:text-primary transition-colors">
+                  JPG to 50KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-100kb" className="text-muted-foreground hover:text-primary transition-colors">
+                  JPG to 100KB
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="font-semibold mb-4">Legal</h3>
             <ul className="space-y-2">
               <li>
