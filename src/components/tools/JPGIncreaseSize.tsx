@@ -92,7 +92,7 @@ const JPGIncreaseSize = () => {
                     }
                 }
 
-                const resizedBlob = new Blob([finalBytes], { type: file.type });
+                const resizedBlob = new Blob([finalBytes as any], { type: file.type });
                 const previewUrl = URL.createObjectURL(resizedBlob);
                 const resizedFile = new File([resizedBlob], file.name, { type: file.type });
 

@@ -32,10 +32,10 @@ export default function NavManager() {
   const { data: menuItems, isLoading } = useQuery({
     queryKey: ['admin-navigation'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_navigation')
+      const { data, error } = await (supabase
+        .from('cms_navigation' as any)
         .select('*')
-        .order('order_index', { ascending: true });
+        .order('order_index', { ascending: true }) as any);
       if (error) throw error;
       return data;
     }
@@ -43,10 +43,10 @@ export default function NavManager() {
 
   const upsertMutation = useMutation({
     mutationFn: async (formData: any) => {
-      const { data, error } = await supabase
-        .from('cms_navigation')
+      const { data, error } = await (supabase
+        .from('cms_navigation' as any)
         .upsert(formData)
-        .select();
+        .select() as any);
       if (error) throw error;
       return data;
     },
@@ -63,7 +63,7 @@ export default function NavManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_navigation').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_navigation' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {
@@ -137,7 +137,7 @@ export default function NavManager() {
                 <TableRow><TableCell colSpan={4} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : menuItems?.length === 0 ? (
                 <TableRow><TableCell colSpan={4} className="text-center py-8 text-muted-foreground">No menu items found.</TableCell></TableRow>
-              ) : menuItems?.map((item) => (
+              ) : menuItems?.map((item: any) => (
                 <TableRow key={item.id}>
                   <TableCell>{item.order_index}</TableCell>
                   <TableCell className="font-medium">{item.label}</TableCell>

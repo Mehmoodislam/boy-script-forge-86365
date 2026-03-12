@@ -9,9 +9,9 @@ export default function AdminDashboard() {
     queryKey: ['admin-stats'],
     queryFn: async () => {
       const [pages, posts, nav] = await Promise.all([
-        supabase.from('cms_pages').select('id', { count: 'exact', head: true }),
-        supabase.from('cms_posts').select('id', { count: 'exact', head: true }),
-        supabase.from('cms_navigation').select('id', { count: 'exact', head: true }),
+        supabase.from('cms_pages' as any).select('id', { count: 'exact', head: true }),
+        supabase.from('cms_posts' as any).select('id', { count: 'exact', head: true }),
+        supabase.from('cms_navigation' as any).select('id', { count: 'exact', head: true }),
       ]);
       return {
         pages: pages.count || 0,
