@@ -34,10 +34,10 @@ export default function PageManager() {
   const { data: pages, isLoading } = useQuery({
     queryKey: ['admin-pages'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_pages')
+      const { data, error } = await (supabase
+        .from('cms_pages' as any)
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }) as any);
       if (error) throw error;
       return data;
     }
