@@ -63,7 +63,7 @@ export default function NavManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_navigation').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_navigation' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {

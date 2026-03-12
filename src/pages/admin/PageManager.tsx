@@ -65,7 +65,7 @@ export default function PageManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_pages').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_pages' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {

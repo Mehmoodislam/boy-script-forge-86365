@@ -65,7 +65,7 @@ export default function PostManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_posts').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_posts' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {
