@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Youtube, ImageDown, FileText, QrCode, Type, Calculator, Brain, Image as ImageIcon, Layers, ArrowDown } from "lucide-react";
+import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as ImageIcon, Layers, ArrowDown, RefreshCw } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
@@ -7,7 +7,6 @@ import { supabase } from "@/integrations/supabase/client";
 import { useQuery } from "@tanstack/react-query";
 
 const mediaTools = [
-  { to: "/tools/youtube-downloader", label: "YouTube Downloader", icon: Youtube, desc: "Download videos easily" },
   { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch image optimization" },
   { to: "/tools/increase-jpg-size", label: "Increase JPG Size", icon: Layers, desc: "Specific KB enlargement" },
   { to: "/tools/reduce-jpg-size", label: "Reduce JPG Size", icon: ArrowDown, desc: "Fast weight reduction" },
@@ -15,9 +14,12 @@ const mediaTools = [
   { to: "/tools/compress-jpg-to-50kb", label: "JPG to 50KB", icon: ImageDown, desc: "Perfect for forms" },
 ];
 
-const studentTools = [
-  { to: "/tools/grade-calculator", label: "Grade Calculator", icon: Calculator, desc: "Calculate GPA & weighted grades" },
-  { to: "/tools/mock-interview", label: "Mock Interview", icon: Brain, desc: "AI-powered interview practice" },
+const converters = [
+  { to: "/tools/webp-to-jpg", label: "WebP to JPG", icon: RefreshCw, desc: "Convert WebP images to JPEG" },
+  { to: "/tools/webp-to-png", label: "WebP to PNG", icon: RefreshCw, desc: "Convert WebP images to PNG" },
+  { to: "/tools/png-to-webp", label: "PNG to WebP", icon: RefreshCw, desc: "Convert PNG images to WebP" },
+  { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Convert PNG images to JPEG" },
+  { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Convert JPEG to WebP format" },
 ];
 
 const Navigation = () => {
@@ -108,7 +110,7 @@ const Navigation = () => {
               {toolsOpen && (
                 <div className="absolute top-full right-0 mt-2 w-[600px] rounded-xl border border-border bg-popover shadow-lg p-4 z-[100] animate-in fade-in-0 zoom-in-95 duration-200 grid grid-cols-2 gap-4">
                   <div>
-                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Media Tools</h3>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Tools</h3>
                     <div className="space-y-1">
                       {mediaTools.map((tool) => (
                         <Link
@@ -128,11 +130,10 @@ const Navigation = () => {
                       ))}
                     </div>
                   </div>
-
                   <div>
-                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Student Tools</h3>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Converters</h3>
                     <div className="space-y-1">
-                      {studentTools.map((tool) => (
+                      {converters.map((tool) => (
                         <Link
                           key={tool.to}
                           to={tool.to}
@@ -198,7 +199,7 @@ const Navigation = () => {
             {mobileToolsOpen && (
               <div className="pl-4 space-y-4 mt-2">
                 <div>
-                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Media Tools</h3>
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Tools</h3>
                   <div className="space-y-1">
                     {mediaTools.map((tool) => (
                       <Link
@@ -214,9 +215,9 @@ const Navigation = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Student Tools</h3>
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Converters</h3>
                   <div className="space-y-1">
-                    {studentTools.map((tool) => (
+                    {converters.map((tool) => (
                       <Link
                         key={tool.to}
                         to={tool.to}

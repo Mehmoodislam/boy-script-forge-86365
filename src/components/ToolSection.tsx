@@ -1,6 +1,22 @@
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { ArrowRight, Zap, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Zap, Shield, Sparkles, ImageDown, Image as ImageIcon, Layers, ArrowDown, RefreshCw } from "lucide-react";
+
+export const mediaTools = [
+  { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch image optimization" },
+  { to: "/tools/increase-jpg-size", label: "Increase JPG Size", icon: Layers, desc: "Specific KB enlargement" },
+  { to: "/tools/reduce-jpg-size", label: "Reduce JPG Size", icon: ArrowDown, desc: "Fast weight reduction" },
+  { to: "/tools/compress-jpg-to-5kb", label: "JPG to 5KB", icon: ImageDown, desc: "Ultra small optimization" },
+  { to: "/tools/compress-jpg-to-50kb", label: "JPG to 50KB", icon: ImageDown, desc: "Perfect for forms" },
+];
+
+export const converters = [
+  { to: "/tools/webp-to-jpg", label: "WebP to JPG", icon: RefreshCw, desc: "Convert WebP images to JPEG" },
+  { to: "/tools/webp-to-png", label: "WebP to PNG", icon: RefreshCw, desc: "Convert WebP images to PNG" },
+  { to: "/tools/png-to-web-p", label: "PNG to WebP", icon: RefreshCw, desc: "Convert PNG images to WebP" },
+  { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Convert PNG images to JPEG" },
+  { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Convert JPEG to WebP format" },
+];
 
 const ToolSection = () => {
     return (
@@ -94,6 +110,30 @@ const ToolSection = () => {
                             </Link>
                         </div>
                     </div>
+                </div>
+
+                {/* NEW TOOLS GRID */}
+                <div className="max-w-6xl mx-auto mt-32 relative z-10" id="tools">
+                   <div className="text-center mb-12">
+                       <h3 className="text-3xl font-black mb-4">All Our Free Tools</h3>
+                       <p className="text-muted-foreground max-w-2xl mx-auto">Explore our collection of 100% free online tools designed to make your daily tasks easier and faster.</p>
+                   </div>
+                   
+                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {[...mediaTools, ...converters].map((tool, idx) => (
+                          <Link key={idx} to={tool.to} className="group p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/80 transition-all hover:-translate-y-1 hover:shadow-xl">
+                              <div className="flex items-center gap-4 mb-4">
+                                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                                      <tool.icon className="h-6 w-6" />
+                                  </div>
+                                  <div>
+                                      <h4 className="font-bold text-lg">{tool.label}</h4>
+                                  </div>
+                              </div>
+                              <p className="text-sm text-muted-foreground">{tool.desc}</p>
+                          </Link>
+                      ))}
+                   </div>
                 </div>
             </div>
         </section>

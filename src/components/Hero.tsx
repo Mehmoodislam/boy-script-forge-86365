@@ -16,33 +16,33 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">AI-Powered Boy Image Prompts</span>
+            <span className="text-sm font-medium text-primary">100% Free Online Tools</span>
           </div>
           <h1 className="font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl break-words text-center">
             <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-              Stylish Handsome Boy
+              Your Ultimate Free
             </span>
             <br className="hidden sm:block" />
             <span className="text-foreground">
-              Pic Professional Prompts for AI Portraits
+              Image & Utility Tools
             </span>
           </h1>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-5xl mx-auto leading-relaxed break-words text-center">
-            Create <b>stylish handsome boy pic</b> using our professionally handcrafted <b>AI boy image prompts.</b> FreeImagePrompt is your ultimate destination for generating <b>realistic,</b> <b>trendy, and professional boy portraits </b>  designed for <b>Midjourney,</b> <b>DALL·E,</b> Stable Diffusion, and <b>Gemini AI.</b>
+            Easily <b>compress JPGs, resize images, calculate grades, and download videos</b> with our suite of free online tools. FreeImagePrompt is your ultimate destination for completely free, fast, and secure web tools.
           </p>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words text-center">
-            With just one click, copy a prompt and generate <b>high-quality stylish boy</b> pics perfect for <b>profile pictures, social media, and creative projects.</b>
+            No limitations, no watermarks, completely free to use directly inside your browser.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/gallery">
+            <a href="#tools">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group">
-                Explore Gallery
+                Explore All Tools
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-            </Link>
+            </a>
             <Button size="lg" variant="outline" className="border-primary/30 hover:border-primary">
               Learn How It Works
             </Button>
@@ -51,10 +51,10 @@ const Hero = () => {
           <div className=" pt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-2xl mx-auto text-center ">
             <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                200+
+                10+
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">
-                Premium Prompts
+                Free Tools
               </div>
             </div>
 
@@ -69,10 +69,10 @@ const Hero = () => {
 
             <div className="space-y-1">
               <div className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                1-Click
+                Fast & Secure
               </div>
               <div className="text-xs sm:text-sm text-muted-foreground">
-                Copy & Paste
+                Local Processing
               </div>
             </div>
           </div>

@@ -30,10 +30,57 @@ const JPGCompress40kb = ({ children }: JPGCompress40kbProps) => {
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
     // Specifically for 40KB
-    const pageTitle = "Compress JPG to 40KB Online Free - Fast Image Optimizer";
-    const metaDescription = "Specifically optimize and compress JPG images to under 40KB while maintaining the best possible quality. Perfect for restricted uploads and web forms.";
-    const h1Title = "Compress JPG to 40KB";
-    const subTitle = "Get your images ready for any platform by compressing them specifically to 40KB. Professional results, instantly.";
+    const pageTitle = "Compress JPG to 40KB Online Free (No Quality Loss)";
+    const metaDescription = "Compress JPG to 40KB online free. Reduce image size instantly without losing quality. No signup needed. Fast, secure & easy to use.";
+    const h1Title = "Compress JPG to 40KB Online Free (No Quality Loss)";
+    const subTitle = "Are you struggling with an image rejected, file too large, or constant upload error while submitting forms? You’re not alone. Many users need to compress JPG to 40KB for job portals, KYC verification, or government uploads-but most tools either ruin quality or are too complicated.";
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How to compress JPG to 40KB online free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Upload your image to an online compressor, select 40KB target size, and download the optimized file instantly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I compress JPEG to 40KB without losing quality?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, advanced tools use smart compression to maintain image quality while reducing size."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the best JPG compressor to 40KB?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The best tool is one that is free, secure, fast, and maintains quality without requiring signup."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I compress PDF to 40KB?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, use a PDF compression tool or convert PDF to JPG and then compress it."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why do government portals reject images?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Because the file size or format does not meet the required criteria, such as 40KB JPG limit."
+                }
+            }
+        ]
+    };
 
     const getTargetSizeMB = () => {
         return 40 / 1024; // Target: 40KB
@@ -184,7 +231,7 @@ const JPGCompress40kb = ({ children }: JPGCompress40kbProps) => {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
-            <SEOHead title={pageTitle} description={metaDescription} />
+            <SEOHead title={pageTitle} description={metaDescription} schema={faqSchema} />
             <Navigation />
 
             <main className="pt-24 pb-16">
@@ -355,79 +402,245 @@ const JPGCompress40kb = ({ children }: JPGCompress40kbProps) => {
 
                     <div className="mt-20 space-y-16">
                         <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 40kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                                Compressing your JPEG images to a mere 40kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">The good news?</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed">
+                                You can now compress jpg to 40kb online free in seconds-without losing quality. Whether you need a photo convert into 40 kb jpg online or reduce a file size quickly, this guide will walk you through everything.
                             </p>
-                            <ol className="space-y-6">
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 40kb Compression:</strong> Opt for the specific 40kb compression option provided on the tool.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
-                                </li>
-                            </ol>
                         </section>
 
-                        <section className="text-center py-10">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
-                                COMPRESS JPG To 40KB
-                            </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Reduce JPG Size to Specific KB Easily
+                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">What is Compress JPG to 40KB?</h2>
+                            <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
+                                Compress JPG to 40KB means reducing the file size of a JPG (or JPEG format) image to exactly or under 40 kilobytes while maintaining acceptable visual quality.
                             </p>
+                            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                                JPG (or JPEG) is a widely used image format designed for efficient compression. Learn more about it <a href="https://en.wikipedia.org/wiki/JPEG" target="_blank" rel="noreferrer" className="text-primary hover:underline">here</a>.
+                            </p>
+                            <h3 className="text-xl font-bold mb-4">This process involves:</h3>
+                            <ul className="list-disc list-inside text-muted-foreground space-y-2 mb-6">
+                                <li>Image compression techniques</li>
+                                <li>Resolution adjustment</li>
+                                <li>Smart quality optimization</li>
+                            </ul>
+                            <p className="text-muted-foreground text-lg leading-relaxed">
+                                It’s commonly done using an online image compressor or file compression tool.
+                            </p>
+                        </section>
 
-                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">Why Do You Need to Compress JPG to 40KB?</h2>
+                            <h3 className="text-xl font-bold mb-4">Real-Life Use Cases</h3>
+                            <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
+                                Here’s where most people face issues:
+                            </p>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <h4 className="text-lg font-bold">1. Government Forms</h4>
+                                    <p className="text-muted-foreground">Many government portals (like <a href="https://www.usa.gov" target="_blank" rel="noreferrer" className="text-primary hover:underline">usa.gov</a>) require strict file size limits. Uploading a larger file results in:</p>
+                                    <ul className="text-muted-foreground">
+                                        <li>❌ Image rejected</li>
+                                        <li>❌ Upload error</li>
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-6">
-                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
-                                        Free, Fast & Online Tool
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
-                                        <div className="p-1 rounded bg-orange-500">
-                                            <ImageIcon className="h-4 w-4 text-white" />
-                                        </div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                                            Small<span className="text-orange-500">JPG</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
-                                        smalljpg.org
-                                    </div>
+                                <div className="space-y-4">
+                                    <h4 className="text-lg font-bold">2. Job Applications</h4>
+                                    <p className="text-muted-foreground">Job portals often ask for:</p>
+                                    <ul className="list-disc list-inside text-muted-foreground">
+                                        <li>Passport-size photo under 40KB</li>
+                                        <li>Signature image within size limits</li>
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
-                                    </div>
-                                    <span className="text-3xl font-black text-[#00bcd4]">40 KB</span>
+                                <div className="space-y-4">
+                                    <h4 className="text-lg font-bold">3. KYC Verification</h4>
+                                    <p className="text-muted-foreground">Banks and online services require:</p>
+                                    <ul className="list-disc list-inside text-muted-foreground">
+                                        <li>ID proof images</li>
+                                        <li>Signature uploads</li>
+                                    </ul>
+                                </div>
+                                <div className="space-y-4">
+                                    <h4 className="text-lg font-bold">4. Exam & Admission Forms</h4>
+                                    <p className="text-muted-foreground">Students frequently need:</p>
+                                    <ul className="list-disc list-inside text-muted-foreground">
+                                        <li>Photo convert into 20 KB to 40 KB JPG</li>
+                                        <li>Resize image to 40 KB online</li>
+                                    </ul>
                                 </div>
                             </div>
+                        </section>
+
+                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">How to Compress JPG to 40KB Online Free</h2>
+                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">Follow this simple step-by-step guide:</p>
+                            <ol className="space-y-6">
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">1</span>
+                                    <div>
+                                        <strong className="text-lg">Step 1: Upload Your Image</strong>
+                                        <p className="text-muted-foreground">Choose your JPG/JPEG file from your device.</p>
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">2</span>
+                                    <div>
+                                        <strong className="text-lg">Step 2: Select Target Size</strong>
+                                        <p className="text-muted-foreground">Set the file size to 40KB.</p>
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">3</span>
+                                    <div>
+                                        <strong className="text-lg">Step 3: Automatic Optimization</strong>
+                                        <p className="text-muted-foreground">The tool will: Reduce image size, Adjust resolution, Optimize compression.</p>
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">4</span>
+                                    <div>
+                                        <strong className="text-lg">Step 4: Download Image</strong>
+                                        <p className="text-muted-foreground">Download your compressed image instantly.</p>
+                                    </div>
+                                </li>
+                            </ol>
+                            <p className="mt-8 text-lg font-medium text-primary">👉 Try now: Upload your image and get instant results (No signup required)</p>
+                        </section>
+
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Key Features of JPG Compressor to 40KB</h2>
+                                <ul className="space-y-3">
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Compress jpeg to 40kb online free</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> No login required</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Secure & private processing</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Fast compression (seconds)</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Works on mobile & desktop</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Supports JPG, JPEG & PDF files</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Maintains image clarity</li>
+                                    <li className="flex gap-3 text-muted-foreground"><CheckCircle2 className="h-5 w-5 text-green-500" /> Signature compressor to 40kb jpg supported</li>
+                                </ul>
+                            </section>
+
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Benefits of Using an Online JPG Compressor</h2>
+                                <div className="space-y-4">
+                                    <div><h4 className="font-bold">1. Saves Time</h4><p className="text-muted-foreground text-sm">No need for complex software.</p></div>
+                                    <div><h4 className="font-bold">2. Keeps Image Quality</h4><p className="text-muted-foreground text-sm">Advanced tools ensure minimal quality loss.</p></div>
+                                    <div><h4 className="font-bold">3. Free to Use</h4><p className="text-muted-foreground text-sm">Most tools are completely free.</p></div>
+                                    <div><h4 className="font-bold">4. Universal Compatibility</h4><p className="text-muted-foreground text-sm">Works with Government portals, Job sites, KYC platforms</p></div>
+                                    <div><h4 className="font-bold">5. Multi-Format Support</h4><p className="text-muted-foreground text-sm">You can also: Compress PDF to 40KB, Convert PDF to JPG, Use pdf to jpg compressor to 40kb</p></div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Pro Tips for Best Results</h2>
+                                <ul className="space-y-3">
+                                    <li className="flex gap-3 text-muted-foreground">📌 Use high-resolution original images for better compression results</li>
+                                    <li className="flex gap-3 text-muted-foreground">📌 Avoid repeated compression (quality loss increases)</li>
+                                    <li className="flex gap-3 text-muted-foreground">📌 Keep dimensions balanced (not too small)</li>
+                                    <li className="flex gap-3 text-muted-foreground">📌 Use tools that support compress jpeg to 40kb without losing quality</li>
+                                    <li className="flex gap-3 text-muted-foreground">📌 For signatures, use a white background and dark ink</li>
+                                </ul>
+                            </section>
+
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Common Mistakes to Avoid</h2>
+                                <ul className="space-y-3">
+                                    <li className="flex gap-3 text-muted-foreground">❌ Uploading already compressed images</li>
+                                    <li className="flex gap-3 text-muted-foreground">❌ Using random tools that reduce quality drastically</li>
+                                    <li className="flex gap-3 text-muted-foreground">❌ Ignoring resolution (only reducing size isn’t enough)</li>
+                                    <li className="flex gap-3 text-muted-foreground">❌ Not checking final file size before upload</li>
+                                    <li className="flex gap-3 text-muted-foreground">❌ Using wrong format (PNG instead of JPG)</li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border overflow-x-auto">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6">Comparison: Your Tool vs Other Tools</h2>
+                            <table className="w-full text-left border-collapse">
+                                <thead className="bg-accent/10">
+                                    <tr>
+                                        <th className="p-4 font-bold border-b">Feature</th>
+                                        <th className="p-4 font-bold border-b text-center">Your Tool</th>
+                                        <th className="p-4 font-bold border-b text-center">Other Tools</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="divide-y">
+                                    <tr><td className="p-4 text-muted-foreground">Free to use</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">❌/Limited</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">No login required</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">❌</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">Exact 40KB compression</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">❌</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">Quality retention</td><td className="p-4 text-center">✅ High</td><td className="p-4 text-center">⚠️ Medium</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">Fast processing</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">⚠️ Slow</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">Multi-format support</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">❌</td></tr>
+                                    <tr><td className="p-4 text-muted-foreground">Mobile-friendly</td><td className="p-4 text-center">✅</td><td className="p-4 text-center">⚠️</td></tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <div className="grid md:grid-cols-2 gap-8">
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Related Tools You May Need</h2>
+                                <p className="text-muted-foreground mb-4">These tools help with image resizing, file conversion, and document optimization:</p>
+                                <ul className="space-y-3">
+                                    <li>🔗 Image Resizer Tool</li>
+                                    <li>🔗 PDF to JPG Converter</li>
+                                    <li>🔗 Signature Resize Tool</li>
+                                </ul>
+                            </section>
+
+                            <section className="bg-card/50 p-8 rounded-[2.5rem] border border-border">
+                                <h2 className="text-2xl font-bold mb-6">Related Searches</h2>
+                                <div className="flex flex-wrap gap-2">
+                                    {["compress image to 40kb jpg", "compress size of jpg to 40kb", "online jpg compressor to 40kb", "photo convert into 30 kb to 40 kb jpg", "40 kb photo size in width and height", "resize image to 40 kb online", "jpeg compressor to 40kb jpg", "pdf to jpg 40 kb"].map(tag => (
+                                        <span key={tag} className="px-3 py-1 bg-accent/10 text-muted-foreground rounded-full text-sm">{tag}</span>
+                                    ))}
+                                </div>
+                            </section>
+                        </div>
+
+                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">People Also Ask (FAQs)</h2>
+                            <div className="space-y-6">
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">1. How to compress JPG to 40KB online free?</h3>
+                                    <p className="text-muted-foreground">Use an online image compressor tool. Upload your image, set 40KB as the target, and download the compressed file instantly.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">2. Can I compress JPEG to 40KB without losing quality?</h3>
+                                    <p className="text-muted-foreground">Yes, modern tools use smart compression algorithms to maintain visual quality while reducing file size.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">3. What dimensions should a 40KB photo have?</h3>
+                                    <p className="text-muted-foreground">There is no fixed size. It depends on compression level, but typically: Passport photo: 200x200 to 600x600 px</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">4. Can I convert PDF to JPG and compress to 40KB?</h3>
+                                    <p className="text-muted-foreground">Yes, use a PDF to JPG converter, then compress the image using a jpg compressor to 40kb.</p>
+                                </div>
+                                <div className="space-y-2">
+                                    <h3 className="text-xl font-bold">5. Why is my image still too large after compression?</h3>
+                                    <p className="text-muted-foreground">Possible reasons: High resolution, Poor compression tool, Incorrect format</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-primary/5 p-8 md:p-12 rounded-[2.5rem] border border-primary/20 text-center">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-4">Final Thoughts: Compress JPG to 40KB Instantly</h2>
+                            <p className="text-muted-foreground text-lg mb-4 max-w-3xl mx-auto leading-relaxed">
+                                If you’re tired of upload errors, image rejected messages, or struggling with file limits, the solution is simple: compress JPG to 40KB using a reliable online tool.
+                            </p>
+                            <p className="text-muted-foreground text-lg mb-8 max-w-3xl mx-auto leading-relaxed">
+                                Whether you’re submitting a job application, completing KYC verification, or uploading documents to government portals, having the right image size is crucial.
+                            </p>
+                            <div className="flex flex-col items-center gap-3">
+                                <p className="font-bold">🚀 Try it now - no signup needed</p>
+                                <p className="font-bold">📤 Upload your image and get instant results</p>
+                                <p className="font-bold">🔒 100% secure & private</p>
+                            </div>
+                            <p className="text-xl font-bold text-primary mt-8">
+                                Make your uploads smooth, fast, and error-free today!
+                            </p>
                         </section>
                     </div>
 

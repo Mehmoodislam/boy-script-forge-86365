@@ -14,9 +14,11 @@ import Benefits from "./components/Benefits";
 import FAQs from "./components/FAQs";
 import Gallery from "./app/gallery/GalleryContent";
 import Packs from "./app/packs/PacksContent";
-import YouTubeDownloader from "./app/tools/youtube-downloader/YouTubeContent";
-import MockInterview from "./app/tools/mock-interview/MockContent";
-import GradeCalculator from "./app/tools/grade-calculator/GradeContent";
+import WebpToJpgPage from "./pages/WebpToJpgPage";
+import WebpToPngPage from "./pages/WebpToPngPage";
+import PngToWebpPage from "./pages/PngToWebpPage";
+import PngToJpgPage from "./pages/PngToJpgPage";
+import JpgToWebpPage from "./pages/JpgToWebpPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Blog from "./pages/Blog";
@@ -86,9 +88,11 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/gallery" element={<Gallery />} />
                             <Route path="/packs" element={<Packs />} />
-                            <Route path="/tools/youtube-downloader" element={<YouTubeDownloader />} />
-                            <Route path="/tools/mock-interview" element={<MockInterview />} />
-                            <Route path="/tools/grade-calculator" element={<GradeCalculator />} />
+                            <Route path="/tools/webp-to-jpg" element={<WebpToJpgPage />} />
+                            <Route path="/tools/webp-to-png" element={<WebpToPngPage />} />
+                            <Route path="/tools/png-to-web-p" element={<PngToWebpPage />} />
+                            <Route path="/tools/png-to-jpg" element={<PngToJpgPage />} />
+                            <Route path="/tools/jpg-to-webp" element={<JpgToWebpPage />} />
                             <Route path="/tools/jpg-compress" element={<JPGCompressPage />} />
                             <Route path="/tools/reduce-jpg-size" element={<JPGReducePage />} />
                             <Route path="/tools/increase-jpg-size" element={<JPGIncreaseSizePage />} />

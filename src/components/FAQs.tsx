@@ -8,28 +8,28 @@ import {
 const FAQs = () => {
   const faqs = [
     {
-      question: "Which AI tools support these prompts?",
-      answer: "Our prompts are tested on Midjourney, DALL·E, and Stable Diffusion."
+      question: "Are these tools completely free to use?",
+      answer: "Yes, every tool on FreeImagePrompt is 100% free to use. There are no hidden fees, subscriptions, or watermarks."
     },
     {
-      question: "Are these AI prompts really free?",
-      answer: "Yes, every AI boy image prompt is 100% free - you can copy, use, and modify them for personal or creative projects."
+      question: "Do I need to install any software or app?",
+      answer: "Not at all! All our utilities work directly within your web browser without requiring any downloads or installations."
     },
     {
-      question: "Can I use the prompts?",
-      answer: "Absolutely. You can tweak lighting, style, emotion, or outfit keywords for custom results."
+      question: "Are my images and files secure?",
+      answer: "Absolutely. Our image compression and resizing tools process your files locally in your browser. This means your files never leave your device and are never uploaded to our servers."
     },
     {
-      question: "Can I use these images for social media?",
-      answer: "Yes! AI-generated images and stylish boy dp inspirations are perfect for profiles."
+      question: "What devices are supported?",
+      answer: "Our website is fully responsive, meaning you can comfortably use our tools on your smartphone, tablet, or desktop computer."
     },
     {
-      question: "Why does my result look different?",
-      answer: "Each AI model interprets prompts slightly differently. Try using the same seed or version setting in your AI tool for closer results."
+      question: "Is there a daily limit on tool usage?",
+      answer: "No, we do not impose any daily limits. You can compress, resize, and use our calculators as many times as you need."
     },
     {
-      question: "Can I request specific types of prompts?",
-      answer: "Yes! Visit our Contact Page to suggest new AI portrait prompt styles like anime, realistic, or cyberpunk."
+      question: "Can I suggest a new tool for the website?",
+      answer: "We love feedback! Please visit our Contact Page to suggest any new tools or utilities you would like to see added."
     }
   ];
 

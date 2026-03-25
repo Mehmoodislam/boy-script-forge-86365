@@ -36,12 +36,6 @@
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://freeimageprompt.com/tools/grade-calculator</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
 
   <url>
     <loc>https://freeimageprompt.com/contact</loc>
@@ -104,6 +98,33 @@
   </url>
   <url>
     <loc>https://freeimageprompt.com/tools/compress-jpg-to-35kb</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+   <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-40kb</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+
+  <!-- convertor tools -->
+  <url>
+    <loc>https://freeimageprompt.com/tools/webp-to-jpg</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/png-to-jpg</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/jpg-to-webp</loc>
     <lastmod>2025-12-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>

@@ -5,16 +5,37 @@ interface SEOHeadProps {
     description: string;
     canonicalUrl?: string;
     keywords?: string;
+    schema?: object;
 }
 
-const SEOHead = ({ title, description }: SEOHeadProps) => {
+const SEOHead = ({ title, description, schema }: SEOHeadProps) => {
     useEffect(() => {
         document.title = title;
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.setAttribute("content", description);
         }
-    }, [title, description]);
+
+        // Handle Schema Injection
+        let scriptTag = document.getElementById("json-ld-schema");
+        if (schema) {
+            if (!scriptTag) {
+                scriptTag = document.createElement("script");
+                scriptTag.id = "json-ld-schema";
+                scriptTag.setAttribute("type", "application/ld+json");
+                document.head.appendChild(scriptTag);
+            }
+            scriptTag.innerHTML = JSON.stringify(schema);
+        } else if (scriptTag) {
+            scriptTag.remove();
+        }
+
+        return () => {
+            // Cleanup on unmount
+            const existingTag = document.getElementById("json-ld-schema");
+            if (existingTag) existingTag.remove();
+        };
+    }, [title, description, schema]);
 
     return null;
 };
