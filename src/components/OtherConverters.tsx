@@ -5,7 +5,7 @@ const OtherConverters = () => {
     const converters = [
         { to: "/tools/webp-to-jpg", label: "WebP to JPG", icon: RefreshCw, desc: "Fast & Secure" },
         { to: "/tools/webp-to-png", label: "WebP to PNG", icon: RefreshCw, desc: "Preserve Quality" },
-        { to: "/tools/png-to-web-p", label: "PNG to WebP", icon: RefreshCw, desc: "Next-Gen Format" },
+        { to: "/tools/png-to-webp", label: "PNG to WebP", icon: RefreshCw, desc: "Next-Gen Format" },
         { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Universal Export" },
         { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Modern Compression" },
         { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch Optimize" },

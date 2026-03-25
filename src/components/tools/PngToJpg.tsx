@@ -487,7 +487,7 @@ const PngToJpg = () => {
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-12 list-none p-0 text-muted-foreground font-medium">
                                     <li><Link to="/tools/webp-to-jpg" className="hover:text-primary transition-colors">🔗 WebP to JPG Converter</Link></li>
                                     <li><Link to="/tools/jpg-compress" className="hover:text-primary transition-colors">🔗 Image Compressor Tool</Link></li>
-                                    <li><Link to="/tools/png-to-web-p" className="hover:text-primary transition-colors">🔗 PNG to WebP Converter</Link></li>
+                                    <li><Link to="/tools/png-to-webp" className="hover:text-primary transition-colors">🔗 PNG to WebP Converter</Link></li>
                                     <li><Link to="/tools/jpg-to-webp" className="hover:text-primary transition-colors">🔗 JPG to WebP Converter</Link></li>
                                 </ul>
 

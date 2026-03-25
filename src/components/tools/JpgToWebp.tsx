@@ -490,7 +490,7 @@ const JpgToWebp = () => {
                                     <li><Link to="/tools/jpg-compress" className="text-primary hover:underline font-medium">🔗 Image Compressor Tool</Link></li>
                                     <li><Link to="/tools/png-to-jpg" className="text-primary hover:underline font-medium">🔗 PNG to JPG Converter</Link></li>
                                     <li><Link to="/tools/webp-to-jpg" className="text-primary hover:underline font-medium">🔗 WebP to JPG Online</Link></li>
-                                    <li><Link to="/tools/png-to-web-p" className="text-primary hover:underline font-medium">🔗 PNG to WebP Converter</Link></li>
+                                    <li><Link to="/tools/png-to-webp" className="text-primary hover:underline font-medium">🔗 PNG to WebP Converter</Link></li>
                                 </ul>
 
                                 <h2 className="text-3xl font-bold mb-6">Key Features of Our JPG to WebP Converter Free</h2>

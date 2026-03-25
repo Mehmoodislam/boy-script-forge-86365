@@ -13,7 +13,7 @@ export const mediaTools = [
 export const converters = [
   { to: "/tools/webp-to-jpg", label: "WebP to JPG", icon: RefreshCw, desc: "Convert WebP images to JPEG" },
   { to: "/tools/webp-to-png", label: "WebP to PNG", icon: RefreshCw, desc: "Convert WebP images to PNG" },
-  { to: "/tools/png-to-web-p", label: "PNG to WebP", icon: RefreshCw, desc: "Convert PNG images to WebP" },
+  { to: "/tools/png-to-webp", label: "PNG to WebP", icon: RefreshCw, desc: "Convert PNG images to WebP" },
   { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Convert PNG images to JPEG" },
   { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Convert JPEG to WebP format" },
 ];

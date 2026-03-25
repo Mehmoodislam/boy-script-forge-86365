@@ -90,7 +90,7 @@ function App() {
                             <Route path="/packs" element={<Packs />} />
                             <Route path="/tools/webp-to-jpg" element={<WebpToJpgPage />} />
                             <Route path="/tools/webp-to-png" element={<WebpToPngPage />} />
-                            <Route path="/tools/png-to-web-p" element={<PngToWebpPage />} />
+                            <Route path="/tools/png-to-webp" element={<PngToWebpPage />} />
                             <Route path="/tools/png-to-jpg" element={<PngToJpgPage />} />
                             <Route path="/tools/jpg-to-webp" element={<JpgToWebpPage />} />
                             <Route path="/tools/jpg-compress" element={<JPGCompressPage />} />

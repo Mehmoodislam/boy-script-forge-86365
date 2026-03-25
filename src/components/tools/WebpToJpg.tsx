@@ -564,7 +564,7 @@ const WebpToJpg = () => {
                                     <li><Link to="/tools/png-to-jpg" className="hover:text-primary transition-colors">🔗 Convert PNG to JPG</Link></li>
                                     <li><Link to="/tools/jpg-compress" className="hover:text-primary transition-colors">🔗 Image Compressor Tool</Link></li>
                                     <li><Link to="/tools/webp-to-png" className="hover:text-primary transition-colors">🔗 WebP to PNG Converter</Link></li>
-                                    <li><Link to="/tools/png-to-web-p" className="hover:text-primary transition-colors">🔗 PNG to WebP Converter</Link></li>
+                                    <li><Link to="/tools/png-to-webp" className="hover:text-primary transition-colors">🔗 PNG to WebP Converter</Link></li>
                                 </ul>
 
                                 <h2 className="text-3xl font-bold mb-10">FAQs – WebP to JPG Converter</h2>
