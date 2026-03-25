@@ -34,10 +34,10 @@ export default function PostManager() {
   const { data: posts, isLoading } = useQuery({
     queryKey: ['admin-posts'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_posts')
+      const { data, error } = await (supabase
+        .from('cms_posts' as any)
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }) as any);
       if (error) throw error;
       return data;
     }
@@ -45,10 +45,10 @@ export default function PostManager() {
 
   const upsertMutation = useMutation({
     mutationFn: async (formData: any) => {
-      const { data, error } = await supabase
-        .from('cms_posts')
+      const { data, error } = await (supabase
+        .from('cms_posts' as any)
         .upsert(formData)
-        .select();
+        .select() as any);
       if (error) throw error;
       return data;
     },
@@ -65,7 +65,7 @@ export default function PostManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_posts').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_posts' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {
@@ -157,7 +157,7 @@ export default function PostManager() {
                 <TableRow><TableCell colSpan={5} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : posts?.length === 0 ? (
                 <TableRow><TableCell colSpan={5} className="text-center py-8 text-muted-foreground">No posts found.</TableCell></TableRow>
-              ) : posts?.map((post) => (
+              ) : posts?.map((post: any) => (
                 <TableRow key={post.id}>
                   <TableCell className="font-medium max-w-[200px] truncate">{post.title}</TableCell>
                   <TableCell>/{post.slug}</TableCell>

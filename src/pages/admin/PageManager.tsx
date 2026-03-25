@@ -34,10 +34,10 @@ export default function PageManager() {
   const { data: pages, isLoading } = useQuery({
     queryKey: ['admin-pages'],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from('cms_pages')
+      const { data, error } = await (supabase
+        .from('cms_pages' as any)
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false }) as any);
       if (error) throw error;
       return data;
     }
@@ -45,10 +45,10 @@ export default function PageManager() {
 
   const upsertMutation = useMutation({
     mutationFn: async (formData: any) => {
-      const { data, error } = await supabase
-        .from('cms_pages')
+      const { data, error } = await (supabase
+        .from('cms_pages' as any)
         .upsert(formData)
-        .select();
+        .select() as any);
       if (error) throw error;
       return data;
     },
@@ -65,7 +65,7 @@ export default function PageManager() {
 
   const deleteMutation = useMutation({
     mutationFn: async (id: string) => {
-      const { error } = await supabase.from('cms_pages').delete().eq('id', id);
+      const { error } = await (supabase.from('cms_pages' as any).delete().eq('id', id) as any);
       if (error) throw error;
     },
     onSuccess: () => {
@@ -159,7 +159,7 @@ export default function PageManager() {
                 <TableRow><TableCell colSpan={5} className="text-center py-8">Loading...</TableCell></TableRow>
               ) : pages?.length === 0 ? (
                 <TableRow><TableCell colSpan={5} className="text-center py-8 text-muted-foreground">No pages found.</TableCell></TableRow>
-              ) : pages?.map((page) => (
+              ) : pages?.map((page: any) => (
                 <TableRow key={page.id}>
                   <TableCell className="font-medium">{page.title}</TableCell>
                   <TableCell>/{page.slug}</TableCell>
