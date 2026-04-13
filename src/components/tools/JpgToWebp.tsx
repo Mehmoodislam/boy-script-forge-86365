@@ -344,7 +344,7 @@ const JpgToWebp = () => {
                                                     <td className="p-5">
                                                         <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
                                                             {result.status === "completed" ? (
-                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" />
+                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
                                                                 <ImageIcon className="h-6 w-6 text-muted/30" />
                                                             )}

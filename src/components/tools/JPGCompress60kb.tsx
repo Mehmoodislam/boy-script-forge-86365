@@ -276,7 +276,7 @@ const JPGCompress60kb = ({ children }: JPGCompress60kbProps) => {
                                                     <td className="p-5">
                                                         <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
                                                             {result.status === "completed" ? (
-                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" />
+                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
                                                                 <ImageIcon className="h-6 w-6 text-muted/30" />
                                                             )}
@@ -353,83 +353,285 @@ const JPGCompress60kb = ({ children }: JPGCompress60kbProps) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 space-y-16">
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 60kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                                Compressing your JPEG images to a mere 60kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
-                            </p>
-                            <ol className="space-y-6">
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 60kb Compression:</strong> Opt for the specific 60kb compression option provided on the tool.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
-                                </li>
-                            </ol>
-                        </section>
-
-                        <section className="text-center py-10">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
-                                COMPRESS JPG To 60KB
-                            </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Reduce JPG Size to Specific KB Easily
-                            </p>
-
-                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                    <section className="mt-20 space-y-24">
+                        {/* High-Level Intro Section */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8">Mastering the 60KB Precision with our JPEG Engine</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <p className="text-muted-foreground leading-relaxed text-sm">
+                                        The 60KB file size limit often appears in portals that require more than just a basic face scan. It’s frequently mandated for multi-page document snippets, high-resolution digital signatures, and international visa applications (like the US DS-160 or UK Visa portal) where biometric clarity is paramount.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed text-sm">
+                                        Unlike lower-limit tools, our 60KB optimizer is tuned to preserve fine textual details and sharp ink strokes. Whether you are uploading a scanned diploma or a professional headshot, our engine uses a sophisticated binary search to allocate bits exactly where they matter most, ensuring you hit the 60KB ceiling without the 'blocky' artifacts seen in generic compressors.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {[
+                                            "Precision 60KB targeting for Visa, Licensing, and Academic portals.",
+                                            "Advanced sharpen-and-compress logic for scanned text and certificates.",
+                                            "No data leaks: Full 256-bit encryption through local browser processing.",
+                                            "Batch ready: Prepare all your visa documents for 60KB in one session."
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex gap-3 text-muted-foreground text-sm font-medium">
+                                                <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-6">
-                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
-                                        Free, Fast & Online Tool
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
-                                        <div className="p-1 rounded bg-orange-500">
-                                            <ImageIcon className="h-4 w-4 text-white" />
-                                        </div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                                            Small<span className="text-orange-500">JPG</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
-                                        smalljpg.org
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
-                                    </div>
-                                    <span className="text-3xl font-black text-[#00bcd4]">60 KB</span>
+                                <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center justify-center text-center space-y-4">
+                                    <Layers className="h-12 w-12 text-primary opacity-50" />
+                                    <p className="text-lg font-semibold italic text-primary/80 leading-relaxed">
+                                        "60KB is the sweet spot for high-impact professional documents where every pixel counts."
+                                    </p>
+                                    <div className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/60 border border-muted/20 px-4 py-1 rounded-full">Engineering Grade Compression</div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+
+                        {/* Top Specific Use Cases for 60KB */}
+                        <div className="space-y-12">
+                            <div className="text-center space-y-4">
+                                <h2 className="text-3xl font-bold">Portals Optimized for 60KB JPG Uploads</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">Specific platforms where 50-60KB is the required or recommended file size.</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { title: "International Visa (DS-160)", text: "Many visa photo portals accept up to 60KB. Our engine ensures your eyes and facial features meet biometric standards perfectly.", icon: <CheckCircle2 className="h-6 w-6" /> },
+                                    { title: "Professional Licensing", text: "Medical, Nursing, and Engineering boards often cap document scans at 60KB to balance storage with legibility.", icon: <Layers className="h-6 w-6" /> },
+                                    { title: "Academic Transcripts", text: "When uploading single-page marksheet snippets, 60KB allows for readable text even at small file sizes.", icon: <ImageIcon className="h-6 w-6" /> },
+                                    { title: "Digital IDs & Badges", text: "Enterprise ID systems and government badge portals frequently use the 60KB standard for high-speed local rendering.", icon: <FileJson className="h-6 w-6" /> },
+                                    { title: "Legal Document Signatures", text: "High-resolution ink signatures require the 60KB threshold to prevent 'pixel bleeding' in digital contracts.", icon: <Upload className="h-6 w-6" /> },
+                                    { title: "Real Estate Portals", text: "Property identity verification systems often mandate a 60KB limit for owner and agent photo identification.", icon: <List className="h-6 w-6" /> }
+                                ].map((useCase, i) => (
+                                    <div key={i} className="group p-8 rounded-[2rem] bg-card border border-border hover:border-primary/30 transition-all hover:bg-primary/5">
+                                        <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-transform group-hover:rotate-12">
+                                            {useCase.icon}
+                                        </div>
+                                        <h3 className="font-bold text-lg mb-3">{useCase.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{useCase.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 6-Step Interaction Guide */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border overflow-hidden relative">
+                            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 blur-[100px] rounded-full" />
+                            <h2 className="text-3xl font-bold mb-12 text-center">Optimizing to 60KB: A Step-by-Step Guide</h2>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                                {[
+                                    { step: "01", title: "Select Document", text: "Upload your high-res certificate scan or visa photo. We handle inputs from all modern digital cameras." },
+                                    { step: "02", title: "Scale Verification", text: "Our tool ensures your photo isn't unnecessarily large (e.g. 8K) before attempting a 60KB target." },
+                                    { step: "03", title: "Smart Quantization", text: "The engine uses smart quantization to compress colors without destroying document text or ink lines." },
+                                    { step: "04", title: "Iterative Refinement", text: "We test multiple quality tiers (100 to 1) until we hit the sweet spot between 58KB and 60KB." },
+                                    { step: "05", title: "Instant Review", text: "Review your compressed file. Zoom in to check that tiny text on certificates is still 100% legible." },
+                                    { step: "06", title: "Safe Download", text: "Download your 60KB file. It's ready for any official upload—no watermarks, no registration, no hassle." }
+                                ].map((s, i) => (
+                                    <div key={i} className="relative p-7 rounded-[2rem] bg-background border border-border hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl">
+                                        <span className="absolute -top-4 -left-4 w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center rounded-2xl font-black shadow-lg shadow-primary/20 rotate-[-5deg] group-hover:rotate-0 transition-transform">
+                                            {s.step}
+                                        </span>
+                                        <h3 className="font-bold mb-3 text-lg mt-2 text-foreground">{s.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Compression Comparison Matrix */}
+                        <div className="space-y-10">
+                            <div className="text-center">
+                                <h2 className="text-3xl font-bold">Why Precision Matters for 60KB Targets</h2>
+                                <p className="text-muted-foreground mt-2 italic">Free Image Prompt vs Standard Desktop Software Comparison</p>
+                            </div>
+                            <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-2xl relative">
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr className="bg-primary/10 border-b border-border">
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-muted-foreground">Capabilities</th>
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-primary">Our 60KB Precision Tool</th>
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-muted-foreground">Bulk Image Optimizers</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-border">
+                                            {[
+                                                { f: "Target accuracy", a: "Within 2% (58.8 - 60 KB)", b: "± 20% Inaccuracy" },
+                                                { f: "Security logic", a: "Browser-Only Sandboxing", b: "Cloud Storage Dependency" },
+                                                { f: "Text Preservation", a: "Edge-Aware Compression", b: "Generic Bicubic Blur" },
+                                                { f: "Queue system", a: "Zero Wait (Multithreaded)", b: "Server Queue Delays" },
+                                                { f: "Metadata removal", a: "Full EXIF Stripping", b: "Partial or None" },
+                                                { f: "Price model", a: "Always Free, Forever", b: "Ad-Heavy or Premium Only" }
+                                            ].map((row, i) => (
+                                                <tr key={i} className="hover:bg-primary/5 transition-all group">
+                                                    <td className="p-6 font-semibold text-sm text-muted-foreground">{row.f}</td>
+                                                    <td className="p-6 text-primary font-bold text-sm">{row.a}</td>
+                                                    <td className="p-6 text-muted-foreground/60 text-sm italic">{row.b}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Professional Tips for Document 60KB Compression */}
+                        <div className="bg-primary/5 p-10 md:p-14 rounded-[3rem] border border-primary/10 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 p-10 opacity-10">
+                                <AlertCircle className="h-40 w-40 text-primary" />
+                            </div>
+                            <h2 className="text-3xl font-bold mb-10 text-center">Pro Tactics for 60KB Legibility</h2>
+                            <div className="grid md:grid-cols-2 gap-10">
+                                <div className="space-y-8 relative z-10">
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">1</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">High-Contrast Scans</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                For documents like certificates, ensure a clean white background. This allows our engine to compress the 'empty' space significantly, leaving more room for the 60KB target for actual text.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">2</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Avoid Heavy Grain</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Grainy or noisy photos are incompressible. If your photo is dark, the noise will consume all 60KB, leaving your face blurry. Always use good lighting!
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-8 relative z-10">
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">3</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Signature Inking</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Use a thick felt-tip pen for digital signatures. Thin ballpoint pens can get lost during the 60KB compression process—sharp ink makes for a sharp scan.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">4</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">No Pre-Optimization</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Never use 'Lite' versions of smartphone cameras or WhatsApp to send photos first. Start with the raw camera file to let our 60KB tool do its best work.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Exhaustive 60KB FAQ Section */}
+                        <div className="space-y-12">
+                            <div className="text-center space-y-4">
+                                <h2 className="text-3xl font-bold">Frequently Asked 60KB Questions</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">Solving everyday document problems for professionals.</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {[
+                                    { q: "Is it safe to compress my ID card to 60KB here?", a: "ABSOLUTELY. Your ID never leaves your browser. All logic is executed on your local CPU/RAM via JavaScript for total security." },
+                                    { q: "Why is 60KB a common limit for academic portals?", a: "It's a balance found in many education databases—large enough for a clear transcript photo, small enough to store millions of students economically." },
+                                    { q: "Can I convert high-res PNG to 60KB JPG?", a: "Yes. Our tool handles the format conversion and the size targeting in one seamless step." },
+                                    { q: "What if my compressed file is 58KB?", a: "That is perfect. Being within 1-2KB of the target ensures you satisfy 'Max 60KB' requirements while maintaining maximum clarity." },
+                                    { q: "Does the image resolution change at 60KB?", a: "Only if strictly necessary to hit the target. Our engine prioritizes pixel count over extreme data destruction to keep it looking crisp." },
+                                    { q: "Can I compress multiple visa photos to 60KB at once?", a: "Yes, our batch processing feature allows you to select dozens of files, and each will be precisely targeted to 60KB individually." },
+                                    { q: "Will this tool keep my metadata?", a: "By default, we strip metadata to maximize pixel quality within the 60KB limit. Most portal systems prefer this clean, privacy-friendly approach." },
+                                    { q: "Does this work on iPhone cameras?", a: "Yes. Simply pick from your library or take a photo directly through the browser. We'll handle the HEIC/JPG conversion to 60KB." },
+                                    { q: "Why is my result sometimes exactly 60KB?", a: "Our binary search algorithm tries to get as close as possible without exceeding the limit, often hitting within 0.1KB of the goal." },
+                                    { q: "Does this work for blue ink signatures?", a: "Yes, though black ink is slightly more space-efficient for JPEG algorithms at the 60KB threshold." },
+                                    { q: "Are there any hidden watermarks?", a: "Never. Free Image Prompt is a professional tool. Your images are yours, untouched by any branding." },
+                                    { q: "Why 60KB instead of 50KB?", a: "The extra 10KB can mean the difference between a blurry signature and a professional one, which is why higher-tier portals prefer it." }
+                                ].map((faq, i) => (
+                                    <div key={i} className="p-8 rounded-[2rem] bg-card border border-border hover:shadow-lg transition-all space-y-4">
+                                        <div className="flex gap-3">
+                                            <div className="h-6 w-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                                <div className="font-bold text-[10px]">Q</div>
+                                            </div>
+                                            <h4 className="font-bold text-lg leading-tight">{faq.q}</h4>
+                                        </div>
+                                        <p className="text-sm text-muted-foreground leading-relaxed italic pl-9">"{faq.a}"</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Visual Summary (Before/After) 60KB Edition */}
+                        <div className="text-center py-24 bg-card/30 rounded-[3rem] border border-dashed border-border overflow-hidden relative">
+                            <div className="absolute inset-0 bg-primary/5 opacity-20 pointer-events-none" />
+                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-primary">
+                                COMPRESS JPG TO 60KB
+                            </h2>
+                            <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-16">
+                                Precision Optimization for Professional Portals
+                            </p>
+
+                            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 relative z-10">
+                                <div className="flex flex-col items-center gap-4 group">
+                                    <div className="w-56 h-56 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl rotate-[-3deg] group-hover:rotate-0 transition-transform duration-500">
+                                        <img src="/assets/boy116.webp" alt="Original Large Document Scan" className="w-full h-full object-cover" loading="lazy" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-black text-destructive/80">6.2 MB</span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Original DSLR Scan</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-8">
+                                    <div className="px-6 py-2 rounded-full bg-primary/20 text-primary text-xs font-black uppercase tracking-tighter animate-pulse">
+                                        Allocating Bits Precisely...
+                                    </div>
+                                    <div className="flex items-center gap-4 text-primary">
+                                        <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-primary" />
+                                        <ArrowRight className="h-10 w-10 animate-bounce-x" />
+                                        <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-primary" />
+                                    </div>
+                                    <div className="p-4 bg-white shadow-2xl rounded-3xl border border-primary/20 scale-110">
+                                        <div className="flex items-center gap-3">
+                                            <div className="p-2 rounded-xl bg-primary">
+                                                <ImageIcon className="h-6 w-6 text-white" />
+                                            </div>
+                                            <span className="text-2xl font-black tracking-tighter">
+                                                Small<span className="text-primary">JPG</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-4 group">
+                                    <div className="w-56 h-56 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl rotate-[3deg] group-hover:rotate-0 transition-transform duration-500 shadow-primary/20">
+                                        <img src="/assets/boy116.webp" alt="Compressed 60KB Document" className="w-full h-full object-cover opacity-95 grayscale-[0.2]" loading="lazy" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-black text-primary">60 KB</span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-primary/60">Optimized for Visa/ID</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Technical Footer Summary for 60KB */}
+                        <div className="text-center space-y-8 max-w-4xl mx-auto pb-12">
+                            <div className="h-1.5 w-32 bg-primary/20 rounded-full mx-auto" />
+                            <h2 className="text-2xl font-bold tracking-tight">ENGINEERED FOR ACCURACY</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed italic">
+                                "Generic software treats 60KB like a suggestion. We treat it like a mission. 
+                                Our 60KB optimized logic preserves the integrity of your professional identification, 
+                                ensuring no bureaucrat can reject your upload for lack of clarity."
+                            </p>
+                            <div className="flex justify-center flex-wrap gap-4">
+                                {["No Watermark", "No Registration", "Privacy First", "Precise Limit"].map((tag, i) => (
+                                    <span key={i} className="px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] font-black uppercase tracking-[0.2em]">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
 
                     <OtherCompressionSizes />
 

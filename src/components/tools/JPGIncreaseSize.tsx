@@ -236,7 +236,7 @@ const JPGIncreaseSize = () => {
                                                     <td className="p-5">
                                                         <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
                                                             {result.status === "completed" ? (
-                                                                <img src={result.previewUrl} alt="Preview" className="w-full h-full object-cover" />
+                                                                <img src={result.previewUrl} alt="Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
                                                                 <ImageIcon className="h-6 w-6 text-muted/30" />
                                                             )}
@@ -326,13 +326,13 @@ const JPGIncreaseSize = () => {
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <div className="aspect-square bg-accent/10 rounded-2xl border border-dashed border-muted/50 flex items-center justify-center overflow-hidden grayscale">
-                                                <img src="/assets/boy116.webp" alt="Old" className="opacity-50" />
+                                                <img src="/assets/boy116.webp" alt="Old" className="opacity-50" loading="lazy" />
                                             </div>
                                             <p className="text-center font-black text-orange-500">20 KB</p>
                                         </div>
                                         <div className="space-y-2">
                                             <div className="aspect-square bg-primary/5 rounded-2xl border border-primary/20 flex items-center justify-center overflow-hidden">
-                                                <img src="/assets/boy116.webp" alt="New" />
+                                                <img src="/assets/boy116.webp" alt="New" loading="lazy" />
                                             </div>
                                             <p className="text-center font-black text-primary">100 KB</p>
                                         </div>

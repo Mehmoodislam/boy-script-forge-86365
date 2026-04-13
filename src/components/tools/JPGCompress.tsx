@@ -230,10 +230,8 @@ const JPGCompress = () => {
                 >
                   <div className="flex items-center gap-4">
                     {result.status === "completed" ? (
-                      <img
-                        src={result.previewUrl}
-                        className="w-16 h-16 object-cover rounded-lg"
-                      />
+                      <img src={result.previewUrl}
+                        className="w-16 h-16 object-cover rounded-lg" loading="lazy" />
                     ) : (
                       <ImageIcon className="h-10 w-10 text-muted" />
                     )}

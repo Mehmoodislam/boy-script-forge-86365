@@ -276,7 +276,7 @@ const JPGCompress45kb = ({ children }: JPGCompress45kbProps) => {
                                                     <td className="p-5">
                                                         <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
                                                             {result.status === "completed" ? (
-                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" />
+                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
                                                                 <ImageIcon className="h-6 w-6 text-muted/30" />
                                                             )}
@@ -353,83 +353,285 @@ const JPGCompress45kb = ({ children }: JPGCompress45kbProps) => {
                         </div>
                     </div>
 
-                    <div className="mt-20 space-y-16">
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 45kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                                Compressing your JPEG images to a mere 45kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
-                            </p>
-                            <ol className="space-y-6">
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 45kb Compression:</strong> Opt for the specific 45kb compression option provided on the tool.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
-                                </li>
-                                <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
-                                </li>
-                            </ol>
-                        </section>
-
-                        <section className="text-center py-10">
-                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
-                                COMPRESS JPG To 45KB
-                            </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-                                Reduce JPG Size to Specific KB Easily
-                            </p>
-
-                            <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
-                                    </div>
-                                    <span className="text-3xl font-black text-orange-500">4 MB</span>
+                    <section className="mt-20 space-y-24">
+                        {/* High-Level Intro Section */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8">Why You Need a Specific 45KB JPEG Compressor</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                <div className="space-y-4">
+                                    <p className="text-muted-foreground leading-relaxed text-sm">
+                                        In the digital age, hitting a precise file size is often the difference between a successful application and an automated rejection. Many government portals, specifically in the Indian banking (IBPS), UPSC, and state-level recruitment (UPSSSC, MPPSC), mandate that photo uploads stay between 20KB and 50KB, with 45KB being the safest "sweet spot" for maximum clarity within the limit.
+                                    </p>
+                                    <p className="text-muted-foreground leading-relaxed text-sm">
+                                        A generic compressor might reduce your 4MB photo to 30KB, losing unnecessary detail, or 55KB, which would still be rejected. Our tool uses a specialized binary search algorithm to target exactly 45KB, ensuring your document looks sharp while remaining fully portal-compliant.
+                                    </p>
+                                    <ul className="space-y-3">
+                                        {[
+                                            "Precise 45KB target specifically for high-detail official documents.",
+                                            "No loss of critical facial features or digital signature clarity.",
+                                            "100% browser-side processing—your private IDs never leave your computer.",
+                                            "Batch support: Optimize multiple photos for different portals in one click."
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex gap-3 text-muted-foreground text-sm font-medium">
+                                                <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                                                {item}
+                                            </li>
+                                        ))}
+                                    </ul>
                                 </div>
-
-                                <div className="flex flex-col items-center gap-6">
-                                    <div className="bg-[#00bcd4] text-white px-4 py-1 rounded-md text-sm font-bold uppercase tracking-wider">
-                                        Free, Fast & Online Tool
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="flex items-center gap-2 px-6 py-3 bg-white shadow-lg rounded-xl border border-gray-100">
-                                        <div className="p-1 rounded bg-orange-500">
-                                            <ImageIcon className="h-4 w-4 text-white" />
-                                        </div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-gray-700 to-gray-900 bg-clip-text text-transparent">
-                                            Small<span className="text-orange-500">JPG</span>
-                                        </span>
-                                    </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="h-[2px] w-24 bg-gradient-to-r from-transparent to-[#00bcd4]" />
-                                        <ArrowRight className="text-[#00bcd4] h-6 w-6" />
-                                    </div>
-                                    <div className="px-4 py-1 rounded-full border border-gray-200 bg-gray-50 flex items-center gap-2 text-xs font-medium text-gray-500">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#00bcd4]" />
-                                        smalljpg.org
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-col items-center gap-4">
-                                    <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
-                                    </div>
-                                    <span className="text-3xl font-black text-[#00bcd4]">45 KB</span>
+                                <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center justify-center text-center space-y-4">
+                                    <Layers className="h-12 w-12 text-primary opacity-50" />
+                                    <p className="text-lg font-semibold italic text-primary/80 leading-relaxed">
+                                        "Professional-grade compression that respects the 45KB threshold without turning your photos into a blurry mess."
+                                    </p>
+                                    <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground opacity-60">Verified Portal Standards</div>
                                 </div>
                             </div>
-                        </section>
-                    </div>
+                        </div>
+
+                        {/* Where is 45KB Used? (Hyper-Specific Use Cases) */}
+                        <div className="space-y-12">
+                            <div className="text-center space-y-4">
+                                <h2 className="text-3xl font-bold">Portals Requiring Under 45KB Image Size</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">Identifying common platforms where 45KB is the standard upload requirement.</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    { title: "Bank Recruitment (IBPS/SBI)", text: "Most bank exams require a passport photo between 20KB-50KB. Targeting 45KB ensures maximum pixel density for the examiner.", icon: <CheckCircle2 className="h-6 w-6" /> },
+                                    { title: "State Civil Services", text: "Portals like UPSSSC and MPPSC often have strict 50KB limits. A 45KB file provides a safe buffer for metadata additions.", icon: <Layers className="h-6 w-6" /> },
+                                    { title: "University Admissions", text: "Online admission portals for central and state universities typically cap images at 50KB for rapid database loading.", icon: <ImageIcon className="h-6 w-6" /> },
+                                    { title: "Job Resumes (PDF Attach)", text: "Keeping your photo under 45KB prevents your total PDF size from exploding, ensuring it passes through email filters.", icon: <FileJson className="h-6 w-6" /> },
+                                    { title: "Digital ID Issuance", text: "Employee ID portals and government card registrations often prefer high-detail 45KB images for printing clarity.", icon: <Upload className="h-6 w-6" /> },
+                                    { title: "Property Registration", text: "Land and property documentation portals in various regions require scanned photos to match the 40-50KB bracket.", icon: <List className="h-6 w-6" /> }
+                                ].map((useCase, i) => (
+                                    <div key={i} className="group p-8 rounded-[2rem] bg-card border border-border hover:border-primary/30 transition-all hover:bg-primary/5">
+                                        <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 transition-transform group-hover:rotate-12">
+                                            {useCase.icon}
+                                        </div>
+                                        <h3 className="font-bold text-lg mb-3">{useCase.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{useCase.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* 6-Step Guide Section */}
+                        <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border overflow-hidden relative">
+                            <div className="absolute -top-24 -left-24 w-64 h-64 bg-primary/5 blur-[100px] rounded-full" />
+                            <h2 className="text-3xl font-bold mb-12 text-center">How to Compress JPG to 45KB Without Losing Quality</h2>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                                {[
+                                    { step: "01", title: "Select JPG Files", text: "Choose the images from your device. We support high-res photos up to 25MB from smartphones and DSLRs." },
+                                    { step: "02", title: "Verify 45KB Target", text: "Our tool enters 'High Precision Mode' automatically for the 45KB target to ensure the best balance of bits." },
+                                    { step: "03", title: "Optional Resizing", text: "If your photo is ultra-HD (e.g. 5000px), our engine will suggest a resize for better 45KB output." },
+                                    { step: "04", title: "Quality Adjustment", text: "The iterative engine starts. It tests multiple quality levels (100 down to 1) until it hits the target size." },
+                                    { step: "05", title: "Instant Preview", text: "Check your 45KB image. Ensure eyes, text, and signatures are legible before finalizing the save." },
+                                    { step: "06", title: "Secure Download", text: "Download your portal-ready file. It stays in your browser cache and is never stored on our servers." }
+                                ].map((s, i) => (
+                                    <div key={i} className="relative p-7 rounded-[2rem] bg-background border border-border hover:border-primary/50 transition-all group shadow-sm hover:shadow-xl">
+                                        <span className="absolute -top-4 -left-4 w-12 h-12 bg-primary text-primary-foreground flex items-center justify-center rounded-2xl font-black shadow-lg shadow-primary/20 rotate-[-5deg] group-hover:rotate-0 transition-transform">
+                                            {s.step}
+                                        </span>
+                                        <h3 className="font-bold mb-3 text-lg mt-2 text-foreground">{s.title}</h3>
+                                        <p className="text-sm text-muted-foreground leading-relaxed">{s.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Premium Features Comparison Table */}
+                        <div className="space-y-10">
+                            <div className="text-center">
+                                <h2 className="text-3xl font-bold">Why Choose Free Image Prompt for 45KB?</h2>
+                                <p className="text-muted-foreground mt-2 italic">Standard vs High-Precision Compression Comparison</p>
+                            </div>
+                            <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-2xl relative">
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr className="bg-primary/10 border-b border-border">
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-muted-foreground">Capabilities</th>
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-primary">Our 45KB Engine</th>
+                                                <th className="p-6 font-bold text-sm uppercase tracking-wider text-muted-foreground">Generic Compressors</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-border">
+                                            {[
+                                                { f: "Target Precision", a: "Within 2% (44.1 - 45.0 KB)", b: "± 20% Variance" },
+                                                { f: "Data Privacy", a: "Browser-Only (No Upload)", b: "Server-Side Processing" },
+                                                { f: "Processing Speed", a: "Sub-Second Optimization", b: "Delayed Queue System" },
+                                                { f: "Batch Efficiency", a: "Unlimited Batching", b: "Often Capped at 5 files" },
+                                                { f: "Metadata Control", a: "Smart Stripping", b: "Keeps Bulky Meta Data" },
+                                                { f: "Cost", a: "100% Free Forever", b: "Ads or Premium Tiers" }
+                                            ].map((row, i) => (
+                                                <tr key={i} className="hover:bg-primary/5 transition-all group">
+                                                    <td className="p-6 font-semibold text-sm text-muted-foreground">{row.f}</td>
+                                                    <td className="p-6 text-primary font-bold text-sm">{row.a}</td>
+                                                    <td className="p-6 text-muted-foreground/60 text-sm italic">{row.b}</td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Pro Tips Section */}
+                        <div className="bg-primary/5 p-10 md:p-14 rounded-[3rem] border border-primary/10 relative overflow-hidden">
+                            <div className="absolute top-0 right-0 p-10 opacity-10">
+                                <AlertCircle className="h-40 w-40 text-primary" />
+                            </div>
+                            <h2 className="text-3xl font-bold mb-10 text-center">Pro Tips for Best Quality at 45KB</h2>
+                            <div className="grid md:grid-cols-2 gap-10">
+                                <div className="space-y-8 relative z-10">
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">1</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Original Aspect Ratio</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Don't stretch your images. If the portal asks for 3.5cm x 4.5cm, crop the photo to that ratio before uploading to our 45KB compressor to avoid distortion.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">2</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Signature Scanning</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                For 45KB signatures, use a high-contrast black pen on white paper. Our engine will prioritize the pen strokes, giving you a sharp digital sign.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="space-y-8 relative z-10">
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">3</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Lighting Matters</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Portals reject grainy photos. Well-lit images require less 'de-noising' by the compressor, allowing more detail to be saved within the 45KB limit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-5">
+                                        <div className="shrink-0 w-12 h-12 rounded-2xl bg-white shadow-md flex items-center justify-center text-primary font-black">4</div>
+                                        <div>
+                                            <h3 className="font-bold text-lg mb-2">Avoid Screenshots</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                Screenshots are often already low-quality. Whenever possible, use the original camera file for 45KB compression to ensure professional clarity.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Extensive FAQ Section */}
+                        <div className="space-y-12">
+                            <div className="text-center space-y-4">
+                                <h2 className="text-3xl font-bold">Frequently Asked Questions</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">Solving everyday problems for candidates and web users.</p>
+                            </div>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                {[
+                                    { q: "Is it safe to upload my passport photo here?", a: "ABSOLUTELY. Your images never leave your browser. All compression logic runs on your local machine using JavaScript. We don't have a database for your photos." },
+                                    { q: "What if my compressed file is 44KB instead of 45KB?", a: "That is perfect. Portals usually mandate 'Max 45KB' or 'Under 50KB'. Being within 1-2KB of the target ensures you satisfy the limit while maintaining max detail." },
+                                    { q: "Can I convert PNG to 45KB JPG?", a: "Yes. Our tool automatically converts incoming image types to highly optimized JPEG format to meet the specific KB target." },
+                                    { q: "Why did my image become slightly blurry at 45KB?", a: "If the original was massive (10MB+), hitting 45KB requires significant data loss. Try cropping the image closer to your face first to save bits." },
+                                    { q: "Does this tool work on iPhone and Android?", a: "Yes. It is fully mobile-optimized. You can take a photo from your camera and compress it to 45KB instantly on your phone." },
+                                    { q: "Can I compress multiple images to 45KB at once?", a: "Yes, our batch processing feature allows you to select dozens of files, and each will be precisely targeted to 45KB individually." },
+                                    { q: "Will the resolution (pixels) change?", a: "If necessary to hit the 45KB target, the engine will adjust dimensions. This is standard practice for portal uploads." },
+                                    { q: "Is there a daily limit for free users?", a: "No. Free Image Prompt offers unlimited usage for all tools, including the 45KB specific compressor." },
+                                    { q: "What happens if my photo is already under 45KB?", a: "The tool will detect this and offer to keep the original or apply a light optimization to further clean up metadata without losing quality." },
+                                    { q: "Does this work for digital signatures?", a: "Yes, and it’s excellent for them. It maintains high contrast for signatures while meeting the strict 45KB portal requirements." },
+                                    { q: "Can I use this for my LinkedIn or CV?", a: "Definitely. A 45KB profile photo is ideal for CVs as it keeps the total document size small for email attachments." },
+                                    { q: "Why is 45KB a common limit?", a: "It’s a balance found in many legacy government systems—large enough for a clear face, small enough to store millions of entries cheaply." }
+                                ].map((faq, i) => (
+                                    <div key={i} className="p-8 rounded-[2rem] bg-card border border-border hover:shadow-lg transition-all space-y-4">
+                                        <div className="flex gap-3">
+                                            <div className="h-6 w-6 rounded-full bg-primary/20 text-primary flex items-center justify-center shrink-0">
+                                                <div className="font-bold text-[10px]">Q</div>
+                                            </div>
+                                            <h4 className="font-bold text-lg leading-tight">{faq.q}</h4>
+                                        </div>
+                                        <p className="text-sm text-muted-foreground leading-relaxed italic pl-9">"{faq.a}"</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Visual Summary Section (Before/After) */}
+                        <div className="text-center py-24 bg-card/30 rounded-[3rem] border border-dashed border-border overflow-hidden relative">
+                            <div className="absolute inset-0 bg-primary/5 opacity-20 pointer-events-none" />
+                            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-primary">
+                                COMPRESS JPG TO 45KB
+                            </h2>
+                            <p className="text-xl md:text-2xl text-muted-foreground font-medium mb-16">
+                                Precision Optimization for Every Pixel
+                            </p>
+
+                            <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 relative z-10">
+                                <div className="flex flex-col items-center gap-4 group">
+                                    <div className="w-56 h-56 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl rotate-[-3deg] group-hover:rotate-0 transition-transform duration-500">
+                                        <img src="/assets/boy116.webp" alt="Original Large Image" className="w-full h-full object-cover" loading="lazy" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-black text-destructive/80">5 MB</span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground">Original File</span>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-8">
+                                    <div className="px-6 py-2 rounded-full bg-primary/20 text-primary text-xs font-black uppercase tracking-tighter animate-pulse">
+                                        Binary Search Search Processing...
+                                    </div>
+                                    <div className="flex items-center gap-4 text-primary">
+                                        <div className="h-[2px] w-16 bg-gradient-to-r from-transparent to-primary" />
+                                        <ArrowRight className="h-10 w-10 animate-bounce-x" />
+                                        <div className="h-[2px] w-16 bg-gradient-to-l from-transparent to-primary" />
+                                    </div>
+                                    <div className="p-4 bg-white shadow-2xl rounded-3xl border border-primary/20 scale-110">
+                                        <div className="flex items-center gap-3">
+                                            <div className="p-2 rounded-xl bg-primary">
+                                                <ImageIcon className="h-6 w-6 text-white" />
+                                            </div>
+                                            <span className="text-2xl font-black tracking-tighter">
+                                                FreeImage<span className="text-primary">Prompt</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex flex-col items-center gap-4 group">
+                                    <div className="w-56 h-56 rounded-[2.5rem] overflow-hidden border-8 border-white shadow-2xl rotate-[3deg] group-hover:rotate-0 transition-transform duration-500">
+                                        <img src="/assets/boy116.webp" alt="Compressed 45KB Image" className="w-full h-full object-cover opacity-90 blur-[0.3px]" loading="lazy" />
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-4xl font-black text-primary">45 KB</span>
+                                        <span className="text-xs font-bold uppercase tracking-widest text-primary/60">Optimized Result</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Technical Footer Summary */}
+                        <div className="text-center space-y-8 max-w-4xl mx-auto pb-12">
+                            <div className="h-1.5 w-32 bg-primary/20 rounded-full mx-auto" />
+                            <h2 className="text-2xl font-bold tracking-tight">ENGINEERED FOR ACCURACY</h2>
+                            <p className="text-muted-foreground text-lg leading-relaxed italic">
+                                "While other tools give you a range, Free Image Prompt gives you a result. 
+                                Our 45KB dedicated optimizer combines quality preservation with mathematical precision, 
+                                ensuring your digital uploads are never the reason for a missed opportunity."
+                            </p>
+                            <div className="flex justify-center flex-wrap gap-4">
+                                {["No Watermark", "No Registration", "Privacy First", "Precise Limit"].map((tag, i) => (
+                                    <span key={i} className="px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] font-black uppercase tracking-[0.2em]">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
 
                     <OtherCompressionSizes />
 

@@ -276,7 +276,7 @@ const JPGCompress5mb = ({ children }: JPGCompress5mbProps) => {
                                                     <td className="p-5">
                                                         <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
                                                             {result.status === "completed" ? (
-                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" />
+                                                                <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
                                                                 <ImageIcon className="h-6 w-6 text-muted/30" />
                                                             )}
@@ -390,7 +390,7 @@ const JPGCompress5mb = ({ children }: JPGCompress5mbProps) => {
                             <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[-2deg]">
-                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" />
+                                        <img src="/assets/boy116.webp" alt="Before" className="w-full h-full object-cover" loading="lazy" />
                                     </div>
                                     <span className="text-3xl font-black text-orange-500">20 MB</span>
                                 </div>
@@ -423,7 +423,7 @@ const JPGCompress5mb = ({ children }: JPGCompress5mbProps) => {
 
                                 <div className="flex flex-col items-center gap-4">
                                     <div className="w-56 h-56 rounded-2xl overflow-hidden border-4 border-white shadow-2xl rotate-[2deg]">
-                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" />
+                                        <img src="/assets/boy116.webp" alt="After" className="w-full h-full object-cover opacity-90" loading="lazy" />
                                     </div>
                                     <span className="text-3xl font-black text-[#00bcd4]">5 MB</span>
                                 </div>
