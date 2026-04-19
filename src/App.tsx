@@ -51,6 +51,7 @@ import JPGCompress500kbPage from "./pages/JPGCompress500kbPage";
 import JPGCompress1mbPage from "./pages/JPGCompress1mbPage";
 import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
+import ArtPromptGeneratorPage from "./pages/ArtPromptGeneratorPage";
 import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import PageManager from "./pages/admin/PageManager";
@@ -120,6 +121,7 @@ function App() {
                             <Route path="/tools/compress-jpg-to-1mb" element={<JPGCompress1mbPage />} />
                             <Route path="/tools/compress-jpg-to-2mb" element={<JPGCompress2mbPage />} />
                             <Route path="/tools/compress-jpg-to-5mb" element={<JPGCompress5mbPage />} />
+                            <Route path="/tools/art-prompt-generator" element={<ArtPromptGeneratorPage />} />
                             <Route path="/blog" element={<Blog />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
                             <Route path="/contact" element={<Contact />} />
