@@ -19,6 +19,7 @@ import WebpToPngPage from "./pages/WebpToPngPage";
 import PngToWebpPage from "./pages/PngToWebpPage";
 import PngToJpgPage from "./pages/PngToJpgPage";
 import JpgToWebpPage from "./pages/JpgToWebpPage";
+import HeicToJpgPage from "./pages/HeicToJpgPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Blog from "./pages/Blog";
