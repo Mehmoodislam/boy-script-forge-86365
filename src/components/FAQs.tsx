@@ -42,7 +42,7 @@ const FAQs = () => {
               Frequently Asked <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Questions</span>
             </h2>
             <p className="text-lg text-muted-foreground">
-              Everything you need to know about using FreeImagePrompt
+              Everything you need to know about using FreeImagePrompt.
             </p>
           </div>
 

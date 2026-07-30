@@ -16,20 +16,19 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
             <Sparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium text-primary">100% Free Online Tools</span>
+            <span className="text-sm font-medium text-primary">100% Free · Runs In Your Browser</span>
           </div>
           <h1 className="font-bold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-7xl break-words text-center">
-            <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-              Your Ultimate Free
-            </span>
+            Free Online <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent"> Image Tools </span>
+
             <br className="hidden sm:block" />
             <span className="text-foreground">
-              Image & Utility Tools
+              For  Compressing, <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent"> Converting & Resizing</span>
             </span>
           </h1>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-5xl mx-auto leading-relaxed break-words text-center">
-            Easily <b>compress JPGs, resize images, calculate grades, and download videos</b> with our suite of free online tools. FreeImagePrompt is your ultimate destination for completely free, fast, and secure web tools.
+           Compress JPGs to an exact KB size, convert between PNG, WebP, JPG and HEIC, and resize images - all instantly, all free, all without uploading a single file to a server.
           </p>
 
           <p className=" text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed break-words text-center">

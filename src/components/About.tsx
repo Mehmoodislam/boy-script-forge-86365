@@ -1,62 +1,41 @@
-import { Sparkles, Target, Zap } from "lucide-react";
-
 const About = () => {
-  const features = [
-    {
-      icon: Sparkles,
-      title: "Handcrafted AI Prompts",
-      description: "Each prompt is manually written and optimized for lighting, realism, facial detail, and composition. We test every prompt before publishing to ensure high-quality output."
-    },
-    {
-      icon: Target,
-      title: "Proven Results",
-      description: "Our prompts work seamlessly with: Midjourney DALL·E Stable Diffusion You get predictable, professional-looking AI portraits every time."
-    },
-    {
-      icon: Zap,
-      title: "Instant Access",
-      description: "No registration. No subscription. Just copy, paste, and generate."
-    }
-  ];
-
   return (
     <section id="about" className="py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+        <div className="max-w-4xl mx-auto space-y-8">
           <h2 className="
             font-bold
             text-2xl sm:text-3xl md:text-4xl lg:text-5xl
             leading-tight
             break-words
-            text-center 
+            text-center
           ">
-            About{" "}
+            Simple, Private Image Tools for{" "}
             <span className="
               bg-gradient-to-r from-primary to-primary-glow
               bg-clip-text text-transparent
             ">
-              FreeImagePrompt
+              Everyday Use
             </span>
           </h2>
 
-          <p className="text-lg text-muted-foreground">
-             FreeImagePrompt is built for creators who want <b>ready-to-use AI photo prompts</b> without wasting time on trial and error.
-          </p>
-        </div>
+          <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
+            <p>
+              <span className="font-semibold text-foreground">FreeImagePrompt</span> is a free collection of online image tools built for the small, everyday moments when you just need a photo fixed quickly — a job application that rejects anything over 50KB, an old website that won't accept a HEIC photo from your iPhone, or a PNG graphic that's too heavy for your site to load fast. Instead of downloading an app or learning design software, you can open a tool here, drop in your image, and have a working file back in a few seconds.
+            </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all hover:shadow-lg group"
-            >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <feature.icon className="h-7 w-7 text-primary-foreground" />
-              </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
+            <p>
+              What sets these tools apart from most free converters online is where the work actually happens. Rather than uploading your photo to a remote server, every tool runs directly inside your own browser using your device's processing power. Your image never leaves your computer or phone, which means there's nothing to wait on, nothing stored anywhere, and nothing to worry about if the photo is personal or sensitive. It also means the tools keep working reliably even on a weak or unstable internet connection, since there's no large file being sent back and forth.
+            </p>
+
+            <p>
+              The tool library covers the two things people search for most: shrinking a photo to fit a strict size limit, and converting between formats like JPG, PNG, WebP, and HEIC. Compression tools are built around the exact KB sizes that forms and portals commonly demand — 5KB, 20KB, and 50KB — instead of a vague "compress" slider that leaves you guessing. Conversion tools handle the format mismatches people run into daily, like an iPhone saving photos as HEIC by default, or a website that only accepts JPG and rejects a WebP image outright.
+            </p>
+
+            <p>
+              New tools are added based on what people are actually searching for, so if a specific size or format isn't covered yet, it usually will be soon.
+            </p>
+          </div>
         </div>
       </div>
     </section>

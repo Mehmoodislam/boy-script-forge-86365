@@ -1,26 +1,26 @@
-import { Search, Copy, Wand2, CheckCircle } from "lucide-react";
+import { Upload, Sliders, Download, ShieldCheck } from "lucide-react";
 
 const HowToUse = () => {
   const steps = [
     {
-      icon: Search,
-      title: "Browse Gallery",
-      description: "Explore realistic and trending AI boy portraits. Every image shows what the prompt can generate."
+      icon: Upload,
+      title: "Drop Your Image",
+      description: "Open any tool and drag your photo into the upload area — JPG, PNG, WebP, or HEIC all work."
     },
     {
-      icon: Copy,
-      title: "Copy Prompt",
-      description: "Click on any image and copy the detailed AI boy image prompt with one click."
+      icon: Sliders,
+      title: "Adjust or Convert",
+      description: "Pick a target size or format. Tools are preset for common requirements like 50KB, 20KB, or converting HEIC to JPG."
     },
     {
-      icon: Wand2,
-      title: "Generate Image",
-      description: "Paste the prompt into Midjourney, DALL·E, Stable Diffusion, or Gemini AI and hit generate."
+      icon: Download,
+      title: "Download Instantly",
+      description: "Hit the download button and your processed file is saved to your device in seconds."
     },
     {
-      icon: CheckCircle,
-      title: "Enjoy Results",
-      description: "Get a stylish handsome boy pic ready for profile pictures, designs, or inspiration."
+      icon: ShieldCheck,
+      title: "Stays Private",
+      description: "Everything runs in your browser. Your image never leaves your device — nothing uploaded, nothing stored."
     }
   ];
 
@@ -29,10 +29,10 @@ const HowToUse = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className=" font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight break-words text-center">
-            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent"> Create Stylish Handsome Boy Pic Using AI</span>
+            How to <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Compress or Convert Images</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-             Creating AI portraits with FreeImagePrompt is simple:
+             Using FreeImagePrompt takes just a few seconds:
           </p>
         </div>
 

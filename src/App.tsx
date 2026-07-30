@@ -68,11 +68,11 @@ const Home = () => (
     <div className="min-h-screen bg-background">
         <Navigation />
         <Hero />
-        <GalleryPreview />
+        {/* <GalleryPreview /> */}
         <ToolSection />
         <About />
         <HowToUse />
-        <Stylish />
+        {/* <Stylish /> */}
         <Benefits />
         <FAQs />
         <Footer />
