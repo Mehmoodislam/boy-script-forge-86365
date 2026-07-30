@@ -183,40 +183,54 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
             <SEOHead title={pageTitle} description={metaDescription} />
             <Navigation />
 
-            <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="text-center mb-10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-primary/10 mb-6 group">
-                            <Layers className="h-8 w-8 text-primary group-hover:rotate-12 transition-transform" />
+            <main className="pt-28 pb-20">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="text-left mb-10">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="h-[1px] w-6 bg-rose-500"></span>
+                            <span className="text-[11px] font-mono uppercase tracking-widest font-semibold text-rose-600">
+                                FREE TOOL · RUNS IN YOUR BROWSER
+                            </span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-[#1C1917] leading-tight">
                             {h1Title}
                         </h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-[#6B645C] max-w-3xl leading-relaxed mb-6">
                             {subTitle}
                         </p>
+                        <div className="flex flex-wrap gap-2">
+                            {["100% FREE", "NO SIGNUP", "NO WATERMARK", "FILES NEVER UPLOADED", "UNLIMITED CONVERSIONS"].map((b) => (
+                                <span key={b} className="text-[10px] font-mono font-semibold tracking-wider px-3 py-1.5 rounded-full bg-[#EFECE6] text-[#6B645C]">
+                                    {b}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
-                    <div className="bg-card border border-border rounded-[2.5rem] p-6 md:p-8 shadow-2xl shadow-primary/10 relative overflow-hidden mb-10 transition-all hover:shadow-primary/20">
+                    <div className="bg-white border border-[#E6E2D8] rounded-2xl p-6 md:p-10 shadow-sm mb-12 text-center">
                         <label
                             htmlFor="file-upload"
-                            className="flex flex-col items-center justify-center w-full h-64 border-4 border-dashed border-muted/50 rounded-[2rem] cursor-pointer hover:bg-accent/5 hover:border-primary/50 transition-all group relative z-10"
+                            className="flex flex-col items-center justify-center w-full py-10 border border-dashed border-[#DDD9CE] rounded-xl cursor-pointer hover:bg-[#FAF9F5] transition-all group"
                         >
-                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                <div className="p-4 rounded-3xl bg-primary/10 mb-5 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                                    <Upload className="h-10 w-10 text-primary" />
+                            <div className="flex flex-col items-center justify-center">
+                                <div className="mb-4 text-rose-500">
+                                    <svg className="w-10 h-10 mx-auto stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                    </svg>
                                 </div>
-                                <p className="mb-3 text-xl font-bold">
+                                <p className="text-lg font-bold text-[#1C1917] mb-1">
                                     Drop your JPG images here
                                 </p>
-                                <p className="text-muted-foreground font-medium flex items-center gap-2">
-                                    <List className="h-4 w-4" />
+                                <p className="text-sm text-[#78716C] mb-6 font-mono">
                                     Supports batch upload (JPG/JPEG only)
                                 </p>
+                                <span className="px-6 py-2.5 rounded-lg bg-[#1C1917] text-white text-sm font-semibold hover:bg-black transition-colors shadow-sm">
+                                    Choose Files
+                                </span>
                             </div>
                             <input
                                 id="file-upload"
@@ -231,9 +245,9 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
 
                     {results.length > 0 && (
                         <div className="space-y-6">
-                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-accent/5 p-4 rounded-2xl border border-border">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-white p-4 rounded-xl border border-[#E6E2D8]">
                                 <div className="flex items-center gap-4">
-                                    <span className="text-sm font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">
+                                    <span className="text-xs font-mono font-bold px-3 py-1 bg-[#F5F3ED] text-[#1C1917] rounded-full">
                                         {results.length} Files Selected
                                     </span>
                                 </div>
@@ -257,24 +271,24 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                                 </div>
                             </div>
 
-                            <div className="bg-card border border-border rounded-[2rem] overflow-hidden shadow-xl">
+                            <div className="bg-white border border-[#E6E2D8] rounded-xl overflow-hidden shadow-sm">
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-left border-collapse">
-                                        <thead className="bg-accent/10">
+                                        <thead className="bg-[#FAF9F5] border-b border-[#E6E2D8]">
                                             <tr>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Preview</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">File Info</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">Size (Before)</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">Size (After)</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Status</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground text-right">Actions</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">Preview</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">File Info</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C] hidden md:table-cell">Size (Before)</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C] hidden md:table-cell">Size (After)</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">Status</th>
+                                                <th className="p-5 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C] text-right">Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-border">
+                                        <tbody className="divide-y divide-[#E6E2D8]">
                                             {results.map((result) => (
-                                                <tr key={result.id} className="group hover:bg-accent/5 transition-colors">
+                                                <tr key={result.id} className="group hover:bg-[#FAF9F5] transition-colors">
                                                     <td className="p-5">
-                                                        <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
+                                                        <div className="w-16 h-16 rounded-xl overflow-hidden border border-[#E6E2D8] bg-[#F5F3ED] flex items-center justify-center">
                                                             {result.status === "completed" ? (
                                                                 <img src={result.previewUrl} alt="Small Preview" className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
@@ -291,13 +305,13 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                                                     <td className="p-5 hidden md:table-cell">
                                                         {result.status === "completed" ? (
                                                             <div className="flex flex-col">
-                                                                <span className="text-sm font-bold text-primary">{formatSize(result.compressedSize)}</span>
-                                                                <span className="text-[10px] font-bold text-green-500 uppercase">
+                                                                <span className="text-sm font-bold text-emerald-700">{formatSize(result.compressedSize)}</span>
+                                                                <span className="text-[10px] font-bold text-emerald-600 uppercase">
                                                                     Saved {Math.round(((result.originalSize - result.compressedSize) / result.originalSize) * 100)}%
                                                                 </span>
                                                             </div>
                                                         ) : (
-                                                            <span className="text-sm text-muted-foreground italic">Processing...</span>
+                                                            <span className="text-sm text-[#78716C] italic">Processing...</span>
                                                         )}
                                                     </td>
                                                     <td className="p-5">
@@ -307,7 +321,7 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                                                             </div>
                                                         )}
                                                         {result.status === "completed" && (
-                                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 text-green-600 text-[10px] font-bold uppercase border border-green-500/20">
+                                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-bold uppercase border border-emerald-200">
                                                                 <CheckCircle2 className="h-3 w-3" />
                                                                 Success
                                                             </span>
@@ -318,7 +332,7 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                                                             size="sm"
                                                             variant="ghost"
                                                             onClick={() => removeResult(result.id)}
-                                                            className="h-8 w-8 p-0 rounded-lg text-muted-foreground hover:text-destructive hover:bg-destructive/10"
+                                                            className="h-8 w-8 p-0 rounded-lg text-[#78716C] hover:text-rose-600 hover:bg-rose-50"
                                                         >
                                                             <X className="h-4 w-4" />
                                                         </Button>
@@ -332,49 +346,49 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                         </div>
                     )}
 
-                    <div className="mt-20 grid md:grid-cols-3 gap-8">
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">Bulk Processing</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                    <div className="grid md:grid-cols-3 gap-4 mb-12">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">Bulk Processing</h3>
+                            <p className="text-[#6B645C] text-sm leading-relaxed">
                                 Save time by uploading hundreds of images at once. Our engine handles multi-file compression with ease.
                             </p>
                         </div>
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">100% Client-Side</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">100% Client-Side</h3>
+                            <p className="text-[#6B645C] text-sm leading-relaxed">
                                 Your privacy is our priority. Images never leave your device. All processing happens locally in your browser.
                             </p>
                         </div>
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">Quality Preservation</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">Quality Preservation</h3>
+                            <p className="text-[#6B645C] text-sm leading-relaxed">
                                 Our smart algorithms reduce file size while keeping your photos looking sharp and professional.
                             </p>
                         </div>
                     </div>
 
-                    <div className="mt-20 space-y-16">
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
-                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">How To Compress JPG to 200kb:</h2>
-                            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+                    <div className="prose-editorial text-left space-y-10 border-t border-[#E6E2D8] pt-12">
+                        <section className="bg-[#FAF9F5] p-8 md:p-12 rounded-xl border border-[#E6E2D8]">
+                            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-[#1C1917]">How To Compress JPG to 200kb:</h2>
+                            <p className="text-[#6B645C] text-lg mb-8 leading-relaxed">
                                 Compressing your JPEG images to a mere 200kb can be accomplished effortlessly using SmallJPG's intuitive interface and advanced compression algorithms.
                             </p>
                             <ol className="space-y-6">
                                 <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">1</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#F5F3ED] text-[#1C1917] flex items-center justify-center font-bold text-sm">1</span>
+                                    <p className="text-[#6B645C]"><strong className="text-[#1C1917]">Upload Your Image:</strong> Begin by selecting your JPEG file directly on the website.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">2</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Choose 200kb Compression:</strong> Opt for the specific 200kb compression option provided on the tool.</p>
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#F5F3ED] text-[#1C1917] flex items-center justify-center font-bold text-sm">2</span>
+                                    <p className="text-[#6B645C]"><strong className="text-[#1C1917]">Choose 200kb Compression:</strong> Opt for the specific 200kb compression option provided on the tool.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">3</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#F5F3ED] text-[#1C1917] flex items-center justify-center font-bold text-sm">3</span>
+                                    <p className="text-[#6B645C]"><strong className="text-[#1C1917]">Adjust Settings if Needed:</strong> SmallJPG provides settings to fine-tune the compression if you require a balance between size and quality.</p>
                                 </li>
                                 <li className="flex gap-4">
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-sm">4</span>
-                                    <p className="text-muted-foreground"><strong className="text-foreground">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
+                                    <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#F5F3ED] text-[#1C1917] flex items-center justify-center font-bold text-sm">4</span>
+                                    <p className="text-[#6B645C]"><strong className="text-[#1C1917]">Download Your Compressed Image:</strong> Once satisfied, download your efficiently compressed image instantly, ready for your job applications or other size-restricted platforms.</p>
                                 </li>
                             </ol>
                         </section>
@@ -383,7 +397,7 @@ const JPGCompress200kb = ({ children }: JPGCompress200kbProps) => {
                             <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-4 text-[#00bcd4]">
                                 COMPRESS JPG To 200KB
                             </h2>
-                            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
+                            <p className="text-xl md:text-2xl text-[#6B645C] font-medium">
                                 Reduce JPG Size to Specific KB Easily
                             </p>
 

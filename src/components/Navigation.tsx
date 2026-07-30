@@ -69,12 +69,12 @@ const Navigation = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F9F8F3]/90 backdrop-blur-md border-b border-[#E6E2D8]">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2 group">
-            <img src={logo} alt="FreeImagePrompt Logo" className="h-10 w-10 rounded-lg group-hover:scale-110 transition-transform" loading="lazy" />
-            <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <img src="/favicon.png" alt="freeimageprompt logo" className="w-10 h-10"/>
+            <span className="font-bold text-xl tracking-tight text-neutral-900 font-sans">
               FreeImagePrompt
             </span>
           </Link>
@@ -97,15 +97,22 @@ const Navigation = () => {
             {/* Tools Dropdown */}
             <div
               ref={toolsRef}
-              className="relative"
+              className="relative flex items-center"
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <button
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-primary ${location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
+              <Link
+                to="/tools"
+                className={`text-sm font-medium transition-colors hover:text-primary py-2 ${location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
                   }`}
               >
                 Tools
+              </Link>
+              <button
+                onClick={(e) => { e.preventDefault(); setToolsOpen(!toolsOpen); }}
+                className={`p-1 transition-colors hover:text-primary ${location.pathname.startsWith("/tools") ? "text-primary" : "text-foreground/70"
+                  }`}
+              >
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${toolsOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -157,12 +164,12 @@ const Navigation = () => {
               )}
             </div>
 
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <button
               className="p-2"
               onClick={() => setIsOpen(!isOpen)}
@@ -190,12 +197,20 @@ const Navigation = () => {
             ))}
 
             {/* Mobile Tools Accordion */}
+            <Link
+              to="/tools"
+              className={`block text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname === "/tools" ? "text-primary bg-primary/10" : "text-foreground/70"
+                }`}
+              onClick={() => setIsOpen(false)}
+            >
+              Tools
+            </Link>
             <button
               onClick={() => setMobileToolsOpen(!mobileToolsOpen)}
               className={`flex items-center justify-between w-full text-sm font-medium transition-colors hover:text-primary px-2 py-2 rounded-lg ${location.pathname.startsWith("/tools") ? "text-primary bg-primary/10" : "text-foreground/70"
                 }`}
             >
-              Tools
+              <span className="text-xs text-muted-foreground/60 ml-2">Quick Access</span>
               <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${mobileToolsOpen ? "rotate-180" : ""}`} />
             </button>
             {mobileToolsOpen && (

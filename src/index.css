@@ -8,101 +8,102 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 20% 10%;
+    /* Warm cream background & editorial dark text */
+    --background: 40 25% 97%;       /* #F9F8F3 warm off-white cream */
+    --foreground: 20 14% 12%;       /* Deep crisp dark charcoal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
+    --card: 0 0% 100%;             /* Crisp white cards */
+    --card-foreground: 20 14% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
+    --popover-foreground: 20 14% 12%;
 
-    --primary: 185 80% 45%;
+    --primary: 350 70% 55%;        /* Warm coral / red accent like in image */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 320 80% 60%;
+    --primary-glow: 350 70% 65%;
 
-    --secondary: 210 20% 97%;
-    --secondary-foreground: 220 20% 10%;
+    --secondary: 40 20% 92%;       /* Muted warm beige tag background */
+    --secondary-foreground: 20 14% 20%;
 
-    --muted: 210 20% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 20 8% 46%; /* Elegant reader paragraph text color */
 
-    --accent: 320 80% 60%;
+    --accent: 350 70% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 92%;
-    --input: 210 20% 92%;
-    --ring: 185 80% 45%;
+    --border: 40 18% 88%;          /* Delicate subtle border */
+    --input: 40 18% 88%;
+    --ring: 350 70% 55%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    --gradient-primary: linear-gradient(135deg, hsl(185 80% 50%), hsl(320 80% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(185 80% 50%) 0%, hsl(260 70% 55%) 50%, hsl(320 80% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(350 70% 55%), hsl(20 80% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(350 70% 55%) 0%, hsl(20 80% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 98%) 100%);
     
-    --shadow-card: 0 4px 20px -4px hsl(220 20% 10% / 0.05);
-    --shadow-hover: 0 10px 40px -8px hsl(185 80% 45% / 0.12);
+    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 220 10% 30%;
-    --sidebar-primary: 220 15% 15%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 210 15% 95%;
-    --sidebar-accent-foreground: 220 15% 15%;
-    --sidebar-border: 210 15% 88%;
-    --sidebar-ring: 185 80% 50%;
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 20 14% 20%;
+    --sidebar-primary: 350 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 20% 90%;
+    --sidebar-accent-foreground: 20 14% 12%;
+    --sidebar-border: 40 18% 88%;
+    --sidebar-ring: 350 70% 55%;
   }
 
   .dark {
-    --background: 230 25% 8%;
-    --foreground: 210 20% 95%;
+    --background: 40 25% 97%;
+    --foreground: 20 14% 12%;
 
-    --card: 230 20% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14% 12%;
 
-    --popover: 230 20% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 12%;
 
-    --primary: 185 80% 50%;
-    --primary-foreground: 220 30% 10%;
-    --primary-glow: 320 80% 60%;
+    --primary: 350 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 350 70% 65%;
 
-    --secondary: 230 15% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 20 14% 20%;
 
-    --muted: 230 15% 18%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 40 15% 92%;
+    --muted-foreground: 20 8% 46%;
 
-    --accent: 320 80% 60%;
+    --accent: 350 70% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 20% 95%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 230 15% 20%;
-    --input: 230 15% 20%;
-    --ring: 185 80% 50%;
+    --border: 40 18% 88%;
+    --input: 40 18% 88%;
+    --ring: 350 70% 55%;
     
-    --gradient-primary: linear-gradient(135deg, hsl(185 80% 50%), hsl(320 80% 60%));
-    --gradient-hero: linear-gradient(135deg, hsl(185 80% 50%) 0%, hsl(260 70% 55%) 50%, hsl(320 80% 60%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(230 20% 12%) 0%, hsl(230 25% 8%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(350 70% 55%), hsl(20 80% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(350 70% 55%) 0%, hsl(20 80% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(40 25% 98%) 100%);
     
-    --shadow-card: 0 4px 20px -4px hsl(185 80% 50% / 0.3);
-    --shadow-hover: 0 8px 30px -6px hsl(320 80% 60% / 0.4);
+    --shadow-card: 0 4px 20px -4px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0 10px 30px -8px rgba(0, 0, 0, 0.08);
     
-    --sidebar-background: 230 25% 10%;
-    --sidebar-foreground: 210 20% 90%;
-    --sidebar-primary: 185 80% 50%;
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 20 14% 20%;
+    --sidebar-primary: 350 70% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 230 15% 15%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 230 15% 18%;
-    --sidebar-ring: 185 80% 50%;
+    --sidebar-accent: 40 20% 90%;
+    --sidebar-accent-foreground: 20 14% 12%;
+    --sidebar-border: 40 18% 88%;
+    --sidebar-ring: 350 70% 55%;
   }
 }
 
@@ -112,6 +113,27 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-rose-100 selection:text-rose-900;
+    background-color: hsl(40 25% 97%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold tracking-tight text-neutral-900;
+  }
+
+  .prose-editorial {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.75;
+    color: #4a453e;
+  }
+  
+  .prose-editorial p {
+    margin-bottom: 1.5rem;
+  }
+
+  .prose-editorial strong {
+    color: #1c1917;
+    font-weight: 600;
   }
 }

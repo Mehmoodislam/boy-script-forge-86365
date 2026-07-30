@@ -157,25 +157,35 @@ const ArtPromptGenerator = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground text-left">
+        <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
             <SEOHead title={pageTitle} description={metaDescription} schema={faqSchema} />
             <Navigation />
 
-            <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="text-center mb-10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-primary/10 mb-6 group">
-                            <Sparkles className="h-8 w-8 text-primary group-hover:rotate-12 transition-transform" />
+            <main className="pt-28 pb-20">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="text-left mb-10">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="h-[1px] w-6 bg-rose-500"></span>
+                            <span className="text-[11px] font-mono uppercase tracking-widest font-semibold text-rose-600">
+                                FREE TOOL · RUNS IN YOUR BROWSER
+                            </span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-[#1C1917] leading-tight">
                             Art Prompt Generator – Get Unlimited Creative Ideas Instantly
                         </h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-[#6B645C] max-w-3xl leading-relaxed mb-6">
                             Stuck staring at a blank canvas? Running out of drawing ideas? Our Art Prompt Generator helps artists, students, designers, and creators generate fresh ideas in seconds.
                         </p>
+                        <div className="flex flex-wrap gap-2">
+                            {["100% FREE", "NO SIGNUP", "NO WATERMARK", "FILES NEVER UPLOADED", "UNLIMITED CONVERSIONS"].map((b) => (
+                                <span key={b} className="text-[10px] font-mono font-semibold tracking-wider px-3 py-1.5 rounded-full bg-[#EFECE6] text-[#6B645C]">
+                                    {b}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
-                    <div className="bg-card border border-border rounded-[2.5rem] p-6 md:p-8 shadow-2xl shadow-primary/10 relative overflow-hidden mb-10 transition-all">
+                    <div className="bg-white border border-[#E6E2D8] rounded-2xl p-6 md:p-10 shadow-sm mb-12 text-center">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-muted-foreground">Step 1: Choose Prompt Type</label>
@@ -244,28 +254,28 @@ const ArtPromptGenerator = () => {
                         )}
                     </div>
 
-                    <div className="mt-20 grid md:grid-cols-3 gap-8">
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">100% Free & Unlimited</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                    <div className="grid md:grid-cols-3 gap-4 mb-12">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">100% Free & Unlimited</h3>
+                            <p className="text-[#6B645C] text-sm">
                                 Unlimited prompt generation, no signup required. Generate your next masterpiece now — free and instant.
                             </p>
                         </div>
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">Beat Creative Block Fast</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">Beat Creative Block Fast</h3>
+                            <p className="text-[#6B645C] text-sm">
                                 No more wasting 30 minutes deciding what to draw. A random artist prompt generator helps you move from thinking to creating.
                             </p>
                         </div>
-                        <div className="p-8 rounded-[2rem] bg-card border border-border shadow-lg space-y-4">
-                            <h3 className="text-xl font-bold">Improve Skill Consistency</h3>
-                            <p className="text-muted-foreground text-sm leading-relaxed">
+                        <div className="p-6 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors">
+                            <h3 className="text-xl font-bold text-[#1C1917]">Improve Skill Consistency</h3>
+                            <p className="text-[#6B645C] text-sm">
                                 Daily prompts help build habits. Consistent output improves your portfolio over time.
                             </p>
                         </div>
                     </div>
 
-                    <section className="mt-20 space-y-24">
+                    <div className="prose-editorial text-left space-y-10 border-t border-[#E6E2D8] pt-12">
                         <div className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
                             <div className="prose prose-invert max-w-none">
                                 <p className="text-muted-foreground leading-relaxed mb-8">
@@ -475,7 +485,7 @@ const ArtPromptGenerator = () => {
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
                     
                     <OtherConverters />
                 </div>

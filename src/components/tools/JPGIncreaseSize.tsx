@@ -132,34 +132,46 @@ const JPGIncreaseSize = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground tracking-tight">
+        <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans tracking-tight">
             <SEOHead title={pageTitle} description={metaDescription} />
             <Navigation />
 
-            <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="text-center mb-10 animate-in fade-in slide-in-from-top-4 duration-700">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-primary/10 mb-6 group">
-                            <Layers className="h-8 w-8 text-primary group-hover:rotate-12 transition-transform" />
+            <main className="pt-28 pb-20">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="text-left mb-10">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="h-[1px] w-6 bg-rose-500"></span>
+                            <span className="text-[11px] font-mono uppercase tracking-widest font-semibold text-rose-600">
+                                FREE TOOL · RUNS IN YOUR BROWSER
+                            </span>
                         </div>
-                        <h1 className="text-3xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-[#1C1917] leading-tight">
                             Increase JPG Size to Specific KB
                         </h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-lg md:text-xl text-[#6B645C] max-w-3xl leading-relaxed mb-6">
                             Effortlessly increase JPG size to 50kb, 100kb, 200kb or any other size. Perfect for portal uploads.
                         </p>
+                        <div className="flex flex-wrap gap-2">
+                            {["100% FREE", "NO SIGNUP", "NO WATERMARK", "FILES NEVER UPLOADED", "UNLIMITED CONVERSIONS"].map((b) => (
+                                <span key={b} className="text-[10px] font-mono font-semibold tracking-wider px-3 py-1.5 rounded-full bg-[#EFECE6] text-[#6B645C]">
+                                    {b}
+                                </span>
+                            ))}
+                        </div>
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-6 mb-10 items-end animate-in fade-in fill-mode-both duration-700 delay-150">
                         <div className="md:col-span-3 space-y-4">
-                            <div className="bg-card border border-border rounded-[2.5rem] p-6 md:p-8 shadow-2xl relative overflow-hidden transition-all hover:shadow-primary/5">
+                            <div className="bg-white border border-[#E6E2D8] rounded-2xl p-6 md:p-10 shadow-sm">
                                 <label
                                     htmlFor="file-upload"
                                     className="flex flex-col items-center justify-center w-full h-48 border-4 border-dashed border-muted/50 rounded-[2rem] cursor-pointer hover:bg-accent/5 hover:border-primary/50 transition-all group relative z-10"
                                 >
                                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                        <div className="p-4 rounded-3xl bg-primary/10 mb-4 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                                            <Upload className="h-8 w-8 text-primary" />
+                                        <div className="mb-4 text-rose-500">
+                                            <svg className="w-10 h-10 mx-auto stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                            </svg>
                                         </div>
                                         <p className="mb-2 text-lg font-bold">Upload Multiple JPG or PNG Images</p>
                                         <p className="text-muted-foreground text-sm font-medium flex items-center gap-2">
@@ -285,9 +297,8 @@ const JPGIncreaseSize = () => {
 
                     <div className="mt-20 space-y-20">
                         {/* SEO Content Section */}
-                        <section className="bg-card/50 p-8 md:p-12 rounded-[2.5rem] border border-border">
                             <h2 className="text-3xl font-bold mb-8">Increase JPG Size to 100kb, 200kb or Any size</h2>
-                            <div className="prose prose-slate dark:prose-invert max-w-none space-y-6 text-muted-foreground leading-relaxed">
+                            <div className="text-[#6B645C] leading-relaxed space-y-6">
                                 <p>
                                     SmallJPG is a browser-based tool that allows users to increase the size of their images in kilobytes to specific sizes, such as 50kb, 100kb, and 200kb. This tool is particularly useful for individuals who want to upload images for job applications on government portals or for school/college admissions, as there are often restrictions on photo size uploads.
                                 </p>
@@ -295,7 +306,6 @@ const JPGIncreaseSize = () => {
                                     Users can process multiple photos at once, making it a convenient tool for batch processing. Our smart padding algorithm ensures your image remains valid and viewable while meeting the strict minimum size requirements of various online forms.
                                 </p>
                             </div>
-                        </section>
 
                         <section className="grid md:grid-cols-2 gap-12 items-center">
                             <div className="space-y-6">

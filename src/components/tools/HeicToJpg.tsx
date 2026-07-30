@@ -179,7 +179,7 @@ const HeicToJpg = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background text-foreground">
+        <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
             <SEOHead
                 title="HEIC to JPG Converter — Free, Instant & Private (No Upload) | FreeImagePrompt"
                 description="Convert HEIC to JPG free, right in your browser. No upload, no signup, no watermark. Works on iPhone photos instantly — your files never leave your device."
@@ -188,51 +188,55 @@ const HeicToJpg = () => {
             />
             <Navigation />
 
-            <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4 max-w-5xl">
-                    <div className="text-center mb-10">
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-primary/10 mb-6 group">
-                            <Replace className="h-8 w-8 text-primary group-hover:rotate-12 transition-transform" />
+            <main className="pt-28 pb-20">
+                <div className="container mx-auto px-4 max-w-4xl">
+                    <div className="text-left mb-10">
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="h-[1px] w-6 bg-rose-500"></span>
+                            <span className="text-[11px] font-mono uppercase tracking-widest font-semibold text-rose-600">
+                                FREE TOOL · RUNS IN YOUR BROWSER
+                            </span>
                         </div>
-                        <p className="text-xs font-mono uppercase tracking-widest text-muted-foreground mb-3">
-                            Free Tool · Runs In Your Browser
-                        </p>
-                        <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-[#1C1917] leading-tight">
                             Convert HEIC to JPG — Free, Instant, No Upload
                         </h1>
-                        <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
+                        <p className="prose-editorial text-lg md:text-xl text-[#6B645C] max-w-3xl leading-relaxed mb-6">
                             Drop in your iPhone photos and get standard JPG files back in seconds. Nothing is uploaded to a
                             server — the conversion happens on your own device.
                         </p>
-                        <div className="flex flex-wrap justify-center gap-2 mt-6">
+                        <div className="flex flex-wrap gap-2">
                             {["100% FREE", "NO SIGNUP", "NO WATERMARK", "FILES NEVER UPLOADED", "UNLIMITED CONVERSIONS"].map((b) => (
-                                <span key={b} className="text-[10px] font-bold tracking-wider px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                                <span key={b} className="text-[10px] font-mono font-semibold tracking-wider px-3 py-1.5 rounded-full bg-[#EFECE6] text-[#6B645C]">
                                     {b}
                                 </span>
                             ))}
                         </div>
                     </div>
 
-                    <div className="bg-card border border-border rounded-[2.5rem] p-6 md:p-8 shadow-2xl shadow-primary/10 relative overflow-hidden mb-10 transition-all hover:shadow-primary/20">
+                    <div className="bg-white border border-[#E6E2D8] rounded-2xl p-6 md:p-10 shadow-sm mb-12 text-center">
                         <label
                             htmlFor="heic-upload"
-                            className="flex flex-col items-center justify-center w-full h-64 border-4 border-dashed border-muted/50 rounded-[2rem] cursor-pointer hover:bg-accent/5 hover:border-primary/50 transition-all group relative z-10"
+                            className="flex flex-col items-center justify-center w-full py-10 border border-dashed border-[#DDD9CE] rounded-xl cursor-pointer hover:bg-[#FAF9F5] transition-all group"
                             onDragOver={(e) => e.preventDefault()}
                             onDrop={(e) => {
                                 e.preventDefault();
                                 convertFiles(e.dataTransfer.files);
                             }}
                         >
-                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                <div className="p-4 rounded-3xl bg-primary/10 mb-5 group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
-                                    <Upload className="h-10 w-10 text-primary" />
-                                </div>
-                                <p className="mb-3 text-xl font-bold">Drop HEIC or HEIF files here</p>
-                                <p className="text-muted-foreground font-medium flex items-center gap-2">
-                                    <List className="h-4 w-4" />
-                                    Only .heic and .heif files are accepted
-                                </p>
+                            <div className="mb-4 text-rose-500">
+                                <svg className="w-10 h-10 mx-auto stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+                                </svg>
                             </div>
+                            <p className="text-lg font-bold text-[#1C1917] mb-1">
+                                Drop HEIC or HEIF files here
+                            </p>
+                            <p className="text-sm text-[#78716C] mb-6 font-mono">
+                                or click to browse — accepts <span className="font-bold text-[#1C1917]">.heic</span> and <span className="font-bold text-[#1C1917]">.heif</span>
+                            </p>
+                            <span className="px-6 py-2.5 rounded-lg bg-[#1C1917] text-white text-sm font-semibold hover:bg-black transition-colors shadow-sm">
+                                Choose Photos
+                            </span>
                             <input
                                 id="heic-upload"
                                 type="file"
@@ -245,85 +249,85 @@ const HeicToJpg = () => {
                     </div>
 
                     {results.length > 0 && (
-                        <div className="space-y-6">
-                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-accent/5 p-4 rounded-2xl border border-border">
-                                <span className="text-sm font-semibold px-3 py-1 bg-primary/10 text-primary rounded-full">
+                        <div className="space-y-6 mb-16">
+                            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 bg-white p-4 rounded-xl border border-[#E6E2D8]">
+                                <span className="text-xs font-mono font-bold px-3 py-1 bg-[#F5F3ED] text-[#1C1917] rounded-full">
                                     {results.length} Files Selected
                                 </span>
                                 <div className="flex gap-3 w-full sm:w-auto">
-                                    <Button variant="outline" onClick={clearAll} disabled={isProcessing} className="flex-1 sm:flex-none">
+                                    <Button variant="outline" onClick={clearAll} disabled={isProcessing} className="flex-1 sm:flex-none text-xs">
                                         Clear All
                                     </Button>
                                     <Button
                                         onClick={downloadAllZip}
                                         disabled={isProcessing || results.filter((r) => r.status === "completed").length === 0}
-                                        className="flex-1 sm:flex-none gap-2 shadow-lg shadow-primary/20"
+                                        className="flex-1 sm:flex-none gap-2 bg-rose-600 hover:bg-rose-700 text-white text-xs"
                                     >
-                                        <Download className="h-4 w-4" />
+                                        <Download className="h-3.5 w-3.5" />
                                         Download All (ZIP)
                                     </Button>
                                 </div>
                             </div>
 
-                            <div className="bg-card border border-border rounded-[2rem] overflow-hidden shadow-xl">
+                            <div className="bg-white border border-[#E6E2D8] rounded-xl overflow-hidden shadow-sm">
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-left border-collapse">
-                                        <thead className="bg-accent/10">
+                                        <thead className="bg-[#FAF9F5] border-b border-[#E6E2D8]">
                                             <tr>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Preview</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Output File</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground hidden md:table-cell">Size</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground">Status</th>
-                                                <th className="p-5 text-xs font-bold uppercase tracking-wider text-muted-foreground text-right">Actions</th>
+                                                <th className="p-4 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">Preview</th>
+                                                <th className="p-4 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">Output File</th>
+                                                <th className="p-4 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C] hidden md:table-cell">Size</th>
+                                                <th className="p-4 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C]">Status</th>
+                                                <th className="p-4 text-xs font-mono font-bold uppercase tracking-wider text-[#78716C] text-right">Actions</th>
                                             </tr>
                                         </thead>
-                                        <tbody className="divide-y divide-border">
+                                        <tbody className="divide-y divide-[#E6E2D8]">
                                             {results.map((result) => (
-                                                <tr key={result.id} className="group hover:bg-accent/5 transition-colors">
-                                                    <td className="p-5">
-                                                        <div className="w-16 h-16 rounded-xl overflow-hidden border border-border bg-accent/5 flex items-center justify-center">
+                                                <tr key={result.id} className="group hover:bg-[#FAF9F5] transition-colors">
+                                                    <td className="p-4">
+                                                        <div className="w-14 h-14 rounded-lg overflow-hidden border border-[#E6E2D8] bg-[#F5F3ED] flex items-center justify-center">
                                                             {result.status === "completed" ? (
                                                                 <img src={result.previewUrl} alt={`Converted JPG preview of ${result.originalName}`} className="w-full h-full object-cover" loading="lazy" />
                                                             ) : (
-                                                                <ImageIcon className="h-6 w-6 text-muted/30" />
+                                                                <ImageIcon className="h-5 w-5 text-muted-foreground/40" />
                                                             )}
                                                         </div>
                                                     </td>
-                                                    <td className="p-5">
-                                                        <p className="text-sm font-bold truncate max-w-[150px] md:max-w-xs">
+                                                    <td className="p-4">
+                                                        <p className="text-sm font-bold truncate max-w-[150px] md:max-w-xs text-[#1C1917]">
                                                             {result.originalName.replace(/\.(heic|heif)$/i, ".jpg")}
                                                         </p>
-                                                        <p className="text-xs text-muted-foreground">{formatSize(result.originalSize)} original</p>
+                                                        <p className="text-xs text-[#78716C]">{formatSize(result.originalSize)} original</p>
                                                     </td>
-                                                    <td className="p-5 hidden md:table-cell">
+                                                    <td className="p-4 hidden md:table-cell">
                                                         {result.status === "completed" ? (
-                                                            <span className="text-sm font-bold text-primary">{formatSize(result.convertedSize)}</span>
+                                                            <span className="text-sm font-semibold text-emerald-700">{formatSize(result.convertedSize)}</span>
                                                         ) : (
-                                                            <span className="text-sm text-muted-foreground italic">Converting...</span>
+                                                            <span className="text-xs text-[#78716C] italic">Converting...</span>
                                                         )}
                                                     </td>
-                                                    <td className="p-5">
+                                                    <td className="p-4">
                                                         {result.status === "converting" && (
                                                             <div className="w-24"><Progress value={result.progress} className="h-1.5" /></div>
                                                         )}
                                                         {result.status === "completed" && (
-                                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-500/10 text-green-600 text-[10px] font-bold uppercase border border-green-500/20">
+                                                            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[10px] font-mono font-bold uppercase border border-emerald-200">
                                                                 <CheckCircle2 className="h-3 w-3" /> Success
                                                             </span>
                                                         )}
                                                         {result.status === "error" && (
-                                                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-destructive/10 text-destructive text-[10px] font-bold uppercase border border-destructive/20">
+                                                            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 text-[10px] font-mono font-bold uppercase border border-rose-200">
                                                                 <AlertCircle className="h-3 w-3" /> Failed
                                                             </span>
                                                         )}
                                                     </td>
-                                                    <td className="p-5 text-right space-x-2">
+                                                    <td className="p-4 text-right space-x-1">
                                                         {result.status === "completed" && (
-                                                            <Button size="sm" variant="ghost" onClick={() => downloadImage(result)} className="h-8 w-8 p-0 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10" title="Download JPG">
+                                                            <Button size="sm" variant="ghost" onClick={() => downloadImage(result)} className="h-8 w-8 p-0 rounded-lg text-[#78716C] hover:text-[#1C1917]" title="Download JPG">
                                                                 <Download className="h-4 w-4" />
                                                             </Button>
                                                         )}
-                                                        <Button size="sm" variant="ghost" onClick={() => removeResult(result.id)} className="h-8 w-8 p-0 rounded-lg text-muted-foreground hover:text-destructive hover:bg-destructive/10" title="Remove">
+                                                        <Button size="sm" variant="ghost" onClick={() => removeResult(result.id)} className="h-8 w-8 p-0 rounded-lg text-[#78716C] hover:text-rose-600" title="Remove">
                                                             <Trash2 className="h-4 w-4" />
                                                         </Button>
                                                     </td>
@@ -336,102 +340,127 @@ const HeicToJpg = () => {
                         </div>
                     )}
 
-                    <article className="prose prose-lg dark:prose-invert max-w-none mt-16">
-                        <p className="lead">
-                            A <strong>HEIC file</strong> is Apple's default photo format on iPhone — it holds the same image
-                            quality as a JPG at roughly half the file size. The trade-off is compatibility: many websites, older
-                            devices, and non-Apple apps can't open HEIC files directly. Converting to <strong>JPG</strong> fixes
-                            that instantly, and this tool does it without ever sending your photo to a server.
-                        </p>
-
-                        <h2>What Is a HEIC File?</h2>
+                    <div className="prose-editorial text-left space-y-10 border-t border-[#E6E2D8] pt-12">
                         <p>
-                            HEIC stands for High Efficiency Image Container, Apple's implementation of the HEIF (High Efficiency
-                            Image Format) standard. Since iOS 11, it has been the default format for photos taken on iPhone,
-                            chosen because it compresses images more efficiently than JPG while keeping more visual detail. The
-                            downside is that HEIC isn't universally supported — Windows apps, many web uploaders, and older
-                            software often reject it outright.
+                            A <strong className="text-[#1C1917]">HEIC file</strong> is Apple's default photo format on iPhone — it holds the same image quality as a JPG at roughly half the file size. The trade-off is compatibility: many websites, older devices, and non-Apple apps can't open HEIC files directly. Converting to <strong className="text-[#1C1917]">JPG</strong> fixes that instantly, and this tool does it without ever sending your photo to a server.
                         </p>
 
-                        <h2>Why Convert HEIC to JPG?</h2>
-                        <ul>
-                            <li><strong>Compatibility:</strong> JPG opens on virtually every device, browser, and app ever made.</li>
-                            <li><strong>Uploading:</strong> Many websites and online forms silently reject HEIC files or fail to preview them.</li>
-                            <li><strong>Editing:</strong> Older photo editors and design tools often can't open HEIC at all.</li>
-                            <li><strong>Sharing:</strong> Sending a HEIC photo to a Windows or Android user can show up as a blank or unreadable file.</li>
-                        </ul>
-
-                        <h2>How to Convert HEIC to JPG Online</h2>
-                        <ol>
-                            <li><strong>Add your photos.</strong> Drag your HEIC or HEIF files into the box above, or tap "Choose Photos."</li>
-                            <li><strong>Wait a moment.</strong> Each photo converts right in your browser — usually under two seconds per file.</li>
-                            <li><strong>Download.</strong> Save each JPG individually, or use "Download All" to get every file in one ZIP.</li>
-                        </ol>
-
-                        <div className="not-prose my-8 rounded-2xl border border-primary/20 bg-primary/5 p-6">
-                            <p className="text-sm leading-relaxed">
-                                <strong>Why this matters for privacy:</strong> because conversion happens on your device using your
-                                browser's own processing power, your photos are never transmitted anywhere. That also means it keeps
-                                working even on a slow connection, since there's nothing to upload.
+                        <div>
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-4">What Is a HEIC File?</h2>
+                            <p>
+                                HEIC stands for High Efficiency Image Container, Apple's implementation of the HEIF (High Efficiency Image Format) standard. Since iOS 11, it has been the default format for photos taken on iPhone, chosen because it compresses images more efficiently than JPG while keeping more visual detail. The downside is that HEIC isn't universally supported — Windows apps, many web uploaders, and older software often reject it outright.
                             </p>
                         </div>
 
-                        <h2>HEIC vs. JPG: Key Differences</h2>
-                        <table>
-                            <thead>
-                                <tr><th></th><th>HEIC</th><th>JPG</th></tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>File size</td><td>Smaller for equal quality</td><td>Larger for equal quality</td></tr>
-                                <tr><td>Compatibility</td><td>Apple devices, newer software</td><td>Universal support</td></tr>
-                                <tr><td>Editing support</td><td>Limited outside Apple apps</td><td>Supported everywhere</td></tr>
-                                <tr><td>Web uploads</td><td>Often rejected</td><td>Accepted everywhere</td></tr>
-                            </tbody>
-                        </table>
-
-                        <h2>Frequently Asked Questions</h2>
-
-                        <h3>Is this HEIC to JPG converter really free?</h3>
-                        <p>Yes. There's no limit on how many files you convert, no watermark added to your photos, and no account required.</p>
-
-                        <h3>Do my photos get uploaded to a server?</h3>
-                        <p>No. Conversion happens entirely inside your browser using your device's own processing power — your photos are never sent anywhere.</p>
-
-                        <h3>Why do iPhone photos save as HEIC instead of JPG?</h3>
-                        <p>Apple switched to HEIC by default in iOS 11 because it stores the same image quality in roughly half the file size of a JPG, saving storage space on the device.</p>
-
-                        <h3>Will converting HEIC to JPG reduce image quality?</h3>
-                        <p>There's a very small quality difference because JPG uses different compression than HEIC, but at high quality settings it isn't visible to the eye.</p>
-
-                        <h3>Can I convert multiple HEIC files at once?</h3>
-                        <p>Yes — drag in as many files as you like, convert them together, and download them all at once as a ZIP file.</p>
-
-                        <h3>Does this work on Windows and Android, not just iPhone?</h3>
-                        <p>Yes. The converter runs in any modern browser, so you can convert HEIC files on Windows, Mac, Android, or iPhone.</p>
-
-                        <h2>Related Tools</h2>
-                        <div className="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                            {[
-                                { to: "/tools/png-to-jpg", label: "PNG to JPG Converter" },
-                                { to: "/tools/jpg-to-webp", label: "JPG to WebP Converter" },
-                                { to: "/tools/png-to-webp", label: "PNG to WebP Converter" },
-                                { to: "/tools/compress-jpg-to-20kb", label: "Compress JPG to 20KB" },
-                            ].map((t) => (
-                                <Link key={t.to} to={t.to} className="block rounded-2xl border border-border bg-card p-4 hover:border-primary/50 transition-colors">
-                                    <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">Tool</span>
-                                    <strong className="block text-sm mt-1">{t.label}</strong>
-                                </Link>
-                            ))}
+                        <div>
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-4">Why Convert HEIC to JPG?</h2>
+                            <ul className="space-y-3 list-disc pl-5">
+                                <li><strong className="text-[#1C1917]">Compatibility:</strong> JPG opens on virtually every device, browser, and app ever made.</li>
+                                <li><strong className="text-[#1C1917]">Uploading:</strong> Many websites and online forms silently reject HEIC files or fail to preview them.</li>
+                                <li><strong className="text-[#1C1917]">Editing:</strong> Older photo editors and design tools often can't open HEIC at all.</li>
+                                <li><strong className="text-[#1C1917]">Sharing:</strong> Sending a HEIC photo to a Windows or Android user can show up as a blank or unreadable file.</li>
+                            </ul>
                         </div>
 
-                        <h2>Further Reading</h2>
-                        <ul>
-                            <li><a href="https://support.apple.com/en-us/HT207022" target="_blank" rel="noopener noreferrer">Apple Support: About HEIF and HEVC media formats</a></li>
-                            <li><a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format" target="_blank" rel="noopener noreferrer">Wikipedia: High Efficiency Image File Format</a></li>
-                        </ul>
-                    </article>
+                        <div>
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-4">How to Convert HEIC to JPG Online</h2>
+                            <ol className="space-y-3 list-decimal pl-5">
+                                <li><strong className="text-[#1C1917]">Add your photos.</strong> Drag your HEIC or HEIF files into the box above, or tap "Choose Photos."</li>
+                                <li><strong className="text-[#1C1917]">Wait a moment.</strong> Each photo converts right in your browser — usually under two seconds per file.</li>
+                                <li><strong className="text-[#1C1917]">Download JPGs.</strong> Save your converted JPG files individually or all together in a single ZIP file.</li>
+                            </ol>
+                        </div>
 
-                    <OtherConverters />
+                        <div className="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-8 text-sm md:text-base">
+                            <p className="m-0 text-[#574E43]">
+                                <strong className="text-[#1C1917]">Why this matters for privacy:</strong> because conversion happens on your device using your browser's own processing power, your photos are never transmitted anywhere. That also means it keeps working even on a slow connection, since there's nothing to upload.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-6">HEIC vs. JPG: Key Differences</h2>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm border-collapse text-left bg-white border border-[#E6E2D8] rounded-xl overflow-hidden">
+                                    <thead>
+                                        <tr className="bg-[#FAF9F5] border-b border-[#E6E2D8] text-xs font-mono uppercase text-[#78716C]">
+                                            <th className="p-3">Feature</th>
+                                            <th className="p-3">HEIC</th>
+                                            <th className="p-3">JPG</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="divide-y divide-[#E6E2D8]">
+                                        <tr>
+                                            <td className="p-3 font-semibold text-[#1C1917]">File size</td>
+                                            <td className="p-3">Smaller for equal quality</td>
+                                            <td className="p-3">Larger for equal quality</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-semibold text-[#1C1917]">Compatibility</td>
+                                            <td className="p-3">Apple devices, newer software</td>
+                                            <td className="p-3 font-semibold text-[#1C1917]">Universal support</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-semibold text-[#1C1917]">Editing support</td>
+                                            <td className="p-3">Limited outside Apple apps</td>
+                                            <td className="p-3">Supported everywhere</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-semibold text-[#1C1917]">Web uploads</td>
+                                            <td className="p-3">Often rejected</td>
+                                            <td className="p-3">Accepted everywhere</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-6">Frequently Asked Questions</h2>
+                            <div className="space-y-6 divide-y divide-[#E6E2D8]">
+                                <div className="pt-4">
+                                    <h3 className="text-lg font-bold font-sans text-[#1C1917] mb-2">Is this HEIC to JPG converter really free?</h3>
+                                    <p className="text-sm md:text-base text-[#6B645C]">Yes. There's no limit on how many files you convert, no watermark added to your photos, and no account required.</p>
+                                </div>
+                                <div className="pt-4">
+                                    <h3 className="text-lg font-bold font-sans text-[#1C1917] mb-2">Do my photos get uploaded to a server?</h3>
+                                    <p className="text-sm md:text-base text-[#6B645C]">No. Conversion happens entirely inside your browser using your device's own processing power — your photos are never sent anywhere.</p>
+                                </div>
+                                <div className="pt-4">
+                                    <h3 className="text-lg font-bold font-sans text-[#1C1917] mb-2">Can I convert multiple HEIC files at once?</h3>
+                                    <p className="text-sm md:text-base text-[#6B645C]">Yes — drag in as many files as you like, convert them together, and download them all at once as a ZIP file.</p>
+                                </div>
+                                <div className="pt-4">
+                                    <h3 className="text-lg font-bold font-sans text-[#1C1917] mb-2">Does this work on Windows and Android, not just iPhone?</h3>
+                                    <p className="text-sm md:text-base text-[#6B645C]">Yes. The converter runs in any modern browser, so you can convert HEIC files on Windows, Mac, Android, or iPhone.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="pt-6">
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-6">Related Tools</h2>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                {[
+                                    { title: "PNG to JPG Converter", link: "/tools/png-to-jpg" },
+                                    { title: "JPG to WebP Converter", link: "/tools/jpg-to-webp" },
+                                    { title: "PNG to WebP Converter", link: "/tools/png-to-webp" },
+                                    { title: "Compress JPG to 20KB", link: "/tools/compress-jpg-to-20kb" }
+                                ].map((tool, idx) => (
+                                    <Link key={idx} to={tool.link} className="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+                                        <span className="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+                                        <span className="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">{tool.title}</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+
+                        <div className="pt-4">
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-4">Further Reading</h2>
+                            <ul className="space-y-2 list-disc pl-5 text-sm">
+                                <li><a href="https://support.apple.com/en-us/HT207022" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Apple Support: About HEIF and HEVC media formats</a></li>
+                                <li><a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format" target="_blank" rel="noopener noreferrer" className="text-rose-600 hover:underline">Wikipedia: High Efficiency Image File Format</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </main>
 

@@ -3,173 +3,106 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary/30 border-t border-border">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-[#F2EFF7]/40 border-t border-[#E6E2D8] text-left">
+      <div className="container mx-auto px-4 py-12 max-w-6xl">
         <div className="grid md:grid-cols-5 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-primary to-primary-glow">
-                <Sparkles className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="font-bold text-xl bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                FreeImagePrompt
-              </span>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Handcrafted AI prompts for creating stunning stylish portraits. Free forever.
+          <div className="space-y-3 md:col-span-1">
+            <span className="font-bold text-lg text-[#1C1917] font-sans">
+              FreeImagePrompt
+            </span>
+            <p className="text-xs text-[#78716C] leading-relaxed">
+              Fast, free & browser-based image conversion tools. No uploads required.
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1C1917] mb-3">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/gallery" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/gallery" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Gallery
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/blog" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Blog
                 </Link>
               </li>
-              <li>
-                <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#how-to-use" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  How to Use
-                </a>
-              </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1C1917] mb-3">Popular Converters</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#benefits" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Benefits
-                </a>
-              </li>
-              <li>
-                <a href="#faqs" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  FAQs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">JPG Compressor</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/tools/increase-jpg-size" className="text-muted-foreground hover:text-primary transition-colors">
-                  Increase JPG Size
+                <Link to="/tools/heic-to-jpg" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  HEIC to JPG
                 </Link>
               </li>
               <li>
-                <Link to="/tools/reduce-jpg-size" className="text-muted-foreground hover:text-primary transition-colors">
-                  Reduce JPG Size
+                <Link to="/tools/png-to-jpg" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  PNG to JPG
                 </Link>
               </li>
               <li>
-                <Link to="/tools/compress-jpg-to-5kb" className="text-muted-foreground hover:text-primary transition-colors">
-                  JPG to 5KB
+                <Link to="/tools/jpg-to-webp" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  JPG to WebP
                 </Link>
               </li>
               <li>
-                <Link to="/tools/compress-jpg-to-10kb" className="text-muted-foreground hover:text-primary transition-colors">
-                  JPG to 10KB
-                </Link>
-              </li>
-              <li>
-                <Link to="/tools/compress-jpg-to-20kb" className="text-muted-foreground hover:text-primary transition-colors">
-                  JPG to 20KB
-                </Link>
-              </li>
-              <li>
-                <Link to="/tools/compress-jpg-to-50kb" className="text-muted-foreground hover:text-primary transition-colors">
-                  JPG to 50KB
-                </Link>
-              </li>
-              <li>
-                <Link to="/tools/compress-jpg-to-100kb" className="text-muted-foreground hover:text-primary transition-colors">
-                  JPG to 100KB
+                <Link to="/tools/png-to-webp" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  PNG to WebP
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Legal</h3>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1C1917] mb-3">JPG Tools</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/tools/compress-jpg-to-20kb" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Compress JPG to 20KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-50kb" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Compress JPG to 50KB
+                </Link>
+              </li>
+              <li>
+                <Link to="/tools/compress-jpg-to-100kb" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Compress JPG to 100KB
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-mono font-bold uppercase tracking-wider text-[#1C1917] mb-3">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/privacy-policy" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/terms-of-services" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Terms of Services
                 </Link>
               </li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Connect</h3>
-            <div className="flex gap-4">
-              <a
-                href="https://www.facebook.com/profile.php?id=61583362258433"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Follow us on Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.instagram.com/imageprompt2008/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Follow us on Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://tiktok.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Follow us on TikTok"
-              >
-                <Video className="h-5 w-5" />
-              </a>
-              <a
-                href="https://youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-lg bg-secondary border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-                aria-label="Subscribe to our YouTube channel"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
-            </div>
-          </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 FreeImagePrompt. All rights reserved. Made with ❤️ for AI creators.
+        <div className="mt-10 pt-6 border-t border-[#E6E2D8] text-center">
+          <p className="text-xs text-[#78716C]">
+            © {new Date().getFullYear()} FreeImagePrompt. All rights reserved. 100% Client-side Free Utilities.
           </p>
         </div>
       </div>

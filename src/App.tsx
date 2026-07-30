@@ -53,6 +53,7 @@ import JPGCompress1mbPage from "./pages/JPGCompress1mbPage";
 import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
 import ArtPromptGeneratorPage from "./pages/ArtPromptGeneratorPage";
+import ToolsPage from "./pages/ToolsPage";
 import AdminLogin from "./pages/admin/Login";
 import AdminDashboard from "./pages/admin/Dashboard";
 import PageManager from "./pages/admin/PageManager";
@@ -90,6 +91,7 @@ function App() {
                             <Route path="/" element={<Home />} />
                             <Route path="/gallery" element={<Gallery />} />
                             <Route path="/packs" element={<Packs />} />
+                            <Route path="/tools" element={<ToolsPage />} />
                             <Route path="/tools/webp-to-jpg" element={<WebpToJpgPage />} />
                             <Route path="/tools/webp-to-png" element={<WebpToPngPage />} />
                             <Route path="/tools/png-to-webp" element={<PngToWebpPage />} />
