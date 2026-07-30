@@ -102,7 +102,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-[#E6E2D8] text-center">
           <p className="text-xs text-[#78716C]">
-            © {new Date().getFullYear()} FreeImagePrompt. All rights reserved. 100% Client-side Free Utilities.
+            © 2025 FreeImagePrompt. All rights reserved. 100% Client-side Free Utilities.
           </p>
         </div>
       </div>

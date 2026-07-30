@@ -21,7 +21,7 @@ const About = () => {
 
           <div className="space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
             <p>
-              <span className="font-semibold text-foreground">FreeImagePrompt</span> is a free collection of online image tools built for the small, everyday moments when you just need a photo fixed quickly — a job application that rejects anything over 50KB, an old website that won't accept a HEIC photo from your iPhone, or a PNG graphic that's too heavy for your site to load fast. Instead of downloading an app or learning design software, you can open a tool here, drop in your image, and have a working file back in a few seconds.
+              <span className="font-semibold text-foreground">FreeImagePrompt</span> is a free collection of online image tools built for the small, everyday moments when you just need a photo fixed quickly - a job application that rejects anything over 50KB, an old website that won't accept a HEIC photo from your iPhone, or a PNG graphic that's too heavy for your site to load fast. Instead of downloading an app or learning design software, you can open a tool here, drop in your image, and have a working file back in a few seconds.
             </p>
 
             <p>
@@ -29,7 +29,7 @@ const About = () => {
             </p>
 
             <p>
-              The tool library covers the two things people search for most: shrinking a photo to fit a strict size limit, and converting between formats like JPG, PNG, WebP, and HEIC. Compression tools are built around the exact KB sizes that forms and portals commonly demand — 5KB, 20KB, and 50KB — instead of a vague "compress" slider that leaves you guessing. Conversion tools handle the format mismatches people run into daily, like an iPhone saving photos as HEIC by default, or a website that only accepts JPG and rejects a WebP image outright.
+              The tool library covers the two things people search for most: shrinking a photo to fit a strict size limit, and converting between formats like JPG, PNG, WebP, and HEIC. Compression tools are built around the exact KB sizes that forms and portals commonly demand - 5KB, 20KB, and 50KB - instead of a vague "compress" slider that leaves you guessing. Conversion tools handle the format mismatches people run into daily, like an iPhone saving photos as HEIC by default, or a website that only accepts JPG and rejects a WebP image outright.
             </p>
 
             <p>

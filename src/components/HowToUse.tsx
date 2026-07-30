@@ -5,7 +5,7 @@ const HowToUse = () => {
     {
       icon: Upload,
       title: "Drop Your Image",
-      description: "Open any tool and drag your photo into the upload area — JPG, PNG, WebP, or HEIC all work."
+      description: "Open any tool and drag your photo into the upload area - JPG, PNG, WebP, or HEIC all work."
     },
     {
       icon: Sliders,
@@ -20,7 +20,7 @@ const HowToUse = () => {
     {
       icon: ShieldCheck,
       title: "Stays Private",
-      description: "Everything runs in your browser. Your image never leaves your device — nothing uploaded, nothing stored."
+      description: "Everything runs in your browser. Your image never leaves your device - nothing uploaded, nothing stored."
     }
   ];
 

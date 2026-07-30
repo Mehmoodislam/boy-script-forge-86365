@@ -43,8 +43,8 @@ const ToolSection = () => {
                             </h2>
 
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                Take full control over your image file sizes with our powerful **JPG Compressor**.
-                                Whether you need to reduce a photo for a website or increase its size for a portal
+                                Take full control over your image file sizes with our powerful <Link to="/tools/jpg-compress" className="text-primary font-semibold hover:underline">JPG Compressor</Link>.
+                                Whether you need to <Link to="/tools/reduce-jpg-size" className="text-primary font-semibold hover:underline">reduce</Link> or <Link to="/tools/increase-jpg-size" className="text-primary font-semibold hover:underline">increase its size</Link> for a portal
                                 requirement, our browser-based tools handle everything locally and securely.
                             </p>
 
@@ -120,21 +120,30 @@ const ToolSection = () => {
                    </div>
                    
                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {[...mediaTools, ...converters].map((tool, idx) => (
-                          <Link key={idx} to={tool.to} className="group p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/80 transition-all hover:-translate-y-1 hover:shadow-xl">
-                              <div className="flex items-center gap-4 mb-4">
-                                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all">
-                                      <tool.icon className="h-6 w-6" />
-                                  </div>
-                                  <div>
-                                      <h4 className="font-bold text-lg">{tool.label}</h4>
-                                  </div>
-                              </div>
-                              <p className="text-sm text-muted-foreground">{tool.desc}</p>
-                          </Link>
-                      ))}
-                   </div>
-                </div>
+                       {[...mediaTools, ...converters].map((tool, idx) => (
+                           <Link key={idx} to={tool.to} className="group p-6 rounded-2xl bg-secondary/30 border border-border/50 hover:bg-secondary/80 transition-all hover:-translate-y-1 hover:shadow-xl">
+                               <div className="flex items-center gap-4 mb-4">
+                                   <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all">
+                                       <tool.icon className="h-6 w-6" />
+                                   </div>
+                                   <div>
+                                       <h4 className="font-bold text-lg">{tool.label}</h4>
+                                   </div>
+                               </div>
+                               <p className="text-sm text-muted-foreground">{tool.desc}</p>
+                           </Link>
+                       ))}
+                    </div>
+
+                    <div className="text-center mt-10">
+                        <Link to="/tools">
+                            <Button size="lg" className="h-14 px-10 text-lg font-bold bg-gradient-to-r from-primary to-primary-glow hover:scale-105 transition-transform shadow-xl shadow-primary/20 group">
+                                View All Tools
+                                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                        </Link>
+                    </div>
+                 </div>
             </div>
         </section>
     );
