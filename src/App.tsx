@@ -19,6 +19,7 @@ import WebpToPngPage from "./pages/WebpToPngPage";
 import PngToWebpPage from "./pages/PngToWebpPage";
 import PngToJpgPage from "./pages/PngToJpgPage";
 import JpgToWebpPage from "./pages/JpgToWebpPage";
+import HeicToJpgPage from "./pages/HeicToJpgPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Blog from "./pages/Blog";
@@ -94,6 +95,7 @@ function App() {
                             <Route path="/tools/png-to-webp" element={<PngToWebpPage />} />
                             <Route path="/tools/png-to-jpg" element={<PngToJpgPage />} />
                             <Route path="/tools/jpg-to-webp" element={<JpgToWebpPage />} />
+                            <Route path="/tools/heic-to-jpg" element={<HeicToJpgPage />} />
                             <Route path="/tools/jpg-compress" element={<JPGCompressPage />} />
                             <Route path="/tools/reduce-jpg-size" element={<JPGReducePage />} />
                             <Route path="/tools/increase-jpg-size" element={<JPGIncreaseSizePage />} />

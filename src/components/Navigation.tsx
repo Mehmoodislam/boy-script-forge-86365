@@ -21,6 +21,7 @@ const converters = [
   { to: "/tools/png-to-webp", label: "PNG to WebP", icon: RefreshCw, desc: "Convert PNG images to WebP" },
   { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Convert PNG images to JPEG" },
   { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Convert JPEG to WebP format" },
+  { to: "/tools/heic-to-jpg", label: "HEIC to JPG", icon: RefreshCw, desc: "Convert iPhone photos to JPG" },
 ];
 
 const Navigation = () => {
