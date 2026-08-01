@@ -47,6 +47,7 @@ const converters = [
   { to: "/tools/png-to-jpg", label: "PNG to JPG", desc: "Convert PNG images to JPEG format" },
   { to: "/tools/jpg-to-webp", label: "JPG to WebP", desc: "Convert JPEG images to WebP format" },
   { to: "/tools/heic-to-jpg", label: "HEIC to JPG", desc: "Convert iPhone HEIC photos to JPG" },
+  { to: "/tools/image-dpi-checker", label: "Image DPI Checker", desc: "Check any image's DPI & print readiness online" },
 ];
 
 const creativeTools = [

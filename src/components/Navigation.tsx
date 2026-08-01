@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as ImageIcon, Layers, ArrowDown, RefreshCw, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as ImageIcon, Layers, ArrowDown, RefreshCw, Sparkles, ScanSearch } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
@@ -22,6 +22,7 @@ const converters = [
   { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Convert PNG images to JPEG" },
   { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Convert JPEG to WebP format" },
   { to: "/tools/heic-to-jpg", label: "HEIC to JPG", icon: RefreshCw, desc: "Convert iPhone photos to JPG" },
+  { to: "/tools/image-dpi-checker", label: "Image DPI Checker", icon: ScanSearch, desc: "Check DPI & print readiness" },
 ];
 
 const Navigation = () => {

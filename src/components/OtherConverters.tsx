@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { RefreshCw, ImageIcon, Layers, ArrowDown, ImageDown, ChevronRight } from "lucide-react";
+import { RefreshCw, ImageIcon, Layers, ArrowDown, ImageDown, ChevronRight, ScanSearch } from "lucide-react";
 
 const OtherConverters = () => {
     const converters = [
@@ -8,6 +8,7 @@ const OtherConverters = () => {
         { to: "/tools/png-to-webp", label: "PNG to WebP", icon: RefreshCw, desc: "Next-Gen Format" },
         { to: "/tools/png-to-jpg", label: "PNG to JPG", icon: RefreshCw, desc: "Universal Export" },
         { to: "/tools/jpg-to-webp", label: "JPG to WebP", icon: RefreshCw, desc: "Modern Compression" },
+        { to: "/tools/image-dpi-checker", label: "Image DPI Checker", icon: ScanSearch, desc: "Check DPI Online" },
         { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch Optimize" },
         { to: "/tools/reduce-jpg-size", label: "Reduce JPG Size", icon: ArrowDown, desc: "Quick Weight Loss" },
         { to: "/tools/increase-jpg-size", label: "Increase JPG Size", icon: Layers, desc: "KB Enlargement" },

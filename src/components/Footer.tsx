@@ -59,6 +59,11 @@ const Footer = () => {
                   PNG to WebP
                 </Link>
               </li>
+              <li>
+                <Link to="/tools/image-dpi-checker" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Image DPI Checker
+                </Link>
+              </li>
             </ul>
           </div>
 
