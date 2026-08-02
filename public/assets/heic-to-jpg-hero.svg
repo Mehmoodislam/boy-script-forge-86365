@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F9F8F3"/>
+  <circle cx="1050" cy="90" r="160" fill="#E11D48" opacity="0.06"/>
+  <circle cx="140" cy="540" r="200" fill="#E11D48" opacity="0.05"/>
+
+  <text x="600" y="88" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" letter-spacing="6" fill="#E11D48">FREE GUIDE</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="800" fill="#1C1917">Convert HEIC to JPG</text>
+  <text x="600" y="195" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="24" font-style="italic" fill="#6B645C">from any device, for free</text>
+
+  <rect x="180" y="300" width="240" height="180" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="210" y="330" width="180" height="100" rx="12" fill="#F5F3ED"/>
+  <path d="M260 340 L300 380 L280 400 L250 370 Z" fill="#FDE8EA"/>
+  <path d="M250 370 L270 390 L300 380 L310 370 Z" fill="#FBCBD1"/>
+  <rect x="300" y="340" width="40" height="40" rx="8" fill="#F1C2C8"/>
+  <text x="210" y="462" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#1C1917">IMG_1234.HEIC</text>
+  <text x="210" y="484" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#6B645C">iPhone high efficiency</text>
+
+  <g transform="translate(560, 330)">
+    <rect width="80" height="90" rx="16" fill="#E11D48"/>
+    <path d="M24 60 L40 44 L56 60 L48 60 L48 78 L32 78 L32 60 Z" fill="#FFFFFF"/>
+    <text x="40" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">JPG</text>
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#E11D48">CONVERT</text>
+
+  <rect x="780" y="300" width="240" height="180" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="810" y="330" width="180" height="100" rx="12" fill="#F5F3ED"/>
+  <rect x="830" y="350" width="90" height="60" rx="8" fill="#1C1917"/>
+  <circle cx="855" cy="370" r="8" fill="#FFFFFF"/>
+  <circle cx="880" cy="390" r="5" fill="#E11D48"/>
+  <rect x="905" y="360" width="8" height="22" rx="4" fill="#FFFFFF"/>
+  <text x="810" y="462" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#1C1917">IMG_1234.JPG</text>
+  <text x="810" y="484" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#6B645C">universally compatible</text>
+
+  <rect x="110" y="560" width="180" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="200" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">iPhone</text>
+  <rect x="340" y="560" width="180" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="430" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Mac</text>
+  <rect x="570" y="560" width="180" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="660" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Windows</text>
+  <rect x="800" y="560" width="180" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="890" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Android</text>
+  <text x="1015" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Online</text>
+</svg>

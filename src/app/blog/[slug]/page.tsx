@@ -19,8 +19,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: `${post.title} | FreeImagePrompt`,
-    description: post.description,
+    title: `${post.metaTitle || post.title} | FreeImagePrompt`,
+    description: post.metaDescription || post.description,
     keywords: post.keywords,
     alternates: {
       canonical: `https://freeimageprompt.com/blog/${slug}`,

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F9F8F3"/>
+  <rect x="60" y="60" width="1080" height="510" rx="32" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+
+  <text x="600" y="130" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="800" fill="#1C1917">Convert on Any Device</text>
+  <text x="600" y="170" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="22" font-style="italic" fill="#6B645C">no extra software required — just native apps</text>
+
+  <rect x="110" y="220" width="220" height="260" rx="24" fill="#F5F3ED" stroke="#E6E2D8"/>
+  <rect x="180" y="250" width="80" height="150" rx="18" fill="#1C1917"/>
+  <rect x="210" y="265" width="20" height="60" rx="6" fill="#E11D48"/>
+  <circle cx="220" cy="345" r="9" fill="#FFFFFF"/>
+  <text x="220" y="430" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1C1917">iPhone</text>
+  <text x="220" y="456" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6B645C">Files app</text>
+  <circle cx="330" cy="240" r="18" fill="#22C55E"/>
+  <path d="M322 240 L327 245 L338 234" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="370" y="220" width="220" height="260" rx="24" fill="#F5F3ED" stroke="#E6E2D8"/>
+  <rect x="410" y="258" width="140" height="12" rx="6" fill="#1C1917"/>
+  <rect x="410" y="286" width="140" height="86" rx="8" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <rect x="430" y="302" width="34" height="22" rx="4" fill="#E11D48"/>
+  <rect x="472" y="302" width="34" height="22" rx="4" fill="#F1C2C8"/>
+  <rect x="514" y="302" width="20" height="22" rx="4" fill="#FDE8EA"/>
+  <text x="480" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1C1917">Mac</text>
+  <text x="480" y="426" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6B645C">Preview &amp; Photos</text>
+  <circle cx="590" cy="240" r="18" fill="#22C55E"/>
+  <path d="M582 240 L587 245 L598 234" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="630" y="220" width="220" height="260" rx="24" fill="#F5F3ED" stroke="#E6E2D8"/>
+  <rect x="670" y="258" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <rect x="685" y="274" width="44" height="30" rx="4" fill="#1C1917"/>
+  <rect x="740" y="274" width="44" height="30" rx="4" fill="#E11D48"/>
+  <rect x="685" y="314" width="110" height="12" rx="4" fill="#E6E2D8"/>
+  <text x="740" y="400" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1C1917">Windows</text>
+  <text x="740" y="426" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6B645C">Photos + HEIF codec</text>
+  <circle cx="850" cy="240" r="18" fill="#22C55E"/>
+  <path d="M842 240 L847 245 L858 234" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="890" y="220" width="200" height="260" rx="24" fill="#F5F3ED" stroke="#E6E2D8"/>
+  <rect x="950" y="258" width="80" height="150" rx="18" fill="#E11D48"/>
+  <rect x="985" y="276" width="10" height="34" rx="5" fill="#FFFFFF"/>
+  <circle cx="990" cy="355" r="10" fill="#FFFFFF"/>
+  <text x="990" y="430" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#1C1917">Android</text>
+  <text x="990" y="456" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#6B645C">Gallery &amp; Samsung</text>
+  <circle cx="1090" cy="240" r="18" fill="#22C55E"/>
+  <path d="M1082 240 L1087 245 L1098 234" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

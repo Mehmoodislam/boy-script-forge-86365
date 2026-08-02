@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { useQuery } from "@tanstack/react-query";
+import SEOHead from "@/components/SEOHead";
 
 export default function BlogPost() {
     const { slug } = useParams();
@@ -29,7 +30,10 @@ export default function BlogPost() {
                 category: "Blog",
                 date: new Date(postData.created_at).toLocaleDateString(),
                 author: "Admin",
-                content: postData.content
+                content: postData.content,
+                metaTitle: postData.meta_title as string | undefined,
+                metaDescription: postData.meta_description as string | undefined,
+                schema: postData.schema as object | undefined
             };
         },
         enabled: !!slug && !staticPost
@@ -52,6 +56,12 @@ export default function BlogPost() {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead
+                title={`${post.metaTitle || post.title} | FreeImagePrompt`}
+                description={post.metaDescription || post.description}
+                canonicalUrl={`https://freeimageprompt.com/blog/${slug}`}
+                schema={post.schema as object}
+            />
             <Navigation />
 
             <section className="pt-24 pb-8 bg-gradient-to-b from-primary/5 to-background">
@@ -90,18 +100,6 @@ export default function BlogPost() {
                     />
                 </div>
             </article>
-
-            <section className="py-12 bg-secondary/30">
-                <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-2xl font-bold mb-4">Ready to Create Your Stylish DP?</h2>
-                    <p className="text-muted-foreground mb-6">Browse our collection of 170+ free AI prompts</p>
-                    <Link to="/gallery">
-                        <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow">
-                            Explore Gallery
-                        </Button>
-                    </Link>
-                </div>
-            </section>
 
             <Footer />
         </div>
