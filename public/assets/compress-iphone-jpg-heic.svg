@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F9F8F3"/>
+  <circle cx="1050" cy="90" r="160" fill="#E11D48" opacity="0.06"/>
+  <circle cx="140" cy="540" r="200" fill="#E11D48" opacity="0.05"/>
+
+  <text x="600" y="70" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="22" font-weight="700" letter-spacing="5" fill="#E11D48">JPG VS HEIC</text>
+  <text x="600" y="120" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="42" font-weight="800" fill="#1C1917">Which Format Should You Use?</text>
+
+  <rect x="120" y="220" width="440" height="300" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="120" y="220" width="440" height="56" rx="20" fill="#1C1917"/>
+  <rect x="120" y="252" width="440" height="24" fill="#1C1917"/>
+  <text x="340" y="254" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">CHOOSE HEIC IF</text>
+  <g font-family="Inter, system-ui, sans-serif" font-size="19" fill="#1C1917" font-weight="600">
+    <text x="160" y="315">• Share between Apple devices</text>
+    <text x="160" y="360">• Storage matters more</text>
+    <text x="160" y="405">• Want smaller files, no loss</text>
+  </g>
+  <text x="160" y="470" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#6B645C">Roughly 2–5× smaller than JPG</text>
+
+  <rect x="640" y="220" width="440" height="300" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="640" y="220" width="440" height="56" rx="20" fill="#E11D48"/>
+  <rect x="640" y="252" width="440" height="24" fill="#E11D48"/>
+  <text x="860" y="254" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">CHOOSE JPG IF</text>
+  <g font-family="Inter, system-ui, sans-serif" font-size="19" fill="#1C1917" font-weight="600">
+    <text x="680" y="315">• Older sites, forums, software</text>
+    <text x="680" y="360">• Sharing with Android users</text>
+    <text x="680" y="405">• Need guaranteed compatibility</text>
+  </g>
+  <text x="680" y="470" font-family="Inter, system-ui, sans-serif" font-size="16" fill="#6B645C">Work everywhere, larger file</text>
+
+  <rect x="440" y="560" width="320" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="600" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">No one-size-fits-all answer</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F9F8F3"/>
+  <circle cx="1050" cy="90" r="160" fill="#E11D48" opacity="0.06"/>
+  <circle cx="140" cy="540" r="200" fill="#E11D48" opacity="0.05"/>
+
+  <text x="600" y="88" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="24" font-weight="700" letter-spacing="6" fill="#E11D48">FREE GUIDE</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="800" fill="#1C1917">Compress Images on iPhone</text>
+  <text x="600" y="195" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="24" font-style="italic" fill="#6B645C">without losing quality</text>
+
+  <rect x="180" y="300" width="240" height="180" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="210" y="330" width="180" height="100" rx="12" fill="#F5F3ED"/>
+  <rect x="230" y="350" width="90" height="60" rx="8" fill="#1C1917"/>
+  <circle cx="255" cy="370" r="8" fill="#FFFFFF"/>
+  <circle cx="280" cy="390" r="5" fill="#E11D48"/>
+  <rect x="305" y="360" width="8" height="22" rx="4" fill="#FFFFFF"/>
+  <text x="210" y="462" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#1C1917">IMG_1234.HEIC</text>
+  <text x="210" y="484" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#6B645C">5.2 MB</text>
+
+  <g transform="translate(560, 330)">
+    <rect width="80" height="90" rx="16" fill="#E11D48"/>
+    <path d="M40 24 L40 66 M22 50 L40 66 L58 50" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="40" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">SHRINK</text>
+  </g>
+  <text x="600" y="440" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="700" fill="#E11D48">COMPRESS</text>
+
+  <rect x="780" y="300" width="240" height="180" rx="20" fill="#FFFFFF" stroke="#E6E2D8" stroke-width="2"/>
+  <rect x="810" y="330" width="180" height="100" rx="12" fill="#F5F3ED"/>
+  <rect x="830" y="350" width="90" height="60" rx="8" fill="#1C1917"/>
+  <circle cx="855" cy="370" r="8" fill="#FFFFFF"/>
+  <circle cx="880" cy="390" r="5" fill="#E11D48"/>
+  <rect x="905" y="360" width="8" height="22" rx="4" fill="#FFFFFF"/>
+  <text x="810" y="462" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="22" font-weight="700" fill="#1C1917">IMG_1234.JPG</text>
+  <text x="810" y="484" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="15" fill="#6B645C">1.1 MB</text>
+
+  <rect x="110" y="560" width="200" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="210" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Files App</text>
+  <rect x="360" y="560" width="200" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="460" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Shortcuts</text>
+  <rect x="610" y="560" width="200" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="710" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Mail &amp; Messages</text>
+  <rect x="860" y="560" width="230" height="44" rx="22" fill="#FFFFFF" stroke="#E6E2D8"/>
+  <text x="975" y="588" text-anchor="middle" font-family="ui-monospace, Menlo, monospace" font-size="13" font-weight="600" fill="#6B645C">Trusted Apps</text>
+</svg>

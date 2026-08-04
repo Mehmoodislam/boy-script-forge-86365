@@ -66,6 +66,290 @@ export const blogPosts: BlogPost[] = [
     `
     },
     {
+        id: "how-to-compress-images-on-iphone",
+        title: "How to Compress Images on iPhone (Without Losing Quality)",
+        description: "Learn how to compress images on iPhone using the built-in Files app, Shortcuts, Mail and Messages tricks, and trusted apps. Free up storage without losing photo quality.",
+        metaTitle: "How to Compress Images on iPhone (5 Easy Methods)",
+        metaDescription: "Learn how to compress images on iPhone using Files app, Shortcuts, and trusted apps. Free up storage without losing photo quality.",
+        socialPost: "Your iPhone storage alert pops up at the worst possible moment. 📱📉 Learn how to compress images on iPhone without losing quality — using Apple's hidden Files app tool, the Shortcuts app, Mail & Messages tricks, and a few trustworthy apps. Free up space the smart way!",
+        schema: {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    headline: "How to Compress Images on iPhone (Without Losing Quality)",
+                    description: "A complete guide to compressing images on iPhone using the built-in Files app, Shortcuts, Mail/Messages, and trusted third-party apps.",
+                    author: {
+                        "@type": "Organization",
+                        name: "TrendsPrompt Team"
+                    },
+                    datePublished: "2026-08-04",
+                    dateModified: "2026-08-04",
+                    mainEntityOfPage: {
+                        "@type": "WebPage",
+                        "@id": "https://freeimageprompt.com/blog/how-to-compress-images-on-iphone"
+                    }
+                },
+                {
+                    "@type": "FAQPage",
+                    mainEntity: [
+                        {
+                            "@type": "Question",
+                            name: "Does compressing a photo on iPhone reduce its quality?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "It can, depending on the compression level you choose. Mild compression usually keeps quality intact. Aggressive compression trades quality for a smaller file."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Can I compress a photo without losing the original?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Yes. The Files app method, Shortcuts, and most third-party apps save a new compressed copy rather than overwriting the original."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Why are my iPhone photos already so large?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Modern iPhones capture high-resolution images with more detail, which naturally increases file size, even with HEIC compression already applied."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Is HEIC smaller than JPEG?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Generally yes. HEIC files can be roughly 2 to 5 times smaller than JPEG at similar quality, though actual savings vary by photo."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        date: "August 4, 2026",
+        author: "TrendsPrompt Team",
+        category: "Guides",
+        keywords: "compress images on iphone, compress photo iphone, compress image iphone, reduce image size iphone, how to compress images on iphone",
+        content: `
+      <div class="prose-editorial text-left space-y-10">
+        <div class="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-4 text-sm md:text-base">
+          <p class="m-0 text-[#574E43]">
+            <strong class="text-[#1C1917]">TL;DR:</strong> Your iPhone storage alert pops up at the worst possible moment. The good news? You don't need a computer or a design degree to compress images on iPhone. Use Apple's hidden <a href="#files-app" class="text-rose-600 hover:underline font-semibold">Files app tool</a>, the <a href="#shortcuts" class="text-rose-600 hover:underline font-semibold">Shortcuts app</a>, Mail and Messages tricks, or a trusted app — all covered below.
+          </p>
+        </div>
+
+        <p class="text-lg leading-relaxed text-[#4A453E]">
+          Your iPhone storage alert pops up at the worst possible moment. Usually right when you're trying to save a meme. If you've searched for how to compress images on iPhone, you're not alone, and the good news is you don't need a computer or a design degree to fix this.
+        </p>
+        <p class="text-lg leading-relaxed text-[#4A453E]">
+          This guide walks through every real method: Apple's hidden built-in tool, the Shortcuts app, Mail and Messages tricks, and a few trustworthy apps. No fluff, no guesswork.
+        </p>
+
+        <figure class="my-4">
+          <img src="/assets/compress-iphone-hero.svg" alt="How to compress images on iPhone without losing quality showing a 5.2 MB iPhone photo shrinking to a 1.1 MB file using Files App, Shortcuts, Mail and Messages, and trusted apps" class="w-full rounded-xl border border-[#E6E2D8] bg-white" loading="lazy" />
+        </figure>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Why Bother Compressing Photos on iPhone?</h2>
+          <p>
+            A single photo from a modern iPhone can run 3-5 MB. Multiply that by a few thousand photos, and your 128 GB phone suddenly feels like 12 GB.
+          </p>
+          <p>
+            Compression matters for a few practical reasons:
+          </p>
+          <ul class="space-y-3 list-disc pl-5">
+            <li><strong class="text-[#1C1917]">Storage.</strong> Smaller files mean more room for the photos you haven't taken yet.</li>
+            <li><strong class="text-[#1C1917]">Faster uploads and downloads.</strong> Smaller images move faster over Wi-Fi or mobile data.</li>
+            <li><strong class="text-[#1C1917]">Email limits.</strong> Most email providers cap attachments around 25 MB. Big photos eat that budget fast.</li>
+            <li><strong class="text-[#1C1917]">Website performance.</strong> If you run a blog or online store, image size directly affects load speed, and load speed affects Google rankings.</li>
+          </ul>
+          <p>
+            So whether you want to compress an image on iPhone to free up space or to upload it somewhere without crashing the page, there's a method below for you.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Does the iPhone Already Compress Your Photos?</h2>
+          <p>
+            Sort of. By default, the iPhone camera saves photos in the HEIF format, known as HEIC. This format compresses images to roughly 2 to 5 times smaller than a standard JPEG, without a noticeable drop in quality. Apple's built-in camera settings even let you switch between <strong class="text-[#1C1917]">High Efficiency</strong> (HEIC) and <strong class="text-[#1C1917]">Most Compatible</strong> (JPEG) formats, which you'll find under <strong class="text-[#1C1917]">Settings &gt; Camera &gt; Formats</strong>.
+          </p>
+          <p>
+            Here's the catch: HEIC files can be smaller, yet many websites, older apps, and some Android devices don't fully support them. So compression and compatibility often pull in opposite directions. Keep that trade-off in mind as you pick a method below.
+          </p>
+        </div>
+
+        <div id="files-app">
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">How to Compress an Image on iPhone Using the Files App</h2>
+          <p>
+            This is the one nobody talks about, and it's already sitting on your phone. The Photos app itself doesn't offer a compression option, but the Files app quietly includes a tool built for exactly this job. It's technically labeled as a <em>convert</em> feature, but it lets you keep the same file format while shrinking the size.
+          </p>
+          <p>Here's how to compress images on iPhone using this method:</p>
+          <ol class="space-y-3 list-decimal pl-5">
+            <li>Open <strong class="text-[#1C1917]">Photos</strong> and select the image you want to shrink.</li>
+            <li>Tap the <strong class="text-[#1C1917]">Share</strong> button, then choose <strong class="text-[#1C1917]">Save to Files</strong>.</li>
+            <li>Pick a folder (like <em>On My iPhone</em>) and tap <strong class="text-[#1C1917]">Save</strong>.</li>
+            <li>Open the <strong class="text-[#1C1917]">Files</strong> app and find the photo you just saved.</li>
+            <li>Tap and hold the photo, then choose <strong class="text-[#1C1917]">Quick Actions &gt; Convert Image</strong>.</li>
+            <li>Select the same format as the original if you only want compression, not a format change.</li>
+            <li>Choose a file size or quality level when prompted.</li>
+          </ol>
+          <p>
+            The Files app then creates a new, compressed copy in the same folder, and the visual quality stays largely intact.
+          </p>
+          <p>
+            Want to compress an image on iPhone in bulk? Tap <strong class="text-[#1C1917]">Select</strong> in the Files app, mark several photos, then repeat the same Convert Image steps. The compression applies to the whole batch at once.
+          </p>
+          <p>Not glamorous. Definitely effective.</p>
+        </div>
+
+        <div id="shortcuts">
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">How to Compress Images on iPhone Using Shortcuts</h2>
+          <p>
+            If you send photos for work, school, or a website often, building a Shortcut saves you from repeating the same steps every time.
+          </p>
+          <ol class="space-y-3 list-decimal pl-5">
+            <li>Open the <strong class="text-[#1C1917]">Shortcuts</strong> app.</li>
+            <li>Tap the <strong class="text-[#1C1917]">+</strong> icon to create a new shortcut.</li>
+            <li>Search for and add the <strong class="text-[#1C1917]">Select Photos</strong> action.</li>
+            <li>Add the <strong class="text-[#1C1917]">Resize Image</strong> action, then set your preferred dimensions or quality.</li>
+            <li>Add <strong class="text-[#1C1917]">Save to Photo Album</strong> (or Save to Files) as the final step.</li>
+            <li>Name it something obvious, like <em>Photo Compressor</em>, and tap Done.</li>
+          </ol>
+          <p>
+            Now, you tap once from your Share Sheet, and it's done. This is especially useful when you compress an image on iPhone for a website upload, since sites often reject anything above a certain size.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Compress Photos Automatically When You Send Them</h2>
+          <p>
+            You don't always need to compress a file before sending it. iPhone can shrink it for you in the moment.
+          </p>
+          <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">In Mail</h3>
+          <p>
+            When you attach a photo, Mail asks if you want to send it at Small, Medium, Large, or Actual Size. Choosing Small or Medium reduces the file size significantly before it ever leaves your phone.
+          </p>
+          <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">In Messages</h3>
+          <p>
+            iMessage automatically compresses photos and videos to keep conversations fast. If you're texting a large batch of images, expect some quality reduction, since Apple prioritizes speed over full resolution here.
+          </p>
+          <p>
+            Neither method touches your original photo in the Photos app. Only the sent copy shrinks.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Trustworthy Third-Party Apps for Compressing Images</h2>
+          <p>
+            Sometimes the built-in tools aren't flexible enough, especially if you need a specific target file size. A few App Store options are worth knowing about:
+          </p>
+          <ul class="space-y-3 list-disc pl-5">
+            <li><strong class="text-[#1C1917]">Compress Photos &amp; Pictures</strong> – Offers two compression levels and keeps the compressed version in a separate album, so your originals stay untouched.</li>
+            <li><strong class="text-[#1C1917]">Photo Compress – Shrink Pics</strong> – Lets you adjust JPEG compression level, resize images, and preview quality before saving, plus it converts HEIC to JPEG when needed.</li>
+            <li><strong class="text-[#1C1917]">Image Compress Photo &amp; Video</strong> – Processes everything on-device rather than uploading your photos to a server, and supports a <em>Target Size Mode</em> where you set a size like <em>under 3MB</em> and the app handles the rest.</li>
+          </ul>
+          <p>
+            A quick tip before downloading anything: check that the app processes images locally on your device rather than through a cloud server. Your vacation photos don't need to take a detour through someone else's server.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">JPEG vs. HEIC: Which Should You Choose?</h2>
+
+          <figure class="my-4">
+            <img src="/assets/compress-iphone-jpg-heic.svg" alt="JPG vs HEIC format comparison showing when to choose HEIC for Apple and smaller storage versus choosing JPG for compatibility with older sites and Android devices" class="w-full rounded-xl border border-[#E6E2D8] bg-white" loading="lazy" />
+          </figure>
+
+          <p>
+            This question comes up constantly, so here's the short version:
+          </p>
+          <p>
+            <strong class="text-[#1C1917]">Choose HEIC if:</strong> you mainly share photos between Apple devices, storage space matters more than compatibility, or you want smaller files without visible quality loss.
+          </p>
+          <p>
+            <strong class="text-[#1C1917]">Choose JPEG if:</strong> you're uploading to older websites, forums, or business software, you're sharing with Android users or older devices, or you need guaranteed compatibility over minimal size savings.
+          </p>
+          <p>
+            There's no universally <em>correct</em> answer. It depends on where the photo is going next.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Common Mistakes That Hurt Photo Quality</h2>
+          <p>A few habits quietly ruin image quality when people try to compress images on iPhone:</p>
+          <ul class="space-y-3 list-disc pl-5">
+            <li><strong class="text-[#1C1917]">Compressing the same photo repeatedly.</strong> Each round of compression discards more data. Always compress from the original, not from an already-compressed copy.</li>
+            <li><strong class="text-[#1C1917]">Over-cropping to save space.</strong> Resizing dimensions helps, but cropping too aggressively changes the composition permanently.</li>
+            <li><strong class="text-[#1C1917]">Ignoring the preview.</strong> Most tools let you preview before saving. Skipping this step is how blurry, over-compressed photos end up in your camera roll.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-6">Frequently Asked Questions About Compressing Images on iPhone</h2>
+          <div class="space-y-6 divide-y divide-[#E6E2D8]">
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Does compressing a photo on iPhone reduce its quality?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">It can, depending on the compression level you choose. Mild compression usually keeps quality intact. Aggressive compression trades quality for a smaller file.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Can I compress a photo without losing the original?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Yes. The Files app method, Shortcuts, and most third-party apps save a new compressed copy rather than overwriting the original.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Why are my iPhone photos already so large?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Modern iPhones capture high-resolution images with more detail, which naturally increases file size, even with HEIC compression already applied.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Is HEIC smaller than JPEG?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Generally yes. HEIC files can be roughly 2 to 5 times smaller than JPEG at similar quality, though actual savings vary by photo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-6">Final Thoughts</h2>
+          <p>
+            Learning how to compress an image on iPhone isn't complicated once you know where Apple hid the tools. Start with the built-in Files app method for occasional use, set up a Shortcut if you do this often, and reach for a trusted third-party app only when you need extra control, like a specific target file size.
+          </p>
+          <p>
+            Your storage bar will thank you. So will anyone waiting on your email attachment.
+          </p>
+        </div>
+
+        <div class="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-8 text-sm md:text-base">
+          <p class="m-0 text-[#574E43]">
+            <strong class="text-[#1C1917]">Need to shrink photos on your computer instead?</strong> Use our free browser-based <a href="/tools/jpg-compress" class="text-rose-600 hover:underline font-semibold">JPG compressor</a> or convert formats with the <a href="/tools/heic-to-jpg" class="text-rose-600 hover:underline font-semibold">HEIC to JPG converter</a> — no upload, no signup, and your images never leave your device.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-6">Related Image Compression Tools</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="/tools/jpg-compress" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">JPG Compressor</span>
+            </a>
+            <a href="/tools/heic-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">HEIC to JPG Converter</span>
+            </a>
+            <a href="/tools/jpg-to-webp" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">JPG to WebP Converter</span>
+            </a>
+            <a href="/tools/webp-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">WebP to JPG Converter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `
+    },
+    {
         id: "how-to-convert-heic-to-jpg",
         title: "How to Convert HEIC to JPG: Free Methods for Any Device",
         description: "Learn how to convert HEIC to JPG on iPhone, Mac, PC, Android, and online. Follow easy, step-by-step methods to instantly transform your images for free.",
