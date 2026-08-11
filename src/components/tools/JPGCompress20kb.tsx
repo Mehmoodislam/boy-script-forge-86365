@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image as ImageIcon, Upload, Download, FileJson, CheckCircle2, AlertCircle, Trash2, ArrowRight, X, Layers, List } from "lucide-react";
+import { Image as ImageIcon, Upload, Download, FileJson, CheckCircle2, X, Layers, List } from "lucide-react";
 import imageCompression from "browser-image-compression";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -30,10 +30,111 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
     const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
     // Specifically for 20KB
-    const pageTitle = "Compress JPG to 20KB Online - Free, Precise & Instant";
-    const metaDescription = "Compress JPG to exactly 20KB online for free using Free Image Prompt. Perfect for government portals, bank KYC, exam forms, and job applications. No signup, 100% browser-based, zero quality loss.";
-    const h1Title = "Compress JPG to 20KB - The Right Size for Hundreds of Official Portals";
-    const subTitle = "Twenty kilobytes is one of the most widely enforced image size limits across government, banking, and institutional platforms worldwide. Yet hitting exactly 20KB is something most photo editors fail to do reliably.";
+    const pageTitle = "Compress JPG to 20KB Online Free - No Signup, No Watermark";
+    const metaDescription = "Upload JPG and compress to ~20KB in your browser. Free, no signup, no watermark. Perfect for government exam forms, bank KYC, passport & visa portals. 100% client-side.";
+    const h1Title = "Compress JPG to 20KB - Free Online Tool for Official Forms";
+    const subTitle = "Upload JPG → compresses to ~20KB in your browser → download instantly. Free, no signup, no watermark. Works for government forms, KYC & exam portals.";
+
+    const faqSchema = {
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can I really compress a JPG to exactly 20KB?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes - our algorithm targets 20KB precisely using iterative compression passes. Results may vary by ±1–2KB depending on image content (a photo with lots of fine detail compresses differently than a plain background). In practice, the output consistently falls within the accepted range for all major portals." }
+            },
+            {
+                "@type": "Question",
+                "name": "Will the image quality be acceptable for official use?",
+                "acceptedAnswer": { "@type": "Answer", "text": "For passport-size photos and standard ID images, yes. Face details remain clear at 20KB when you start from a good original. We've tested this against UPSC, SSC, and IBPS portal requirements - the compressed images pass visual inspection." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it safe to compress ID photos and documents here?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Completely safe. All processing happens in your browser using JavaScript. Your files are never uploaded to any server - not ours, not anyone's. The image data doesn't leave your device at any point." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I compress multiple images to 20KB at once?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes - batch compression is supported. Upload multiple files and download them all at once. Useful if you're preparing photos for multiple candidates or multiple documents in one session." }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my image is already under 20KB?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The tool will leave it as-is or make minimal adjustments. It won't inflate the file size to hit 20KB - that would only hurt quality. If your image is already 18KB, you're good to go." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this work for JPEG files too?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. JPG and JPEG are the same format - the difference is just the file extension. Both .jpg and .jpeg files are fully supported." }
+            },
+            {
+                "@type": "Question",
+                "name": "What if the portal still rejects my image after compression?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Check the portal's other requirements beyond file size: dimensions (most passport photo portals require 200×230px or 35×45mm), color mode (RGB, not CMYK or grayscale unless specified), format (JPG/JPEG only), and background (white or light-colored for passport photos). If all of those are correct and the portal still rejects, try compressing to 19KB instead of 20KB." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a file size limit for uploading?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No hard limit. Processing is entirely client-side, so it depends on your device's available memory. Modern phones and laptops handle large files and batch uploads without issue." }
+            }
+        ]
+    };
+
+    const appSchema = {
+        "@type": "SoftwareApplication",
+        "name": "JPG to 20KB Compressor",
+        "url": "https://freeimageprompt.com/tools/compress-jpg-to-20kb",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any (Web Browser)",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "featureList": ["Compress to 20KB", "Client-side processing", "No signup", "Batch compression", "No watermarks"]
+    };
+
+    const breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://freeimageprompt.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://freeimageprompt.com/tools" },
+            { "@type": "ListItem", "position": 3, "name": "JPG Compressor", "item": "https://freeimageprompt.com/tools/jpg-compress" },
+            { "@type": "ListItem", "position": 4, "name": "Compress JPG to 20KB", "item": "https://freeimageprompt.com/tools/compress-jpg-to-20kb" }
+        ]
+    };
+
+    const faqs = [
+        {
+            question: "Can I really compress a JPG to exactly 20KB?",
+            answer: "Yes - our algorithm targets 20KB precisely using iterative compression passes. Results may vary by ±1–2KB depending on image content (a photo with lots of fine detail compresses differently than a plain background). In practice, the output consistently falls within the accepted range for all major portals."
+        },
+        {
+            question: "Will the image quality be acceptable for official use?",
+            answer: "For passport-size photos and standard ID images, yes. Face details remain clear at 20KB when you start from a good original. We've tested this against UPSC, SSC, and IBPS portal requirements - the compressed images pass visual inspection."
+        },
+        {
+            question: "Is it safe to compress ID photos and documents here?",
+            answer: "Completely safe. All processing happens in your browser using JavaScript. Your files are never uploaded to any server - not ours, not anyone's. The image data doesn't leave your device at any point."
+        },
+        {
+            question: "Can I compress multiple images to 20KB at once?",
+            answer: "Yes - batch compression is supported. Upload multiple files and download them all at once. Useful if you're preparing photos for multiple candidates or multiple documents in one session."
+        },
+        {
+            question: "What if my image is already under 20KB?",
+            answer: "The tool will leave it as-is or make minimal adjustments. It won't inflate the file size to hit 20KB - that would only hurt quality. If your image is already 18KB, you're good to go."
+        },
+        {
+            question: "Does this work for JPEG files too?",
+            answer: "Yes. JPG and JPEG are the same format - the difference is just the file extension. Both .jpg and .jpeg files are fully supported."
+        },
+        {
+            question: "What if the portal still rejects my image after compression?",
+            answer: "Check the portal's other requirements beyond file size: dimensions (most passport photo portals require 200×230px or 35×45mm), color mode (RGB, not CMYK or grayscale unless specified), format (JPG/JPEG only), and background (white or light-colored for passport photos). If all of those are correct and the portal still rejects, try compressing to 19KB instead of 20KB."
+        },
+        {
+            question: "Is there a file size limit for uploading?",
+            answer: "No hard limit. Processing is entirely client-side, so it depends on your device's available memory. Modern phones and laptops handle large files and batch uploads without issue."
+        }
+    ];
 
     const getTargetSizeMB = () => {
         return 20 / 1024; // Target: 20KB
@@ -185,7 +286,7 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
 
     return (
         <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
-            <SEOHead title={pageTitle} description={metaDescription} />
+            <SEOHead title={pageTitle} description={metaDescription} schema={[appSchema, faqSchema, breadcrumbSchema]} />
             <Navigation />
 
             <main className="pt-28 pb-20">
@@ -377,21 +478,24 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                     </div>
 
                     <div className="prose-editorial text-left space-y-10 border-t border-[#E6E2D8] pt-12">
-                        {/* Use Cases section */}
+                        {/* Why 20KB limit section */}
                         <div>
-                            <h2 className="text-3xl font-bold mb-8">Where Is a 20KB Image Limit Most Commonly Required?</h2>
+                            <h2 className="text-3xl font-bold mb-4">Why Do So Many Portals Require a 20KB Image Limit?</h2>
+                            <p className="text-muted-foreground leading-relaxed text-sm mb-6">
+                                Government and institutional portals set strict file size limits for three practical reasons: <strong>fast uploads on low-bandwidth connections</strong>, uniform storage across millions of records, and compatibility with older backend systems that were built long before modern smartphones existed.
+                            </p>
                             <div className="grid md:grid-cols-2 gap-8">
                                 <div className="space-y-4">
                                     <p className="text-muted-foreground leading-relaxed text-sm">
-                                        The 20KB threshold is arguably the most frequently encountered image size restriction across official platforms. Here's where you'll need it most:
+                                        The 20KB ceiling is one of the most common thresholds you'll hit. Here's where it shows up:
                                     </p>
                                     <ul className="space-y-3">
                                         {[
-                                            "Competitive exam portals (UPSC, SSC CGL, IBPS PO, RRB NTPC) specifying photo uploads between 10KB and 20KB.",
-                                            "Bank account opening and KYC verification (SBI, PNB, Canara Bank) capping digital photos at 20KB.",
-                                            "Central and state government job applications for police, railways, and defence.",
-                                            "University admission counselling (JEE Main, NEET UG) rutinly requiring 20KB passport photos.",
-                                            "Voter ID, Aadhaar, and PAN card update portals enforcing strict image size caps."
+                                            "Government exam portals - UPSC Civil Services, SSC CGL/CHSL, Railway NTPC, IBPS PO, SBI PO all specify photo uploads between 10KB and 20KB.",
+                                            "Bank KYC and account opening - SBI, PNB, Bank of Baroda digital onboarding forms cap passport photos at 20KB.",
+                                            "Passport & visa applications - India's Passport Seva Portal and several embassy visa portals enforce the same limit.",
+                                            "Job application portals - NCS (National Career Service), state government job boards, and many Naukri-integrated portals.",
+                                            "University admissions - DU, JNU, and state university counselling portals; NEET and JEE application forms."
                                         ].map((item, i) => (
                                             <li key={i} className="flex gap-3 text-muted-foreground text-sm">
                                                 <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
@@ -402,7 +506,7 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                                 </div>
                                 <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10 flex items-center justify-center">
                                     <p className="text-lg font-medium text-center italic text-primary/80 leading-relaxed">
-                                        "Missing the 20KB limit triggers instant form rejection - even when every other detail in your application is correct."
+                                        If your image is even 1KB over the limit, the portal rejects it. Our tool compresses to exactly the right size - so you don't have to guess.
                                     </p>
                                 </div>
                             </div>
@@ -410,15 +514,14 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
 
                         {/* How to compress (Steps) */}
                         <div>
-                            <h2 className="text-3xl font-bold mb-8 text-center">How to Compress JPG to 20KB - Step-by-Step Guide</h2>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <h2 className="text-3xl font-bold mb-2 text-center">How to Compress JPG to 20KB Online Free (Step-by-Step)</h2>
+                            <p className="text-muted-foreground text-center mb-8">No account. No install. Done in seconds.</p>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                                 {[
-                                    { title: "Open Free Image Prompt", text: "Visit directly in any browser - no account, no installation, no waiting." },
-                                    { title: "Upload Your Image", text: "Select your JPG/JPEG from your device, smartphone gallery, Google Drive, or Dropbox." },
-                                    { title: "Select 20KB Preset", text: "Choose the '20KB' preset from the target size options displayed on the tool." },
-                                    { title: "Adjust Quality", text: "Use the quality slider for images with important fine detail like facial features or text." },
-                                    { title: "Click Compress Now", text: "Our iterative engine processes your image entirely within your browser in seconds." },
-                                    { title: "Preview & Download", text: "Inspect side-by-side details, then download your portal-ready 20KB image instantly." }
+                                    { title: "Upload your JPG or JPEG image", text: "Drag & drop onto the tool, or click to browse your device." },
+                                    { title: "The tool automatically targets 20KB", text: "The compression algorithm runs entirely in your browser." },
+                                    { title: "Preview the compressed result", text: "File size is shown before you download." },
+                                    { title: "Download your 20KB JPG instantly", text: "Clean file, ready for portal submission." }
                                 ].map((step, i) => (
                                     <div key={i} className="relative p-7 rounded-[2rem] bg-white border border-[#E6E2D8] hover:border-[#1C1917] transition-all group overflow-hidden">
                                         <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:scale-150 transition-transform">
@@ -432,22 +535,25 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                                     </div>
                                 ))}
                             </div>
+                            <p className="text-muted-foreground text-sm mt-6 text-center italic">
+                                Your image never leaves your device - 100% browser-based, zero server uploads. This matters especially when you're compressing ID photos, passport images, or KYC documents.
+                            </p>
                         </div>
 
                         {/* Features */}
                         <div className="space-y-12">
                             <div className="text-center space-y-4">
-                                <h2 className="text-3xl font-bold">Why Free Image Prompt Is the Smartest Choice for 20KB Compression</h2>
-                                <p className="text-muted-foreground max-w-2xl mx-auto italic">High-precision tools for high-stakes applications.</p>
+                                <h2 className="text-3xl font-bold">Key Features of Our 20KB JPG Compressor</h2>
+                                <p className="text-muted-foreground max-w-2xl mx-auto italic">We built this as a dedicated image size reducer to 20KB - not a generic slider tool.</p>
                             </div>
                             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
                                 {[
-                                    { title: "Total Browser-Side Privacy", text: "Your image never leaves your device. Essential for sensitive IDs, passport photos, and official portraits.", icon: <Upload className="h-6 w-6" /> },
-                                    { title: "Pinpoint 20KB Accuracy", text: "Our iterative algorithm systematicly adjusts levels until your output lands precisely at 20KB.", icon: <Layers className="h-6 w-6" /> },
-                                    { title: "Unlimited Free Use", text: "No subscriptions, no daily caps. Compress one image or one hundred - it's always free.", icon: <CheckCircle2 className="h-6 w-6" /> },
-                                    { title: "Works Seamlessly on Mobile", text: "Open on Android or iOS, upload directly from camera roll, and download the compressed image.", icon: <ImageIcon className="h-6 w-6" /> },
-                                    { title: "Accepts PNG/WebP Input", text: "Convert and compress screenshots or WebP photos to perfectly sized 20KB JPEG outputs.", icon: <FileJson className="h-6 w-6" /> },
-                                    { title: "Live Quality Preview", text: "Confirm the output meets your quality expectations before downloading for portal submission.", icon: <List className="h-6 w-6" /> }
+                                    { title: "Precise 20KB Targeting", text: "A smart iterative algorithm hits the target size, not just approximately smaller.", icon: <Layers className="h-6 w-6" /> },
+                                    { title: "100% Client-Side", text: "Files never leave your device; critical for ID documents and sensitive photos.", icon: <Upload className="h-6 w-6" /> },
+                                    { title: "No Signup Required", text: "No account, no email, no waiting; open the tool and start immediately.", icon: <CheckCircle2 className="h-6 w-6" /> },
+                                    { title: "No Watermarks", text: "Download clean files ready for official submission.", icon: <ImageIcon className="h-6 w-6" /> },
+                                    { title: "Batch Compression", text: "Compress multiple images to 20KB at once; useful for bulk application uploads.", icon: <FileJson className="h-6 w-6" /> },
+                                    { title: "Free Forever", text: "No trial period, no subscription, no daily cap.", icon: <List className="h-6 w-6" /> }
                                 ].map((feature, i) => (
                                     <div key={i} className="group p-8 rounded-[2rem] bg-card border border-border hover:bg-primary/5 transition-all">
                                         <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:rotate-12 transition-transform">
@@ -463,44 +569,56 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                         {/* Pro Tips */}
                         <div className="bg-primary/5 p-10 md:p-14 rounded-[3rem] border border-primary/10 relative overflow-hidden">
                             <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/10 blur-[100px] rounded-full" />
-                            <h2 className="text-3xl font-bold mb-10 text-center">Pro Tips for the Sharpest Possible Output at 20KB</h2>
+                            <h2 className="text-3xl font-bold mb-4 text-center">How to Compress JPG to 20KB Without Losing Quality</h2>
+                            <p className="text-muted-foreground text-center max-w-3xl mx-auto mb-10 italic">
+                                20KB is a very small target. Quality loss is inevitable at this size - but our algorithm minimizes it. The difference between a well-compressed 20KB image and a badly compressed one is significant. Here's how to get the sharpest result:
+                            </p>
                             <div className="grid md:grid-cols-2 gap-10">
                                 <div className="space-y-8">
                                     <div className="flex gap-4">
                                         <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">1</div>
                                         <div>
-                                            <h3 className="font-bold mb-2">Pre-Compression Resizing</h3>
+                                            <h3 className="font-bold mb-2">Start With the Highest Quality Original</h3>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Resize your image to the required pixel dimensions (e.g., 200x230px) before compressing to ensure data efficiency and sharper results.
+                                                Re-compressing an already-compressed JPEG stacks quality losses. Always go back to the original source file.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
                                         <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">2</div>
                                         <div>
-                                            <h3 className="font-bold mb-2">Use Original Sources</h3>
+                                            <h3 className="font-bold mb-2">Crop Unnecessary Whitespace</h3>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Always compress from your original, uncompressed source image. Re-compressing already-compressed JPEGs stacks quality losses.
+                                                Every pixel of background is data. Tighter framing means more quality budget for what matters. For passport/ID photos your face should fill 70-80% of the frame - typically 200x230px.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-4">
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                                        <div>
+                                            <h3 className="font-bold mb-2">Scan Documents in Grayscale</h3>
+                                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                                A grayscale scan at the same resolution is roughly 60% smaller - which means you can compress to 20KB with far less quality loss.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="space-y-8">
                                     <div className="flex gap-4">
-                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">3</div>
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">4</div>
                                         <div>
-                                            <h3 className="font-bold mb-2">Signature Strategy</h3>
+                                            <h3 className="font-bold mb-2">Zoom in Before Submitting</h3>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                For signatures, use a plain white background. This allows the engine to preserve line sharpness more effectively within 20KB.
+                                                After compression, zoom in to check face clarity before submitting. The preview in the tool lets you do this before downloading.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="flex gap-4">
-                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">4</div>
+                                        <div className="shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold">5</div>
                                         <div>
-                                            <h3 className="font-bold mb-2">Check Zoom Details</h3>
+                                            <h3 className="font-bold mb-2">Automatic Quality-to-Size Optimization</h3>
                                             <p className="text-sm text-muted-foreground leading-relaxed">
-                                                Zoom into face or signature areas in the side-by-side preview to confirm the output meets quality expectations before downloading.
+                                                Our tool finds the best quality-to-size ratio automatically - you don't need to adjust any settings.
                                             </p>
                                         </div>
                                     </div>
@@ -511,35 +629,158 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                         {/* Comparison Table */}
                         <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-2xl">
                             <div className="bg-gradient-to-r from-primary to-accent p-8 text-center text-primary-foreground">
-                                <h2 className="text-2xl font-bold">Free Image Prompt vs Other JPEG Compressors — Why We're Better</h2>
+                                <h2 className="text-2xl font-bold">Compress JPG to 20KB vs Other Size Targets</h2>
+                            </div>
+                            <div className="p-6 md:p-8 border-b border-border">
+                                <p className="text-muted-foreground text-sm italic">
+                                    Not sure which size you need? The reduce JPG to 20KB option covers most official Indian government portals - but the right target depends on what the portal specifies.
+                                </p>
                             </div>
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse">
                                     <thead>
                                         <tr className="bg-muted/50 border-b border-border">
-                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Feature</th>
-                                            <th className="p-6 font-bold text-sm uppercase tracking-wider text-primary">Free Image Prompt</th>
-                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Other Tools</th>
+                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Target Size</th>
+                                            <th className="p-6 font-bold text-sm uppercase tracking-wider">Best For</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-border">
                                         {[
-                                            { f: "Precise 20KB Target", a: "✅ Exact Accuracy", b: "❌ Approximate only" },
-                                            { f: "100% Client-Side", a: "✅ Yes (Max Privacy)", b: "❌ Server upload required" },
-                                            { f: "Unlimited Use", a: "✅ Yes", b: "⚠️ Daily limits apply" },
-                                            { f: "Iterative Engine", a: "✅ 3-Pass Processing", b: "❌ Single-pass compression" },
-                                            { f: "No Sign-up", a: "✅ Yes", b: "⚠️ Varies" },
-                                            { f: "High-Res Preview", a: "✅ Live Side-by-Side", b: "❌ No preview" }
+                                            { f: "10KB", a: "Very strict portals, signature uploads, thumbnails", p: "/tools/compress-jpg-to-10kb" },
+                                            { f: "20KB", a: "Government exams, KYC, passport applications (Recommended)", p: "" },
+                                            { f: "25KB", a: "Some bank and university portals", p: "/tools/compress-jpg-to-25kb" },
+                                            { f: "50KB", a: "Job applications, general form uploads", p: "/tools/compress-jpg-to-50kb" },
+                                            { f: "100KB", a: "Email attachments, social media profile photos", p: "/tools/compress-jpg-to-100kb" },
+                                            { f: "200KB", a: "High-quality web images, professional submissions", p: "/tools/compress-jpg-to-200kb" }
                                         ].map((row, i) => (
                                             <tr key={i} className="hover:bg-accent/5 transition-all group">
-                                                <td className="p-6 font-medium text-sm">{row.f}</td>
-                                                <td className="p-6 text-primary font-bold text-sm group-hover:scale-105 transition-transform">{row.a}</td>
-                                                <td className="p-6 text-muted-foreground text-sm italic">{row.b}</td>
+                                                <td className="p-6">
+                                                    {row.p ? (
+                                                        <a href={row.p} className="text-primary font-bold text-sm underline underline-offset-4 hover:scale-105 transition-transform inline-block">
+                                                            {row.f}
+                                                        </a>
+                                                    ) : (
+                                                        <span className="text-primary font-black text-sm">{row.f}</span>
+                                                    )}
+                                                </td>
+                                                <td className="p-6 text-muted-foreground text-sm italic">{row.a}</td>
                                             </tr>
                                         ))}
                                     </tbody>
                                 </table>
                             </div>
+                            <div className="p-6 md:p-8 text-center">
+                                <p className="text-muted-foreground text-sm italic">When in doubt, compress to 20KB - it passes the widest range of official portals.</p>
+                            </div>
+                        </div>
+
+                        {/* Which Portals Require 20KB */}
+                        <div>
+                            <h2 className="text-3xl font-bold mb-4">Which Portals Require 20KB Image Size?</h2>
+                            <p className="text-muted-foreground text-sm mb-8">
+                                We've tracked the most common portals that enforce this limit. Always verify the exact requirement on the portal itself - some accept up to 25KB or 30KB.
+                            </p>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {[
+                                    {
+                                        title: "Government Exams",
+                                        items: ["UPSC Civil Services (photo: max 20KB, signature: max 10KB)", "SSC CGL, CHSL, MTS", "Railway NTPC, Group D (RRB portals)", "IBPS PO, Clerk, SO", "SBI PO and Clerk"]
+                                    },
+                                    {
+                                        title: "Passport & Visa",
+                                        items: ["Indian Passport Seva Portal (passportindia.gov.in)", "Many embassy visa application portals"]
+                                    },
+                                    {
+                                        title: "Banking KYC",
+                                        items: ["SBI, PNB, Bank of Baroda online account opening", "Various cooperative bank digital KYC forms"]
+                                    },
+                                    {
+                                        title: "Education",
+                                        items: ["DU, JNU, and state university admission counselling", "NEET UG, JEE Main application forms", "NTA exam portals"]
+                                    },
+                                    {
+                                        title: "Employment",
+                                        items: ["NCS (National Career Service) portal", "State government job portals (various)"]
+                                    }
+                                ].map((portal, i) => (
+                                    <div key={i} className="p-7 rounded-[2rem] bg-white border border-[#E6E2D8] hover:border-[#1C1917] transition-all">
+                                        <h3 className="font-bold text-lg mb-4">{portal.title}</h3>
+                                        <ul className="space-y-3">
+                                            {portal.items.map((item, j) => (
+                                                <li key={j} className="flex gap-3 text-muted-foreground text-sm">
+                                                    <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
+                                                    {item}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-muted-foreground text-sm mt-6">
+                                If your portal accepts up to 25KB, use our{" "}
+                                <a href="/tools/compress-jpg-to-25kb" className="text-primary underline underline-offset-4">compress to 25KB tool</a>
+                                . For stricter portals that cap at 10KB, use our{" "}
+                                <a href="/tools/compress-jpg-to-10kb" className="text-primary underline underline-offset-4">compress to 10KB tool</a>.
+                            </p>
+                        </div>
+
+                        {/* Mobile Section */}
+                        <div className="bg-card border border-border rounded-[2.5rem] overflow-hidden shadow-2xl">
+                            <div className="bg-gradient-to-r from-accent to-primary p-8 text-center text-primary-foreground">
+                                <h2 className="text-2xl font-bold">Compress JPG to 20KB on Mobile</h2>
+                            </div>
+                            <div className="grid md:grid-cols-3 gap-8 p-8 md:p-10">
+                                <div className="space-y-3">
+                                    <h3 className="font-bold">iPhone (iOS)</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed">
+                                        No native tool handles compress to 20KB online with precision. Open this tool in Safari - it runs fully in-browser on iOS, no app download needed.
+                                    </p>
+                                </div>
+                                <div className="space-y-3">
+                                    <h3 className="font-bold">Android</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed">
+                                        Open in Chrome. The experience is identical to desktop. Upload from your camera roll, compress, download.
+                                    </p>
+                                </div>
+                                <div className="space-y-3">
+                                    <h3 className="font-bold">Why Not WhatsApp or Telegram?</h3>
+                                    <p className="text-sm text-muted-foreground leading-relaxed">
+                                        They compress images randomly - no control over output size. Our tool gives you exact 20KB output on any device, any browser.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* FAQ Section */}
+                        <div id="faqs">
+                            <h2 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h2>
+                            <div className="space-y-4 max-w-4xl mx-auto">
+                                {faqs.map((faq, index) => (
+                                    <div key={index} className="border border-border rounded-2xl px-6 bg-card">
+                                        <h3 className="font-semibold py-5">{faq.question}</h3>
+                                        <p className="text-sm text-muted-foreground pb-6 leading-relaxed">{faq.answer}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Useful Sources */}
+                        <div className="bg-accent/5 p-10 md:p-14 rounded-[3rem] border border-border">
+                            <h2 className="text-3xl font-bold mb-8 text-center">Useful Sources</h2>
+                            <ul className="space-y-3 max-w-2xl mx-auto">
+                                {[
+                                    { name: "UPSC Online Application Portal - Photo & Signature Specifications", url: "https://upsconline.nic.in/" },
+                                    { name: "Passport Seva - Photo Guidelines", url: "https://www.passportindia.gov.in/AppOnlineProject/online/faqNri" },
+                                    { name: "JPEG Standard - Joint Photographic Experts Group", url: "https://jpeg.org/jpeg/" },
+                                    { name: "web.dev - Efficiently Encode Images", url: "https://web.dev/uses-optimized-images/" }
+                                ].map((src, i) => (
+                                    <li key={i}>
+                                        <a href={src.url} target="_blank" rel="noopener noreferrer" className="text-primary underline underline-offset-4 text-sm hover:opacity-80 transition-opacity">
+                                            {src.name}
+                                        </a>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
                         {/* Different Sizes Link Grid */}
@@ -553,14 +794,22 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                                     { s: "5KB", d: "Signatures", p: "/tools/compress-jpg-to-5kb" },
                                     { s: "10KB", d: "Portals", p: "/tools/compress-jpg-to-10kb" },
                                     { s: "15KB", d: "ID Cards", p: "/tools/compress-jpg-to-15kb" },
+                                    { s: "20KB", d: "Govt Exams", p: "" },
                                     { s: "25KB", d: "Admission", p: "/tools/compress-jpg-to-25kb" },
                                     { s: "50KB", d: "Job Forms", p: "/tools/compress-jpg-to-50kb" },
                                     { s: "100KB", d: "Passports", p: "/tools/compress-jpg-to-100kb" }
                                 ].map((size, i) => (
-                                    <a key={i} href={size.p} className="flex flex-col items-center p-6 rounded-3xl bg-white border border-[#E6E2D8] hover:border-[#1C1917] hover:shadow-xl transition-all group">
-                                        <span className="font-black text-2xl text-primary group-hover:scale-110 transition-transform">{size.s}</span>
-                                        <span className="text-[10px] font-bold text-muted-foreground mt-2 uppercase tracking-widest">{size.d}</span>
-                                    </a>
+                                    size.p ? (
+                                        <a key={i} href={size.p} className="flex flex-col items-center p-6 rounded-3xl bg-white border border-[#E6E2D8] hover:border-[#1C1917] hover:shadow-xl transition-all group">
+                                            <span className="font-black text-2xl text-primary group-hover:scale-110 transition-transform">{size.s}</span>
+                                            <span className="text-[10px] font-bold text-muted-foreground mt-2 uppercase tracking-widest">{size.d}</span>
+                                        </a>
+                                    ) : (
+                                        <div key={i} className="flex flex-col items-center p-6 rounded-3xl bg-primary text-primary-foreground border-2 border-primary shadow-xl">
+                                            <span className="font-black text-2xl">{size.s}</span>
+                                            <span className="text-[10px] font-bold mt-2 uppercase tracking-widest opacity-80">{size.d} · You are here</span>
+                                        </div>
+                                    )
                                 ))}
                             </div>
                         </div>
@@ -568,10 +817,12 @@ const JPGCompress20kb = ({ children }: JPGCompress20kbProps) => {
                         {/* Conclusion */}
                         <div className="text-center space-y-8 max-w-4xl mx-auto py-12">
                             <div className="h-1.5 w-24 bg-primary/20 rounded-full mx-auto" />
-                            <h2 className="text-3xl font-bold tracking-tight uppercase">The Trusted Choice for 20KB Official Documents</h2>
+                            <h2 className="text-3xl font-bold tracking-tight uppercase">Compress Your JPG to 20KB Now</h2>
                             <p className="text-muted-foreground text-lg leading-relaxed italic">
-                                "When your application depends on a perfect 20KB upload, don't leave it to chance. 
-                                Free Image Prompt delivers the precision, privacy, and speed required for serious submissions."
+                                The fastest way to compress JPG to 20KB for any official portal - free, private, no signup. Works on all devices, handles batch uploads, and produces clean files with no watermarks.
+                            </p>
+                            <p className="text-muted-foreground text-base leading-relaxed">
+                                Whether you need to compress JPG images in bulk or just get one passport photo ready for an exam form, the tool handles it in seconds. Explore our full suite of free image tools for more compression sizes and conversion options.
                             </p>
                             <div className="flex justify-center gap-4">
                                 <div className="px-6 py-2 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-bold uppercase tracking-widest">Privacy First</div>
