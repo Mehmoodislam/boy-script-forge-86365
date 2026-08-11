@@ -8,6 +8,7 @@ import {
   Layers,
   List,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import imageCompression from "browser-image-compression";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -34,13 +35,140 @@ const JPGCompress = () => {
   const [isOverallProcessing, setIsOverallProcessing] = useState(false);
 
   // ✅ Static SEO (No duplicate variables)
-  const pageTitle =
-    "Batch JPG Image Compressor - Compress Multiple JPGs Fast & Free";
+  const PAGE_URL = "https://freeimageprompt.com/tools/jpg-compress";
+  const pageTitle = "JPG Compressor - Free, Fast & No Signup";
   const metaDescription =
-    "Compress multiple JPG/JPEG images at once without losing quality. 100% client-side, secure, and fast batch optimization directly in your browser.";
-  const h1Title = "Batch JPG Compressor";
+    "Compress JPG and JPEG images online free - no signup, no watermark. Batch compression supported. Reduce file size without losing quality.";
+  const h1Title = "JPG Compressor - Compress JPEG Images Online Free";
   const subTitle =
-    "Upload multiple images and compress them instantly. Secure, fast, and high-quality optimization directly in your browser.";
+    "This free JPG compressor reduces JPEG file sizes by 40-80% directly in your browser. No signup. No watermark. Batch compression supported. Your images never leave your device.";
+
+  const softwareSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JPG Compressor",
+    "url": PAGE_URL,
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": "Any (Web Browser)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+    },
+    "description":
+      "Free online JPG compressor. Compress JPEG images in bulk with no signup, no watermark, and 100% client-side processing.",
+    "featureList": [
+      "Batch compression",
+      "Client-side processing",
+      "No signup required",
+      "Target file size presets",
+      "No watermarks",
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is this JPG compressor really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Yes, 100% free - no signup, no hidden fees, unlimited compressions. There's no premium tier and no daily cap.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "How much can I compress a JPG file?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Typically 40-80% reduction with no visible quality loss, depending on the original image. A 4MB photo commonly compresses to under 1MB.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Does compressing a JPG reduce image quality?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "At the 80-85% quality setting, the difference is imperceptible to the human eye. We optimize for this sweet spot - smaller file, same visual result.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Can I compress multiple JPG files at once?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Yes - our batch compressor handles hundreds of files simultaneously. Upload them all at once and download a ZIP when done.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Are my images safe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Completely. All compression happens in your browser - your files are never uploaded to any server. We have no access to your images at any point.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum file size I can compress?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "There is no hard limit. Since processing is entirely client-side, it depends on your device's available memory. Most modern phones and laptops handle large batches without issue.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Can I compress JPG to a specific file size (e.g., 200KB)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Yes - use our target-size presets: 20KB, 50KB, 100KB, 200KB, 500KB, or 1MB. Each preset compresses your image to land at or under that target.",
+        },
+      },
+      {
+        "@type": "Question",
+        "name": "Does this work on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":
+            "Yes - the tool works on any modern browser including Chrome, Safari, and Firefox on iOS and Android. No app download required.",
+        },
+      },
+    ],
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://freeimageprompt.com/",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tools",
+        "item": "https://freeimageprompt.com/tools",
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "JPG Compressor",
+        "item": PAGE_URL,
+      },
+    ],
+  };
 
   const formatSize = (bytes: number) => {
     if (bytes === 0) return "0 Bytes";
@@ -167,7 +295,7 @@ const JPGCompress = () => {
 
   return (
     <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
-      <SEOHead title={pageTitle} description={metaDescription} />
+      <SEOHead title={pageTitle} description={metaDescription} canonicalUrl={PAGE_URL} schema={[softwareSchema, faqSchema, breadcrumbSchema]} />
       <Navigation />
 
       <main className="pt-28 pb-20">
@@ -312,6 +440,266 @@ const JPGCompress = () => {
                 Our smart algorithms reduce file size while keeping your photos looking sharp and professional.
               </p>
             </div>
+          </div>
+
+          <div className="prose-editorial text-left space-y-10 border-t border-[#E6E2D8] pt-12">
+            <div className="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-8 text-sm md:text-base text-[#574E43]">
+              <strong>TL;DR:</strong> This free JPG compressor reduces JPEG file sizes by 40–80% directly in your browser. No signup. No watermark. Batch compression supported. Your images never leave your device.
+            </div>
+
+            <h2 className="text-3xl font-bold mb-6">What is a JPG Compressor?</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              A <strong>JPG compressor</strong> is a tool that shrinks the file size of JPEG images by removing redundant or imperceptible data - without noticeably degrading the photo.
+            </p>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              There are two main approaches:
+            </p>
+            <ul className="space-y-3 mb-4 list-none p-0 text-[#6B645C]">
+              <li className="flex items-start gap-2"><strong>Lossy compression</strong> - permanently discards data the human eye can't detect. Produces the smallest files. This is what most online tools (including ours) use.</li>
+              <li className="flex items-start gap-2"><strong>Lossless compression</strong> - removes only metadata and redundant bytes, keeping all pixel data intact. Files stay larger but are fully reversible.</li>
+            </ul>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              Why does it matter? Large images slow down websites, bounce off email servers, and get rejected by government upload portals. Compressing a JPEG file before you share it solves all three problems at once - fast, and for free.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">Why Compress JPG Images?</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              There are four situations where you'll hit a wall with an uncompressed JPG:
+            </p>
+            <ol className="space-y-3 mb-4 list-none p-0 text-[#6B645C]">
+              <li className="flex items-start gap-2"><strong>Website speed.</strong> Google PageSpeed Insights flags oversized images as one of the top performance killers. A 4MB hero image can add 2–3 seconds to your load time. Compress it to under 200KB and the difference is immediate.</li>
+              <li className="flex items-start gap-2"><strong>Email attachments.</strong> Most email clients cap attachments at 10–25 MB, and many corporate servers reject anything over 5 MB. Compressing your JPEG images before attaching keeps them deliverable.</li>
+              <li className="flex items-start gap-2"><strong>Government and KYC forms.</strong> Aadhaar uploads, visa applications, bank KYC - almost all of these enforce strict limits, often 200KB or less. A standard phone photo is 3–5 MB. You need to decrease the file size of the JPG before you can even submit.</li>
+              <li className="flex items-start gap-2"><strong>Social media uploads.</strong> Instagram, Facebook, and Twitter re-compress your images anyway. If you upload a bloated original, their algorithm does the compression for you - badly. Pre-compress for quality control and you keep the sharpness.</li>
+            </ol>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              <strong>Bottom line:</strong> compressing a JPG can reduce file size by <strong>40–80%</strong> with no visible quality loss. A 3MB photo becomes 600KB–1.8MB. You can also <Link to="/tools/webp-to-jpg" className="text-[#1C1917] underline underline-offset-4">convert WebP to JPG</Link> if you're working with images downloaded from modern websites.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">How to Compress JPG Images Online Free (Step-by-Step)</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              No account needed. No software to install. Here's how it works:
+            </p>
+            <ol className="space-y-3 mb-4 text-[#6B645C]">
+              <li><strong>Upload your files.</strong> Drag and drop your JPG or JPEG images onto the tool, or click to browse. Batch upload is fully supported - drop hundreds of files at once.</li>
+              <li><strong>Auto-compression runs instantly.</strong> The tool compresses all images automatically in your browser the moment they're uploaded. No settings to fiddle with.</li>
+              <li><strong>Preview the results.</strong> See the before/after file sizes side by side. Confirm the quality looks right.</li>
+              <li><strong>Download.</strong> Grab files individually or download everything as a single ZIP.</li>
+            </ol>
+            <p className="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-8 text-sm md:text-base text-[#574E43]">
+              🔒 <strong>Privacy note:</strong> All processing happens in your browser - your images are <strong>never uploaded to any server</strong>. Not even ours.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">Key Features of Our JPG Compressor</h2>
+            <ul className="space-y-3 mb-8 list-none p-0 text-[#6B645C] font-medium">
+              <li className="flex items-center gap-2">⚡ <strong>Batch compression</strong> - compress hundreds of JPGs at once, not one by one</li>
+              <li className="flex items-center gap-2">🔒 <strong>100% client-side</strong> - files never leave your device; privacy-first by design</li>
+              <li className="flex items-center gap-2">📝 <strong>No signup required</strong> - open the tool and start compressing instantly</li>
+              <li className="flex items-center gap-2">🖼️ <strong>No watermarks</strong> - download clean, unbranded files every time</li>
+              <li className="flex items-center gap-2">✨ <strong>Quality preservation</strong> - smart lossy algorithms keep photos looking sharp</li>
+              <li className="flex items-center gap-2">🎯 <strong>Target file sizes</strong> - need to <Link to="/tools/compress-jpg-to-20kb" className="text-[#1C1917] underline underline-offset-4">compress JPG to 20KB</Link> for a KYC form, or <Link to="/tools/compress-jpg-to-100kb" className="text-[#1C1917] underline underline-offset-4">compress JPG to 100KB</Link> for a web upload? Use our target-size presets: 20KB, 50KB, 100KB, 200KB, 500KB, or 1MB</li>
+              <li className="flex items-center gap-2">💰 <strong>Free forever</strong> - no hidden fees, no daily limits, no paywalls</li>
+            </ul>
+
+            <h2 className="text-3xl font-bold mb-6">JPG vs JPEG - Is There a Difference?</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              No. <strong>JPG and JPEG are exactly the same format.</strong>
+            </p>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              The only difference is the file extension. Early Windows systems limited extensions to three characters, so <code className="bg-[#F5F3ED] px-1.5 py-0.5 rounded">.jpeg</code> got shortened to <code className="bg-[#F5F3ED] px-1.5 py-0.5 rounded">.jpg</code>. The underlying compression algorithm - JPEG (Joint Photographic Experts Group) - is identical in both cases. Our tool handles both <code className="bg-[#F5F3ED] px-1.5 py-0.5 rounded">.jpg</code> and <code className="bg-[#F5F3ED] px-1.5 py-0.5 rounded">.jpeg</code> files without any distinction. Whether you search for a "jpeg compressor" or a "jpg compressor," you're looking for the same thing, and this is it.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">How to Compress JPG Without Losing Quality</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              "Losing quality" in JPEG compression means introducing visible artifacts - blocky edges, smeared colors, washed-out detail. That happens when you compress too aggressively.
+            </p>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              The sweet spot is <strong>80–85% quality setting</strong>. At that level:
+            </p>
+            <ul className="space-y-2 mb-6 list-none p-0 text-[#6B645C]">
+              <li className="flex items-center gap-2">• File size drops by <strong>40–70%</strong></li>
+              <li className="flex items-center gap-2">• Visual difference is imperceptible to the human eye</li>
+              <li className="flex items-center gap-2">• Photos still look sharp on screen and in print at normal sizes</li>
+            </ul>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              Here's how lossy and lossless compare in practice:
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full border-collapse border border-[#E6E2D8] text-sm">
+                <thead>
+                  <tr className="bg-[#F5F3ED]">
+                    <th className="border border-[#E6E2D8] p-3 text-left">Approach</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">File Size</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Reversible?</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Best For</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">Lossy (80–85%)</td>
+                    <td className="border border-[#E6E2D8] p-3">Smallest</td>
+                    <td className="border border-[#E6E2D8] p-3">No</td>
+                    <td className="border border-[#E6E2D8] p-3">Web, email, social, KYC</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">Lossy (90–95%)</td>
+                    <td className="border border-[#E6E2D8] p-3">Medium</td>
+                    <td className="border border-[#E6E2D8] p-3">No</td>
+                    <td className="border border-[#E6E2D8] p-3">Professional photography</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">Lossless</td>
+                    <td className="border border-[#E6E2D8] p-3">Largest</td>
+                    <td className="border border-[#E6E2D8] p-3">Yes</td>
+                    <td className="border border-[#E6E2D8] p-3">Archival, editing workflows</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              Our tool uses smart lossy compression optimized for the 80–85% sweet spot - the setting that compresses jpeg size aggressively while keeping photos visually clean.
+            </p>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              <strong>Two tips before you compress:</strong>
+            </p>
+            <ul className="space-y-2 mb-4 list-none p-0 text-[#6B645C]">
+              <li className="flex items-start gap-2">• Always keep your original file. Lossy compression is permanent - you can't recover discarded data.</li>
+              <li className="flex items-start gap-2">• For web images, <strong>72 DPI</strong> is sufficient. Print needs <strong>300 DPI</strong>. Compressing a 300 DPI image for web use is fine; just don't print the compressed version.</li>
+            </ul>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              If you'd rather switch formats entirely for even smaller files, you can <Link to="/tools/jpg-to-webp" className="text-[#1C1917] underline underline-offset-4">convert JPG to WebP</Link> - WebP typically runs 25–35% smaller than an equivalent JPEG.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">Compress JPG on Windows, Mac & Mobile</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              Every platform has a native option. None of them are great for batch work.
+            </p>
+            <ul className="space-y-3 mb-4 list-none p-0 text-[#6B645C]">
+              <li className="flex items-start gap-2"><strong>Windows 11</strong> - Open the image in Paint → File → Save As → JPEG → adjust the quality slider. Works for one file at a time. For batch compression or precise file size targets, it's not practical.</li>
+              <li className="flex items-start gap-2"><strong>Mac</strong> - Open in Preview → File → Export → change format to JPEG → drag the quality slider. Again, one file at a time. Fine for occasional use.</li>
+              <li className="flex items-start gap-2"><strong>iPhone</strong> - The Files app doesn't compress images natively. Your best option is to open the tool in Safari - it runs fully in-browser on iOS, no app download needed.</li>
+              <li className="flex items-start gap-2"><strong>Android</strong> - Google Photos can reduce storage quality across your library, but it's a blunt instrument with no per-file control. For anything precise, open the tool in Chrome on Android - same experience as desktop.</li>
+            </ul>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              For batch compression or precise file size targets, our online JPG compressor is faster on every device.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">JPG Compressor vs Other Tools</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              Most free online compressors do the job - but the details matter. Here's how we stack up against the tools you'll find on the first page of Google (compressjpeg.com, tinyjpg.com, adobe.com):
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full border-collapse border border-[#E6E2D8] text-sm">
+                <thead>
+                  <tr className="bg-[#F5F3ED]">
+                    <th className="border border-[#E6E2D8] p-3 text-left">Tool</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Free</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">No Signup</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Batch</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Client-Side (Privacy)</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Target File Size</th>
+                    <th className="border border-[#E6E2D8] p-3 text-left">Speed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="bg-[#FAF6EC]">
+                    <td className="border border-[#E6E2D8] p-3 font-bold">FreeImagePrompt</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">⚡</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">TinyJPG</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">⚡</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">iLoveIMG</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">⚡</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">Adobe Express</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">⚡</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-[#E6E2D8] p-3">FreeConvert</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">❌</td>
+                    <td className="border border-[#E6E2D8] p-3">✅</td>
+                    <td className="border border-[#E6E2D8] p-3">⚡</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-[#6B645C] leading-relaxed mb-4">
+              Two things set this tool apart: <strong>client-side processing</strong> (your files never touch a server) and <strong>target file size presets</strong> (compress to an exact KB/MB limit, not just a vague quality percentage). No other free tool in this list offers both.
+            </p>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              If you're working with images in other formats, our <Link to="/tools/png-to-jpg" className="text-[#1C1917] underline underline-offset-4">PNG to JPG converter</Link> handles that conversion before you compress.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
+            <div className="space-y-8 mb-12">
+              <div>
+                <h4 className="text-lg font-bold mb-2">Is this JPG compressor really free?</h4>
+                <p className="text-[#6B645C]">Yes, 100% free - no signup, no hidden fees, unlimited compressions. There's no premium tier and no daily cap.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">How much can I compress a JPG file?</h4>
+                <p className="text-[#6B645C]">Typically <strong>40–80% reduction</strong> with no visible quality loss, depending on the original image. A 4MB photo commonly compresses to under 1MB.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Does compressing a JPG reduce image quality?</h4>
+                <p className="text-[#6B645C]">At the 80–85% quality setting, the difference is imperceptible to the human eye. We optimize for this sweet spot - smaller file, same visual result.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Can I compress multiple JPG files at once?</h4>
+                <p className="text-[#6B645C]">Yes - our batch compressor handles hundreds of files simultaneously. Upload them all at once and download a ZIP when done.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Are my images safe?</h4>
+                <p className="text-[#6B645C]">Completely. All compression happens in your browser - your files are never uploaded to any server. We have no access to your images at any point.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">What is the maximum file size I can compress?</h4>
+                <p className="text-[#6B645C]">There is no hard limit. Since processing is entirely client-side, it depends on your device's available memory. Most modern phones and laptops handle large batches without issue.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Can I compress JPG to a specific file size (e.g., 200KB)?</h4>
+                <p className="text-[#6B645C]">Yes - use our target-size presets: <strong>20KB, 50KB, 100KB, 200KB, 500KB, or 1MB</strong>. Each preset compresses your image to land at or under that target.</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-bold mb-2">Does this work on mobile?</h4>
+                <p className="text-[#6B645C]">Yes - the tool works on any modern browser including Chrome, Safari, and Firefox on iOS and Android. No app download required.</p>
+              </div>
+            </div>
+
+            <h2 className="text-3xl font-bold mb-6">Conclusion</h2>
+            <p className="text-[#6B645C] leading-relaxed mb-8">
+              This JPG compressor is fast, free, and private. It runs entirely in your browser, supports batch compression, requires no signup, and leaves no watermarks. Whether you need to decrease JPG size for a KYC form, a website, or an email attachment - it handles all of it, on any device. Explore our full suite of <Link to="/" className="text-[#1C1917] underline underline-offset-4">free image tools</Link> for more conversion and optimization options.
+            </p>
+            <p className="font-bold text-center text-2xl mb-12">
+              👉 Start compressing your JPG images now - no signup needed.
+            </p>
           </div>
 
           <OtherCompressionSizes />

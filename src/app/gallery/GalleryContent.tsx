@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import {
     fetchCategories,
@@ -158,6 +159,7 @@ export default function Gallery() {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEOHead title="AI Image Gallery – FreeImagePrompt" description="Browse a gallery of stunning AI-generated images and prompts for inspiration." canonicalUrl="https://freeimageprompt.com/gallery" />
             <Navigation />
 
             <main className="pt-24 pb-16">

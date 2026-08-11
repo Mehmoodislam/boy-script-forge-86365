@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { blogPosts as staticPosts } from "@/data/blog-posts";
 import { supabase } from "@/integrations/supabase/client";
 import { useQuery } from "@tanstack/react-query";
+import SEOHead from "@/components/SEOHead";
 
 const POSTS_PER_PAGE = 8;
 
@@ -42,6 +43,7 @@ export default function Blog() {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead title="AI Image Prompts Blog – FreeImagePrompt" description="Tips, tutorials, and inspiration for creating stunning AI-generated stylish boy portraits." canonicalUrl="https://freeimageprompt.com/blog" />
             <Navigation />
 
             <section className="pt-24 pb-12 bg-gradient-to-b from-primary/5 to-background">

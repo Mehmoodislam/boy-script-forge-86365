@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead title="Privacy Policy – FreeImagePrompt" description="Read the FreeImagePrompt privacy policy to understand how we collect, use and protect your information." canonicalUrl="https://freeimageprompt.com/privacy-policy" />
             <Navigation />
             <main className="pt-24 pb-16 px-4 container mx-auto max-w-4xl space-y-6 text-muted-foreground">
                 <h1 className="text-4xl font-bold text-foreground mb-8">Privacy Policy</h1>

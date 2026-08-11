@@ -1,9 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const TermsOfService = () => {
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead title="Terms of Service – FreeImagePrompt" description="Review the FreeImagePrompt terms of service that govern your use of our online image tools." canonicalUrl="https://freeimageprompt.com/terms-of-services" />
             <Navigation />
             <main className="pt-24 pb-16 px-4 container mx-auto max-w-4xl space-y-6 text-muted-foreground">
                 <h1 className="text-4xl font-bold text-foreground mb-8">Terms of Service</h1>

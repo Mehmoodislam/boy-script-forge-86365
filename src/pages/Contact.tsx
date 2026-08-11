@@ -8,6 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { toast } from "sonner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const contactSchema = z.object({
     name: z.string().trim().min(1, { message: "Name is required" }),
@@ -31,6 +32,7 @@ export default function Contact() {
 
     return (
         <div className="min-h-screen bg-background text-foreground">
+            <SEOHead title="Contact Us – FreeImagePrompt" description="Get in touch with FreeImagePrompt. We're happy to help with any questions about our free online image tools." canonicalUrl="https://freeimageprompt.com/contact" />
             <Navigation />
             <main className="pt-24 pb-16">
                 <div className="container mx-auto px-4 max-w-2xl">

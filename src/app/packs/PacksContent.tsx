@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { toast } from "sonner";
 import {
     fetchCategories,
@@ -116,6 +117,7 @@ export default function Packs() {
 
     return (
         <div className="min-h-screen bg-background">
+            <SEOHead title="AI Image Packs – FreeImagePrompt" description="Download curated packs of AI-generated stylish images and prompts." canonicalUrl="https://freeimageprompt.com/packs" />
             <Navigation />
 
             <main className="pt-24 pb-16">

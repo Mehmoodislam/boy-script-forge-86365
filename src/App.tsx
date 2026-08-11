@@ -62,11 +62,17 @@ import PostManager from "./pages/admin/PostManager";
 import NavManager from "./pages/admin/NavManager";
 import DynamicPage from "./pages/DynamicPage";
 import { ThemeProvider } from "@/hooks/use-theme";
+import SEOHead from "@/components/SEOHead";
 
 const queryClient = new QueryClient();
 
 const Home = () => (
     <div className="min-h-screen bg-background">
+        <SEOHead
+            title="Free Online Image Tools & Utilities - FreeImagePrompt"
+            description="Free online image tools to compress, resize & optimize JPGs instantly. 100% free, fast & easy to use – no signup required."
+            canonicalUrl="https://freeimageprompt.com/"
+        />
         <Navigation />
         <Hero />
         {/* <GalleryPreview /> */}
