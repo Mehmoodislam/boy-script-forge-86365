@@ -874,5 +874,240 @@ export const blogPosts: BlogPost[] = [
         </div>
       </div>
     `
+    },
+    {
+        id: "heic-to-jpg-iphone-mac-windows",
+        title: "How to Convert HEIC to JPG on iPhone, Mac & Windows (2026 Guide)",
+        description: "Learn how to convert HEIC to JPG on iPhone, Mac, Windows 11, and Android — plus the fastest free online method. Step-by-step guide with screenshots-free instructions.",
+        metaTitle: "How to Convert HEIC to JPG on iPhone, Mac & Windows (2026 Guide)",
+        metaDescription: "Learn how to convert HEIC to JPG on iPhone, Mac, Windows 11, and Android — plus the fastest free online method. Step-by-step guide with screenshots-free instructions.",
+        socialPost: "iPhone photos stuck as HEIC files? Here's how to convert HEIC to JPG on iPhone, Mac, Windows, and Android — plus the fastest free online method that works on any device.",
+        schema: {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    headline: "How to Convert HEIC to JPG on iPhone, Mac & Windows",
+                    description: "A complete device-by-device guide to converting HEIC photos to JPG on iPhone, Mac, Windows 11, and Android, including the fastest free online converter method.",
+                    author: {
+                        "@type": "Organization",
+                        name: "FreeImagePrompt"
+                    },
+                    publisher: {
+                        "@type": "Organization",
+                        name: "FreeImagePrompt",
+                        logo: {
+                            "@type": "ImageObject",
+                            url: "https://www.freeimageprompt.com/logo.png"
+                        }
+                    },
+                    mainEntityOfPage: {
+                        "@type": "WebPage",
+                        "@id": "https://www.freeimageprompt.com/blog/heic-to-jpg-iphone-mac-windows"
+                    },
+                    datePublished: "2026-08-14",
+                    dateModified: "2026-08-14"
+                },
+                {
+                    "@type": "FAQPage",
+                    mainEntity: [
+                        {
+                            "@type": "Question",
+                            name: "Why do my iPhone photos save as HEIC instead of JPG?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Apple uses HEIC by default because it compresses photos more efficiently than JPG, saving storage space without a noticeable drop in quality. You can change this in Settings if you'd rather save photos as JPG directly."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Does converting HEIC to JPG reduce photo quality?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "There is a small amount of quality loss because JPG compression works differently from HEIC, but at high export quality settings the difference is usually not noticeable to the eye."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Can I convert HEIC to JPG without installing any software?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Yes. Browser-based converters let you upload a HEIC file and download a JPG version without installing anything, which is the fastest option on Windows or Android where native HEIC support is limited."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Why can't Windows open my HEIC photos?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Windows doesn't support HEIC out of the box. You need to install the HEIF/HEVC codec extensions from the Microsoft Store, or simply convert the files to JPG using an online tool instead."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Will turning off HEIC on my iPhone convert my old photos too?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "No. Changing the camera format setting only affects photos you take after the change. Existing HEIC photos in your camera roll need to be converted separately."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "What's the fastest way to convert many HEIC photos at once?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "For bulk conversion, an online HEIC to JPG tool that supports multiple file uploads is typically faster than converting photos one by one through Preview or Photos apps."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        date: "August 14, 2026",
+        author: "TrendsPrompt Team",
+        category: "Guides",
+        keywords: "heic to jpg, convert heic to jpg, heic to jpeg converter, heic to jpg iphone, heic to jpg mac, heic to jpg windows, heic to jpg android, heic to jpg online, how to convert heic to jpg",
+        content: `
+      <div class="prose-editorial text-left space-y-10">
+        <div class="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-4 text-sm md:text-base">
+          <p class="m-0 text-[#574E43]">
+            <strong class="text-[#1C1917]">TL;DR:</strong> iPhone saves photos as HEIC by default to save space, but not every device or app supports it. You can convert HEIC to JPG right on your iPhone, Mac, or Windows PC — or skip the setup entirely with a free <a href="/tools/heic-to-jpg" class="text-rose-600 hover:underline font-semibold">online HEIC to JPG converter</a>.
+          </p>
+        </div>
+
+        <p class="text-lg leading-relaxed text-[#4A453E]">
+          If you've ever tried to open an iPhone photo on a Windows laptop or upload it to an older website, you've probably run into the same wall: the file is <code class="text-sm bg-[#F5F3ED] px-2 py-0.5 rounded">.HEIC</code>, and half your tools don't recognize it. It's not a bug — it's Apple's default photo format since iOS 11, designed to save storage space. The good news is that converting HEIC to JPG takes only a minute or two, no matter which device you're on. Here's exactly how to do it.
+        </p>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Convert HEIC to JPG on iPhone</h2>
+          <p>
+            There are two ways to handle this on iPhone, depending on whether you want to fix photos you've already taken or stop the problem going forward.
+          </p>
+          <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Change future photos to JPG automatically:</h3>
+          <ol class="space-y-3 list-decimal pl-5">
+            <li>Open <strong class="text-[#1C1917]">Settings</strong></li>
+            <li>Go to <strong class="text-[#1C1917]">Camera → Formats</strong></li>
+            <li>Select <strong class="text-[#1C1917]">"Most Compatible"</strong> instead of "High Efficiency"</li>
+          </ol>
+          <p>
+            This tells your iPhone to save new photos directly as JPG. It won't change photos already sitting in your camera roll, though.
+          </p>
+          <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Convert existing HEIC photos:</h3>
+          <p>
+            The quickest option here is uploading them to a browser-based converter — no cables, no apps, no waiting for iCloud to sync. This works whether you're on the iPhone itself or have AirDropped the photos to another device.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Convert HEIC to JPG on Mac</h2>
+          <p>
+            If your photos have already landed on a Mac, you have built-in tools that handle the conversion without any extra downloads:
+          </p>
+          <ul class="space-y-3 list-disc pl-5">
+            <li><strong class="text-[#1C1917]">Preview app:</strong> Open the HEIC file in Preview, go to File → Export, and choose JPEG as the format before saving.</li>
+            <li><strong class="text-[#1C1917]">Photos app:</strong> Select the photo(s), then File → Export → Export Photos, and pick JPG from the format dropdown. This method works well for exporting multiple photos at once.</li>
+          </ul>
+          <p>
+            Both methods keep your original HEIC file untouched, so you end up with a separate JPG copy — useful if you want to keep the smaller original for storage.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Convert HEIC to JPG on Windows 11</h2>
+          <p>
+            Windows doesn't support HEIC natively, which is why double-clicking one of these files on a PC often shows a blank thumbnail or an error. You have two real options:
+          </p>
+          <ol class="space-y-3 list-decimal pl-5">
+            <li><strong class="text-[#1C1917]">Install the HEIF/HEVC codec extensions</strong> from the Microsoft Store. Once installed, Windows Photos app can open HEIC files directly, and you can then use "Save As" to export a JPG copy.</li>
+            <li><strong class="text-[#1C1917]">Skip the codec install</strong> and use an <a href="/tools/heic-to-jpg" class="text-rose-600 hover:underline font-semibold">online HEIC to JPG converter</a> instead — upload the file in your browser and download a ready-to-use JPG. This is usually faster if you're only converting a handful of photos and don't want to install anything.</li>
+          </ol>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Open HEIC Files on Android</h2>
+          <p>
+            Most modern Android phones (Android 10 and above) can actually view HEIC photos without any extra setup. The trouble usually starts when you try to <em>share</em> them — some apps and older Android versions still don't handle HEIC well. If that happens, converting to JPG through a browser-based tool solves the compatibility issue instantly, without needing a dedicated app from the Play Store.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">The Fastest Method: Online Converter</h2>
+          <p>
+            Across every device above, there's one method that works the same way every time and needs zero installation: a browser-based converter. Upload your HEIC file, and a JPG version downloads straight to your device.
+          </p>
+          <p>
+            Our <a href="/tools/heic-to-jpg" class="text-rose-600 hover:underline font-semibold"><strong>free HEIC to JPG converter</strong></a> is built for exactly this — no sign-up, no software, and no limit on how many times you use it. It works the same whether you're on an iPhone, Mac, Windows PC, or Android device, which makes it the simplest fallback if you'd rather not dig through settings menus on every device you own.
+          </p>
+        </div>
+
+        <div class="bg-[#FAF6EC] border-l-4 border-amber-500 p-5 rounded-r-xl my-8 text-sm md:text-base">
+          <p class="m-0 text-[#574E43]">
+            <strong class="text-[#1C1917]">Want it done instantly on your device?</strong> Try our free browser-based <a href="/tools/heic-to-jpg" class="text-rose-600 hover:underline font-semibold">HEIC to JPG converter</a> — no upload, no signup, and your photos never leave your device.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-6">Frequently Asked Questions About HEIC Conversion</h2>
+          <div class="space-y-6 divide-y divide-[#E6E2D8]">
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Why do my iPhone photos save as HEIC instead of JPG?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Apple uses HEIC by default because it compresses photos more efficiently than JPG, saving storage space without a noticeable drop in quality. You can change this in Settings if you'd rather save photos as JPG directly.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Does converting HEIC to JPG reduce photo quality?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">There's a small amount of quality loss because JPG compression works differently from HEIC, but at high export quality settings the difference is usually not noticeable to the eye.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Can I convert HEIC to JPG without installing any software?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Yes. Browser-based converters let you upload a HEIC file and download a JPG version without installing anything, which is the fastest option on Windows or Android where native HEIC support is limited.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Why can't Windows open my HEIC photos?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Windows doesn't support HEIC out of the box. You need to install the HEIF/HEVC codec extensions from the Microsoft Store, or simply convert the files to JPG using an online tool instead.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Will turning off HEIC on my iPhone convert my old photos too?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">No. Changing the camera format setting only affects photos you take after the change. Existing HEIC photos in your camera roll need to be converted separately.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">What's the fastest way to convert many HEIC photos at once?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">For bulk conversion, an online HEIC to JPG tool that supports multiple file uploads is typically faster than converting photos one by one through Preview or Photos apps.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-4">Sources</h2>
+          <ul class="space-y-3 list-disc pl-5">
+            <li><a href="https://support.apple.com/en-us/111086" class="text-rose-600 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">Apple Support — About HEIF and HEVC in iOS</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/High_Efficiency_Image_File_Format" class="text-rose-600 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">Wikipedia — High Efficiency Image File Format</a></li>
+            <li><a href="https://support.microsoft.com/en-us/windows/heif-image-extensions" class="text-rose-600 hover:underline font-semibold" rel="noopener noreferrer" target="_blank">Microsoft Support — HEIF Image Extensions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#1C1917] mb-6">Related Image Conversion Tools</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="/tools/heic-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">HEIC to JPG Converter</span>
+            </a>
+            <a href="/tools/png-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">PNG to JPG Converter</span>
+            </a>
+            <a href="/tools/jpg-to-webp" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">JPG to WebP Converter</span>
+            </a>
+            <a href="/tools/webp-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">WebP to JPG Converter</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    `
     }
 ];
