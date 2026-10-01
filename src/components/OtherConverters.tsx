@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { RefreshCw, ImageIcon, Layers, ArrowDown, ImageDown, ChevronRight, ScanSearch } from "lucide-react";
+import AdBannerDouble from "@/components/ads/AdBannerDouble";
 
 const OtherConverters = () => {
     const converters = [
@@ -15,7 +16,8 @@ const OtherConverters = () => {
     ];
 
     return (
-        <div className="mt-16 pt-10 border-t border-[#E6E2D8] text-left">
+        <div className="mt-16 pt-6 border-t border-[#E6E2D8] text-left">
+            <AdBannerDouble className="mb-8" />
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
                 <div>
                     <h2 className="text-xl font-bold font-sans text-[#1C1917] tracking-tight">
