@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
 import { useQuery } from "@tanstack/react-query";
 import SEOHead from "@/components/SEOHead";
-import AdBannerDouble from "@/components/ads/AdBannerDouble";
 
 export default function BlogPost() {
     const { slug } = useParams();
@@ -101,10 +100,6 @@ export default function BlogPost() {
                     />
                 </div>
             </article>
-
-            <div className="container mx-auto px-4 max-w-3xl pb-8">
-                <AdBannerDouble />
-            </div>
 
             <Footer />
         </div>

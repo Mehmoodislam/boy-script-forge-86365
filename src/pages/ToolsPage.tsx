@@ -6,7 +6,6 @@ import {
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
-import AdBannerDouble from "@/components/ads/AdBannerDouble";
 
 const imageCompressors = [
   { to: "/tools/jpg-compress", label: "JPG Compressor", desc: "Batch compress multiple JPG/JPEG images at once" },
@@ -94,8 +93,6 @@ const ToolsPage = () => {
               30+ free browser-based tools to compress, convert, and optimize your images. Nothing leaves your device — 100% private and secure.
             </p>
           </div>
-
-          <AdBannerDouble className="mb-12" />
 
           <div className="space-y-16">
             {categories.map((cat) => {

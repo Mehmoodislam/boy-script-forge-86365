@@ -63,7 +63,6 @@ import NavManager from "./pages/admin/NavManager";
 import DynamicPage from "./pages/DynamicPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 import SEOHead from "@/components/SEOHead";
-import AdBannerDouble from "@/components/ads/AdBannerDouble";
 
 const queryClient = new QueryClient();
 
@@ -76,12 +75,8 @@ const Home = () => (
         />
         <Navigation />
         <Hero />
-        {/* Top High CTR Ad Placement */}
-        <AdBannerDouble className="bg-muted/10 border-y border-border/20" />
         {/* <GalleryPreview /> */}
         <ToolSection />
-        {/* Mid-Page Engagement Ad Placement */}
-        <AdBannerDouble />
         <About />
         <HowToUse />
         {/* <Stylish /> */}
