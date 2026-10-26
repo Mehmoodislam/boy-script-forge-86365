@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ArrowLeft, Gamepad2 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
-import Navigation from "@/components/Navigation";
 import { getGameBySlug } from "@/games/gamesData";
 
 const SITE_URL = "https://freeimageprompt.com";
@@ -45,7 +44,7 @@ const GamePlayerPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background relative">
             <SEOHead
                 title={`${game.title} — Play Free Online | TrendsPrompt`}
                 description={game.description}
@@ -53,24 +52,19 @@ const GamePlayerPage = () => {
                 keywords={`play ${game.title}, ${game.title} online, free ${game.title} game`}
                 schema={schema}
             />
-            <Navigation />
 
-            {/* Back link bar */}
-            <div className="pt-20 pb-3">
-                <div className="container mx-auto px-4 max-w-6xl flex items-center justify-between">
-                    <Link
-                        to="/games"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                    >
-                        <ArrowLeft className="h-4 w-4" />
-                        All Games
-                    </Link>
-                    <span className="text-sm font-semibold">{game.title}</span>
-                </div>
-            </div>
+            {/* Floating back button */}
+            <Link
+                to="/games"
+                aria-label="Back to all games"
+                className="fixed top-3 left-3 z-[60] flex items-center gap-1.5 px-3 py-2 rounded-full bg-background/70 backdrop-blur text-foreground/80 hover:text-primary text-sm font-medium shadow-md transition-colors"
+            >
+                <ArrowLeft className="h-4 w-4" />
+                Back
+            </Link>
 
-            {/* Game iframe fills the area below the nav */}
-            <div className="relative w-full" style={{ height: "calc(100vh - 6.5rem)" }}>
+            {/* Game iframe fills the whole screen (no header) */}
+            <div className="relative w-full h-screen">
                 {!loaded && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-muted/50">
                         <div className="h-10 w-10 rounded-full border-4 border-primary border-t-transparent animate-spin" />
