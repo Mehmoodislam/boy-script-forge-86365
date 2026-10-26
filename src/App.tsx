@@ -24,6 +24,8 @@ import ImageDpiCheckerPage from "./pages/ImageDpiCheckerPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import Blog from "./pages/Blog";
+import GamesPage from "./pages/GamesPage";
+import GamePlayerPage from "./pages/GamePlayerPage";
 import BlogPost from "./pages/BlogPost";
 import Contact from "./pages/Contact";
 import JPGCompressPage from "./pages/JPGCompressPage";
@@ -134,6 +136,8 @@ function App() {
                             <Route path="/tools/compress-jpg-to-2mb" element={<JPGCompress2mbPage />} />
                             <Route path="/tools/compress-jpg-to-5mb" element={<JPGCompress5mbPage />} />
                             <Route path="/tools/art-prompt-generator" element={<ArtPromptGeneratorPage />} />
+                            <Route path="/games" element={<GamesPage />} />
+                            <Route path="/games/:slug" element={<GamePlayerPage />} />
                             <Route path="/blog" element={<Blog />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
                             <Route path="/contact" element={<Contact />} />
