@@ -21,6 +21,7 @@ export interface GameCategory {
 }
 
 import puffFlapThumb from "@/assets/games/puff-flap-thumb.png";
+import ticTacToeThumb from "@/assets/games/tic-tac-toe-thumb.png";
 
 export const gameCategories: GameCategory[] = [
     {
@@ -35,6 +36,21 @@ export const gameCategories: GameCategory[] = [
                 path: "/games/puff-flap/index.html",
                 thumb: puffFlapThumb,
                 controls: "Tap / Click / Space",
+            },
+        ],
+    },
+    {
+        id: "board",
+        name: "Board & Strategy",
+        description: "Classic games of skill — outsmart your opponent",
+        games: [
+            {
+                slug: "tic-tac-toe",
+                title: "Timber Tic Tac Toe",
+                description: "Wooden tic-tac-toe with a twist — play against a friend on one device or challenge the CPU across three difficulty levels. Get three in a row to win.",
+                path: "/games/tic-tac-toe/index.html",
+                thumb: ticTacToeThumb,
+                controls: "Tap / Click",
             },
         ],
     },
