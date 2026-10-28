@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Timber Tic Tac Toe</title>
-<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/peerjs@1.5.4/dist/peerjs.min.js" defer></script>
 <style>
 :root{--g:#2fb344;--r:#e53935;--gold:#f2c36b;--ink:#fff3dc;--dark:#2a190c;--bs:min(58vh,88vw)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -237,11 +237,13 @@ document.addEventListener("keydown",e=>{
  if(m){e.preventDefault();render()}
 });
 
+$("info").textContent=L.keys;buildMenu();updSnd();render();
 (async function(){
- try{await SDK().init();const loc=(SDK().user.systemInfo.locale||"en").slice(0,2);if(T[loc]){curLang=loc;L=T[loc]}}catch(e){}
- let inv=null;try{inv=SDK().game.getInviteParam("room")}catch(e){}
- $("info").textContent=L.keys;buildMenu();updSnd();render();
- if(inv){pm="online";buildMenu();joinRoom(inv)}
+ const t0=Date.now();
+ while(!SDK()&&Date.now()-t0<4000)await new Promise(r=>setTimeout(r,100));
+ if(!SDK())return;
+ try{await SDK().init();const loc=(SDK().user.systemInfo.locale||"en").slice(0,2);if(T[loc]&&curLang==="en"){curLang=loc;L=T[loc];buildMenu();render()}}catch(e){}
+ try{const inv=SDK().game.getInviteParam("room");if(inv){pm="online";buildMenu();joinRoom(inv)}}catch(e){}
 })();
 </script>
 </body>
