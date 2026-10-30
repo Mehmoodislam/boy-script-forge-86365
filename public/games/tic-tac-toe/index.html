@@ -55,6 +55,8 @@ html,body{height:100%;margin:0;overflow:hidden;color:var(--ink);font-family:"Tre
 .seg{display:flex;gap:max(1vh,6px)}.seg .btn{flex:1;padding:max(.8vh,5px) 1vmin}
 #online{display:none;flex-direction:column;gap:max(1vh,6px)}
 #code{width:100%;padding:.8vh;font:700 max(3vh,15px) inherit;font-family:inherit;text-transform:uppercase;letter-spacing:.3em;text-align:center;color:var(--dark);background:#fff3dc;border:.35vmin solid #7a4a1f;border-radius:1.2vmin}
+#bigcode{font:700 max(4.2vh,20px) inherit;letter-spacing:.4em;text-align:center;color:#fff3dc;background:#2a190c;border:.35vmin solid var(--gold);border-radius:1.2vmin;padding:1vh .6vh}
+#copylink{background:linear-gradient(#7a5127,#4f3218);border-color:var(--gold)}
 #info{font-size:max(2vh,12px);color:#3b2209;min-height:1.3em;font-weight:600}
 #play{font-size:max(3vh,16px);padding:max(1.2vh,8px);background:linear-gradient(#3fc656,#23902f);border-color:#a8f0b3;color:#fff;text-shadow:0 .2vmin 0 #0006}
 #close{position:absolute;top:max(1.2vh,8px);right:max(1.2vh,8px);width:max(5.4vh,34px);height:max(5.4vh,34px);min-height:0;padding:0;display:none;align-items:center;justify-content:center;border-radius:50%;background:linear-gradient(#5b3a1d,#2f1d0e);border:.35vmin solid var(--gold)}
@@ -82,6 +84,11 @@ html,body{height:100%;margin:0;overflow:hidden;color:var(--ink);font-family:"Tre
   <div id="dwrap"><div class="lb" id="lLevel"></div><div class="seg" id="diff"></div></div>
   <div id="online">
     <button class="btn" id="create"></button>
+    <div id="waitbox" style="display:none;flex-direction:column;gap:max(1vh,6px)">
+      <div class="lb" id="lWait"></div>
+      <div id="bigcode"></div>
+      <button class="btn" id="copylink"></button>
+    </div>
     <input id="code" maxlength="4" autocomplete="off">
     <button class="btn" id="join"></button>
   </div>
@@ -94,16 +101,19 @@ html,body{height:100%;margin:0;overflow:hidden;color:var(--ink);font-family:"Tre
 const T={
 en:{sound:"Sound",on:"On",off:"Off",mode:"Game mode",level:"Difficulty",lang:"Language",ai:"vs Computer",local:"2 Players",online:"Online",easy:"Easy",hard:"Hard",
  create:"Create room",join:"Join room",code:"CODE",play:"Play",again:"Play again",draws:"Draws",
+ waitLabel:"Share this code with your friend:",copyLink:"Copy invite link",copied:"Invite link copied!",
  yourTurn:"Your turn",turn:m=>m+"'s turn",win:m=>m+" wins!",youWin:"You win!",youLose:"You lose!",draw:"It's a draw!",
  wait:c=>"Room code: "+c+" — waiting for a friend…",conn:"Friend connected!",left:"Your friend left the game.",err:"Could not connect. Check the code.",
  you:"You",cpu:"CPU",friend:"Friend",hint:"Pick a mode, then press Play.",keys:"Tip: use arrow keys + Enter, or keys 1-9."},
 es:{sound:"Sonido",on:"Sí",off:"No",mode:"Modo de juego",level:"Dificultad",lang:"Idioma",ai:"vs PC",local:"2 Jugadores",online:"En línea",easy:"Fácil",hard:"Difícil",
  create:"Crear sala",join:"Unirse",code:"CÓDIGO",play:"Jugar",again:"Jugar otra vez",draws:"Empates",
+ waitLabel:"Comparte este código con tu amigo:",copyLink:"Copiar enlace",copied:"¡Enlace copiado!",
  yourTurn:"Tu turno",turn:m=>"Turno de "+m,win:m=>"¡Gana "+m+"!",youWin:"¡Ganaste!",youLose:"¡Perdiste!",draw:"¡Empate!",
  wait:c=>"Código: "+c+" — esperando amigo…",conn:"¡Amigo conectado!",left:"Tu amigo salió.",err:"No se pudo conectar.",
  you:"Tú",cpu:"PC",friend:"Amigo",hint:"Elige un modo y pulsa Jugar.",keys:"Consejo: flechas + Enter, o teclas 1-9."},
 ur:{sound:"آواز",on:"آن",off:"آف",mode:"گیم موڈ",level:"مشکل",lang:"زبان",ai:"کمپیوٹر کے خلاف",local:"دو کھلاڑی",online:"آن لائن",easy:"آسان",hard:"مشکل",
  create:"کمرہ بنائیں",join:"شامل ہوں",code:"کوڈ",play:"کھیلیں",again:"دوبارہ کھیلیں",draws:"برابر",
+ waitLabel:"یہ کوڈ اپنے دوست کو بھیجیں:",copyLink:"دعوتی لنک کاپی کریں",copied:"لنک کاپی ہو گیا!",
  yourTurn:"آپ کی باری",turn:m=>m+" کی باری",win:m=>m+" جیت گیا!",youWin:"آپ جیت گئے!",youLose:"آپ ہار گئے!",draw:"برابر!",
  wait:c=>"کوڈ: "+c+" — دوست کا انتظار…",conn:"دوست شامل ہو گیا!",left:"دوست چلا گیا۔",err:"کنیکٹ نہیں ہو سکا۔",
  you:"آپ",cpu:"کمپیوٹر",friend:"دوست",hint:"موڈ چنیں اور کھیلیں دبائیں۔",keys:"تیر + Enter یا 1-9 استعمال کریں۔"}};
@@ -192,26 +202,32 @@ function aiMove(){
 /* Online (WebRTC / PeerJS) */
 function closeOnline(){try{conn&&conn.close()}catch(e){}try{peer&&peer.destroy()}catch(e){}conn=null;peer=null}
 const rc=()=>{const a="ABCDEFGHJKMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.random()*a.length|0];return s};
+const inviteBase=()=>{try{if(window.top&&window.top!==window.self)return window.top.location.origin+window.top.location.pathname}catch(e){}return location.origin+location.pathname};
+function showWaiting(v){$("waitbox").style.display=v?"flex":"none";$("create").style.display=v?"none":"block";$("code").style.display=v?"none":"block";$("join").style.display=v?"none":"block"}
 function bindConn(c){conn=c;
- c.on("open",()=>{mode="online";started=true;scores={X:0,O:0,D:0};round=0;$("info").textContent=L.conn;showModal(false);newRound()});
+ c.on("open",()=>{mode="online";started=true;scores={X:0,O:0,D:0};round=0;showWaiting(false);$("info").textContent=L.conn;showModal(false);newRound()});
  c.on("data",d=>{if(d.t==="move")play(d.i,false);if(d.t==="again")newRound()});
- c.on("close",()=>{over=true;note=L.left;cg.stop();render()})}
-function createRoom(){closeOnline();myMark="X";roomCode=rc();peer=new Peer("timberttt-"+roomCode);
- peer.on("open",()=>{$("info").textContent=L.wait(roomCode);try{SDK().game.showInviteButton({room:roomCode})}catch(e){}});
+ c.on("close",()=>{over=true;note=L.left;cg.stop();showWaiting(false);render()})}
+function createRoom(){closeOnline();myMark="X";roomCode=rc();showWaiting(false);peer=new Peer("timberttt-"+roomCode);
+ peer.on("open",()=>{$("bigcode").textContent=roomCode;$("lWait").textContent=L.waitLabel;$("copylink").textContent=L.copyLink;$("info").textContent=L.wait(roomCode);showWaiting(true);try{SDK().game.showInviteButton({room:roomCode})}catch(e){}});
  peer.on("connection",c=>{if(conn&&conn.open){c.close();return}bindConn(c)});
- peer.on("error",e=>{if(e.type==="unavailable-id")createRoom();else $("info").textContent=L.err})}
+ peer.on("error",e=>{if(e.type==="unavailable-id")createRoom();else{showWaiting(false);$("info").textContent=L.err}})}
 function joinRoom(code){closeOnline();myMark="O";peer=new Peer();
  peer.on("open",()=>bindConn(peer.connect("timberttt-"+code.toUpperCase(),{reliable:true})));
- peer.on("error",()=>{$("info").textContent=L.err})}
+ peer.on("error",e=>{if(e.type!=="unavailable-id")$("info").textContent=L.err})}
 $("create").onclick=()=>{sfx.ui();createRoom()};
 $("join").onclick=()=>{sfx.ui();const v=$("code").value.trim();if(v.length===4)joinRoom(v)};
 $("code").addEventListener("keydown",e=>{e.stopPropagation();if(e.key==="Enter")$("join").click()});
+$("copylink").onclick=async()=>{sfx.ui();const url=inviteBase()+"?room="+roomCode;
+ try{await navigator.clipboard.writeText(url);$("info").textContent=L.copied}
+ catch(e){const t=document.createElement("textarea");t.value=url;document.body.appendChild(t);t.select();
+  try{document.execCommand("copy");$("info").textContent=L.copied}catch(_){$("info").textContent=roomCode}t.remove()}};
 
 /* Settings popup */
 function seg(el,items,cur,fn){el.innerHTML="";items.forEach(([k,t])=>{const b=document.createElement("button");b.className="btn"+(cur===k?" on":"");b.textContent=t;b.onclick=()=>{fn(k);sfx.ui()};el.appendChild(b)})}
 function buildMenu(){
  $("lMode").textContent=L.mode;$("lSnd").textContent=L.sound;$("lLevel").textContent=L.level;$("lLang").textContent=L.lang;
- seg($("modes"),[["ai",L.ai],["local",L.local],["online",L.online]],pm,k=>{pm=k;if(k!=="online")closeOnline();$("info").textContent=k==="online"?"":L.keys;buildMenu()});
+ seg($("modes"),[["ai",L.ai],["local",L.local],["online",L.online]],pm,k=>{pm=k;if(k!=="online"){closeOnline();showWaiting(false)}$("info").textContent=k==="online"?"":L.keys;buildMenu()});
  seg($("diff"),[["easy",L.easy],["hard",L.hard]],pd,k=>{pd=k;buildMenu()});
  seg($("langs"),[["en","English"],["es","Español"],["ur","اردو"]],curLang,k=>{curLang=k;L=T[k];buildMenu();render()});
  seg($("snds"),[["1",L.on],["0",L.off]],soundOn?"1":"0",k=>setSnd(k==="1"));
@@ -219,6 +235,7 @@ function buildMenu(){
  $("online").style.display=pm==="online"?"flex":"none";
  $("play").style.display=pm==="online"?"none":"block";
  $("create").textContent=L.create;$("join").textContent=L.join;$("code").placeholder=L.code;$("play").textContent=L.play;
+ $("lWait").textContent=L.waitLabel;$("copylink").textContent=L.copyLink;$("bigcode").textContent=roomCode||$("bigcode").textContent;
  $("close").style.display=started?"flex":"none";
 }
 let curLang="en";
