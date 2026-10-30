@@ -82,6 +82,11 @@ html,body{height:100%;margin:0;overflow:hidden;color:var(--ink);font-family:"Tre
   <div id="dwrap"><div class="lb" id="lLevel"></div><div class="seg" id="diff"></div></div>
   <div id="online">
     <button class="btn" id="create"></button>
+    <div id="waitbox" style="display:none;flex-direction:column;gap:max(1vh,6px)">
+      <div class="lb" id="lWait"></div>
+      <div id="bigcode"></div>
+      <button class="btn" id="copylink"></button>
+    </div>
     <input id="code" maxlength="4" autocomplete="off">
     <button class="btn" id="join"></button>
   </div>
@@ -94,16 +99,19 @@ html,body{height:100%;margin:0;overflow:hidden;color:var(--ink);font-family:"Tre
 const T={
 en:{sound:"Sound",on:"On",off:"Off",mode:"Game mode",level:"Difficulty",lang:"Language",ai:"vs Computer",local:"2 Players",online:"Online",easy:"Easy",hard:"Hard",
  create:"Create room",join:"Join room",code:"CODE",play:"Play",again:"Play again",draws:"Draws",
+ waitLabel:"Share this code with your friend:",copyLink:"Copy invite link",copied:"Invite link copied!",
  yourTurn:"Your turn",turn:m=>m+"'s turn",win:m=>m+" wins!",youWin:"You win!",youLose:"You lose!",draw:"It's a draw!",
  wait:c=>"Room code: "+c+" — waiting for a friend…",conn:"Friend connected!",left:"Your friend left the game.",err:"Could not connect. Check the code.",
  you:"You",cpu:"CPU",friend:"Friend",hint:"Pick a mode, then press Play.",keys:"Tip: use arrow keys + Enter, or keys 1-9."},
 es:{sound:"Sonido",on:"Sí",off:"No",mode:"Modo de juego",level:"Dificultad",lang:"Idioma",ai:"vs PC",local:"2 Jugadores",online:"En línea",easy:"Fácil",hard:"Difícil",
  create:"Crear sala",join:"Unirse",code:"CÓDIGO",play:"Jugar",again:"Jugar otra vez",draws:"Empates",
+ waitLabel:"Comparte este código con tu amigo:",copyLink:"Copiar enlace",copied:"¡Enlace copiado!",
  yourTurn:"Tu turno",turn:m=>"Turno de "+m,win:m=>"¡Gana "+m+"!",youWin:"¡Ganaste!",youLose:"¡Perdiste!",draw:"¡Empate!",
  wait:c=>"Código: "+c+" — esperando amigo…",conn:"¡Amigo conectado!",left:"Tu amigo salió.",err:"No se pudo conectar.",
  you:"Tú",cpu:"PC",friend:"Amigo",hint:"Elige un modo y pulsa Jugar.",keys:"Consejo: flechas + Enter, o teclas 1-9."},
 ur:{sound:"آواز",on:"آن",off:"آف",mode:"گیم موڈ",level:"مشکل",lang:"زبان",ai:"کمپیوٹر کے خلاف",local:"دو کھلاڑی",online:"آن لائن",easy:"آسان",hard:"مشکل",
  create:"کمرہ بنائیں",join:"شامل ہوں",code:"کوڈ",play:"کھیلیں",again:"دوبارہ کھیلیں",draws:"برابر",
+ waitLabel:"یہ کوڈ اپنے دوست کو بھیجیں:",copyLink:"دعوتی لنک کاپی کریں",copied:"لنک کاپی ہو گیا!",
  yourTurn:"آپ کی باری",turn:m=>m+" کی باری",win:m=>m+" جیت گیا!",youWin:"آپ جیت گئے!",youLose:"آپ ہار گئے!",draw:"برابر!",
  wait:c=>"کوڈ: "+c+" — دوست کا انتظار…",conn:"دوست شامل ہو گیا!",left:"دوست چلا گیا۔",err:"کنیکٹ نہیں ہو سکا۔",
  you:"آپ",cpu:"کمپیوٹر",friend:"دوست",hint:"موڈ چنیں اور کھیلیں دبائیں۔",keys:"تیر + Enter یا 1-9 استعمال کریں۔"}};
