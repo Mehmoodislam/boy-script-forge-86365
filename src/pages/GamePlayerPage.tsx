@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Gamepad2 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { getGameBySlug } from "@/games/gamesData";

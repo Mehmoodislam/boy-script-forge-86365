@@ -255,6 +255,9 @@ document.addEventListener("keydown",e=>{
 });
 
 $("info").textContent=L.keys;buildMenu();updSnd();render();
+/* Auto-join from ?room=CODE invite link */
+try{const r=(new URLSearchParams(location.search).get("room")||"").toUpperCase();
+ if(/^[A-Z2-9]{4}$/.test(r)){pm="online";buildMenu();$("info").textContent="";joinRoom(r)}}catch(e){}
 (async function(){
  const t0=Date.now();
  while(!SDK()&&Date.now()-t0<4000)await new Promise(r=>setTimeout(r,100));
