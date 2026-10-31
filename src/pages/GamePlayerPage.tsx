@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Gamepad2 } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { getGameBySlug } from "@/games/gamesData";
@@ -8,8 +8,16 @@ const SITE_URL = "https://freeimageprompt.com";
 
 const GamePlayerPage = () => {
     const { slug } = useParams<{ slug: string }>();
+    const [searchParams] = useSearchParams();
     const game = slug ? getGameBySlug(slug) : undefined;
     const [loaded, setLoaded] = useState(false);
+
+    // Forward query params (e.g. ?room=CODE invite links) into the game iframe
+    const iframeSrc = useMemo(() => {
+        if (!game) return "";
+        const q = searchParams.toString();
+        return q ? `${game.path}?${q}` : game.path;
+    }, [game, searchParams]);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -72,7 +80,7 @@ const GamePlayerPage = () => {
                     </div>
                 )}
                 <iframe
-                    src={game.path}
+                    src={iframeSrc}
                     title={game.title}
                     className="w-full h-full border-0"
                     allow="autoplay; fullscreen; gamepad"
