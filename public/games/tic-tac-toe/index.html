@@ -204,19 +204,36 @@ function closeOnline(){try{conn&&conn.close()}catch(e){}try{peer&&peer.destroy()
 const rc=()=>{const a="ABCDEFGHJKMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.random()*a.length|0];return s};
 const inviteBase=()=>{try{if(window.top&&window.top!==window.self)return window.top.location.origin+window.top.location.pathname}catch(e){}return location.origin+location.pathname};
 function showWaiting(v){$("waitbox").style.display=v?"flex":"none";$("create").style.display=v?"none":"block";$("code").style.display=v?"none":"block";$("join").style.display=v?"none":"block"}
+/* Wait for the deferred PeerJS script to actually load before using it */
+function loadPeer(){if(window.Peer)return Promise.resolve(true);
+ return new Promise(res=>{const t0=Date.now();
+  (function poll(){if(window.Peer)return res(true);if(Date.now()-t0>10000)return res(false);setTimeout(poll,150)})()})}
+const peerOpts=()=>({config:{iceServers:[{urls:"stun:stun.l.google.com:19302"},{urls:"stun:stun1.l.google.com:19302"}]}});
 function bindConn(c){conn=c;
  c.on("open",()=>{mode="online";started=true;scores={X:0,O:0,D:0};round=0;showWaiting(false);$("info").textContent=L.conn;showModal(false);newRound()});
  c.on("data",d=>{if(d.t==="move")play(d.i,false);if(d.t==="again")newRound()});
  c.on("close",()=>{over=true;note=L.left;cg.stop();showWaiting(false);render()})}
-function createRoom(){closeOnline();myMark="X";roomCode=rc();showWaiting(false);peer=new Peer("timberttt-"+roomCode);
+async function createRoom(){
+ closeOnline();myMark="X";roomCode=rc();showWaiting(false);$("info").textContent="";
+ const ok=await loadPeer();
+ if(!ok||!window.Peer){$("info").textContent=L.err;return}
+ peer=new Peer("timberttt-"+roomCode,peerOpts());
  peer.on("open",()=>{$("bigcode").textContent=roomCode;$("lWait").textContent=L.waitLabel;$("copylink").textContent=L.copyLink;$("info").textContent=L.wait(roomCode);showWaiting(true);try{SDK().game.showInviteButton({room:roomCode})}catch(e){}});
  peer.on("connection",c=>{if(conn&&conn.open){c.close();return}bindConn(c)});
+ peer.on("disconnected",()=>{try{peer&&peer.reconnect()}catch(e){}});
  peer.on("error",e=>{if(e.type==="unavailable-id")createRoom();else{showWaiting(false);$("info").textContent=L.err}})}
-function joinRoom(code){closeOnline();myMark="O";peer=new Peer();
- peer.on("open",()=>bindConn(peer.connect("timberttt-"+code.toUpperCase(),{reliable:true})));
- peer.on("error",e=>{if(e.type!=="unavailable-id")$("info").textContent=L.err})}
+async function joinRoom(code){
+ closeOnline();myMark="O";showWaiting(false);$("info").textContent="";
+ const ok=await loadPeer();
+ if(!ok||!window.Peer){$("info").textContent=L.err;return}
+ peer=new Peer(null,peerOpts());
+ peer.on("open",()=>{
+  const c=peer.connect("timberttt-"+code.toUpperCase(),{reliable:true});bindConn(c);
+  setTimeout(()=>{if(!(conn&&conn.open)){showWaiting(false);$("info").textContent=L.err;closeOnline()}},20000)});
+ peer.on("disconnected",()=>{try{peer&&peer.reconnect()}catch(e){}});
+ peer.on("error",e=>{if(e.type!=="unavailable-id"){$("info").textContent=L.err;showWaiting(false)}})}
 $("create").onclick=()=>{sfx.ui();createRoom()};
-$("join").onclick=()=>{sfx.ui();const v=$("code").value.trim();if(v.length===4)joinRoom(v)};
+$("join").onclick=()=>{sfx.ui();const v=$("code").value.trim().toUpperCase();if(v.length===4)joinRoom(v)};
 $("code").addEventListener("keydown",e=>{e.stopPropagation();if(e.key==="Enter")$("join").click()});
 $("copylink").onclick=async()=>{sfx.ui();const url=inviteBase()+"?room="+roomCode;
  try{await navigator.clipboard.writeText(url);$("info").textContent=L.copied}
