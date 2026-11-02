@@ -227,7 +227,9 @@ async function joinRoom(code){
  const ok=await loadPeer();
  if(!ok||!window.Peer){$("info").textContent=L.err;return}
  peer=new Peer(null,peerOpts());
- peer.on("open",()=>bindConn(peer.connect("timberttt-"+code.toUpperCase(),{reliable:true})));
+ peer.on("open",()=>{
+  const c=peer.connect("timberttt-"+code.toUpperCase(),{reliable:true});bindConn(c);
+  setTimeout(()=>{if(!(conn&&conn.open)){showWaiting(false);$("info").textContent=L.err;closeOnline()}},20000)});
  peer.on("disconnected",()=>{try{peer&&peer.reconnect()}catch(e){}});
  peer.on("error",e=>{if(e.type!=="unavailable-id"){$("info").textContent=L.err;showWaiting(false)}})}
 $("create").onclick=()=>{sfx.ui();createRoom()};
