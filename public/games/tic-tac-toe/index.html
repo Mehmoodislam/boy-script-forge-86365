@@ -204,6 +204,11 @@ function closeOnline(){try{conn&&conn.close()}catch(e){}try{peer&&peer.destroy()
 const rc=()=>{const a="ABCDEFGHJKMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.random()*a.length|0];return s};
 const inviteBase=()=>{try{if(window.top&&window.top!==window.self)return window.top.location.origin+window.top.location.pathname}catch(e){}return location.origin+location.pathname};
 function showWaiting(v){$("waitbox").style.display=v?"flex":"none";$("create").style.display=v?"none":"block";$("code").style.display=v?"none":"block";$("join").style.display=v?"none":"block"}
+/* Wait for the deferred PeerJS script to actually load before using it */
+function loadPeer(){if(window.Peer)return Promise.resolve(true);
+ return new Promise(res=>{const t0=Date.now();
+  (function poll(){if(window.Peer)return res(true);if(Date.now()-t0>10000)return res(false);setTimeout(poll,150)})()})}
+const peerOpts=()=>({config:{iceServers:[{urls:"stun:stun.l.google.com:19302"},{urls:"stun:stun1.l.google.com:19302"}]}});
 function bindConn(c){conn=c;
  c.on("open",()=>{mode="online";started=true;scores={X:0,O:0,D:0};round=0;showWaiting(false);$("info").textContent=L.conn;showModal(false);newRound()});
  c.on("data",d=>{if(d.t==="move")play(d.i,false);if(d.t==="again")newRound()});
