@@ -7,7 +7,7 @@ const TermsOfService = () => {
     return (
         <div className="min-h-screen bg-background text-foreground">
             <SEOHead
-                title="Terms of Service – FreeImagePrompt"
+                title="Terms of Service - FreeImagePrompt"
                 description="Review the FreeImagePrompt terms of service that govern your use of our free online image compression and conversion tools."
                 canonicalUrl="https://freeimageprompt.com/terms-of-services"
             />
@@ -83,7 +83,7 @@ const TermsOfService = () => {
                     If you have questions or inquiries regarding these Terms of Service, please reach out to us:
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
-                    <li>Email: <strong className="text-foreground">support@freeimageprompt.com</strong></li>
+                    <li>Email: <strong className="text-foreground">mehmoodislam10@gmail.com</strong></li>
                     <li>Contact Page: <Link to="/contact" className="text-primary underline">https://freeimageprompt.com/contact</Link></li>
                 </ul>
             </main>

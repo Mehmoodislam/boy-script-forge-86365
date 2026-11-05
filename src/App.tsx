@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams, Navigate } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -7,13 +7,9 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import HowToUse from "./components/HowToUse";
-import Stylish from "./components/Stylish";
-import GalleryPreview from "./components/GalleryPreview";
 import ToolSection from "./components/ToolSection";
 import Benefits from "./components/Benefits";
 import FAQs from "./components/FAQs";
-import Gallery from "./app/gallery/GalleryContent";
-import Packs from "./app/packs/PacksContent";
 import WebpToJpgPage from "./pages/WebpToJpgPage";
 import WebpToPngPage from "./pages/WebpToPngPage";
 import PngToWebpPage from "./pages/PngToWebpPage";
@@ -78,11 +74,9 @@ const Home = () => (
         />
         <Navigation />
         <Hero />
-        {/* <GalleryPreview /> */}
         <ToolSection />
         <About />
         <HowToUse />
-        {/* <Stylish /> */}
         <Benefits />
         <FAQs />
         <Footer />
@@ -99,8 +93,8 @@ function App() {
                     <Router>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/gallery" element={<Gallery />} />
-                            <Route path="/packs" element={<Packs />} />
+                            <Route path="/gallery" element={<Navigate to="/tools" replace />} />
+                            <Route path="/packs" element={<Navigate to="/tools" replace />} />
                             <Route path="/tools" element={<ToolsPage />} />
                             <Route path="/tools/webp-to-jpg" element={<WebpToJpgPage />} />
                             <Route path="/tools/webp-to-png" element={<WebpToPngPage />} />

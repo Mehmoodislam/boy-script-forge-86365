@@ -56,7 +56,7 @@ const GalleryPreview = () => {
             {previewImages.map((item) => (
               <Link
                 key={item.id}
-                to="/gallery"
+                to="/tools"
                 className="group block"
               >
                 <div className="relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-all hover:shadow-xl">
@@ -76,7 +76,7 @@ const GalleryPreview = () => {
           </div>
 
           <div className="text-center mt-10">
-            <Link to="/gallery">
+            <Link to="/tools">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group">
                 More Images
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />

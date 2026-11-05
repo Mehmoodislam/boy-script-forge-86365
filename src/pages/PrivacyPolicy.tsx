@@ -122,7 +122,7 @@ const PrivacyPolicy = () => {
                     If you have any questions or suggestions about our Privacy Policy or data protection practices, please contact us:
                 </p>
                 <ul className="list-disc pl-6 space-y-1">
-                    <li>Email: <strong className="text-foreground">support@freeimageprompt.com</strong></li>
+                    <li>Email: <strong className="text-foreground">mehmoodislam10@gmail.com</strong></li>
                     <li>Website: <a href="https://freeimageprompt.com/contact" className="text-primary underline">https://freeimageprompt.com/contact</a></li>
                 </ul>
             </main>

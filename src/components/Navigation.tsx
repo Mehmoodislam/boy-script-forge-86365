@@ -35,10 +35,8 @@ const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/gallery", label: "Image Gallery" },
-    { to: "/packs", label: "Packs" },
-    { to: "/games", label: "Games" },
     { to: "/blog", label: "Blog" },
+    { to: "/games", label: "Games" },
     { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];

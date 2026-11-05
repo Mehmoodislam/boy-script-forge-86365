@@ -32,7 +32,7 @@ const Stylish = () => {
                     <p className="text-lg text-muted-foreground mt-2">
                         <b>👉 Explore Full Collection:</b>
                     </p>
-                    <Link to="/gallery">
+                    <Link to="/tools">
                         <Button size="lg" className=" bg-gradient-to-r from-primary to-primary-glow hover:opacity-90 shadow-lg hover:shadow-xl transition-all group mt-4   text-sm sm:text-base whitespace-normal break-words text-center px-4">
                             Stylish Boy DP - Cute Boy Pics & HD Photos
                         </Button>
