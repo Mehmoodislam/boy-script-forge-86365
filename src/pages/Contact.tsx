@@ -36,7 +36,13 @@ export default function Contact() {
             <Navigation />
             <main className="pt-24 pb-16">
                 <div className="container mx-auto px-4 max-w-2xl">
-                    <h1 className="text-4xl font-bold mb-8 text-center bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Contact Us</h1>
+                    <h1 className="text-4xl font-bold mb-4 text-center bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Contact Us</h1>
+                    <p className="text-center text-muted-foreground mb-8 text-sm md:text-base">
+                        Have a question, feedback, or need assistance with our image tools? Drop us a message below or email us directly at{" "}
+                        <a href="mailto:mehmoodislam10@gmail.com" className="text-primary font-semibold underline">
+                            mehmoodislam10@gmail.com
+                        </a>.
+                    </p>
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 bg-card p-8 rounded-xl border">
                             <FormField control={form.control} name="name" render={({ field }) => (

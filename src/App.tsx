@@ -54,12 +54,6 @@ import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
 import ArtPromptGeneratorPage from "./pages/ArtPromptGeneratorPage";
 import ToolsPage from "./pages/ToolsPage";
-import AdminLogin from "./pages/admin/Login";
-import AdminDashboard from "./pages/admin/Dashboard";
-import PageManager from "./pages/admin/PageManager";
-import PostManager from "./pages/admin/PostManager";
-import NavManager from "./pages/admin/NavManager";
-import DynamicPage from "./pages/DynamicPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 import SEOHead from "@/components/SEOHead";
 
@@ -140,15 +134,8 @@ function App() {
                             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                             <Route path="/terms-of-services" element={<TermsOfService />} />
                             
-                            {/* Admin Routes */}
-                            <Route path="/admin/login" element={<AdminLogin />} />
-                            <Route path="/admin/dashboard" element={<AdminDashboard />} />
-                            <Route path="/admin/pages" element={<PageManager />} />
-                            <Route path="/admin/posts" element={<PostManager />} />
-                            <Route path="/admin/navigation" element={<NavManager />} />
-
-                            {/* Dynamic CMS Pages (Catch-all) */}
-                            <Route path="/:slug" element={<DynamicPage />} />
+                            {/* Fallback Catch-all */}
+                            <Route path="*" element={<Navigate to="/" replace />} />
                         </Routes>
                     </Router>
                 </TooltipProvider>

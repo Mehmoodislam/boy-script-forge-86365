@@ -3,8 +3,6 @@ import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as Image
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
-import { supabase } from "@/integrations/supabase/client";
-import { useQuery } from "@tanstack/react-query";
 
 const mediaTools = [
   { to: "/tools/jpg-compress", label: "JPG Compressor", icon: ImageIcon, desc: "Batch image optimization" },
@@ -35,25 +33,11 @@ const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/blog", label: "Blog" },
-    { to: "/games", label: "Games" },
     { to: "/about", label: "About" },
+    { to: "/games", label: "Games" },
+    { to: "/blog", label: "Blog" },
     { to: "/contact", label: "Contact" },
   ];
-
-  const { data: dynamicLinks } = useQuery({
-    queryKey: ['navigation-menu'],
-    queryFn: async () => {
-      const { data, error } = await (supabase
-        .from('cms_navigation' as any)
-        .select('label, path') as any)
-        .order('order_index', { ascending: true });
-      if (error) return [];
-      return (data as any[]).map(item => ({ to: item.path, label: item.label }));
-    }
-  });
-
-  const allLinks = [...links, ...(dynamicLinks || [])];
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -83,7 +67,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {allLinks.map((link) => (
+            {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
@@ -184,7 +168,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 space-y-1">
-            {allLinks.map((link) => (
+            {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}

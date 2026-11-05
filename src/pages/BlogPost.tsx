@@ -5,43 +5,11 @@ import Footer from "@/components/Footer";
 import { Calendar, User, ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { supabase } from "@/integrations/supabase/client";
-import { useQuery } from "@tanstack/react-query";
 import SEOHead from "@/components/SEOHead";
 
 export default function BlogPost() {
     const { slug } = useParams();
-    const staticPost = blogPosts.find(p => p.id === slug);
-
-    const { data: dynamicPost, isLoading } = useQuery({
-        queryKey: ['blog-post', slug],
-        queryFn: async () => {
-            if (staticPost) return null;
-            const { data, error } = await (supabase
-                .from('cms_posts' as any)
-                .select('*')
-                .eq('slug', slug)
-                .single() as any);
-            if (error) return null;
-            const postData = data as any;
-            return {
-                title: postData.title,
-                description: postData.excerpt,
-                category: "Blog",
-                date: new Date(postData.created_at).toLocaleDateString(),
-                author: "Admin",
-                content: postData.content,
-                metaTitle: postData.meta_title as string | undefined,
-                metaDescription: postData.meta_description as string | undefined,
-                schema: postData.schema as object | undefined
-            };
-        },
-        enabled: !!slug && !staticPost
-    });
-
-    const post = staticPost || dynamicPost;
-
-    if (isLoading) return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    const post = blogPosts.find(p => p.id === slug);
 
     if (!post) {
         return (
