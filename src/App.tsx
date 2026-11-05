@@ -59,6 +59,7 @@ import AdminDashboard from "./pages/admin/Dashboard";
 import PageManager from "./pages/admin/PageManager";
 import PostManager from "./pages/admin/PostManager";
 import NavManager from "./pages/admin/NavManager";
+import ContactSubmissions from "./pages/admin/ContactSubmissions";
 import DynamicPage from "./pages/DynamicPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 import SEOHead from "@/components/SEOHead";
@@ -146,6 +147,7 @@ function App() {
                             <Route path="/admin/pages" element={<PageManager />} />
                             <Route path="/admin/posts" element={<PostManager />} />
                             <Route path="/admin/navigation" element={<NavManager />} />
+                            <Route path="/admin/contact-submissions" element={<ContactSubmissions />} />
 
                             {/* Dynamic CMS Pages (Catch-all) */}
                             <Route path="/:slug" element={<DynamicPage />} />

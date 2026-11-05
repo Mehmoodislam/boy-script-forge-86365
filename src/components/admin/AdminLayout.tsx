@@ -7,6 +7,7 @@ import {
   FileText, 
   PenTool, 
   Navigation as NavIcon, 
+  Inbox,
   LogOut,
   Menu,
   X
@@ -48,6 +49,7 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
     { label: "Manage Pages", path: "/admin/pages", icon: <FileText className="w-5 h-5" /> },
     { label: "Manage Posts", path: "/admin/posts", icon: <PenTool className="w-5 h-5" /> },
     { label: "Navigation", path: "/admin/navigation", icon: <NavIcon className="w-5 h-5" /> },
+    { label: "Contact Messages", path: "/admin/contact-submissions", icon: <Inbox className="w-5 h-5" /> },
   ];
 
   if (loading) return <div className="flex items-center justify-center min-h-screen">Loading...</div>;
