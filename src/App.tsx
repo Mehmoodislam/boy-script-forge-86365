@@ -23,6 +23,7 @@ import HeicToJpgPage from "./pages/HeicToJpgPage";
 import ImageDpiCheckerPage from "./pages/ImageDpiCheckerPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import AboutPage from "./pages/AboutPage";
 import Blog from "./pages/Blog";
 import GamesPage from "./pages/GamesPage";
 import GamePlayerPage from "./pages/GamePlayerPage";
@@ -140,6 +141,7 @@ function App() {
                             <Route path="/games/:slug" element={<GamePlayerPage />} />
                             <Route path="/blog" element={<Blog />} />
                             <Route path="/blog/:slug" element={<BlogPost />} />
+                            <Route path="/about" element={<AboutPage />} />
                             <Route path="/contact" element={<Contact />} />
                             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
                             <Route path="/terms-of-services" element={<TermsOfService />} />

@@ -39,6 +39,7 @@ const Navigation = () => {
     { to: "/packs", label: "Packs" },
     { to: "/games", label: "Games" },
     { to: "/blog", label: "Blog" },
+    { to: "/about", label: "About" },
     { to: "/contact", label: "Contact" },
   ];
 

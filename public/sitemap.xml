@@ -1,174 +1,356 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Core Pages -->
   <url>
     <loc>https://freeimageprompt.com/</loc>
-    <lastmod>2025-12-22</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://freeimageprompt.com/gallery</loc>
-    <lastmod>2025-12-22</lastmod>
+    <loc>https://freeimageprompt.com/about</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/contact</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/privacy-policy</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/terms-of-services</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Tools Hub & Format Converters -->
+  <url>
+    <loc>https://freeimageprompt.com/tools</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://freeimageprompt.com/blog</loc>
-    <lastmod>2025-12-22</lastmod>
+    <loc>https://freeimageprompt.com/tools/jpg-compress</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/heic-to-jpg</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/image-dpi-checker</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/webp-to-jpg</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/webp-to-png</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/png-to-webp</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/png-to-jpg</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/jpg-to-webp</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/reduce-jpg-size</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/increase-jpg-size</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/art-prompt-generator</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Targeted KB Image Compression Presets -->
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-5kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-10kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-15kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-20kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-25kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-30kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-35kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-40kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-45kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-50kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-60kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-70kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-80kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-90kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-100kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-150kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-200kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-250kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-300kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-400kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-500kb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-1mb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-2mb</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/tools/compress-jpg-to-5mb</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
+  <!-- Blog & Educational Content -->
   <url>
-    <loc>https://freeimageprompt.com/blog/mood-off-dp-2026</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://freeimageprompt.com/blog</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://freeimageprompt.com/blog/understanding-image-compression-lossy-vs-lossless</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://freeimageprompt.com/blog/whatsapp-dp-attitude-boy-2026</loc>
-    <lastmod>2026-02-02</lastmod>
+    <loc>https://freeimageprompt.com/blog/webp-vs-jpg-vs-png-guide</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://freeimageprompt.com/blog/image-dpi-explained-print-vs-web</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://freeimageprompt.com/blog/how-to-convert-heic-to-jpg</loc>
-    <lastmod>2026-08-02</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://freeimageprompt.com/blog/heic-to-jpg-iphone-mac-windows</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://freeimageprompt.com/blog/how-to-compress-images-on-iphone</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-
   <url>
-    <loc>https://freeimageprompt.com/contact</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://freeimageprompt.com/blog/ai-image-generation</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://freeimageprompt.com/privacy-policy</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://freeimageprompt.com/blog/best-ai-image-prompts-stylish-boy-dp</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://freeimageprompt.com/terms-of-services</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://freeimageprompt.com/blog/whatsapp-dp-attitude-boy-2026</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
-
-   <url>
-    <loc>https://freeimageprompt.com/tools</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+  <url>
+    <loc>https://freeimageprompt.com/blog/mood-off-dp-2026</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- toools jpg compress  -->
+  <!-- Interactive & Gallery Sections -->
   <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-5kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-10kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://freeimageprompt.com/gallery</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-15kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://freeimageprompt.com/packs</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-
-  <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-20kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-25kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-30kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-35kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-   <url>
-    <loc>https://freeimageprompt.com/tools/compress-jpg-to-40kb</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-
-  <!-- convertor tools -->
-  <url>
-    <loc>https://freeimageprompt.com/tools/webp-to-jpg</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/png-to-jpg</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/jpg-to-webp</loc>
-    <lastmod>2025-12-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/tools/heic-to-jpg</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- games -->
   <url>
     <loc>https://freeimageprompt.com/games</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://freeimageprompt.com/games/puff-flap</loc>
-  </url>
-  <url>
-    <loc>https://freeimageprompt.com/games/tic-tac-toe</loc>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://freeimageprompt.com/games/tic-tac-toe</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 
+</urlset>

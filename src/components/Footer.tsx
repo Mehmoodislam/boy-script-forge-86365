@@ -24,6 +24,16 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/tools" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  All Tools
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
                 <Link to="/gallery" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Gallery
                 </Link>
@@ -31,6 +41,11 @@ const Footer = () => {
               <li>
                 <Link to="/blog" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Contact Us
                 </Link>
               </li>
             </ul>
@@ -107,7 +122,7 @@ const Footer = () => {
 
         <div className="mt-10 pt-6 border-t border-[#E6E2D8] text-center">
           <p className="text-xs text-[#78716C]">
-            © 2025 FreeImagePrompt. All rights reserved. 100% Client-side Free Utilities.
+            © 2026 FreeImagePrompt. All rights reserved. 100% Client-side Free Utilities.
           </p>
         </div>
       </div>
