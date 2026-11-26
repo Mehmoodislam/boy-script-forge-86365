@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import {
   ImageDown, Layers, ArrowDown, RefreshCw, Sparkles, Image as ImageIcon,
-  FileImage, ArrowRight
+  FileImage, ArrowRight, Hash
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -54,11 +54,16 @@ const creativeTools = [
   { to: "/tools/art-prompt-generator", label: "Art Prompt Generator", desc: "Generate unlimited creative art prompts & ideas" },
 ];
 
+const socialTools = [
+  { to: "/facebook-reels-hashtags", label: "Facebook Reels Hashtags", desc: "Trending, viral & copy-paste hashtags for 2026 Reels" },
+];
+
 const categories = [
   { id: "compressors", title: "Image Compressors", icon: ImageDown, tools: imageCompressors, color: "rose" },
   { id: "size", title: "Image Size Adjusters", icon: Layers, tools: sizeTools, color: "amber" },
   { id: "converters", title: "Image Format Converters", icon: RefreshCw, tools: converters, color: "blue" },
   { id: "creative", title: "Creative Tools", icon: Sparkles, tools: creativeTools, color: "violet" },
+  { id: "social", title: "Social Media Tools", icon: Hash, tools: socialTools, color: "emerald" },
 ];
 
 const colorMap: Record<string, { badge: string; border: string; hover: string; icon: string; bg: string }> = {
@@ -66,6 +71,7 @@ const colorMap: Record<string, { badge: string; border: string; hover: string; i
   amber: { badge: "bg-amber-50 text-amber-700 border-amber-200", border: "border-[#E6E2D8]", hover: "hover:border-amber-300", icon: "text-amber-600", bg: "bg-amber-50" },
   blue: { badge: "bg-blue-50 text-blue-700 border-blue-200", border: "border-[#E6E2D8]", hover: "hover:border-blue-300", icon: "text-blue-500", bg: "bg-blue-50" },
   violet: { badge: "bg-violet-50 text-violet-700 border-violet-200", border: "border-[#E6E2D8]", hover: "hover:border-violet-300", icon: "text-violet-500", bg: "bg-violet-50" },
+  emerald: { badge: "bg-emerald-50 text-emerald-700 border-emerald-200", border: "border-[#E6E2D8]", hover: "hover:border-emerald-300", icon: "text-emerald-600", bg: "bg-emerald-50" },
 };
 
 const ToolsPage = () => {

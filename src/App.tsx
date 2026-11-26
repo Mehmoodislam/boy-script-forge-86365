@@ -53,6 +53,7 @@ import JPGCompress1mbPage from "./pages/JPGCompress1mbPage";
 import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
 import ArtPromptGeneratorPage from "./pages/ArtPromptGeneratorPage";
+import FacebookReelsHashtagsPage from "./pages/FacebookReelsHashtagsPage";
 import ToolsPage from "./pages/ToolsPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 import SEOHead from "@/components/SEOHead";
@@ -125,6 +126,8 @@ function App() {
                             <Route path="/tools/compress-jpg-to-2mb" element={<JPGCompress2mbPage />} />
                             <Route path="/tools/compress-jpg-to-5mb" element={<JPGCompress5mbPage />} />
                             <Route path="/tools/art-prompt-generator" element={<ArtPromptGeneratorPage />} />
+                            <Route path="/facebook-reels-hashtags" element={<FacebookReelsHashtagsPage />} />
+                            <Route path="/facebook-reels-hashtags/" element={<FacebookReelsHashtagsPage />} />
                             <Route path="/games" element={<GamesPage />} />
                             <Route path="/games/:slug" element={<GamePlayerPage />} />
                             <Route path="/blog" element={<Blog />} />

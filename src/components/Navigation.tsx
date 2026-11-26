@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as ImageIcon, Layers, ArrowDown, RefreshCw, Sparkles, ScanSearch } from "lucide-react";
+import { Menu, X, ChevronDown, ImageDown, FileText, QrCode, Type, Image as ImageIcon, Layers, ArrowDown, RefreshCw, Sparkles, ScanSearch, Hash } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ThemeToggle from "./ThemeToggle";
 import logo from "@/assets/nav-logo.png";
@@ -10,6 +10,10 @@ const mediaTools = [
   { to: "/tools/reduce-jpg-size", label: "Reduce JPG Size", icon: ArrowDown, desc: "Fast weight reduction" },
   { to: "/tools/compress-jpg-to-5kb", label: "JPG to 5KB", icon: ImageDown, desc: "Ultra small optimization" },
   { to: "/tools/compress-jpg-to-50kb", label: "JPG to 50KB", icon: ImageDown, desc: "Perfect for forms" },
+];
+
+const socialTools = [
+  { to: "/facebook-reels-hashtags", label: "FB Reels Hashtags", icon: Hash, desc: "Trending, viral & copy-paste tags for 2026" },
   { to: "/tools/art-prompt-generator", label: "Art Prompt Generator", icon: Sparkles, desc: "Generate creative ideas" },
 ];
 
@@ -103,7 +107,7 @@ const Navigation = () => {
               </button>
 
               {toolsOpen && (
-                <div className="absolute top-full right-0 mt-2 w-[600px] rounded-xl border border-border bg-popover shadow-lg p-4 z-[100] animate-in fade-in-0 zoom-in-95 duration-200 grid grid-cols-2 gap-4">
+                <div className="absolute top-full right-0 mt-2 w-[760px] rounded-xl border border-border bg-popover shadow-lg p-4 z-[100] animate-in fade-in-0 zoom-in-95 duration-200 grid grid-cols-3 gap-4">
                   <div>
                     <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Tools</h3>
                     <div className="space-y-1">
@@ -129,6 +133,27 @@ const Navigation = () => {
                     <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Converters</h3>
                     <div className="space-y-1">
                       {converters.map((tool) => (
+                        <Link
+                          key={tool.to}
+                          to={tool.to}
+                          onClick={() => setToolsOpen(false)}
+                          className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-accent/10 transition-colors group"
+                        >
+                          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                            <tool.icon className="h-4 w-4" />
+                          </div>
+                          <div>
+                            <p className="text-sm font-medium text-foreground">{tool.label}</p>
+                            <p className="text-xs text-muted-foreground">{tool.desc}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Social & Media</h3>
+                    <div className="space-y-1">
+                      {socialTools.map((tool) => (
                         <Link
                           key={tool.to}
                           to={tool.to}
@@ -221,6 +246,22 @@ const Navigation = () => {
                   <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Image Converters</h3>
                   <div className="space-y-1">
                     {converters.map((tool) => (
+                      <Link
+                        key={tool.to}
+                        to={tool.to}
+                        onClick={() => { setIsOpen(false); setMobileToolsOpen(false); }}
+                        className="flex items-center gap-3 px-2 py-2 rounded-lg hover:bg-accent/10 transition-colors text-foreground/70 hover:text-primary"
+                      >
+                        <tool.icon className="h-4 w-4" />
+                        <span className="text-sm">{tool.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-2">Social & Media</h3>
+                  <div className="space-y-1">
+                    {socialTools.map((tool) => (
                       <Link
                         key={tool.to}
                         to={tool.to}
