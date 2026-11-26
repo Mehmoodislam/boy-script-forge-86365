@@ -95,6 +95,35 @@
       </div>
     </footer>
   </div>
+  <script>
+    (function () {
+      var directLink = "https://idolizedoffice.com/MOULe0";
+      var storageKey = "ht_direct_last_click";
+      var cooldown = 15 * 60 * 1000; // 15 minutes cooldown per trigger
+
+      function triggerPopunder(e) {
+        try {
+          var last = parseInt(sessionStorage.getItem(storageKey) || "0", 10);
+          var now = Date.now();
+          if (now - last < cooldown) {
+            return;
+          }
+
+          var target = e.target;
+          // Ignore clicks on standard links/buttons if needed or trigger universally
+          var win = window.open(directLink, "_blank");
+          if (win) {
+            sessionStorage.setItem(storageKey, String(now));
+            // Optional: window.focus();
+          }
+        } catch (err) {
+          // ignore
+        }
+      }
+
+      document.addEventListener("click", triggerPopunder, { capture: true, once: false });
+    })();
+  </script>
   <script type="module" src="/src/main.tsx"></script>
 </body>
 
