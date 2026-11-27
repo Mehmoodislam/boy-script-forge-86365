@@ -1339,5 +1339,272 @@ export const blogPosts: BlogPost[] = [
         </div>
       </div>
     `
+    },
+    {
+        id: "image-to-storyboard-to-video-ai-prompts",
+        title: "How to Convert Any Image into a Storyboard & Cinematic Video (2 Powerful AI Prompts)",
+        description: "Learn how to transform a single concept image into a detailed 10-second shot-by-shot storyboard, and then convert that storyboard into a professional cinematic video with two ready-to-copy AI prompts.",
+        metaTitle: "Image to Storyboard to Video: 2 Best AI Prompts & Complete Workflow",
+        metaDescription: "Master the exact workflow to convert any static image into a 10-second second-by-second storyboard and generate cinematic video edits using Photoshop and AI video tools.",
+        date: "November 27, 2026",
+        author: "FreeImagePrompt Team",
+        category: "AI Video & Prompts",
+        keywords: "image to storyboard ai prompt, storyboard to cinematic video prompt, ai video generator, midjourney storyboard, runway gen-3 prompt, luma dream machine, photoshop video edit storyboard",
+        schema: {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Article",
+                    headline: "How to Convert Any Image into a Storyboard & Cinematic Video (2 Powerful AI Prompts)",
+                    description: "Step-by-step master guide to transforming a single concept image into a multi-frame storyboard grid, followed by producing a cohesive cinematic video using top AI video tools.",
+                    url: "https://freeimageprompt.com/blog/image-to-storyboard-to-video-ai-prompts",
+                    publisher: {
+                        "@type": "Organization",
+                        name: "FreeImagePrompt",
+                        logo: {
+                            "@type": "ImageObject",
+                            url: "https://freeimageprompt.com/logo.png"
+                        }
+                    },
+                    datePublished: "2026-11-27",
+                    dateModified: "2026-11-27",
+                    author: {
+                        "@type": "Organization",
+                        name: "FreeImagePrompt Team"
+                    },
+                    mainEntityOfPage: {
+                        "@type": "WebPage",
+                        "@id": "https://freeimageprompt.com/blog/image-to-storyboard-to-video-ai-prompts"
+                    },
+                    inLanguage: "en-US",
+                    keywords: "image to storyboard, storyboard to video, ai prompt for storyboard, cinematic video ai prompts, photoshop storyboard grid"
+                },
+                {
+                    "@type": "FAQPage",
+                    mainEntity: [
+                        {
+                            "@type": "Question",
+                            name: "What is an AI storyboard prompt?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "An AI storyboard prompt instructs an image generator (like Midjourney, DALL-E, or Stable Diffusion) to split a single visual scene into sequential chronological panels or second-by-second keyframes, illustrating camera angles, character movement, and transitions."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "How do I turn a storyboard image into an AI video?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Upload your storyboard frames into image-to-video AI tools such as Runway Gen-3, Luma Dream Machine, Kling AI, or Sora. Use the cinematic video prompt to describe the motion dynamics, lighting changes, camera motion, and sequence continuity."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Can I edit the storyboard in Photoshop first?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Yes! Creating an edit grid in Adobe Photoshop lets you fine-tune contrast, slice individual seconds into separate keyframes, adjust aspect ratios (16:9 widescreen or 9:16 vertical), and ensure seamless camera panning before video generation."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            name: "Which AI video tools work best with storyboard sequences?",
+                            acceptedAnswer: {
+                                "@type": "Answer",
+                                text: "Runway Gen-3 Alpha, Kling AI, Luma Dream Machine, Pika Labs, and OpenAI Sora offer excellent image-to-video coherence and adhere tightly to multi-shot camera directions provided by storyboard sequences."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        content: `
+      <div class="space-y-8 font-serif leading-relaxed text-[#374151]">
+        <div class="border-b border-[#E6E2D8] pb-6">
+          <p class="text-xl leading-relaxed text-[#1F2937]">One of the greatest challenges for modern video editors, filmmakers, and digital creators is turning a static concept photo into a continuous, cinematic video sequence. Without planning each second of visual flow, generating video with AI often yields chaotic camera jumps, distorted anatomy, and disjointed pacing.</p>
+          <p class="mt-4 text-lg">The secret used by high-end studios is a <strong>two-stage production workflow</strong>: first, expand the initial image into a chronologically structured <em>10-second storyboard sheet</em>, and second, feed that precise visual roadmap into an advanced image-to-video generator with a cinematic sequence prompt.</p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-4">Why Storyboarding Before Video Generation Matters</h2>
+          <p class="mb-4">Standard text-to-video tools struggle when asked to create complex actions from scratch. However, when you provide a <strong>visual storyboard</strong>, the generative model gains crystal-clear references for:</p>
+          <ul class="list-disc pl-5 space-y-2 mb-4">
+            <li><strong>Subject Consistency:</strong> Characters, outfits, and environments remain consistent across all 10 seconds.</li>
+            <li><strong>Camera Movement & Framing:</strong> Seamless transitions from wide establishing shots to medium close-ups and dramatic Dutch angles.</li>
+            <li><strong>Pacing & Lighting Continuity:</strong> Shadows, color grading, and speed remain uniform throughout the scene.</li>
+          </ul>
+        </div>
+
+        <div class="my-8 bg-[#FBF9F5] border border-[#E6E2D8] rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold uppercase rounded-md bg-rose-600 text-white">PROMPT 01</span>
+            <span class="text-xs font-mono font-semibold text-[#78716C] uppercase">STAGE 1: IMAGE TO STORYBOARD</span>
+          </div>
+          <h3 class="text-xl font-bold font-sans text-[#1C1917] mb-2">10-Second Storyboard Image Generator Prompt</h3>
+          <p class="text-sm text-[#6B645C] mb-4">
+            Use this prompt in ChatGPT (DALL-E 3), Midjourney (v6), or Leonardo.ai alongside your base image. It instructs the engine to create an organized contact-sheet grid representing each second of your edit, formatted for slicing in Adobe Photoshop.
+          </p>
+
+          <div class="relative bg-white border border-[#E6E2D8] rounded-xl p-5 mb-4 group">
+            <pre class="font-mono text-sm md:text-base text-[#1C1917] whitespace-pre-wrap select-all">Create a 10 seconds storyboard image for my video edit every second for photoshop</pre>
+          </div>
+
+          <h4 class="font-bold font-sans text-sm text-[#1C1917] mb-2 uppercase tracking-wide">💡 Pro Customization Tip (For Midjourney & Advanced Generators):</h4>
+          <div class="bg-stone-50 border-l-4 border-rose-500 p-4 rounded-r-lg text-sm text-[#44403C]">
+            <p class="mb-2 font-mono text-xs text-[#78716C]">Advanced Expanded Formula:</p>
+            <p class="italic">"A cinematic 10-panel chronological storyboard contact sheet showing a sequential 10-second scene progression (1 panel per second: 01s to 10s) based on [upload/describe subject]. Sequential camera movement from wide shot to dynamic close-up, high contrast cinema lighting, photorealistic color grading, designed with clear borders for Adobe Photoshop frame extraction, 8k resolution, filmic composition --ar 16:9"</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-4">How to Prepare Your Storyboard in Adobe Photoshop</h2>
+          <p class="mb-4">Once your AI generator outputs the 10-panel grid, bring it into <strong>Adobe Photoshop</strong> to prepare the cleanest possible inputs for the video engine:</p>
+          <ol class="list-decimal pl-5 space-y-3 mb-6">
+            <li><strong>Slice the Grid:</strong> Use the <em>Slice Tool (C)</em> or create 1920×1080 artboards to separate each individual second (Frame 01 through Frame 10).</li>
+            <li><strong>Color Match:</strong> Apply a single <em>Adjustment Layer (Curves or Color Lookup / 3D LUT)</em> across all panels to lock in consistent film tonality.</li>
+            <li><strong>Sharpen & Denoise:</strong> Check image clarity and export your frames as uncompressed PNG or high-quality JPG files.</li>
+          </ol>
+        </div>
+
+        <div class="my-8 bg-[#FBF9F5] border border-[#E6E2D8] rounded-2xl p-6 md:p-8 shadow-sm">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="px-2.5 py-1 text-xs font-mono font-bold uppercase rounded-md bg-emerald-600 text-white">PROMPT 02</span>
+            <span class="text-xs font-mono font-semibold text-[#78716C] uppercase">STAGE 2: STORYBOARD TO CINEMATIC VIDEO</span>
+          </div>
+          <h3 class="text-xl font-bold font-sans text-[#1C1917] mb-2">Cinematic Video Motion Generation Prompt</h3>
+          <p class="text-sm text-[#6B645C] mb-4">
+            Input this prompt into video AI platforms like Runway Gen-3 Alpha, Kling AI, Luma Dream Machine, or Pika Labs alongside your storyboard image or keyframes to render fluid, director-grade motion.
+          </p>
+
+          <div class="relative bg-white border border-[#E6E2D8] rounded-xl p-5 mb-4 group">
+            <pre class="font-mono text-sm md:text-base text-[#1C1917] whitespace-pre-wrap select-all">Create a Cinematic video for professinal video according to this storyboard sequence</pre>
+          </div>
+
+          <h4 class="font-bold font-sans text-sm text-[#1C1917] mb-2 uppercase tracking-wide">💡 Pro Customization Tip (For Runway, Luma & Kling):</h4>
+          <div class="bg-stone-50 border-l-4 border-emerald-500 p-4 rounded-r-lg text-sm text-[#44403C]">
+            <p class="mb-2 font-mono text-xs text-[#78716C]">Expanded Motion Control Modifier:</p>
+            <p class="italic">"Cinematic video render adhering strictly to the provided storyboard keyframes. Smooth 24fps film motion, volumetric cinematic lighting, natural depth of field with 35mm anamorphic lens flare, photorealistic character motion, dynamic camera push-in and panning, hyper-realistic physics, 4k master export, zero artifacting."</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-4">Complete 5-Step Workflow: From Static Image to Final Master Video</h2>
+          <div class="space-y-4">
+            <div class="p-5 bg-white border border-[#E6E2D8] rounded-xl">
+              <h3 class="font-bold text-[#1C1917] mb-1">Step 1: Choose Your Hero Concept Image</h3>
+              <p class="text-sm text-[#6B645C]">Select a crisp, high-resolution source photo or AI artwork. Ensure character features, lighting angles, and central elements are clearly defined.</p>
+            </div>
+            <div class="p-5 bg-white border border-[#E6E2D8] rounded-xl">
+              <h3 class="font-bold text-[#1C1917] mb-1">Step 2: Generate the 10-Second Storyboard Sheet</h3>
+              <p class="text-sm text-[#6B645C]">Run <strong>Prompt 01</strong>. Check that the panels logically follow each second of action: introduction (1-3s), main action/climax (4-7s), and resolution/outro (8-10s).</p>
+            </div>
+            <div class="p-5 bg-white border border-[#E6E2D8] rounded-xl">
+              <h3 class="font-bold text-[#1C1917] mb-1">Step 3: Organize Frames in Photoshop</h3>
+              <p class="text-sm text-[#6B645C]">Slice individual panels into 16:9 widescreen assets (or 9:16 for Reels/Shorts/TikTok). Enhance colors and save as clean reference images.</p>
+            </div>
+            <div class="p-5 bg-white border border-[#E6E2D8] rounded-xl">
+              <h3 class="font-bold text-[#1C1917] mb-1">Step 4: Generate Video Motion with Prompt 02</h3>
+              <p class="text-sm text-[#6B645C]">Upload the storyboard reference frames to your AI video engine of choice (Runway, Kling, Luma) and execute <strong>Prompt 02</strong> to render fluid visual motion.</p>
+            </div>
+            <div class="p-5 bg-white border border-[#E6E2D8] rounded-xl">
+              <h3 class="font-bold text-[#1C1917] mb-1">Step 5: Final Sound Design & Edit</h3>
+              <p class="text-sm text-[#6B645C]">Import the rendered video clips into Premiere Pro, DaVinci Resolve, or CapCut. Add ambient sound effects (foley), cinematic music, and subtle speed-ramping to complete your master video.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-4">Best AI Tools for This Workflow</h2>
+          <div class="overflow-x-auto my-4">
+            <table class="w-full text-sm border-collapse text-left bg-white border border-[#E6E2D8] rounded-xl overflow-hidden">
+              <thead>
+                <tr class="bg-[#FAF9F5] border-b border-[#E6E2D8] text-xs font-mono uppercase text-[#78716C]">
+                  <th class="p-3">Stage</th>
+                  <th class="p-3">Recommended Tools</th>
+                  <th class="p-3">Best Features</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#E6E2D8]">
+                <tr>
+                  <td class="p-3 font-semibold text-[#1C1917]">Storyboard Generation</td>
+                  <td class="p-3">Midjourney v6, ChatGPT DALL-E, Leonardo AI</td>
+                  <td class="p-3">High grid consistency, multi-panel contact sheets</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-[#1C1917]">Frame Slicing & Prep</td>
+                  <td class="p-3">Adobe Photoshop, Photopea (Free)</td>
+                  <td class="p-3">Slice Tool, Artboards, LUT grading, DPI verification</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-[#1C1917]">Video Motion Synthesis</td>
+                  <td class="p-3">Runway Gen-3, Luma Dream Machine, Kling AI, Sora</td>
+                  <td class="p-3">Keyframe-to-keyframe control, cinematic camera motion</td>
+                </tr>
+                <tr>
+                  <td class="p-3 font-semibold text-[#1C1917]">Final Assembly</td>
+                  <td class="p-3">DaVinci Resolve, Premiere Pro, CapCut</td>
+                  <td class="p-3">Audio synchronization, sound effects, final 4K render</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-6">Frequently Asked Questions</h2>
+          <div class="space-y-6 divide-y divide-[#E6E2D8]">
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">What is an AI storyboard prompt?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">An AI storyboard prompt instructs an image generator (like Midjourney, DALL-E, or Stable Diffusion) to split a single visual scene into sequential chronological panels or second-by-second keyframes, illustrating camera angles, character movement, and transitions.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">How do I turn a storyboard image into an AI video?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Upload your storyboard frames into image-to-video AI tools such as Runway Gen-3, Luma Dream Machine, Kling AI, or Sora. Use the cinematic video prompt to describe the motion dynamics, lighting changes, camera motion, and sequence continuity.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Can I edit the storyboard in Photoshop first?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Yes! Creating an edit grid in Adobe Photoshop lets you fine-tune contrast, slice individual seconds into separate keyframes, adjust aspect ratios (16:9 widescreen or 9:16 vertical), and ensure seamless camera panning before video generation.</p>
+            </div>
+            <div class="pt-4">
+              <h3 class="text-lg font-bold font-sans text-[#1C1917] mb-2">Which AI video tools work best with storyboard sequences?</h3>
+              <p class="text-sm md:text-base text-[#6B645C]">Runway Gen-3 Alpha, Kling AI, Luma Dream Machine, Pika Labs, and OpenAI Sora offer excellent image-to-video coherence and adhere tightly to multi-shot camera directions provided by storyboard sequences.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-4">Start Creating Your Cinematic Edits Today</h2>
+          <p class="mb-4">
+            By combining <strong>Prompt 01</strong> (for second-by-second storyboards) and <strong>Prompt 02</strong> (for cinematic video motion), you eliminate the guesswork in AI video creation. Try both prompts on your next video project to achieve studio-grade continuity and professional visual impact!
+          </p>
+        </div>
+
+        <div class="pt-6">
+          <h2 class="text-2xl font-bold font-sans text-[#111827] mb-6">Related Tools & Resources</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <a href="/tools/image-dpi-checker" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">Image DPI Checker</span>
+              <p class="text-xs text-[#78716C] mt-1">Verify resolution and print/video readiness before editing.</p>
+            </a>
+            <a href="/facebook-reels-hashtags" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">SOCIAL TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">Facebook Reels Hashtags (2026)</span>
+              <p class="text-xs text-[#78716C] mt-1">Trending viral hashtags to distribute your newly created AI video.</p>
+            </a>
+            <a href="/tools/jpg-compress" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">JPG Compressor</span>
+              <p class="text-xs text-[#78716C] mt-1">Compress storyboard frames without losing image details.</p>
+            </a>
+            <a href="/tools/webp-to-jpg" class="block p-5 bg-white border border-[#E6E2D8] rounded-xl hover:border-[#1C1917] transition-colors group">
+              <span class="text-[10px] font-mono uppercase tracking-widest text-rose-500 block mb-1">TOOL</span>
+              <span class="font-bold text-[#1C1917] group-hover:text-rose-600 transition-colors">WebP to JPG Converter</span>
+              <p class="text-xs text-[#78716C] mt-1">Convert downloaded AI frames to standard JPG format.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    `
     }
 ];
