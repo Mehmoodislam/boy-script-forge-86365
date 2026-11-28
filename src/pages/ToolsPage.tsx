@@ -55,6 +55,7 @@ const creativeTools = [
 ];
 
 const socialTools = [
+  { to: "/best-hashtags-for-instagram", label: "Instagram Hashtags", desc: "Best popular, trending & copy-paste tags for Instagram in 2026" },
   { to: "/facebook-reels-hashtags", label: "Facebook Reels Hashtags", desc: "Trending, viral & copy-paste hashtags for 2026 Reels" },
 ];
 

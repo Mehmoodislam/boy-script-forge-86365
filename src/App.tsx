@@ -56,6 +56,7 @@ import JPGCompress2mbPage from "./pages/JPGCompress2mbPage";
 import JPGCompress5mbPage from "./pages/JPGCompress5mbPage";
 import ArtPromptGeneratorPage from "./pages/ArtPromptGeneratorPage";
 import FacebookReelsHashtagsPage from "./pages/FacebookReelsHashtagsPage";
+import InstagramHashtagsPage from "./pages/InstagramHashtagsPage";
 import ToolsPage from "./pages/ToolsPage";
 import { ThemeProvider } from "@/hooks/use-theme";
 import SEOHead from "@/components/SEOHead";
@@ -130,6 +131,8 @@ function App() {
                             <Route path="/tools/art-prompt-generator" element={<ArtPromptGeneratorPage />} />
                             <Route path="/facebook-reels-hashtags" element={<FacebookReelsHashtagsPage />} />
                             <Route path="/facebook-reels-hashtags/" element={<FacebookReelsHashtagsPage />} />
+                            <Route path="/best-hashtags-for-instagram" element={<InstagramHashtagsPage />} />
+                            <Route path="/best-hashtags-for-instagram/" element={<InstagramHashtagsPage />} />
                             <Route path="/jobs" element={<JobsPage />} />
                             <Route path="/jobs/:slug" element={<JobDetailPage />} />
                             <Route path="/games" element={<GamesPage />} />

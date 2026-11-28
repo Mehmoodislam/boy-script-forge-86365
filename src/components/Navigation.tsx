@@ -13,6 +13,7 @@ const mediaTools = [
 ];
 
 const socialTools = [
+  { to: "/best-hashtags-for-instagram", label: "Instagram Hashtags", icon: Hash, desc: "Best 2026 trending & viral tags" },
   { to: "/facebook-reels-hashtags", label: "FB Reels Hashtags", icon: Hash, desc: "Trending, viral & copy-paste tags for 2026" },
   { to: "/tools/art-prompt-generator", label: "Art Prompt Generator", icon: Sparkles, desc: "Generate creative ideas" },
 ];

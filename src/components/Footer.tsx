@@ -80,6 +80,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/best-hashtags-for-instagram" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Instagram Hashtags
+                </Link>
+              </li>
+              <li>
                 <Link to="/facebook-reels-hashtags" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   FB Reels Hashtags
                 </Link>
