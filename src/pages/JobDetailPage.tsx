@@ -15,7 +15,9 @@ import {
     CheckCircle2,
     FileText,
     ArrowLeft,
-    ExternalLink
+    ExternalLink,
+    Palette,
+    Award
 } from "lucide-react";
 
 export default function JobDetailPage() {
@@ -32,7 +34,7 @@ export default function JobDetailPage() {
         identifier: {
             "@type": "PropertyValue",
             name: job.agencyName,
-            value: job.agencyLicense
+            value: job.agencyLicense || job.agencyName
         },
         datePosted: "2026-11-28",
         validThrough: "2027-11-28",
@@ -46,18 +48,7 @@ export default function JobDetailPage() {
             "@type": "Place",
             address: {
                 "@type": "PostalAddress",
-                addressLocality: "Dammam",
-                addressRegion: "Eastern Province",
                 addressCountry: "SA"
-            }
-        },
-        baseSalary: {
-            "@type": "MonetaryAmount",
-            currency: "SAR",
-            value: {
-                "@type": "QuantitativeValue",
-                value: 1200,
-                unitText: "MONTH"
             }
         }
     };
@@ -65,8 +56,8 @@ export default function JobDetailPage() {
     return (
         <div className="min-h-screen bg-[#F9F8F3] text-[#1C1917] font-sans">
             <SEOHead
-                title={`${job.title} | FreeImagePrompt Jobs`}
-                description={`Urgent hiring for Loading, Unloading and Packing workers in Dammam, Saudi Arabia. Salary: 1,000 + 200 SAR with accommodation, medical, transport. Agency: Workers Haven.`}
+                title={`${job.metaTitle || job.title} | FreeImagePrompt Jobs`}
+                description={job.metaDescription || job.description}
                 canonicalUrl={PAGE_URL}
                 schema={jobSchema}
             />
@@ -92,7 +83,7 @@ export default function JobDetailPage() {
                                 URGENT OVERSEAS HIRING
                             </span>
                             <span className="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-[#EFECE6] text-[#6B645C]">
-                                SAUDI ARABIA
+                                {job.country.toUpperCase()}
                             </span>
                             <span className="text-xs text-[#78716C] flex items-center gap-1 font-mono">
                                 <Calendar className="w-3.5 h-3.5" />
@@ -105,7 +96,7 @@ export default function JobDetailPage() {
                         </h1>
 
                         <p className="text-base md:text-lg text-[#6B645C] leading-relaxed">
-                            Are you looking for a job opportunity in Saudi Arabia? An urgent recruitment opportunity is available for <strong>Loading, Unloading, and Packing Workers</strong> at Dammam Saudi Port. Workers Haven, an overseas recruitment agency, is advertising vacancies for individuals interested in working in Saudi Arabia.
+                            {job.description}
                         </p>
                     </div>
 
@@ -116,59 +107,63 @@ export default function JobDetailPage() {
                                 <span className="text-xs uppercase font-mono tracking-widest text-emerald-300 block mb-1">
                                     SALARY PACKAGE
                                 </span>
-                                <div className="text-2xl md:text-3xl font-extrabold font-mono text-white">
-                                    1,000 + 200 SAR
+                                <div className="text-xl md:text-2xl font-extrabold font-mono text-white">
+                                    {job.salary}
                                 </div>
-                                <span className="text-xs text-emerald-200">Total 1,200 Saudi Riyals</span>
+                                <span className="text-xs text-emerald-200">Tax-Free Overseas Income</span>
                             </div>
                             <div>
                                 <span className="text-xs uppercase font-mono tracking-widest text-emerald-300 block mb-1">
-                                    DUTY & OVERTIME
+                                    {job.minExperience ? "EXPERIENCE" : "DUTY & OVERTIME"}
                                 </span>
                                 <div className="text-xl md:text-2xl font-bold text-white">
-                                    8 Hours Daily
+                                    {job.minExperience ? `${job.minExperience} Minimum` : job.dutyHours}
                                 </div>
-                                <span className="text-xs text-emerald-200">+ Overtime Available</span>
+                                <span className="text-xs text-emerald-200">
+                                    {job.portfolioRequired ? "Professional Portfolio Required" : job.overtime}
+                                </span>
                             </div>
                             <div>
                                 <span className="text-xs uppercase font-mono tracking-widest text-emerald-300 block mb-1">
-                                    CONTRACT PERIOD
+                                    LOCATION & VISA
                                 </span>
                                 <div className="text-xl md:text-2xl font-bold text-white">
-                                    2 Years
+                                    {job.location}
                                 </div>
-                                <span className="text-xs text-emerald-200">Renewable Agreement</span>
+                                <span className="text-xs text-emerald-200">Employment Visa</span>
                             </div>
                         </div>
                     </div>
 
-                    {/* Newspaper Ad Proof Image */}
-                    <div className="bg-white border border-[#E6E2D8] rounded-2xl p-4 md:p-6 mb-10 shadow-sm text-center">
-                        <div className="flex items-center justify-between mb-3 text-xs font-mono uppercase text-[#78716C] px-2">
-                            <span className="flex items-center gap-1 font-semibold text-emerald-700">
-                                <FileText className="w-3.5 h-3.5" />
-                                Official Newspaper Advertisement
-                            </span>
-                            <span>Overseas Employment Ad</span>
+                    {/* Newspaper Ad Proof Image (If available) */}
+                    {job.newspaperAdImage && (
+                        <div className="bg-white border border-[#E6E2D8] rounded-2xl p-4 md:p-6 mb-10 shadow-sm text-center">
+                            <div className="flex items-center justify-between mb-3 text-xs font-mono uppercase text-[#78716C] px-2">
+                                <span className="flex items-center gap-1 font-semibold text-emerald-700">
+                                    <FileText className="w-3.5 h-3.5" />
+                                    Official Advertisement Proof
+                                </span>
+                                <span>Verified Overseas Vacancy</span>
+                            </div>
+                            <div className="rounded-xl overflow-hidden border border-[#E6E2D8] bg-black">
+                                <img
+                                    src={job.newspaperAdImage}
+                                    alt={`${job.title} Newspaper Ad`}
+                                    className="w-full max-h-[450px] object-contain mx-auto"
+                                />
+                            </div>
+                            <p className="text-xs text-[#78716C] mt-2 italic">
+                                Original verified recruitment advertisement for {job.title}.
+                            </p>
                         </div>
-                        <div className="rounded-xl overflow-hidden border border-[#E6E2D8] bg-black">
-                            <img
-                                src={job.newspaperAdImage}
-                                alt="Saudi Arabia Dammam Port Loading Unloading Packing Jobs Newspaper Ad"
-                                className="w-full max-h-[450px] object-contain mx-auto"
-                            />
-                        </div>
-                        <p className="text-xs text-[#78716C] mt-2 italic">
-                            Original verified newspaper advertisement for Dammam Saudi Port workers by Workers Haven OEP.
-                        </p>
-                    </div>
+                    )}
 
                     {/* Article Content / Structured Details */}
                     <div className="bg-white border border-[#E6E2D8] rounded-2xl p-6 md:p-10 mb-10 space-y-8">
                         <div>
                             <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-4">Saudi Arabia Job Details</h2>
                             <p className="text-[#6B645C] mb-4 text-sm md:text-base">
-                                Here are the important verified details of this overseas employment opportunity:
+                                Here are the important details of this overseas recruitment opportunity:
                             </p>
 
                             <div className="overflow-x-auto">
@@ -200,9 +195,12 @@ export default function JobDetailPage() {
 
                             <div className="space-y-4">
                                 {job.positions.map((pos, idx) => (
-                                    <div key={idx} className="p-4 bg-[#FAF9F5] border border-[#E6E2D8] rounded-xl">
-                                        <h3 className="font-bold text-[#1C1917] text-base mb-1">
-                                            {idx + 1}. {pos.title}
+                                    <div key={idx} className="p-5 bg-[#FAF9F5] border border-[#E6E2D8] rounded-xl">
+                                        <h3 className="font-bold text-[#1C1917] text-lg mb-2 flex items-center gap-2">
+                                            <span className="w-6 h-6 rounded-full bg-emerald-700 text-white text-xs flex items-center justify-center font-mono">
+                                                {idx + 1}
+                                            </span>
+                                            {pos.title}
                                         </h3>
                                         <p className="text-sm text-[#6B645C] leading-relaxed">
                                             {pos.description}
@@ -212,60 +210,83 @@ export default function JobDetailPage() {
                             </div>
                         </div>
 
-                        {/* Salary Package */}
-                        <div>
-                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-3">Salary Package – 1,000 + 200 SAR</h2>
-                            <p className="text-sm md:text-base text-[#6B645C] mb-3 leading-relaxed">
-                                One of the important highlights of this Saudi Arabia job opportunity is its advertised salary package. Selected workers will receive:
-                            </p>
-                            <ul className="list-disc pl-5 space-y-1.5 text-sm text-[#44403C]">
-                                <li><strong>Basic advertised salary:</strong> 1,000 SAR</li>
-                                <li><strong>Additional allowance:</strong> 200 SAR</li>
-                                <li><strong>Total advertised package:</strong> 1,200 SAR (Saudi Riyals)</li>
+                        {/* Special Calligraphy Styles Section (If Arabic Calligrapher job) */}
+                        {job.calligraphyStyles && (
+                            <div>
+                                <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-3">Required Arabic Calligraphy Styles</h2>
+                                <p className="text-sm text-[#6B645C] mb-4">
+                                    Candidates applying for the calligrapher position should have expertise in traditional Arabic scripts:
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                    <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl">
+                                        <strong className="text-emerald-800 text-base block mb-1">1. Thuluth (ثلث)</strong>
+                                        <p className="text-xs text-[#6B645C]">A traditional Arabic calligraphy style known for its artistic lettering, curved elegance, and grand architectural compositions.</p>
+                                    </div>
+                                    <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl">
+                                        <strong className="text-emerald-800 text-base block mb-1">2. Diwani (ديواني)</strong>
+                                        <p className="text-xs text-[#6B645C]">A decorative Ottoman Arabic script commonly recognized for its flowing, cursive, and artistic overlapping appearance.</p>
+                                    </div>
+                                    <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl">
+                                        <strong className="text-emerald-800 text-base block mb-1">3. Naskh (نسخ)</strong>
+                                        <p className="text-xs text-[#6B645C]">A widely used Arabic script with clear, balanced lettering and high legibility, standard in Quranic and official texts.</p>
+                                    </div>
+                                    <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl">
+                                        <strong className="text-emerald-800 text-base block mb-1">4. Ruq'ah (رقعة)</strong>
+                                        <p className="text-xs text-[#6B645C]">A practical, structured Arabic handwriting script known for its simplicity, straight geometric lines, and speed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Software & Requirements */}
+                        {job.requiredSoftware && (
+                            <div>
+                                <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-3">Required Software & Technical Skills</h2>
+                                <p className="text-sm text-[#6B645C] mb-4">
+                                    Candidates must demonstrate professional mastery of industry-standard Adobe creative tools:
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                                    <div className="flex items-center gap-3 p-3.5 bg-[#FAF9F5] rounded-xl border border-[#E6E2D8]">
+                                        <Palette className="w-5 h-5 text-blue-600 shrink-0" />
+                                        <div>
+                                            <strong className="text-[#1C1917] block">Adobe Photoshop</strong>
+                                            <span className="text-xs text-[#6B645C]">Photo editing, mockups, digital calligraphy retouching</span>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-3 p-3.5 bg-[#FAF9F5] rounded-xl border border-[#E6E2D8]">
+                                        <Award className="w-5 h-5 text-amber-600 shrink-0" />
+                                        <div>
+                                            <strong className="text-[#1C1917] block">Adobe Illustrator</strong>
+                                            <span className="text-xs text-[#6B645C]">Vectorizing Arabic calligraphy, branding, logo design</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Eligibility Criteria */}
+                        <div className="pt-4 border-t border-[#E6E2D8]">
+                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-3">Eligibility Criteria & Requirements</h2>
+                            <ul className="space-y-2.5 text-sm text-[#44403C]">
+                                {job.minExperience && (
+                                    <li className="flex items-start gap-2">
+                                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                                        <span><strong>Minimum Experience:</strong> At least {job.minExperience} of verified professional experience in the relevant field.</span>
+                                    </li>
+                                )}
+                                {job.portfolioRequired && (
+                                    <li className="flex items-start gap-2">
+                                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                                        <span><strong>Creative Portfolio:</strong> A solid portfolio (Behance, PDF, Google Drive link, or image samples) showcasing previous designs or calligraphy artwork is mandatory.</span>
+                                    </li>
+                                )}
+                                {job.benefits.map((b, idx) => (
+                                    <li key={idx} className="flex items-start gap-2">
+                                        <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                                        <span>{b}</span>
+                                    </li>
+                                ))}
                             </ul>
-                        </div>
-
-                        {/* Working Hours & Facilities */}
-                        <div>
-                            <h2 className="text-2xl font-bold font-sans text-[#1C1917] mb-3">Working Hours, Overtime & Facilities</h2>
-                            <p className="text-sm md:text-base text-[#6B645C] mb-4 leading-relaxed">
-                                According to the recruitment advertisement, the daily duty schedule is <strong>8 hours</strong>, with overtime available. This opportunity is suitable for individuals interested in working in the loading, unloading, and packing sectors in Saudi Arabia.
-                            </p>
-
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                                <div className="flex items-center gap-2 p-3 bg-[#FAF9F5] rounded-lg border border-[#E6E2D8]">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                    <span><strong>Accommodation:</strong> Provided by company</span>
-                                </div>
-                                <div className="flex items-center gap-2 p-3 bg-[#FAF9F5] rounded-lg border border-[#E6E2D8]">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                    <span><strong>Medical:</strong> Medical facilities included</span>
-                                </div>
-                                <div className="flex items-center gap-2 p-3 bg-[#FAF9F5] rounded-lg border border-[#E6E2D8]">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                    <span><strong>Transportation:</strong> Free transport provided</span>
-                                </div>
-                                <div className="flex items-center gap-2 p-3 bg-[#FAF9F5] rounded-lg border border-[#E6E2D8]">
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                                    <span><strong>Labor Rights:</strong> Per Saudi Labor Laws</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Contract & Experience */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#E6E2D8]">
-                            <div>
-                                <h3 className="font-bold text-[#1C1917] text-base mb-2">Contract Duration</h3>
-                                <p className="text-sm text-[#6B645C]">
-                                    The advertised employment contract has a duration of <strong>2 years</strong>. Candidates should review the employment contract and confirm its terms before accepting the job offer.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="font-bold text-[#1C1917] text-base mb-2">Experience Requirements</h3>
-                                <p className="text-sm text-[#6B645C]">
-                                    The original recruitment advertisement does not clearly mention a specific experience requirement or minimum qualification. Fresh and experienced workers may apply.
-                                </p>
-                            </div>
                         </div>
 
                         {/* Official Contact Box */}
@@ -277,15 +298,17 @@ export default function JobDetailPage() {
                                 </h2>
                             </div>
                             <p className="text-sm text-[#6B645C] mb-6">
-                                Contact the licensed recruiting agency directly for inquiries, document submissions, and interview dates:
+                                Contact the recruiting agency directly for inquiries, portfolio review, and interview appointments:
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                                 <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl space-y-2">
-                                    <div className="text-xs font-mono uppercase text-[#78716C]">Agency Name & License</div>
+                                    <div className="text-xs font-mono uppercase text-[#78716C]">Agency Name & Details</div>
                                     <div className="font-bold text-[#1C1917] text-base">{job.agencyName}</div>
                                     <div className="text-xs text-emerald-700 font-semibold">{job.agencyType}</div>
-                                    <div className="text-xs text-[#78716C] font-mono">{job.agencyLicense}</div>
+                                    {job.agencyLicense && (
+                                        <div className="text-xs text-[#78716C] font-mono">{job.agencyLicense}</div>
+                                    )}
                                 </div>
 
                                 <div className="p-4 bg-white border border-[#E6E2D8] rounded-xl space-y-2">
@@ -294,20 +317,19 @@ export default function JobDetailPage() {
                                         <MapPin className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                                         <span>{job.agencyAddress}</span>
                                     </div>
-                                    <div className="text-xs text-[#78716C]">Principal: {job.company}</div>
                                 </div>
                             </div>
 
-                            {/* Phone Numbers & Email */}
+                            {/* Phone Numbers & Emails */}
                             <div className="bg-white border border-[#E6E2D8] rounded-xl p-5 mb-6">
                                 <div className="text-xs font-mono uppercase text-[#78716C] mb-3">
-                                    Phone & Mobile Numbers for Inquiries
+                                    Official Contact & Inquiry Numbers
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
                                     {job.phoneNumbers.map((phone, idx) => (
                                         <a
                                             key={idx}
-                                            href={`tel:${phone.replace(/[^0-9]/g, "")}`}
+                                            href={`tel:${phone.replace(/[^0-9+]/g, "")}`}
                                             className="flex items-center gap-2.5 p-3 rounded-lg bg-[#FAF9F5] hover:bg-emerald-50 border border-[#E6E2D8] hover:border-emerald-500 transition-colors group"
                                         >
                                             <div className="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
@@ -320,47 +342,60 @@ export default function JobDetailPage() {
                                     ))}
                                 </div>
 
-                                <div className="pt-3 border-t border-[#E6E2D8] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                                    <div className="flex items-center gap-2 text-sm text-[#44403C]">
-                                        <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
-                                        <span>Email CV / Documents:</span>
+                                <div className="pt-3 border-t border-[#E6E2D8] space-y-2">
+                                    <div className="text-xs font-mono uppercase text-[#78716C]">
+                                        Official Application Email Addresses:
                                     </div>
-                                    <a
-                                        href={`mailto:${job.email}`}
-                                        className="font-mono font-bold text-emerald-700 hover:underline text-sm"
-                                    >
-                                        {job.email}
-                                    </a>
+                                    <div className="flex flex-wrap gap-2">
+                                        {job.emails.map((em, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={`mailto:${em}?subject=Application for ${job.title}&body=Dear ${job.agencyName} Team,%0D%0A%0D%0AI am applying for the ${job.title} position in Saudi Arabia.%0D%0A%0D%0AFull Name:%0D%0AContact Number:%0D%0APortfolio / Work Link:%0D%0ACity / Country:%0D%0A`}
+                                                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-mono font-semibold transition-colors"
+                                            >
+                                                <Mail className="w-3.5 h-3.5 text-emerald-700" />
+                                                <span>{em}</span>
+                                            </a>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
 
                             {/* How to Apply Steps */}
                             <div>
                                 <h3 className="font-bold text-base text-[#1C1917] mb-2">
-                                    How to Apply for Loading, Unloading and Packing Jobs in Saudi Arabia?
+                                    How to Apply for this Saudi Arabia Job?
                                 </h3>
-                                <p className="text-sm text-[#6B645C] mb-3">
-                                    If you are interested in these Saudi Arabia job vacancies:
-                                </p>
                                 <ol className="list-decimal pl-5 space-y-1.5 text-sm text-[#44403C] mb-6">
-                                    <li>Prepare your updated CV, passport copy, and recent passport-size photos.</li>
-                                    <li>Send your resume directly to <code className="font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded">{job.email}</code>.</li>
-                                    <li>Call the recruitment agency numbers listed above to confirm interview and test schedules.</li>
-                                    <li>Visit the agency office at <em>Grand Hotel Plaza, Davis Road, Lahore</em> during office hours with original documents.</li>
+                                    <li>Prepare an updated professional CV highlighting your experience.</li>
+                                    <li>Attach your Arabic calligraphy samples, portfolio PDF, or design link.</li>
+                                    <li>Email your application directly to <code className="font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded">{job.emails[0]}</code>.</li>
+                                    <li>You can also apply online through the official portal link below.</li>
                                 </ol>
 
-                                <div className="text-center pt-2">
+                                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+                                    {job.applyLink && (
+                                        <a
+                                            href={job.applyLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-base shadow-md transition-all group"
+                                        >
+                                            <span>🟢 APPLY ONLINE NOW</span>
+                                            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                                        </a>
+                                    )}
                                     <a
-                                        href={`mailto:${job.email}?subject=Application for Loading, Unloading & Packing Job in Dammam&body=Dear Workers Haven Team,%0D%0A%0D%0AI am applying for the Loading/Unloading/Packing position in Dammam, Saudi Arabia.%0D%0A%0D%0AName:%0D%0APhone:%0D%0APassport Number:%0D%0ACity:%0D%0A`}
-                                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-base shadow-md transition-all group"
+                                        href={`mailto:${job.emails[0]}?subject=Application for ${job.title}&body=Dear ${job.agencyName} Team,%0D%0A%0D%0AI am applying for the ${job.title} position in Saudi Arabia.%0D%0A%0D%0AFull Name:%0D%0AContact Number:%0D%0APortfolio / Work Link:%0D%0ACity / Country:%0D%0A`}
+                                        className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white border border-[#E6E2D8] hover:border-emerald-600 text-[#1C1917] font-bold text-base shadow-sm transition-all"
                                     >
-                                        <span>APPLY NOW VIA EMAIL</span>
-                                        <ArrowLeft className="w-4 h-4 rotate-180 group-hover:translate-x-1 transition-transform" />
+                                        <Mail className="w-4 h-4 text-emerald-700" />
+                                        <span>EMAIL UPDATED CV</span>
                                     </a>
-                                    <p className="text-xs text-[#78716C] mt-2 italic">
-                                        Confirm all recruitment details and visa terms directly with Workers Haven before making any financial commitments.
-                                    </p>
                                 </div>
+                                <p className="text-xs text-[#78716C] mt-3 text-center italic">
+                                    Confirm all recruitment details and employment terms directly with {job.agencyName} before making any commitments.
+                                </p>
                             </div>
                         </div>
                     </div>
