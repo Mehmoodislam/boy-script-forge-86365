@@ -37,6 +37,7 @@ const Navigation = () => {
 
   const links = [
     { to: "/", label: "Home" },
+    { to: "/jobs", label: "Jobs" },
     { to: "/about", label: "About" },
     { to: "/games", label: "Games" },
     { to: "/blog", label: "Blog" },

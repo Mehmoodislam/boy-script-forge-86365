@@ -24,6 +24,8 @@ import Blog from "./pages/Blog";
 import GamesPage from "./pages/GamesPage";
 import GamePlayerPage from "./pages/GamePlayerPage";
 import BlogPost from "./pages/BlogPost";
+import JobsPage from "./pages/JobsPage";
+import JobDetailPage from "./pages/JobDetailPage";
 import Contact from "./pages/Contact";
 import JPGCompressPage from "./pages/JPGCompressPage";
 import JPGCompress5kbPage from "./pages/JPGCompress5kbPage";
@@ -128,6 +130,8 @@ function App() {
                             <Route path="/tools/art-prompt-generator" element={<ArtPromptGeneratorPage />} />
                             <Route path="/facebook-reels-hashtags" element={<FacebookReelsHashtagsPage />} />
                             <Route path="/facebook-reels-hashtags/" element={<FacebookReelsHashtagsPage />} />
+                            <Route path="/jobs" element={<JobsPage />} />
+                            <Route path="/jobs/:slug" element={<JobDetailPage />} />
                             <Route path="/games" element={<GamesPage />} />
                             <Route path="/games/:slug" element={<GamePlayerPage />} />
                             <Route path="/blog" element={<Blog />} />

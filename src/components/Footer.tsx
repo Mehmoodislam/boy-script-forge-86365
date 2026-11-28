@@ -34,6 +34,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/jobs" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
+                  Jobs & Visas
+                </Link>
+              </li>
+              <li>
                 <Link to="/blog" className="text-xs text-[#78716C] hover:text-[#1C1917] transition-colors">
                   Blog
                 </Link>
